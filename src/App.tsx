@@ -26,6 +26,7 @@ import {
   MDAlert,
   MDToast,
   MDLoaderLayout,
+  MDMenu,
 } from './components'
 import { ToastContainer } from 'react-toastify'
 
@@ -119,6 +120,46 @@ function App() {
       <MDButton onClick={() => MDToast.success('Success toast text ...')}>Toast</MDButton>
       <hr />
       <MDLoaderLayout isLoading>Content ...</MDLoaderLayout>
+      <hr />
+      <MDMenu
+        component={<MDButton>Menu</MDButton>}
+        items={[
+          {
+            children: <div>some element</div>,
+            onClick: () => console.log('Do not close'),
+            disableClose: true,
+          },
+          {
+            children: <div>some element</div>,
+            onClick: () => console.log('Default close on click'),
+          },
+        ]}
+      />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   )
 }

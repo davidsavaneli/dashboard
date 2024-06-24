@@ -88,4 +88,10 @@ export { default as MDLoader } from './Loader'
 export { default as MDLoaderLayout } from './LoaderLayout'
 export type { MDLoaderLayoutProps } from './LoaderLayout'
 
+export { default as MDMenuItem } from './MenuItem'
+export type { MDMenuItemProps } from './MenuItem'
+
+export { default as MDMenu } from './Menu'
+export type { MDMenuProps } from './Menu'
+
 export { default as MDToast } from './Toast'
