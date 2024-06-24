@@ -1,0 +1,48 @@
+:root {
+  /* All Colors */
+
+  --tzy-color-primary-rgb: 47, 53, 58;
+  --tzy-color-secondary-rgb: 21, 115, 245;
+  --tzy-color-success-rgb: 53, 173, 101;
+  --tzy-color-error-rgb: 220, 38, 38;
+  --tzy-color-warning-rgb: 255, 187, 11;
+  --tzy-color-info-rgb: 51, 181, 229;
+
+  --tzy-color-primary: rgb(var(--tzy-color-primary-rgb));
+  --tzy-color-secondary: rgb(var(--tzy-color-secondary-rgb));
+  --tzy-color-success: rgb(var(--tzy-color-success-rgb));
+  --tzy-color-error: rgb(var(--tzy-color-error-rgb));
+  --tzy-color-warning: rgb(var(--tzy-color-warning-rgb));
+  --tzy-color-info: rgb(var(--tzy-color-info-rgb));
+
+  --tzy-color-body-bg: rgb(255, 255, 255);
+
+  /* General */
+  --tzy-color-text-primary: var(--tzy-color-primary);
+
+  --tzy-font-family: "Nunito", sans-serif;
+
+  --tzy-font-weight-normal: 400;
+  --tzy-font-weight-medium: 500;
+  --tzy-font-weight-bold: 600;
+
+  --tzy-font-size-xs: 12px;
+  --tzy-font-size-sm: 14px;
+  --tzy-font-size-md: 16px;
+  --tzy-font-size-lg: 18px;
+  --tzy-font-size-xl: 20px;
+
+  --tzy-border-radius-xs: 4px;
+  --tzy-border-radius-sm: 8px;
+  --tzy-border-radius-md: 16px;
+  --tzy-border-radius-lg: 24px;
+  --tzy-border-radius-xl: 32px;
+
+  --tzy-padding-xs: 8px;
+  --tzy-padding-sm: 16px;
+  --tzy-padding-md: 24px;
+  --tzy-padding-lg: 32px;
+  --tzy-padding-xl: 40px;
+
+  --tzy-tr-dur: 0.2s;
+}
