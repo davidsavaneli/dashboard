@@ -3,8 +3,8 @@ import {
   MDButton,
   MDTextField,
   MDFormGroup,
-  MDFormLabel,
-  MDCheckbox,
+  FormLabel,
+  Checkbox,
   MDRadioGroup,
   MDRadio,
   MDSwitch,
@@ -27,6 +27,8 @@ import {
   MDToast,
   MDLoaderLayout,
   MDMenu,
+  MDPagination,
+  MDTabs,
 } from './components'
 import { ToastContainer } from 'react-toastify'
 
@@ -42,6 +44,12 @@ const autocompleteOptions = [
   { value: 'option3', label: 'Option 3' },
 ]
 
+const tabs = [
+  { id: 0, label: 'Tab One', name: 'tabName1', content: <>Content of Tab One</>, defaultOpen: false },
+  { id: 1, label: 'Tab Two', name: 'tabName2', content: <>Content of Tab Two</>, defaultOpen: true },
+  { id: 2, label: 'Tab Three', name: 'tabName3', content: <>Content of Tab Three</>, defaultOpen: false },
+]
+
 function App() {
   return (
     <div className='container'>
@@ -51,27 +59,27 @@ function App() {
       <hr />
       <MDButton>Button</MDButton>
       <hr />
-      <MDCheckbox label='Checkbox' />
+      <Checkbox label='Checkbox' />
       <hr />
-      <MDFormLabel>Checkbox Group</MDFormLabel>
+      <FormLabel>Checkbox Group</FormLabel>
       <MDFormGroup>
-        <MDCheckbox label='Checkbox' />
-        <MDCheckbox label='Checkbox' />
+        <Checkbox label='Checkbox' />
+        <Checkbox label='Checkbox' />
       </MDFormGroup>
       <hr />
-      <MDFormLabel>Checkbox Group</MDFormLabel>
+      <FormLabel>Checkbox Group</FormLabel>
       <MDFormGroup row>
-        <MDCheckbox label='Checkbox' />
-        <MDCheckbox label='Checkbox' />
+        <Checkbox label='Checkbox' />
+        <Checkbox label='Checkbox' />
       </MDFormGroup>
       <hr />
-      <MDFormLabel>Radio Group</MDFormLabel>
+      <FormLabel>Radio Group</FormLabel>
       <MDRadioGroup>
         <MDRadio label='Radio' value='male' />
         <MDRadio label='Radio' value='female' />
       </MDRadioGroup>
       <hr />
-      <MDFormLabel>Radio Group</MDFormLabel>
+      <FormLabel>Radio Group</FormLabel>
       <MDRadioGroup row>
         <MDRadio label='Radio' value='male' />
         <MDRadio label='Radio' value='female' />
@@ -135,31 +143,11 @@ function App() {
           },
         ]}
       />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <hr />
+      <MDPagination count={10} />
+      <hr />
+      <MDTabs tabs={tabs} onChange={(e, newValue: number) => console.log(newValue)} />
+      <div style={{ height: '400px' }}></div>
     </div>
   )
 }
