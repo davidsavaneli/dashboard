@@ -1,63 +1,40 @@
-import React, { memo } from 'react'
-import {
-  default as MuiAutocomplete,
-  AutocompleteProps,
-  AutocompleteRenderInputParams,
-} from '@mui/material/Autocomplete'
-import { ChipTypeMap } from '@mui/material/Chip'
-import MDFormControl from '../FormControl'
-import MDTextField, { MDTextFieldProps } from '../TextField'
+import { forwardRef } from 'react'
+import { MuiAutocomplete, MuiAutocompleteProps, MuiAutocompleteRenderInputParams } from '../../Mui'
+import TextField, { TextFieldProps } from '../TextField'
+import FormControl from '../FormControl'
+import { ChipTypeMap } from '../Chip'
 
-export interface MDAutocompleteProps<
+export interface AutocompleteProps<
   T,
   Multiple extends boolean | undefined,
   DisableClearable extends boolean | undefined,
   FreeSolo extends boolean | undefined,
   ChipComponent extends React.ElementType = ChipTypeMap['defaultComponent'],
-> extends Omit<
-    AutocompleteProps<T, Multiple, DisableClearable, FreeSolo, ChipComponent>,
-    | 'clearIcon'
-    | 'clearText'
-    | 'closeText'
-    | 'componentsProps'
-    | 'disabledItemsFocusable'
-    | 'forcePopupIcon'
-    | 'fullWidth'
-    | 'handleHomeEndKeys'
-    | 'includeInputInList'
-    | 'openOnFocus'
-    | 'openText'
-    | 'PaperComponent'
-    | 'PopperComponent'
-    | 'popupIcon'
-    | 'selectOnFocus'
-    | 'size'
-    | 'renderInput'
-  > {
-  FieldProps?: MDTextFieldProps
+> extends Omit<MuiAutocompleteProps<T, Multiple, DisableClearable, FreeSolo, ChipComponent>, 'renderInput'> {
+  FieldProps?: TextFieldProps
   label?: string
 }
 
-const MDAutocomplete = <
+const Autocomplete = forwardRef(function Autocomplete<
   T,
   Multiple extends boolean | undefined = false,
   DisableClearable extends boolean | undefined = false,
   FreeSolo extends boolean | undefined = false,
   ChipComponent extends React.ElementType = ChipTypeMap['defaultComponent'],
->({
-  FieldProps,
-  label,
-  ...props
-}: MDAutocompleteProps<T, Multiple, DisableClearable, FreeSolo, ChipComponent>): JSX.Element => {
+>(
+  { FieldProps, label, ...props }: AutocompleteProps<T, Multiple, DisableClearable, FreeSolo, ChipComponent>,
+  ref: React.Ref<HTMLElement>,
+): JSX.Element {
   return (
-    <MDFormControl>
+    <FormControl>
       <MuiAutocomplete
         disableCloseOnSelect
-        renderInput={(params: AutocompleteRenderInputParams) => <MDTextField {...params} label={label} />}
+        renderInput={(params: MuiAutocompleteRenderInputParams) => <TextField label={label} {...params} />}
+        ref={ref}
         {...props}
       />
-    </MDFormControl>
+    </FormControl>
   )
-}
+})
 
-export default memo(MDAutocomplete)
+export default Autocomplete

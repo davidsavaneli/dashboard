@@ -1,23 +1,23 @@
 import React, { useState } from 'react'
 import {
-  MDButton,
-  MDTextField,
-  MDFormGroup,
-  FormLabel,
   Checkbox,
-  MDRadioGroup,
-  MDRadio,
+  FormGroup,
+  FormLabel,
+  RadioGroup,
+  Radio,
+  TextField,
+  Autocomplete,
+  Chip,
+  MDButton,
   MDSwitch,
   MDSelect,
   MDSlider,
-  MDAutocomplete,
   MDLocalizationProvider,
   MDDatePicker,
   MDTimePicker,
   MDDateTimePicker,
   MDColorPicker,
   MDNumberInput,
-  MDChip,
   MDTextEditor,
   MDDivider,
   MDIcon,
@@ -62,38 +62,38 @@ function App() {
       <Checkbox label='Checkbox' />
       <hr />
       <FormLabel>Checkbox Group</FormLabel>
-      <MDFormGroup>
+      <FormGroup>
         <Checkbox label='Checkbox' />
         <Checkbox label='Checkbox' />
-      </MDFormGroup>
+      </FormGroup>
       <hr />
       <FormLabel>Checkbox Group</FormLabel>
-      <MDFormGroup row>
+      <FormGroup row>
         <Checkbox label='Checkbox' />
         <Checkbox label='Checkbox' />
-      </MDFormGroup>
+      </FormGroup>
       <hr />
       <FormLabel>Radio Group</FormLabel>
-      <MDRadioGroup>
-        <MDRadio label='Radio' value='male' />
-        <MDRadio label='Radio' value='female' />
-      </MDRadioGroup>
+      <RadioGroup>
+        <Radio label='Radio' value='male' />
+        <Radio label='Radio' value='female' />
+      </RadioGroup>
       <hr />
       <FormLabel>Radio Group</FormLabel>
-      <MDRadioGroup row>
-        <MDRadio label='Radio' value='male' />
-        <MDRadio label='Radio' value='female' />
-      </MDRadioGroup>
+      <RadioGroup row>
+        <Radio label='Radio' value='male' />
+        <Radio label='Radio' value='female' />
+      </RadioGroup>
       <hr />
       <MDSwitch label='Switch' />
       <hr />
       <MDSlider onValueChange={(e) => console.log(e)} min={10} />
       <hr />
-      <MDTextField label='Text Field' />
+      <TextField label='Text Field' />
       <hr />
       <MDSelect label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} multiple />
       <hr />
-      <MDAutocomplete multiple options={autocompleteOptions} label='Autocomplete' onChange={(e) => console.log(e)} />
+      <Autocomplete multiple options={autocompleteOptions} label='Autocomplete' onChange={(e) => console.log(e)} />
       <MDLocalizationProvider>
         <hr />
         <MDDatePicker label='Date Picker' />
@@ -107,7 +107,7 @@ function App() {
       <hr />
       <MDNumberInput max={5} value={0} onValueChange={(e) => console.log(e)} />
       <hr />
-      <MDChip label='Chip' onDelete={() => console.log('Delete')} />
+      <Chip label='Chip' onDelete={() => console.log('Delete')} />
       <hr />
       <MDTextEditor size='small' editorId='1' value='' placeholder='Description' onChange={(e) => console.log(e)} />
       <hr />

@@ -7,29 +7,35 @@ export type { FormLabelProps } from './FormLabel'
 export { default as FormControlLabel } from './FormControlLabel'
 export type { FormControlLabelProps } from './FormControlLabel'
 
+export { default as FormGroup } from './FormGroup'
+export type { FormGroupProps } from './FormGroup'
+
+export { default as FormControl } from './FormControl'
+export type { FormControlProps } from './FormControl'
+
+export { default as RadioGroup } from './RadioGroup'
+export type { RadioGroupProps } from './RadioGroup'
+
+export { default as Radio } from './Radio'
+export type { RadioProps } from './Radio'
+
+export { default as TextField } from './TextField'
+export type { TextFieldProps } from './TextField'
+
+export { default as InputAdornment } from './InputAdornment'
+export type { InputAdornmentProps } from './InputAdornment'
+
+export { default as Autocomplete } from './Autocomplete'
+export type { AutocompleteProps } from './Autocomplete'
+
+export { default as Chip } from './Chip'
+export type { ChipProps } from './Chip'
+
 export { default as MDButton } from './Button'
 export type { MDButtonProps } from './Button'
 
-export { default as MDTextField } from './TextField'
-export type { MDTextFieldProps } from './TextField'
-
-export { default as MDInputAdornment } from './InputAdornment'
-export type { MDInputAdornmentProps } from './InputAdornment'
-
-export { default as MDFormControl } from './FormControl'
-export type { MDFormControlProps } from './FormControl'
-
-export { default as MDFormGroup } from './FormGroup'
-export type { MDFormGroupProps } from './FormGroup'
-
 export { default as MDInputLabel } from './InputLabel'
 export type { MDInputLabelProps } from './InputLabel'
-
-export { default as MDRadioGroup } from './RadioGroup'
-export type { MDRadioGroupProps } from './RadioGroup'
-
-export { default as MDRadio } from './Radio'
-export type { MDRadioProps } from './Radio'
 
 export { default as MDSwitch } from './Switch'
 export type { MDSwitchProps } from './Switch'
@@ -39,9 +45,6 @@ export type { MDSelectProps } from './Select'
 
 export { default as MDSlider } from './Slider'
 export type { MDSliderProps } from './Slider'
-
-export { default as MDAutocomplete } from './Autocomplete'
-export type { MDAutocompleteProps } from './Autocomplete'
 
 export { default as MDLocalizationProvider } from './LocalizationProvider'
 export type { MDLocalizationProviderProps } from './LocalizationProvider'
@@ -60,9 +63,6 @@ export type { MDColorPickerProps } from './ColorPicker'
 
 export { default as MDNumberInput } from './NumberInput'
 export type { MDNumberInputProps } from './NumberInput'
-
-export { default as MDChip } from './Chip'
-export type { MDChipProps } from './Chip'
 
 export { default as MDTextEditor } from './TextEditor'
 export type { MDTextEditorProps } from './TextEditor'

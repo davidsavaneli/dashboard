@@ -1,21 +1,21 @@
-import React, { forwardRef, useState, RefAttributes, memo } from 'react'
-import TextField, { TextFieldProps } from '@mui/material/TextField'
+import { forwardRef, useState } from 'react'
+import { MuiTextField, MuiTextFieldProps } from '../../Mui'
 import FormControl from '../FormControl'
 import InputAdornment from '../InputAdornment'
 
-export type MDTextFieldProps = TextFieldProps & {
+export type TextFieldProps = MuiTextFieldProps & {
   isPassword?: boolean
   iconName?: string
 }
 
-const MDTextField = forwardRef<HTMLInputElement, MDTextFieldProps>(
-  ({ isPassword = false, iconName = '', variant = 'outlined', size = 'medium', ...props }, ref) => {
+const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
+  ({ isPassword = false, iconName = '', variant = 'outlined', ...props }, ref) => {
     const [showPassword, setShowPassword] = useState<boolean>(!!isPassword)
-    const handleClickShowPassword = () => setShowPassword(!showPassword)
+    const handleShowPassword = () => setShowPassword(!showPassword)
 
     const Icon = isPassword ? (
       <InputAdornment position='end'>
-        <div onClick={handleClickShowPassword}>Password</div>
+        <div onClick={handleShowPassword}>Password</div>
       </InputAdornment>
     ) : (
       iconName && <InputAdornment position='end'>Icon</InputAdornment>
@@ -23,10 +23,9 @@ const MDTextField = forwardRef<HTMLInputElement, MDTextFieldProps>(
 
     return (
       <FormControl>
-        <TextField
+        <MuiTextField
           ref={ref}
           variant={variant}
-          size={size}
           type={!showPassword ? 'text' : 'password'}
           InputProps={{
             endAdornment: Icon,
@@ -38,4 +37,4 @@ const MDTextField = forwardRef<HTMLInputElement, MDTextFieldProps>(
   },
 )
 
-export default memo(MDTextField)
+export default TextField

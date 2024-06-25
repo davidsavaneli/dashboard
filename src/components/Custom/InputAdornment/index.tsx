@@ -1,10 +1,10 @@
-import React, { forwardRef, memo } from 'react'
-import InputAdornment, { InputAdornmentProps } from '@mui/material/InputAdornment'
+import { forwardRef } from 'react'
+import { MuiInputAdornment, MuiInputAdornmentProps } from '../../Mui'
 
-export type MDInputAdornmentProps = InputAdornmentProps
+export interface InputAdornmentProps extends MuiInputAdornmentProps {}
 
-const MDInputAdornment = forwardRef<HTMLDivElement, MDInputAdornmentProps>(({ ...props }, ref) => {
-  return <InputAdornment {...props} ref={ref} />
+const InputAdornment = forwardRef<HTMLDivElement, InputAdornmentProps>(({ ...props }, ref) => {
+  return <MuiInputAdornment ref={ref} {...props} />
 })
 
-export default memo(MDInputAdornment)
+export default InputAdornment

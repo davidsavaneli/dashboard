@@ -1,10 +1,10 @@
-import React, { forwardRef, memo } from 'react'
-import FormControl, { FormControlProps } from '@mui/material/FormControl'
+import { forwardRef } from 'react'
+import { MuiFormControl, MuiFormControlProps } from '../../Mui'
 
-export type MDFormControlProps = FormControlProps
+export interface FormControlProps extends MuiFormControlProps {}
 
-const MDFormControl = forwardRef<HTMLDivElement, MDFormControlProps>(({ fullWidth = true, ...props }, ref) => {
-  return <FormControl fullWidth={fullWidth} ref={ref} {...props} />
+const FormControl = forwardRef<HTMLDivElement, FormControlProps>(({ fullWidth = true, ...props }, ref) => {
+  return <MuiFormControl ref={ref} fullWidth={fullWidth} {...props} />
 })
 
-export default memo(MDFormControl)
+export default FormControl

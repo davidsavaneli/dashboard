@@ -1,10 +1,10 @@
-import React, { forwardRef, memo } from 'react'
-import FormGroup, { FormGroupProps } from '@mui/material/FormGroup'
+import { forwardRef } from 'react'
+import { MuiFormGroup, MuiFormGroupProps } from '../../Mui'
 
-export type MDFormGroupProps = FormGroupProps
+export interface FormGroupProps extends MuiFormGroupProps {}
 
-const MDFormGroup = forwardRef<HTMLDivElement, MDFormGroupProps>(({ ...props }, ref) => {
-  return <FormGroup ref={ref} {...props} />
+const FormGroup = forwardRef<HTMLDivElement, FormGroupProps>(({ ...props }, ref) => {
+  return <MuiFormGroup ref={ref} {...props} />
 })
 
-export default memo(MDFormGroup)
+export default FormGroup

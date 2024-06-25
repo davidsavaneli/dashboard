@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { MuiFormControlLabel, MuiFormControlLabelProps } from '../../Mui'
 
-export type FormControlLabelProps = MuiFormControlLabelProps
+export interface FormControlLabelProps extends MuiFormControlLabelProps {}
 
 const FormControlLabel = forwardRef<HTMLLabelElement, FormControlLabelProps>(({ ...props }, ref) => {
   return <MuiFormControlLabel ref={ref} {...props} />

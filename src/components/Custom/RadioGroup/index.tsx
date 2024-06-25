@@ -1,10 +1,10 @@
-import React, { forwardRef, memo } from 'react'
-import RadioGroup, { RadioGroupProps } from '@mui/material/RadioGroup'
+import { forwardRef } from 'react'
+import { MuiRadioGroup, MuiRadioGroupProps } from '../../Mui'
 
-export type MDRadioGroupProps = RadioGroupProps
+export interface RadioGroupProps extends MuiRadioGroupProps {}
 
-const MDRadioGroup = forwardRef<HTMLDivElement, MDRadioGroupProps>(({ ...props }, ref) => {
-  return <RadioGroup ref={ref} {...props} />
+const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps>(({ ...props }, ref) => {
+  return <MuiRadioGroup ref={ref} {...props} />
 })
 
-export default memo(MDRadioGroup)
+export default RadioGroup

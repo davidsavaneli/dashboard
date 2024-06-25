@@ -1,13 +1,12 @@
-import React, { forwardRef, memo } from 'react'
-import Radio, { RadioProps } from '@mui/material/Radio'
-import FormControlLabel from '../FormControlLabel'
+import { forwardRef } from 'react'
+import { MuiRadio, MuiRadioProps, MuiFormControlLabel } from '../../Mui'
 
-export type MDRadioProps = RadioProps & {
+export interface RadioProps extends MuiRadioProps {
   label?: string
 }
 
-const MDRadio = forwardRef<HTMLButtonElement, MDRadioProps>(({ label, ...props }, ref) => {
-  return <FormControlLabel control={<Radio ref={ref} {...props} />} label={label} />
+const Radio = forwardRef<HTMLButtonElement, RadioProps>(({ label, ...props }, ref) => {
+  return <MuiFormControlLabel control={<MuiRadio ref={ref} {...props} />} label={label} />
 })
 
-export default memo(MDRadio)
+export default Radio

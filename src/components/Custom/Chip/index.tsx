@@ -1,11 +1,11 @@
-import React, { forwardRef, memo } from 'react'
-import Chip, { ChipProps } from '@mui/material/Chip'
-import FormControlLabel from '../FormControlLabel'
+import { forwardRef } from 'react'
+import { MuiChip, MuiChipProps, MuiChipTypeMap } from '../../Mui'
 
-export type MDChipProps = ChipProps
+export interface ChipProps extends MuiChipProps {}
+export interface ChipTypeMap extends MuiChipTypeMap {}
 
-const MDChip = forwardRef<HTMLDivElement, MDChipProps>(({ ...props }, ref) => {
-  return <Chip ref={ref} {...props} />
+const MDChip = forwardRef<HTMLDivElement, ChipProps>(({ ...props }, ref) => {
+  return <MuiChip ref={ref} {...props} />
 })
 
-export default memo(MDChip)
+export default MDChip

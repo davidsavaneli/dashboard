@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { MuiCheckbox, MuiCheckboxProps, MuiFormControlLabel } from '../../Mui'
 
-export type CheckboxProps = MuiCheckboxProps & {
+export interface CheckboxProps extends MuiCheckboxProps {
   label?: string
 }
 
