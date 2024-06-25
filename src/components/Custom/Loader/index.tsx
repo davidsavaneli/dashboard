@@ -1,7 +1,6 @@
-import { memo } from 'react'
 import styles from './styles.module.css'
 
-const MDLoader = () => {
+const Loader = () => {
   return (
     <div className={styles.loader}>
       <div className={styles.box}>
@@ -13,4 +12,4 @@ const MDLoader = () => {
   )
 }
 
-export default memo(MDLoader)
+export default Loader

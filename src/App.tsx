@@ -20,16 +20,16 @@ import {
   Text,
   Divider,
   ColorPicker,
-  MDButton,
   Select,
-  MDNumberInput,
-  MDTextEditor,
-  MDIcon,
-  MDToast,
-  MDLoaderLayout,
+  LoaderLayout,
+  NumberInput,
+  TextEditor,
+  Button,
+  Icon,
+  Toast,
   MDTabs,
+  ToastContainer,
 } from './components'
-import { ToastContainer } from 'react-toastify'
 
 const selectOptions = [
   { value: 'option1', label: 'Option 1' },
@@ -56,7 +56,7 @@ function App() {
       <br />
       <br />
       <hr />
-      <MDButton>Button</MDButton>
+      <Button variant='filled'>Button</Button>
       <hr />
       <Checkbox label='Checkbox' />
       <hr />
@@ -102,15 +102,15 @@ function App() {
       </LocalizationProvider>
       <ColorPicker label='Color Picker' onChange={(e) => console.log(e)} />
       <hr />
-      <MDNumberInput max={5} value={0} onValueChange={(e) => console.log(e)} />
+      <NumberInput max={5} value={0} onValueChange={(e) => console.log(e)} />
       <hr />
       <Chip label='Chip' onDelete={() => console.log('Delete')} />
       <hr />
-      <MDTextEditor size='small' editorId='1' value='' placeholder='Description' onChange={(e) => console.log(e)} />
+      <TextEditor size='small' editorId='1' value='' placeholder='Description' onChange={(e) => console.log(e)} />
       <hr />
       <Divider />
       <hr />
-      <MDIcon name='MdHome' />
+      <Icon name='MdHome' />
       <hr />
       <Title>Title</Title>
       <hr />
@@ -118,12 +118,12 @@ function App() {
       <hr />
       <Alert severity='success'>This is an outlined success Alert.</Alert>
       <hr />
-      <MDButton onClick={() => MDToast.success('Success toast text ...')}>Toast</MDButton>
+      <Button onClick={() => Toast.success('Success toast text ...')}>Toast</Button>
       <hr />
-      <MDLoaderLayout isLoading>Content ...</MDLoaderLayout>
+      <LoaderLayout isLoading>Content ...</LoaderLayout>
       <hr />
       <Menu
-        component={<MDButton>Menu</MDButton>}
+        component={<Button>Menu</Button>}
         items={[
           {
             children: <div>some element</div>,

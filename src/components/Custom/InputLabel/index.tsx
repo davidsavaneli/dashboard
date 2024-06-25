@@ -1,10 +1,10 @@
 import { forwardRef } from 'react'
-import InputLabel, { InputLabelProps } from '@mui/material/InputLabel'
+import { MuiInputLabel, MuiInputLabelProps } from '../../Mui'
 
-export type MDInputLabelProps = InputLabelProps
+export interface InputLabelProps extends MuiInputLabelProps {}
 
-const MDInputLabel = forwardRef<HTMLLabelElement, MDInputLabelProps>(({ ...props }: MDInputLabelProps, ref) => {
-  return <InputLabel ref={ref} {...props} />
+const InputLabel = forwardRef<HTMLLabelElement, InputLabelProps>(({ ...props }: InputLabelProps, ref) => {
+  return <MuiInputLabel ref={ref} {...props} />
 })
 
-export default MDInputLabel
+export default InputLabel

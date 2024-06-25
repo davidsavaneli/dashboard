@@ -1,14 +1,13 @@
-import { memo, ReactNode } from 'react';
-import Loader from '../Loader';
+import { ReactNode } from 'react'
+import Loader from '../Loader'
 
-export type MDLoaderLayoutProps = {
-  children?: ReactNode;
-  isLoading?: boolean;
-};
+export interface LoaderLayoutProps {
+  children?: ReactNode
+  isLoading?: boolean
+}
 
-const MDLoaderLayout = ({ children, isLoading }: MDLoaderLayoutProps) => {
-  if (isLoading) return <Loader />;
-  return <>{children}</>;
-};
+const LoaderLayout = ({ children, isLoading }: LoaderLayoutProps) => {
+  return isLoading ? <Loader /> : <>{children}</>
+}
 
-export default memo<MDLoaderLayoutProps>(MDLoaderLayout);
+export default LoaderLayout

@@ -7,6 +7,9 @@ export type { FormLabelProps } from './FormLabel'
 export { default as FormControlLabel } from './FormControlLabel'
 export type { FormControlLabelProps } from './FormControlLabel'
 
+export { default as InputLabel } from './InputLabel'
+export type { InputLabelProps } from './InputLabel'
+
 export { default as FormGroup } from './FormGroup'
 export type { FormGroupProps } from './FormGroup'
 
@@ -73,26 +76,26 @@ export type { ColorPickerProps } from './ColorPicker'
 export { default as Select } from './Select'
 export type { SelectProps } from './Select'
 
-export { default as MDButton } from './Button'
-export type { MDButtonProps } from './Button'
+export { default as Loader } from './Loader'
 
-export { default as MDInputLabel } from './InputLabel'
-export type { MDInputLabelProps } from './InputLabel'
+export { default as LoaderLayout } from './LoaderLayout'
+export type { LoaderLayoutProps } from './LoaderLayout'
 
-export { default as MDNumberInput } from './NumberInput'
-export type { MDNumberInputProps } from './NumberInput'
+export { default as NumberInput } from './NumberInput'
+export type { NumberInputProps } from './NumberInput'
 
-export { default as MDTextEditor } from './TextEditor'
-export type { MDTextEditorProps } from './TextEditor'
+export { default as TextEditor } from './TextEditor'
+export type { TextEditorProps } from './TextEditor'
 
-export { default as MDIcon } from './Icon'
-export type { MDIconProps } from './Icon'
+export { default as Icon } from './Icon'
+export type { IconProps } from './Icon'
 
-export { default as MDLoader } from './Loader'
-
-export { default as MDLoaderLayout } from './LoaderLayout'
-export type { MDLoaderLayoutProps } from './LoaderLayout'
+export { default as Button } from './Button'
+export type { ButtonProps } from './Button'
 
 export { default as MDTabs } from './Tabs'
 
-export { default as MDToast } from './Toast'
+export { default as ToastContainer } from './ToastContainer'
+export type { ToastContainerProps } from './ToastContainer'
+
+export { default as Toast } from './Toast'

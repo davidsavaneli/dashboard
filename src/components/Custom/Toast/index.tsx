@@ -1,7 +1,7 @@
 import { toast, ToastContent, ToastOptions } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import Icon from '../Icon'
 
-import MDIcon from '../Icon'
+import 'react-toastify/dist/ReactToastify.css'
 
 const createToasts = (
   position: ToastOptions['position'] = 'bottom-right',
@@ -28,7 +28,7 @@ const createToasts = (
 
   const success = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <MDIcon name='MdCheckCircle' />,
+      icon: <Icon name='MdCheckCircle' />,
       type: 'success',
       ...params,
       ...config,
@@ -36,7 +36,7 @@ const createToasts = (
 
   const error = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <MDIcon name='MdError' />,
+      icon: <Icon name='MdError' />,
       type: 'error',
       ...params,
       ...config,
@@ -44,7 +44,7 @@ const createToasts = (
 
   const warning = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <MDIcon name='MdWarning' />,
+      icon: <Icon name='MdWarning' />,
       type: 'warning',
       ...params,
       ...config,
@@ -52,7 +52,7 @@ const createToasts = (
 
   const info = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <MDIcon name='MdInfo' />,
+      icon: <Icon name='MdInfo' />,
       type: 'info',
       ...params,
       ...config,
@@ -61,6 +61,6 @@ const createToasts = (
   return { error, success, warning, info }
 }
 
-const MDToast = createToasts()
+const Toast = createToasts()
 
-export default MDToast
+export default Toast

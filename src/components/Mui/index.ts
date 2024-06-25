@@ -4,6 +4,9 @@ export type { CheckboxProps as MuiCheckboxProps } from './Checkbox'
 export { FormControlLabel as MuiFormControlLabel } from './FormControlLabel'
 export type { FormControlLabelProps as MuiFormControlLabelProps } from './FormControlLabel'
 
+export { InputLabel as MuiInputLabel } from './InputLabel'
+export type { InputLabelProps as MuiInputLabelProps } from './InputLabel'
+
 export { FormLabel as MuiFormLabel } from './FormLabel'
 export type { FormLabelProps as MuiFormLabelProps } from './FormLabel'
 
@@ -24,6 +27,9 @@ export type { SwitchProps as MuiSwitchProps } from './Switch'
 
 export { InputAdornment as MuiInputAdornment } from './InputAdornment'
 export type { InputAdornmentProps as MuiInputAdornmentProps } from './InputAdornment'
+
+export { Button as MuiButton } from './Button'
+export type { ButtonProps as MuiButtonProps } from './Button'
 
 export { TextField as MuiTextField } from './TextField'
 export type { TextFieldProps as MuiTextFieldProps } from './TextField'

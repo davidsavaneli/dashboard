@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import Button, { ButtonProps } from '@mui/material/Button'
+import { MuiButton, MuiButtonProps } from '../../Mui'
 
 declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
@@ -12,13 +12,15 @@ declare module '@mui/material/Button' {
   }
 }
 
-export type MDButtonProps = {
+export interface ButtonProps extends MuiButtonProps {
   variant?: 'contained' | 'outlined' | 'filled' | 'text'
   color?: 'dark' | 'medium'
-} & Omit<ButtonProps, 'color' | 'variant'>
+}
 
-const MDButton = forwardRef<HTMLButtonElement, MDButtonProps>(({ variant = 'contained', color, ...props }, ref) => {
-  return <Button variant={variant} {...props} ref={ref} />
-})
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant = 'contained', color, ...props }: ButtonProps, ref) => {
+    return <MuiButton variant={variant} {...props} ref={ref} />
+  },
+)
 
-export default MDButton
+export default Button

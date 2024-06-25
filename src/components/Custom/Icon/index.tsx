@@ -1,8 +1,9 @@
-import React, { memo } from 'react'
+import { forwardRef } from 'react'
 import * as MdIcons from 'react-icons/md'
 import * as AiIcons from 'react-icons/ai'
+import { IconBaseProps } from 'react-icons'
 
-export type MDIconProps = {
+export interface IconProps extends Omit<IconBaseProps, 'size'> {
   name: string
   size?: number | string
 }
@@ -17,11 +18,17 @@ const getIcon = (name: string) => {
   return null
 }
 
-const MdIcon = ({ name, size }: MDIconProps) => {
+const Icon = forwardRef<HTMLSpanElement, IconProps>(({ name, size, ...rest }: IconProps, ref) => {
   const IconComponent = getIcon(name)
   if (!IconComponent) return null
 
-  return <IconComponent size={size} />
-}
+  const iconProps = {
+    ...rest,
+    size,
+    ref: ref as React.RefObject<HTMLElement>,
+  }
 
-export default memo(MdIcon)
+  return <IconComponent {...iconProps} />
+})
+
+export default Icon

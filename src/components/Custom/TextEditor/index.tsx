@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ReactQuill, { Quill } from 'react-quill'
 // @ts-ignore
 import ImageResize from 'quill-image-resize-module-react'
 import textEditorContext from './TextEditorStore'
+import clsx from 'clsx'
 
 import 'react-quill/dist/quill.snow.css'
 import styles from './styles.module.css'
-import { useEffect } from 'react'
-import clsx from 'clsx'
 
 const CustomUndo = () => (
   <svg viewBox='0 0 18 18'>
@@ -37,7 +36,7 @@ Size.whitelist = ['size-10', 'size-12', 'size-14', 'size-16', 'size-18', 'size-2
 Quill.register(Size, true)
 Quill.register('modules/imageResize', ImageResize)
 
-export type MDTextEditorProps = {
+export interface TextEditorProps {
   editorId: string
   placeholder: string
   value: string
@@ -48,13 +47,7 @@ export type MDTextEditorProps = {
   helperText?: string
 }
 
-export const MDTextEditor = ({
-  placeholder = '',
-  error,
-  helperText,
-  disabled = false,
-  ...props
-}: MDTextEditorProps) => {
+export const TextEditor = ({ placeholder = '', error, helperText, disabled = false, ...props }: TextEditorProps) => {
   const modules = {
     toolbar: {
       container: '#editorId-' + props.editorId,
@@ -176,4 +169,4 @@ export const MDTextEditor = ({
   )
 }
 
-export default MDTextEditor
+export default TextEditor
