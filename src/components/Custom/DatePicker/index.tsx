@@ -1,30 +1,23 @@
-import React, { memo } from 'react'
-import { DatePicker, DatePickerProps } from '@mui/x-date-pickers/DatePicker'
-import dayjs from 'dayjs'
-import MDFormControl from '../FormControl'
-import MDTextField from '../TextField'
+import { MuiDatePicker, MuiDatePickerProps } from '../../Mui'
+import FormControl from '../FormControl'
+import TextField from '../TextField'
 
-export type MDDatePickerProps = DatePickerProps<dayjs.Dayjs> & {
+export interface DatePickerProps extends MuiDatePickerProps {
   format?: string
 }
 
-const MDDatePicker = ({ format = 'DD/MM/YYYY', ...props }: MDDatePickerProps) => {
+const DatePicker = ({ format = 'DD/MM/YYYY', ...props }: DatePickerProps) => {
   return (
-    <MDFormControl>
-      <DatePicker
+    <FormControl>
+      <MuiDatePicker
         format={format}
-        slotProps={{
-          inputAdornment: {
-            position: 'end',
-          },
-        }}
         slots={{
-          textField: (params) => <MDTextField {...params} />,
+          textField: (params) => <TextField {...params} />,
         }}
         {...props}
       />
-    </MDFormControl>
+    </FormControl>
   )
 }
 
-export default memo(MDDatePicker)
+export default DatePicker

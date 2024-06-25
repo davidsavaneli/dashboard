@@ -5,29 +5,28 @@ import {
   FormLabel,
   RadioGroup,
   Radio,
+  Switch,
   TextField,
   Autocomplete,
   Chip,
+  LocalizationProvider,
+  TimePicker,
+  DatePicker,
+  DateTimePicker,
+  Alert,
+  Pagination,
+  Menu,
+  Title,
+  Text,
+  Divider,
+  ColorPicker,
   MDButton,
-  MDSwitch,
   MDSelect,
-  MDSlider,
-  MDLocalizationProvider,
-  MDDatePicker,
-  MDTimePicker,
-  MDDateTimePicker,
-  MDColorPicker,
   MDNumberInput,
   MDTextEditor,
-  MDDivider,
   MDIcon,
-  MDTitle,
-  MDText,
-  MDAlert,
   MDToast,
   MDLoaderLayout,
-  MDMenu,
-  MDPagination,
   MDTabs,
 } from './components'
 import { ToastContainer } from 'react-toastify'
@@ -85,25 +84,23 @@ function App() {
         <Radio label='Radio' value='female' />
       </RadioGroup>
       <hr />
-      <MDSwitch label='Switch' />
-      <hr />
-      <MDSlider onValueChange={(e) => console.log(e)} min={10} />
+      <Switch label='Switch' />
       <hr />
       <TextField label='Text Field' />
       <hr />
       <MDSelect label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} multiple />
       <hr />
       <Autocomplete multiple options={autocompleteOptions} label='Autocomplete' onChange={(e) => console.log(e)} />
-      <MDLocalizationProvider>
+      <LocalizationProvider>
         <hr />
-        <MDDatePicker label='Date Picker' />
+        <DatePicker label='Date Picker' />
         <hr />
-        <MDTimePicker label='Time Picker' />
+        <TimePicker label='Time Picker' />
         <hr />
-        <MDDateTimePicker label='Date Time Picker' />
+        <DateTimePicker label='Date Time Picker' />
         <hr />
-      </MDLocalizationProvider>
-      <MDColorPicker label='Color Picker' onChange={(e) => console.log(e)} />
+      </LocalizationProvider>
+      <ColorPicker label='Color Picker' onChange={(e) => console.log(e)} />
       <hr />
       <MDNumberInput max={5} value={0} onValueChange={(e) => console.log(e)} />
       <hr />
@@ -111,25 +108,21 @@ function App() {
       <hr />
       <MDTextEditor size='small' editorId='1' value='' placeholder='Description' onChange={(e) => console.log(e)} />
       <hr />
-      <MDDivider />
+      <Divider />
       <hr />
       <MDIcon name='MdHome' />
       <hr />
-      <MDTitle>Title</MDTitle>
+      <Title>Title</Title>
       <hr />
-      <MDText>Text</MDText>
+      <Text>Text</Text>
       <hr />
-      <MDAlert
-        title='Alert Title'
-        text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, dolore voluptatum esse eaque placeat magni.'
-        variant='info'
-      />
+      <Alert severity='success'>This is an outlined success Alert.</Alert>
       <hr />
       <MDButton onClick={() => MDToast.success('Success toast text ...')}>Toast</MDButton>
       <hr />
       <MDLoaderLayout isLoading>Content ...</MDLoaderLayout>
       <hr />
-      <MDMenu
+      <Menu
         component={<MDButton>Menu</MDButton>}
         items={[
           {
@@ -144,7 +137,7 @@ function App() {
         ]}
       />
       <hr />
-      <MDPagination count={10} />
+      <Pagination count={10} />
       <hr />
       <MDTabs tabs={tabs} onChange={(e, newValue: number) => console.log(newValue)} />
       <div style={{ height: '400px' }}></div>

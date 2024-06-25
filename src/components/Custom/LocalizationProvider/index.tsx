@@ -1,11 +1,12 @@
-import React, { ReactNode, memo } from 'react'
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { ReactNode } from 'react'
+import { MuiLocalizationProvider, MuiLocalizationProviderProps } from '../../Mui'
 
-export type MDLocalizationProviderProps = { children: ReactNode }
-
-const MDLocalizationProvider = ({ children }: MDLocalizationProviderProps) => {
-  return <LocalizationProvider dateAdapter={AdapterDayjs}>{children}</LocalizationProvider>
+export interface LocalizationProviderProps extends MuiLocalizationProviderProps {
+  children: ReactNode
 }
 
-export default memo(MDLocalizationProvider)
+const LocalizationProvider = ({ children }: LocalizationProviderProps) => {
+  return <MuiLocalizationProvider children={children} />
+}
+
+export default LocalizationProvider

@@ -1,32 +1,25 @@
-import React, { memo } from 'react'
-import { TimePicker, TimePickerProps } from '@mui/x-date-pickers/TimePicker'
-import dayjs from 'dayjs'
-import MDFormControl from '../FormControl'
-import MDTextField from '../TextField'
+import { MuiTimePicker, MuiTimePickerProps } from '../../Mui'
+import FormControl from '../FormControl'
+import TextField from '../TextField'
 
-export type MDTimePickerProps = TimePickerProps<dayjs.Dayjs> & {
+export interface TimePickerProps extends MuiTimePickerProps {
   format?: string
   ampm?: boolean
 }
 
-const MDTimePicker = ({ format = 'HH:mm', ampm = false, ...props }: MDTimePickerProps) => {
+const TimePicker = ({ format = 'HH:mm', ampm = false, ...props }: TimePickerProps) => {
   return (
-    <MDFormControl>
-      <TimePicker
+    <FormControl>
+      <MuiTimePicker
         format={format}
         ampm={ampm}
-        slotProps={{
-          inputAdornment: {
-            position: 'end',
-          },
-        }}
         slots={{
-          textField: (params) => <MDTextField {...params} />,
+          textField: (params) => <TextField {...params} />,
         }}
         {...props}
       />
-    </MDFormControl>
+    </FormControl>
   )
 }
 
-export default memo(MDTimePicker)
+export default TimePicker

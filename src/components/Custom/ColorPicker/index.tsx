@@ -1,8 +1,8 @@
-import React, { memo, useState } from 'react'
+import { useState, forwardRef } from 'react'
 import { MuiColorInput, MuiColorInputValue, MuiColorInputFormat } from 'mui-color-input'
-import MDFormControl from '../FormControl'
+import FormControl from '../FormControl'
 
-export type MDColorPickerProps = {
+export type ColorPickerProps = {
   format?: MuiColorInputFormat
   fallbackValue?: MuiColorInputValue
   value?: MuiColorInputValue
@@ -11,38 +11,33 @@ export type MDColorPickerProps = {
   disabled?: boolean
 }
 
-const MDColorPicker = ({
-  format = 'hex8',
-  fallbackValue,
-  value,
-  onChange,
-  label,
-  disabled = false,
-  ...props
-}: MDColorPickerProps) => {
-  const [color, setColor] = useState<MuiColorInputValue>(value || '')
+const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
+  ({ format = 'hex8', fallbackValue, value, onChange, label, disabled = false, ...props }, ref) => {
+    const [color, setColor] = useState<MuiColorInputValue>(value || '')
 
-  const handleChange = (newValue: string) => {
-    setColor(newValue)
-    if (onChange) {
-      onChange(newValue)
+    const handleChange = (newValue: string) => {
+      setColor(newValue)
+      if (onChange) {
+        onChange(newValue)
+      }
     }
-  }
 
-  return (
-    <MDFormControl>
-      <MuiColorInput
-        adornmentPosition={'end'}
-        format={format}
-        fallbackValue={fallbackValue}
-        value={color}
-        onChange={handleChange}
-        label={label}
-        disabled={disabled}
-        {...props}
-      />
-    </MDFormControl>
-  )
-}
+    return (
+      <FormControl>
+        <MuiColorInput
+          ref={ref}
+          adornmentPosition={'end'}
+          format={format}
+          fallbackValue={fallbackValue}
+          value={color}
+          onChange={handleChange}
+          label={label}
+          disabled={disabled}
+          {...props}
+        />
+      </FormControl>
+    )
+  },
+)
 
-export default memo(MDColorPicker)
+export default ColorPicker

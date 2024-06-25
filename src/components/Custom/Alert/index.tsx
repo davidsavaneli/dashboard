@@ -1,24 +1,10 @@
-import React, { memo } from 'react'
-import clsx from 'clsx'
-import Icon from '../Icon'
-import styles from './styles.module.css'
+import { forwardRef } from 'react'
+import { MuiAlert, MuiAlertProps } from '../../Mui'
 
-export type MDAlertProps = {
-  iconName?: string
-  title?: string
-  text?: string
-  variant?: 'default' | 'success' | 'error' | 'warning' | 'info'
-}
+export interface AlertProps extends MuiAlertProps {}
 
-const MDAlert = ({ title, text, iconName, variant = 'default' }: MDAlertProps) => {
-  return (
-    <div>
-      <div>
-        {title && <div>{title}</div>}
-        {text && <div>{text}</div>}
-      </div>
-    </div>
-  )
-}
+const MDAlert = forwardRef<HTMLDivElement, AlertProps>(({ variant = 'outlined', ...props }, ref) => {
+  return <MuiAlert ref={ref} variant={variant} {...props} />
+})
 
-export default memo(MDAlert)
+export default MDAlert

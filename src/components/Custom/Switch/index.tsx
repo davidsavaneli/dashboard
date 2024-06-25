@@ -1,14 +1,13 @@
-import React, { forwardRef, memo } from 'react'
-import Switch, { SwitchProps } from '@mui/material/Switch'
-import MDFormControl from '../FormControl'
+import { forwardRef } from 'react'
+import { MuiSwitch, MuiSwitchProps } from '../../Mui'
 import FormControlLabel from '../FormControlLabel'
 
-export type MDSwitchProps = SwitchProps & {
+export interface SwitchProps extends MuiSwitchProps {
   label?: string
 }
 
-const MDSwitch = forwardRef<HTMLButtonElement, MDSwitchProps>(({ label, ...props }, ref) => {
-  return <FormControlLabel control={<Switch ref={ref} {...props} />} label={label} />
+const Radio = forwardRef<HTMLButtonElement, SwitchProps>(({ label, ...props }, ref) => {
+  return <FormControlLabel control={<MuiSwitch ref={ref} {...props} />} label={label} />
 })
 
-export default memo(MDSwitch)
+export default Radio

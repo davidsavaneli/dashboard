@@ -1,11 +1,11 @@
-import React, { ReactNode, memo } from 'react'
+import { ReactNode } from 'react'
 
-export type MDTitleProps = {
+export interface TitleProps {
   children: ReactNode
 }
 
-const MdTitle = ({ children }: MDTitleProps) => {
+const Title = ({ children }: TitleProps) => {
   return <h1>{children}</h1>
 }
 
-export default memo(MdTitle)
+export default Title

@@ -1,10 +1,10 @@
-import React, { forwardRef, memo } from 'react'
-import MenuItem, { MenuItemProps } from '@mui/material/MenuItem'
+import { forwardRef } from 'react'
+import { MuiMenuItem, MuiMenuItemProps } from '../../Mui'
 
-export type MDMenuItemProps = MenuItemProps
+export type MenuItemProps = MuiMenuItemProps
 
-const MDMenuItem = forwardRef<HTMLLIElement, MDMenuItemProps>(({ ...props }, ref) => {
-  return <MenuItem ref={ref} {...props} />
+const MenuItem = forwardRef<HTMLLIElement, MenuItemProps>(({ ...props }, ref) => {
+  return <MuiMenuItem ref={ref} {...props} />
 })
 
-export default memo(MDMenuItem)
+export default MenuItem

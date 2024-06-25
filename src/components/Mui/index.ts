@@ -19,6 +19,9 @@ export type { RadioGroupProps as MuiRadioGroupProps } from './RadioGroup'
 export { Radio as MuiRadio } from './Radio'
 export type { RadioProps as MuiRadioProps } from './Radio'
 
+export { Switch as MuiSwitch } from './Switch'
+export type { SwitchProps as MuiSwitchProps } from './Switch'
+
 export { InputAdornment as MuiInputAdornment } from './InputAdornment'
 export type { InputAdornmentProps as MuiInputAdornmentProps } from './InputAdornment'
 
@@ -32,3 +35,30 @@ export type { AutocompleteRenderInputParams as MuiAutocompleteRenderInputParams 
 export { Chip as MuiChip } from './Chip'
 export type { ChipProps as MuiChipProps } from './Chip'
 export type { ChipTypeMap as MuiChipTypeMap } from './Chip'
+
+export { Alert as MuiAlert } from './Alert'
+export type { AlertProps as MuiAlertProps } from './Alert'
+
+export { Menu as MuiMenu } from './Menu'
+export type { MenuProps as MuiMenuProps } from './Menu'
+
+export { MenuItem as MuiMenuItem } from './MenuItem'
+export type { MenuItemProps as MuiMenuItemProps } from './MenuItem'
+
+export { Pagination as MuiPagination } from './Pagination'
+export type { PaginationProps as MuiPaginationProps } from './Pagination'
+
+export { Divider as MuiDivider } from './Divider'
+export type { DividerProps as MuiDividerProps } from './Divider'
+
+export { LocalizationProvider as MuiLocalizationProvider } from './LocalizationProvider'
+export type { LocalizationProviderProps as MuiLocalizationProviderProps } from './LocalizationProvider'
+
+export { TimePicker as MuiTimePicker } from './TimePicker'
+export type { TimePickerProps as MuiTimePickerProps } from './TimePicker'
+
+export { DatePicker as MuiDatePicker } from './DatePicker'
+export type { DatePickerProps as MuiDatePickerProps } from './DatePicker'
+
+export { DateTimePicker as MuiDateTimePicker } from './DateTimePicker'
+export type { DateTimePickerProps as MuiDateTimePickerProps } from './DateTimePicker'

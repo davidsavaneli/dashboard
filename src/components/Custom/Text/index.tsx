@@ -1,11 +1,11 @@
-import React, { ReactNode, memo } from 'react'
+import { ReactNode } from 'react'
 
-export type MDTextProps = {
+export interface TextProps {
   children: ReactNode
 }
 
-const MdText = ({ children }: MDTextProps) => {
+const Text = ({ children }: TextProps) => {
   return <p>{children}</p>
 }
 
-export default memo(MdText)
+export default Text

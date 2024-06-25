@@ -1,45 +1,56 @@
-import React, { useState, ReactElement, ReactNode, memo, cloneElement, MouseEvent, forwardRef } from 'react'
-import Menu from '@mui/material/Menu'
-import MDMenuItem from '../MenuItem'
+import { useState, ReactNode, cloneElement, MouseEvent, forwardRef } from 'react'
+import { MuiMenu, MuiMenuProps } from '../../Mui'
+import MenuItem from '../MenuItem'
 
-export type MDMenuProps = {
-  component: ReactElement
+export type MenuProps = Omit<MuiMenuProps, 'open'> & {
+  component: any
   items: Array<{ children: ReactNode; onClick?: () => void; disableClose?: boolean }>
 }
 
-const MDMenu = forwardRef<HTMLDivElement, MDMenuProps>(({ component, items, ...props }: MDMenuProps, ref) => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
-  const open = Boolean(anchorEl)
+const Menu = forwardRef<HTMLDivElement, MenuProps>(
+  (
+    {
+      component,
+      items,
+      transformOrigin = { horizontal: 'right', vertical: 'top' },
+      anchorOrigin = { horizontal: 'right', vertical: 'bottom' },
+      ...props
+    },
+    ref,
+  ) => {
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+    const open = Boolean(anchorEl)
 
-  const handleClick = (event: MouseEvent<HTMLButtonElement>) => setAnchorEl(event.currentTarget)
-  const handleClose = () => setAnchorEl(null)
+    const handleClick = (event: MouseEvent<HTMLButtonElement>) => setAnchorEl(event.currentTarget)
+    const handleClose = () => setAnchorEl(null)
 
-  return (
-    <div>
-      {cloneElement(component, { onClick: handleClick })}
-      <Menu
-        ref={ref}
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-        {...props}
-      >
-        {items.map((item, index) => (
-          <MDMenuItem
-            key={index}
-            onClick={() => {
-              if (item.onClick) item.onClick()
-              if (item.disableClose !== true) handleClose()
-            }}
-          >
-            {item.children}
-          </MDMenuItem>
-        ))}
-      </Menu>
-    </div>
-  )
-})
+    return (
+      <div>
+        {cloneElement(component, { onClick: handleClick })}
+        <MuiMenu
+          ref={ref}
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          transformOrigin={transformOrigin}
+          anchorOrigin={anchorOrigin}
+          {...props}
+        >
+          {items.map((item, index) => (
+            <MenuItem
+              key={index}
+              onClick={() => {
+                if (item.onClick) item.onClick()
+                if (item.disableClose !== true) handleClose()
+              }}
+            >
+              {item.children}
+            </MenuItem>
+          ))}
+        </MuiMenu>
+      </div>
+    )
+  },
+)
 
-export default memo(MDMenu)
+export default Menu

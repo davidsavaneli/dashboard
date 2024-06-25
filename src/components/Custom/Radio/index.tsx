@@ -1,12 +1,13 @@
 import { forwardRef } from 'react'
-import { MuiRadio, MuiRadioProps, MuiFormControlLabel } from '../../Mui'
+import { MuiRadio, MuiRadioProps } from '../../Mui'
+import FormControlLabel from '../FormControlLabel'
 
 export interface RadioProps extends MuiRadioProps {
   label?: string
 }
 
 const Radio = forwardRef<HTMLButtonElement, RadioProps>(({ label, ...props }, ref) => {
-  return <MuiFormControlLabel control={<MuiRadio ref={ref} {...props} />} label={label} />
+  return <FormControlLabel control={<MuiRadio ref={ref} {...props} />} label={label} />
 })
 
 export default Radio

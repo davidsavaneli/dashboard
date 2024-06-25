@@ -19,6 +19,9 @@ export type { RadioGroupProps } from './RadioGroup'
 export { default as Radio } from './Radio'
 export type { RadioProps } from './Radio'
 
+export { default as Switch } from './Switch'
+export type { SwitchProps } from './Switch'
+
 export { default as TextField } from './TextField'
 export type { TextFieldProps } from './TextField'
 
@@ -31,35 +34,50 @@ export type { AutocompleteProps } from './Autocomplete'
 export { default as Chip } from './Chip'
 export type { ChipProps } from './Chip'
 
+export { default as LocalizationProvider } from './LocalizationProvider'
+export type { LocalizationProviderProps } from './LocalizationProvider'
+
+export { default as TimePicker } from './TimePicker'
+export type { TimePickerProps } from './TimePicker'
+
+export { default as DatePicker } from './DatePicker'
+export type { DatePickerProps } from './DatePicker'
+
+export { default as DateTimePicker } from './DateTimePicker'
+export type { DateTimePickerProps } from './DateTimePicker'
+
+export { default as Alert } from './Alert'
+export type { AlertProps } from './Alert'
+
+export { default as Menu } from './Menu'
+export type { MenuProps } from './Menu'
+
+export { default as MenuItem } from './MenuItem'
+export type { MenuItemProps } from './MenuItem'
+
+export { default as Pagination } from './Pagination'
+export type { PaginationProps } from './Pagination'
+
+export { default as Title } from './Title'
+export type { TitleProps } from './Title'
+
+export { default as Text } from './Text'
+export type { TextProps } from './Text'
+
+export { default as Divider } from './Divider'
+export type { DividerProps } from './Divider'
+
+export { default as ColorPicker } from './ColorPicker'
+export type { ColorPickerProps } from './ColorPicker'
+
 export { default as MDButton } from './Button'
 export type { MDButtonProps } from './Button'
 
 export { default as MDInputLabel } from './InputLabel'
 export type { MDInputLabelProps } from './InputLabel'
 
-export { default as MDSwitch } from './Switch'
-export type { MDSwitchProps } from './Switch'
-
 export { default as MDSelect } from './Select'
 export type { MDSelectProps } from './Select'
-
-export { default as MDSlider } from './Slider'
-export type { MDSliderProps } from './Slider'
-
-export { default as MDLocalizationProvider } from './LocalizationProvider'
-export type { MDLocalizationProviderProps } from './LocalizationProvider'
-
-export { default as MDDatePicker } from './DatePicker'
-export type { MDDatePickerProps } from './DatePicker'
-
-export { default as MDTimePicker } from './TimePicker'
-export type { MDTimePickerProps } from './TimePicker'
-
-export { default as MDDateTimePicker } from './DateTimePicker'
-export type { MDDateTimePickerProps } from './DateTimePicker'
-
-export { default as MDColorPicker } from './ColorPicker'
-export type { MDColorPickerProps } from './ColorPicker'
 
 export { default as MDNumberInput } from './NumberInput'
 export type { MDNumberInputProps } from './NumberInput'
@@ -67,34 +85,13 @@ export type { MDNumberInputProps } from './NumberInput'
 export { default as MDTextEditor } from './TextEditor'
 export type { MDTextEditorProps } from './TextEditor'
 
-export { default as MDDivider } from './Divider'
-export type { MDDividerProps } from './Divider'
-
 export { default as MDIcon } from './Icon'
 export type { MDIconProps } from './Icon'
-
-export { default as MDTitle } from './Title'
-export type { MDTitleProps } from './Title'
-
-export { default as MDText } from './Text'
-export type { MDTextProps } from './Text'
-
-export { default as MDAlert } from './Alert'
-export type { MDAlertProps } from './Alert'
 
 export { default as MDLoader } from './Loader'
 
 export { default as MDLoaderLayout } from './LoaderLayout'
 export type { MDLoaderLayoutProps } from './LoaderLayout'
-
-export { default as MDMenuItem } from './MenuItem'
-export type { MDMenuItemProps } from './MenuItem'
-
-export { default as MDMenu } from './Menu'
-export type { MDMenuProps } from './Menu'
-
-export { default as MDPagination } from './Pagination'
-export type { MDPaginationProps } from './Pagination'
 
 export { default as MDTabs } from './Tabs'
 

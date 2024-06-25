@@ -1,10 +1,9 @@
-import React, { memo } from 'react'
-import Divider, { DividerProps } from '@mui/material/Divider'
+import { MuiDivider, MuiDividerProps } from '../../Mui'
 
-export type MDDividerProps = DividerProps
+export interface DividerProps extends MuiDividerProps {}
 
-const MDDivider = ({ ...props }: MDDividerProps) => {
-  return <Divider {...props} />
+const Divider = ({ ...props }: DividerProps) => {
+  return <MuiDivider {...props} />
 }
 
-export default memo(MDDivider)
+export default Divider
