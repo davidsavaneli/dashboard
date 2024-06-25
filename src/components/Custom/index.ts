@@ -70,14 +70,14 @@ export type { DividerProps } from './Divider'
 export { default as ColorPicker } from './ColorPicker'
 export type { ColorPickerProps } from './ColorPicker'
 
+export { default as Select } from './Select'
+export type { SelectProps } from './Select'
+
 export { default as MDButton } from './Button'
 export type { MDButtonProps } from './Button'
 
 export { default as MDInputLabel } from './InputLabel'
 export type { MDInputLabelProps } from './InputLabel'
-
-export { default as MDSelect } from './Select'
-export type { MDSelectProps } from './Select'
 
 export { default as MDNumberInput } from './NumberInput'
 export type { MDNumberInputProps } from './NumberInput'

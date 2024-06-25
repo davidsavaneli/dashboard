@@ -21,7 +21,7 @@ import {
   Divider,
   ColorPicker,
   MDButton,
-  MDSelect,
+  Select,
   MDNumberInput,
   MDTextEditor,
   MDIcon,
@@ -88,7 +88,7 @@ function App() {
       <hr />
       <TextField label='Text Field' />
       <hr />
-      <MDSelect label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} multiple />
+      <Select label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} multiple />
       <hr />
       <Autocomplete multiple options={autocompleteOptions} label='Autocomplete' onChange={(e) => console.log(e)} />
       <LocalizationProvider>

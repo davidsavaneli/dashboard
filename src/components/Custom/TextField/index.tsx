@@ -9,7 +9,7 @@ export type TextFieldProps = MuiTextFieldProps & {
 }
 
 const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
-  ({ isPassword = false, iconName = '', variant = 'outlined', ...props }, ref) => {
+  ({ isPassword = false, iconName = '', variant = 'outlined', ...props }: TextFieldProps, ref) => {
     const [showPassword, setShowPassword] = useState<boolean>(!!isPassword)
     const handleShowPassword = () => setShowPassword(!showPassword)
 

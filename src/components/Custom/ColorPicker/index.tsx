@@ -12,7 +12,7 @@ export type ColorPickerProps = {
 }
 
 const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
-  ({ format = 'hex8', fallbackValue, value, onChange, label, disabled = false, ...props }, ref) => {
+  ({ format = 'hex8', fallbackValue, value, onChange, label, disabled = false, ...props }: ColorPickerProps, ref) => {
     const [color, setColor] = useState<MuiColorInputValue>(value || '')
 
     const handleChange = (newValue: string) => {

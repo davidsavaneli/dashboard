@@ -3,7 +3,7 @@ import { MuiAlert, MuiAlertProps } from '../../Mui'
 
 export interface AlertProps extends MuiAlertProps {}
 
-const MDAlert = forwardRef<HTMLDivElement, AlertProps>(({ variant = 'outlined', ...props }, ref) => {
+const MDAlert = forwardRef<HTMLDivElement, AlertProps>(({ variant = 'outlined', ...props }: AlertProps, ref) => {
   return <MuiAlert ref={ref} variant={variant} {...props} />
 })
 

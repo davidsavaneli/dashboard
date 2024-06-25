@@ -15,7 +15,7 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
       transformOrigin = { horizontal: 'right', vertical: 'top' },
       anchorOrigin = { horizontal: 'right', vertical: 'bottom' },
       ...props
-    },
+    }: MenuProps,
     ref,
   ) => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)

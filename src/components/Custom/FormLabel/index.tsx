@@ -3,7 +3,7 @@ import { MuiFormLabel, MuiFormLabelProps } from '../../Mui'
 
 export interface FormLabelProps extends MuiFormLabelProps {}
 
-const FormLabel = forwardRef<HTMLLabelElement, FormLabelProps>(({ ...props }, ref) => {
+const FormLabel = forwardRef<HTMLLabelElement, FormLabelProps>(({ ...props }: FormLabelProps, ref) => {
   return <MuiFormLabel ref={ref} {...props} />
 })
 

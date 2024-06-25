@@ -3,7 +3,7 @@ import { MuiPagination, MuiPaginationProps } from '../../Mui'
 
 export type PaginationProps = MuiPaginationProps
 
-const Pagination = forwardRef<HTMLDivElement, PaginationProps>(({ ...props }, ref) => {
+const Pagination = forwardRef<HTMLDivElement, PaginationProps>(({ ...props }: PaginationProps, ref) => {
   return <MuiPagination ref={ref} {...props} />
 })
 

@@ -6,7 +6,7 @@ export interface SwitchProps extends MuiSwitchProps {
   label?: string
 }
 
-const Radio = forwardRef<HTMLButtonElement, SwitchProps>(({ label, ...props }, ref) => {
+const Radio = forwardRef<HTMLButtonElement, SwitchProps>(({ label, ...props }: SwitchProps, ref) => {
   return <FormControlLabel control={<MuiSwitch ref={ref} {...props} />} label={label} />
 })
 

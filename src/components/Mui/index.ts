@@ -33,8 +33,7 @@ export type { AutocompleteProps as MuiAutocompleteProps } from './Autocomplete'
 export type { AutocompleteRenderInputParams as MuiAutocompleteRenderInputParams } from './Autocomplete'
 
 export { Chip as MuiChip } from './Chip'
-export type { ChipProps as MuiChipProps } from './Chip'
-export type { ChipTypeMap as MuiChipTypeMap } from './Chip'
+export type { ChipProps as MuiChipProps, ChipTypeMap as MuiChipTypeMap } from './Chip'
 
 export { Alert as MuiAlert } from './Alert'
 export type { AlertProps as MuiAlertProps } from './Alert'
@@ -62,3 +61,7 @@ export type { DatePickerProps as MuiDatePickerProps } from './DatePicker'
 
 export { DateTimePicker as MuiDateTimePicker } from './DateTimePicker'
 export type { DateTimePickerProps as MuiDateTimePickerProps } from './DateTimePicker'
+
+export { Select as MuiSelect } from './Select'
+export type { SelectProps as MuiSelectProps } from './Select'
+export type { SelectChangeEvent as MuiSelectChangeEvent } from './Select'

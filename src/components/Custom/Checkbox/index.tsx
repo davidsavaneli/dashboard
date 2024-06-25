@@ -6,7 +6,7 @@ export interface CheckboxProps extends MuiCheckboxProps {
   label?: string
 }
 
-const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(({ label, ...props }, ref) => {
+const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(({ label, ...props }: CheckboxProps, ref) => {
   return <FormControlLabel control={<MuiCheckbox ref={ref} {...props} />} label={label} />
 })
 

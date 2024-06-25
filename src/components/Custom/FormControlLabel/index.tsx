@@ -3,8 +3,10 @@ import { MuiFormControlLabel, MuiFormControlLabelProps } from '../../Mui'
 
 export interface FormControlLabelProps extends MuiFormControlLabelProps {}
 
-const FormControlLabel = forwardRef<HTMLLabelElement, FormControlLabelProps>(({ ...props }, ref) => {
-  return <MuiFormControlLabel ref={ref} {...props} />
-})
+const FormControlLabel = forwardRef<HTMLLabelElement, FormControlLabelProps>(
+  ({ ...props }: FormControlLabelProps, ref) => {
+    return <MuiFormControlLabel ref={ref} {...props} />
+  },
+)
 
 export default FormControlLabel
