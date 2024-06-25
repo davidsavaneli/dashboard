@@ -1,10 +1,10 @@
-import React, { useState, useEffect, SyntheticEvent, ReactNode, memo } from 'react'
-import Tab from '@mui/material/Tab'
-import TabContext from '@mui/lab/TabContext'
-import TabList from '@mui/lab/TabList'
-import TabPanel from '@mui/lab/TabPanel'
+import { useState, useEffect, SyntheticEvent, ReactNode } from 'react'
+import TabContext from '../TabContext'
+import TabList from '../TabList'
+import Tab from '../Tab'
+import TabPanel from '../TabPanel'
 
-type TabData = {
+interface TabData {
   id: number
   label: string
   name: string
@@ -12,12 +12,12 @@ type TabData = {
   defaultOpen?: boolean
 }
 
-type MDTabsProps = {
+export interface TabsProps {
   tabs: TabData[]
   onChange: (event: SyntheticEvent, newValue: number) => void
 }
 
-const MDTabs = ({ tabs, onChange }: MDTabsProps) => {
+const Tabs = ({ tabs, onChange }: TabsProps) => {
   const [value, setValue] = useState<string | number>('0')
 
   useEffect(() => {
@@ -46,4 +46,4 @@ const MDTabs = ({ tabs, onChange }: MDTabsProps) => {
   )
 }
 
-export default memo(MDTabs)
+export default Tabs

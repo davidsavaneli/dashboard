@@ -93,7 +93,20 @@ export type { IconProps } from './Icon'
 export { default as Button } from './Button'
 export type { ButtonProps } from './Button'
 
-export { default as MDTabs } from './Tabs'
+export { default as TabContext } from './TabContext'
+export type { TabContextProps } from './TabContext'
+
+export { default as TabList } from './TabList'
+export type { TabListProps } from './TabList'
+
+export { default as Tab } from './Tab'
+export type { TabProps } from './Tab'
+
+export { default as TabPanel } from './TabPanel'
+export type { TabPanelProps } from './TabPanel'
+
+export { default as Tabs } from './Tabs'
+export type { TabsProps } from './Tabs'
 
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'

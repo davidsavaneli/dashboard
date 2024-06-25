@@ -71,3 +71,15 @@ export type { DateTimePickerProps as MuiDateTimePickerProps } from './DateTimePi
 export { Select as MuiSelect } from './Select'
 export type { SelectProps as MuiSelectProps } from './Select'
 export type { SelectChangeEvent as MuiSelectChangeEvent } from './Select'
+
+export { Tab as MuiTab } from './Tab'
+export type { TabProps as MuiTabProps } from './Tab'
+
+export { TabContext as MuiTabContext } from './TabContext'
+export type { TabContextProps as MuiTabContextProps } from './TabContext'
+
+export { TabList as MuiTabList } from './TabList'
+export type { TabListProps as MuiTabListProps } from './TabList'
+
+export { TabPanel as MuiTabPanel } from './TabPanel'
+export type { TabPanelProps as MuiTabPanelProps } from './TabPanel'

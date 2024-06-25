@@ -27,7 +27,7 @@ import {
   Button,
   Icon,
   Toast,
-  MDTabs,
+  Tabs,
   ToastContainer,
 } from './components'
 
@@ -139,7 +139,7 @@ function App() {
       <hr />
       <Pagination count={10} />
       <hr />
-      <MDTabs tabs={tabs} onChange={(e, newValue: number) => console.log(newValue)} />
+      <Tabs tabs={tabs} onChange={(e, newValue: number) => console.log(newValue)} />
       <div style={{ height: '400px' }}></div>
     </div>
   )
