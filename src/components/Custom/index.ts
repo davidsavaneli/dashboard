@@ -124,6 +124,12 @@ export type { BadgeProps } from './Badge'
 export { default as Avatar } from './Avatar'
 export type { AvatarProps } from './Avatar'
 
+export { default as ToggleButtonGroup } from './ToggleButtonGroup'
+export type { ToggleButtonGroupProps } from './ToggleButtonGroup'
+
+export { default as ToggleButton } from './ToggleButton'
+export type { ToggleButtonProps } from './ToggleButton'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 

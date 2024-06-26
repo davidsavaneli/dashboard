@@ -33,6 +33,8 @@ import {
   Link,
   Badge,
   Avatar,
+  ToggleButtonGroup,
+  ToggleButton,
   ToastContainer,
 } from './components'
 
@@ -62,6 +64,22 @@ function App() {
       <br />
       <hr />
       <Avatar src='https://picsum.photos/200/200'></Avatar>
+      <hr />
+      <ToggleButtonGroup value='left' orientation='vertical'>
+        <ToggleButton value='left' aria-label='left aligned'>
+          <Icon name='Home' />
+        </ToggleButton>
+        <ToggleButton value='center' aria-label='centered'>
+          <Icon name='Home' />
+        </ToggleButton>
+        <ToggleButton value='right' aria-label='right aligned'>
+          <Icon name='Home' />
+        </ToggleButton>
+      </ToggleButtonGroup>
+      <hr />
+      <ToggleButton value='check' selected>
+        <Icon name='Home' />
+      </ToggleButton>
       <hr />
       <Link href='/href_here'>Link</Link>
       <hr />
