@@ -99,3 +99,6 @@ export type { LinkProps as MuiLinkProps } from './Link'
 
 export { Badge as MuiBadge } from './Badge'
 export type { BadgeProps as MuiBadgeProps } from './Badge'
+
+export { Avatar as MuiAvatar } from './Avatar'
+export type { AvatarProps as MuiAvatarProps } from './Avatar'

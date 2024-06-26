@@ -32,6 +32,7 @@ import {
   Breadcrumbs,
   Link,
   Badge,
+  Avatar,
   ToastContainer,
 } from './components'
 
@@ -60,10 +61,12 @@ function App() {
       <br />
       <br />
       <hr />
+      <Avatar src='https://picsum.photos/200/200'></Avatar>
+      <hr />
       <Link href='/href_here'>Link</Link>
       <hr />
       <Badge color='secondary' badgeContent={2}>
-        <Icon name='Home' />
+        <Button>Badge</Button>
       </Badge>
       <hr />
       <Tooltip title='Tooltip Title'>

@@ -121,6 +121,9 @@ export type { LinkProps } from './Link'
 export { default as Badge } from './Badge'
 export type { BadgeProps } from './Badge'
 
+export { default as Avatar } from './Avatar'
+export type { AvatarProps } from './Avatar'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 
