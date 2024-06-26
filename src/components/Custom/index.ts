@@ -113,6 +113,10 @@ export type { TooltipProps } from './Tooltip'
 
 export { default as Breadcrumbs } from './Breadcrumbs'
 export type { BreadcrumbsProps } from './Breadcrumbs'
+export type { IBreadcrumbs } from './Breadcrumbs'
+
+export { default as Link } from './Link'
+export type { LinkProps } from './Link'
 
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'

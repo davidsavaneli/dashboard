@@ -30,9 +30,9 @@ import {
   Tabs,
   Tooltip,
   Breadcrumbs,
+  Link,
   ToastContainer,
 } from './components'
-import { Link } from '@mui/material'
 
 const selectOptions = [
   { value: 'option1', label: 'Option 1' },
@@ -59,18 +59,28 @@ function App() {
       <br />
       <br />
       <hr />
+      <Link href='/href_here'>Link</Link>
+      <hr />
       <Tooltip title='Tooltip Title'>
         <Button>Tooltip</Button>
       </Tooltip>
       <hr />
-      <Breadcrumbs>
-        <Link href='/mui'>
-          MUI
-        </Link>
-        <Link href='/mui/core'>
-          Core
-        </Link>
-      </Breadcrumbs>
+      <Breadcrumbs
+        breadcrumbs={[
+          {
+            name: 'Home',
+            to: '/',
+          },
+          {
+            name: 'List Page',
+            to: '/list-page',
+          },
+          {
+            name: 'Inner Page',
+            to: '',
+          },
+        ]}
+      />
       <hr />
       <Button variant='outlined'>Button</Button>
       <hr />

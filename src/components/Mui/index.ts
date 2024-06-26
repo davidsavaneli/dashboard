@@ -93,3 +93,6 @@ export { Icons } from './Icon'
 
 export { Breadcrumbs as MuiBreadcrumbs } from './Breadcrumbs'
 export type { BreadcrumbsProps as MuiBreadcrumbsProps } from './Breadcrumbs'
+
+export { Link as MuiLink } from './Link'
+export type { LinkProps as MuiLinkProps } from './Link'
