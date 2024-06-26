@@ -7,7 +7,7 @@ export interface LoaderLayoutProps {
 }
 
 const LoaderLayout = ({ children, isLoading }: LoaderLayoutProps) => {
-  return isLoading ? <Loader /> : <>{children}</>
+  return isLoading ? <Loader /> : children
 }
 
 export default LoaderLayout

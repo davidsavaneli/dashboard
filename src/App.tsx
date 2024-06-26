@@ -115,7 +115,7 @@ function App() {
       <hr />
       <Divider />
       <hr />
-      <Icon name='MdHome' />
+      <Icon name='Delete' />
       <hr />
       <Title>Title</Title>
       <hr />

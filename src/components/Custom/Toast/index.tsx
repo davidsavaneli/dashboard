@@ -28,7 +28,7 @@ const createToasts = (
 
   const success = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <Icon name='MdCheckCircle' />,
+      icon: <Icon name='CheckCircle' />,
       type: 'success',
       ...params,
       ...config,
@@ -36,7 +36,7 @@ const createToasts = (
 
   const error = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <Icon name='MdError' />,
+      icon: <Icon name='Error' />,
       type: 'error',
       ...params,
       ...config,
@@ -44,7 +44,7 @@ const createToasts = (
 
   const warning = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <Icon name='MdWarning' />,
+      icon: <Icon name='Warning' />,
       type: 'warning',
       ...params,
       ...config,
@@ -52,7 +52,7 @@ const createToasts = (
 
   const info = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <Icon name='MdInfo' />,
+      icon: <Icon name='Info' />,
       type: 'info',
       ...params,
       ...config,
