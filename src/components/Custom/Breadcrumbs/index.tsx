@@ -3,7 +3,7 @@ import { MuiBreadcrumbs, MuiBreadcrumbsProps } from '../../Mui'
 import Link from '../Link'
 
 export interface IBreadcrumbs {
-  name: string
+  label: string
   to: string
 }
 
@@ -15,9 +15,9 @@ const Breadcrumbs = forwardRef<HTMLDivElement, BreadcrumbsProps>(
   ({ breadcrumbs, separator = '›', ...props }: BreadcrumbsProps, ref) => {
     return (
       <MuiBreadcrumbs ref={ref} separator={separator} {...props}>
-        {breadcrumbs?.map(({ to, name }, i) => (
+        {breadcrumbs?.map(({ to, label }, i) => (
           <Link key={i} href={to ? to : undefined}>
-            {name}
+            {label}
           </Link>
         ))}
       </MuiBreadcrumbs>

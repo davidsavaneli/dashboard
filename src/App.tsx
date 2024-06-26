@@ -68,15 +68,15 @@ function App() {
       <Breadcrumbs
         breadcrumbs={[
           {
-            name: 'Home',
+            label: 'Home',
             to: '/',
           },
           {
-            name: 'List Page',
+            label: 'List Page',
             to: '/list-page',
           },
           {
-            name: 'Inner Page',
+            label: 'Inner Page',
             to: '',
           },
         ]}
