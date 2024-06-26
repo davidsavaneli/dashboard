@@ -90,3 +90,6 @@ export type { TooltipProps as MuiTooltipProps } from './Tooltip'
 export { Icon as MuiIcon } from './Icon'
 export type { IconProps as MuiIconProps } from './Icon'
 export { Icons } from './Icon'
+
+export { Breadcrumbs as MuiBreadcrumbs } from './Breadcrumbs'
+export type { BreadcrumbsProps as MuiBreadcrumbsProps } from './Breadcrumbs'

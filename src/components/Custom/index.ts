@@ -111,6 +111,9 @@ export type { TabsProps } from './Tabs'
 export { default as Tooltip } from './Tooltip'
 export type { TooltipProps } from './Tooltip'
 
+export { default as Breadcrumbs } from './Breadcrumbs'
+export type { BreadcrumbsProps } from './Breadcrumbs'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 

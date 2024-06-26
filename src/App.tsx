@@ -29,8 +29,10 @@ import {
   Toast,
   Tabs,
   Tooltip,
+  Breadcrumbs,
   ToastContainer,
 } from './components'
+import { Link } from '@mui/material'
 
 const selectOptions = [
   { value: 'option1', label: 'Option 1' },
@@ -60,6 +62,15 @@ function App() {
       <Tooltip title='Tooltip Title'>
         <Button>Tooltip</Button>
       </Tooltip>
+      <hr />
+      <Breadcrumbs>
+        <Link href='/mui'>
+          MUI
+        </Link>
+        <Link href='/mui/core'>
+          Core
+        </Link>
+      </Breadcrumbs>
       <hr />
       <Button variant='outlined'>Button</Button>
       <hr />
