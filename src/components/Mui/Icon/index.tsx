@@ -1,4 +1,3 @@
-import React from 'react'
 import MuiIcon, { IconProps as MuiIconProps } from '@mui/material/Icon'
 import { Delete, Home, CheckCircle, Error, Warning, Info } from '@mui/icons-material'
 
