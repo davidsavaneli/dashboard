@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import Icon, { IconName } from '../Icon'
 
 export interface NoDataProps {
@@ -16,4 +15,4 @@ const NoData = ({ text = '', iconName = 'Home', disableIcon = false }: NoDataPro
   )
 }
 
-export default memo<NoDataProps>(NoData)
+export default NoData

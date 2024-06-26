@@ -36,6 +36,7 @@ import {
   ToggleButtonGroup,
   ToggleButton,
   NoData,
+  CollapseCard,
   ToastContainer,
 } from './components'
 
@@ -81,6 +82,11 @@ function App() {
       <ToggleButton value='check' selected>
         <Icon name='Home' />
       </ToggleButton>
+      <hr />
+      <CollapseCard title='Collapse Card Title'>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas temporibus autem laborum. Unde rem dolore est
+        mollitia pariatur ullam adipisci velit corporis vitae itaque animi quaerat.
+      </CollapseCard>
       <hr />
       <NoData text='Results Not Found' />
       <hr />
