@@ -83,3 +83,6 @@ export type { TabListProps as MuiTabListProps } from './TabList'
 
 export { TabPanel as MuiTabPanel } from './TabPanel'
 export type { TabPanelProps as MuiTabPanelProps } from './TabPanel'
+
+export { Tooltip as MuiTooltip } from './Tooltip'
+export type { TooltipProps as MuiTooltipProps } from './Tooltip'

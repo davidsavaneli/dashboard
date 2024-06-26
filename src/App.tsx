@@ -28,6 +28,7 @@ import {
   Icon,
   Toast,
   Tabs,
+  Tooltip,
   ToastContainer,
 } from './components'
 
@@ -56,7 +57,11 @@ function App() {
       <br />
       <br />
       <hr />
-      <Button variant='filled'>Button</Button>
+      <Tooltip title='Tooltip Title'>
+        <Button>Tooltip</Button>
+      </Tooltip>
+      <hr />
+      <Button variant='outlined'>Button</Button>
       <hr />
       <Checkbox label='Checkbox' />
       <hr />

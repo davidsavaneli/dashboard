@@ -108,6 +108,9 @@ export type { TabPanelProps } from './TabPanel'
 export { default as Tabs } from './Tabs'
 export type { TabsProps } from './Tabs'
 
+export { default as Tooltip } from './Tooltip'
+export type { TooltipProps } from './Tooltip'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 
