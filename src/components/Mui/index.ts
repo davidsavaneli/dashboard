@@ -96,3 +96,6 @@ export type { BreadcrumbsProps as MuiBreadcrumbsProps } from './Breadcrumbs'
 
 export { Link as MuiLink } from './Link'
 export type { LinkProps as MuiLinkProps } from './Link'
+
+export { Badge as MuiBadge } from './Badge'
+export type { BadgeProps as MuiBadgeProps } from './Badge'

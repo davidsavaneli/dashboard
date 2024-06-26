@@ -118,6 +118,9 @@ export type { IBreadcrumbs } from './Breadcrumbs'
 export { default as Link } from './Link'
 export type { LinkProps } from './Link'
 
+export { default as Badge } from './Badge'
+export type { BadgeProps } from './Badge'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 

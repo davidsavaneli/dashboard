@@ -31,6 +31,7 @@ import {
   Tooltip,
   Breadcrumbs,
   Link,
+  Badge,
   ToastContainer,
 } from './components'
 
@@ -60,6 +61,10 @@ function App() {
       <br />
       <hr />
       <Link href='/href_here'>Link</Link>
+      <hr />
+      <Badge color='secondary' badgeContent={2}>
+        <Icon name='Home' />
+      </Badge>
       <hr />
       <Tooltip title='Tooltip Title'>
         <Button>Tooltip</Button>
