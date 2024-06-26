@@ -35,6 +35,7 @@ import {
   Avatar,
   ToggleButtonGroup,
   ToggleButton,
+  NoData,
   ToastContainer,
 } from './components'
 
@@ -80,6 +81,8 @@ function App() {
       <ToggleButton value='check' selected>
         <Icon name='Home' />
       </ToggleButton>
+      <hr />
+      <NoData text='Results Not Found' />
       <hr />
       <Link href='/href_here'>Link</Link>
       <hr />

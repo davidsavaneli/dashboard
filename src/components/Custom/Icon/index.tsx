@@ -5,6 +5,8 @@ export interface IconProps extends MuiIconProps {
   name: keyof typeof Icons
 }
 
+export type IconName = keyof typeof Icons
+
 const Icon = forwardRef<HTMLOrSVGElement, IconProps>(({ name, ...props }: IconProps, ref) => {
   const IconComponent = Icons[name] as React.ElementType
 

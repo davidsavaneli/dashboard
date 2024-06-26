@@ -89,6 +89,7 @@ export type { TextEditorProps } from './TextEditor'
 
 export { default as Icon } from './Icon'
 export type { IconProps } from './Icon'
+export type { IconName } from './Icon'
 
 export { default as Button } from './Button'
 export type { ButtonProps } from './Button'
@@ -129,6 +130,9 @@ export type { ToggleButtonGroupProps } from './ToggleButtonGroup'
 
 export { default as ToggleButton } from './ToggleButton'
 export type { ToggleButtonProps } from './ToggleButton'
+
+export { default as NoData } from './NoData'
+export type { NoDataProps } from './NoData'
 
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
