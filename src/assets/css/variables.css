@@ -20,7 +20,8 @@
   /* General */
   --tzy-color-text-primary: var(--tzy-color-primary);
 
-  --tzy-font-family: "Nunito", sans-serif;
+  /* --tzy-font-family: "Nunito", sans-serif; */
+  --tzy-font-family: 'Inter var';
 
   --tzy-font-weight-normal: 400;
   --tzy-font-weight-medium: 500;
