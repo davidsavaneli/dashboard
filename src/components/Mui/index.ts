@@ -87,10 +87,6 @@ export type { TabPanelProps as MuiTabPanelProps } from './TabPanel'
 export { Tooltip as MuiTooltip } from './Tooltip'
 export type { TooltipProps as MuiTooltipProps } from './Tooltip'
 
-export { Icon as MuiIcon } from './Icon'
-export type { IconProps as MuiIconProps } from './Icon'
-export { Icons } from './Icon'
-
 export { Breadcrumbs as MuiBreadcrumbs } from './Breadcrumbs'
 export type { BreadcrumbsProps as MuiBreadcrumbsProps } from './Breadcrumbs'
 

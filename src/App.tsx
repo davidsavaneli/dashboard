@@ -171,7 +171,7 @@ function App() {
       <hr />
       <Divider />
       <hr />
-      <Icon name='Delete' />
+      <Icon name='Home' />
       <hr />
       <Title>Title</Title>
       <hr />

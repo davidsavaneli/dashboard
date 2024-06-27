@@ -19,7 +19,7 @@ const CollapseCard = forwardRef<HTMLDivElement, CollapseCardProps>(
         <div>
           {title}
           {subText}
-          <Icon name={expanded ? 'Home' : 'Delete'} onClick={handleExpand} />
+          <Icon name={expanded ? 'Home' : 'Trash'} onClick={handleExpand} />
         </div>
 
         <Collapse in={expanded} timeout='auto' unmountOnExit>

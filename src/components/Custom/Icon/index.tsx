@@ -1,16 +1,22 @@
-import { forwardRef } from 'react'
-import { Icons, MuiIconProps } from '../../Mui'
+import { IconProps as IconsaxIconProps } from 'iconsax-react'
+import { Home, Trash, TickSquare } from 'iconsax-react'
+
+const Icons = {
+  Home,
+  Trash,
+  TickSquare,
+}
 
 export type IconName = keyof typeof Icons
 
-export interface IconProps extends MuiIconProps {
+export interface IconProps extends IconsaxIconProps {
   name: IconName
 }
 
-const Icon = forwardRef<HTMLOrSVGElement, IconProps>(({ name, ...props }: IconProps, ref) => {
-  const IconComponent = Icons[name] as React.ElementType
+const Icon = ({ name, size = 24, color = '#000', variant = 'Linear', ...props }: IconProps) => {
+  const IconComponent = Icons[name]
 
-  return IconComponent ? <IconComponent ref={ref} {...props} /> : null
-})
+  return IconComponent ? <IconComponent size={size} color={color} variant={variant} {...props} /> : null
+}
 
 export default Icon
