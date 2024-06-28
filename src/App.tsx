@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import {
   Checkbox,
   FormGroup,
@@ -39,6 +40,8 @@ import {
   CollapseCard,
   ToastContainer,
 } from './components'
+import { IRoutes } from './types'
+import CustomRouter from './router'
 
 const selectOptions = [
   { value: 'option1', label: 'Option 1' },
@@ -59,6 +62,22 @@ const tabs = [
 ]
 
 function App() {
+  return (
+    <div>
+      <Link to='/'>Home</Link>&nbsp;&nbsp;
+      <Link to='/about'>About</Link>&nbsp;&nbsp;
+      <Link to='/products'>Products</Link>&nbsp;&nbsp;
+      <Link to='/products/product-inner'>Product Inner</Link>&nbsp;&nbsp;
+      <Link to='/products/product-inner/product-inner-inner'>Product Inner Inner</Link>&nbsp;&nbsp;
+      <Link to='/nothing-here'>Nothing Here</Link>
+      <br />
+      <br />
+      <CustomRouter routes={routes} />
+    </div>
+  )
+}
+
+const Home = () => {
   return (
     <div className='container'>
       <ToastContainer />
@@ -90,7 +109,7 @@ function App() {
       <hr />
       <NoData text='Results Not Found' />
       <hr />
-      <Link href='/href_here'>Link</Link>
+      <Link to='/products/product-inner'>Link</Link>
       <hr />
       <Badge color='secondary' badgeContent={2}>
         <Button>Badge</Button>
@@ -207,3 +226,37 @@ function App() {
 }
 
 export default App
+
+const routes: IRoutes = {
+  mainPath: '/',
+  indexElement: <Home />,
+  items: [
+    {
+      path: '/home',
+      element: <Home />,
+      children: [],
+    },
+    {
+      path: '/about',
+      element: <>About Element</>,
+      children: [],
+    },
+    {
+      path: '/products',
+      element: <>Products Element</>,
+      children: [
+        {
+          path: '/products/product-inner',
+          element: <>Product Inner Element</>,
+          children: [
+            {
+              path: '/products/product-inner/product-inner-inner',
+              element: <>Product Inner Inner Element</>,
+              children: [],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}

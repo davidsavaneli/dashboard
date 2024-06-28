@@ -27,6 +27,7 @@ body {
   text-align: left;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "salt";
   touch-action: manipulation;
   color: var(--tzy-color-text-primary);
   background-color: var(--tzy-color-body-bg);

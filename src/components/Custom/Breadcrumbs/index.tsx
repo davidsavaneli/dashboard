@@ -16,7 +16,7 @@ const Breadcrumbs = forwardRef<HTMLDivElement, BreadcrumbsProps>(
     return (
       <MuiBreadcrumbs ref={ref} separator={separator} {...props}>
         {breadcrumbs?.map(({ to, label }, i) => (
-          <Link key={i} href={to ? to : undefined}>
+          <Link key={i} to={to ? to : undefined}>
             {label}
           </Link>
         ))}
