@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { MuiBreadcrumbs, MuiBreadcrumbsProps } from '../../Mui'
-import Link from '../Link'
+import RouterLink from '../RouterLink'
 
 export interface IBreadcrumbs {
   label: string
@@ -16,9 +16,9 @@ const Breadcrumbs = forwardRef<HTMLDivElement, BreadcrumbsProps>(
     return (
       <MuiBreadcrumbs ref={ref} separator={separator} {...props}>
         {breadcrumbs?.map(({ to, label }, i) => (
-          <Link key={i} to={to ? to : undefined}>
+          <RouterLink key={i} to={to ? to : undefined}>
             {label}
-          </Link>
+          </RouterLink>
         ))}
       </MuiBreadcrumbs>
     )

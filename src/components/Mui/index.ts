@@ -104,3 +104,6 @@ export type { ToggleButtonProps as MuiToggleButtonProps } from './ToggleButton'
 
 export { Collapse as MuiCollapse } from './Collapse'
 export type { CollapseProps as MuiCollapseProps } from './Collapse'
+
+export { Link as MuiLink } from './Link'
+export type { LinkProps as MuiLinkProps } from './Link'

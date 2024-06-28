@@ -1,11 +1,9 @@
-import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom'
+import { MuiLink, MuiLinkProps } from '../../Mui'
 
-export interface LinkProps extends Omit<RouterLinkProps, 'to'> {
-  to?: string
-}
+export interface LinkProps extends MuiLinkProps {}
 
-const Link = ({ to, ...props }: LinkProps) => {
-  return to ? <RouterLink to={to} {...props} /> : <a {...props} />
+const Link = ({ ...props }: LinkProps) => {
+  return <MuiLink {...props} />
 }
 
 export default Link

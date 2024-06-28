@@ -116,6 +116,9 @@ export { default as Breadcrumbs } from './Breadcrumbs'
 export type { BreadcrumbsProps } from './Breadcrumbs'
 export type { IBreadcrumbs } from './Breadcrumbs'
 
+export { default as RouterLink } from './RouterLink'
+export type { RouterLinkProps } from './RouterLink'
+
 export { default as Link } from './Link'
 export type { LinkProps } from './Link'
 

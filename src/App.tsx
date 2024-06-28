@@ -31,6 +31,7 @@ import {
   Tabs,
   Tooltip,
   Breadcrumbs,
+  RouterLink,
   Link,
   Badge,
   Avatar,
@@ -64,12 +65,12 @@ const tabs = [
 function App() {
   return (
     <div>
-      <Link to='/'>Home</Link>&nbsp;&nbsp;
-      <Link to='/about'>About</Link>&nbsp;&nbsp;
-      <Link to='/products'>Products</Link>&nbsp;&nbsp;
-      <Link to='/products/product-inner'>Product Inner</Link>&nbsp;&nbsp;
-      <Link to='/products/product-inner/product-inner-inner'>Product Inner Inner</Link>&nbsp;&nbsp;
-      <Link to='/nothing-here'>Nothing Here</Link>
+      <RouterLink to='/'>Home</RouterLink>&nbsp;&nbsp;
+      <RouterLink to='/about'>About</RouterLink>&nbsp;&nbsp;
+      <RouterLink to='/products'>Products</RouterLink>&nbsp;&nbsp;
+      <RouterLink to='/products/product-inner'>Product Inner</RouterLink>&nbsp;&nbsp;
+      <RouterLink to='/products/product-inner/product-inner-inner'>Product Inner Inner</RouterLink>&nbsp;&nbsp;
+      <RouterLink to='/nothing-here'>Nothing Here</RouterLink>
       <br />
       <br />
       <CustomRouter routes={routes} />
@@ -109,7 +110,9 @@ const Home = () => {
       <hr />
       <NoData text='Results Not Found' />
       <hr />
-      <Link to='/products/product-inner'>Link</Link>
+      <RouterLink to='/products/product-inner'>RouterLink</RouterLink>
+      <hr />
+      <Link href='/products/product-inner'>Link</Link>
       <hr />
       <Badge color='secondary' badgeContent={2}>
         <Button>Badge</Button>
