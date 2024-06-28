@@ -23,6 +23,7 @@ import {
   ColorPicker,
   Select,
   LoaderLayout,
+  LinearProgress,
   NumberInput,
   TextEditor,
   Button,
@@ -204,6 +205,8 @@ const Home = () => {
       <Button onClick={() => Toast.success('Success toast text ...')}>Toast</Button>
       <hr />
       <LoaderLayout isLoading>Content ...</LoaderLayout>
+      <hr />
+      <LinearProgress />
       <hr />
       <Menu
         component={<Button>Menu</Button>}

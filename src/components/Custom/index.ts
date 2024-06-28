@@ -76,7 +76,7 @@ export type { ColorPickerProps } from './ColorPicker'
 export { default as Select } from './Select'
 export type { SelectProps } from './Select'
 
-export { default as Loader } from './Loader'
+export { default as ComponentLoader } from './ComponentLoader'
 
 export { default as LoaderLayout } from './LoaderLayout'
 export type { LoaderLayoutProps } from './LoaderLayout'
@@ -142,6 +142,12 @@ export type { CollapseProps } from './Collapse'
 
 export { default as CollapseCard } from './CollapseCard'
 export type { CollapseCardProps } from './CollapseCard'
+
+export { default as CircularProgress } from './CircularProgress'
+export type { CircularProgressProps } from './CircularProgress'
+
+export { default as LinearProgress } from './LinearProgress'
+export type { LinearProgressProps } from './LinearProgress'
 
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'

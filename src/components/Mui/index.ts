@@ -107,3 +107,9 @@ export type { CollapseProps as MuiCollapseProps } from './Collapse'
 
 export { Link as MuiLink } from './Link'
 export type { LinkProps as MuiLinkProps } from './Link'
+
+export { CircularProgress as MuiCircularProgress } from './CircularProgress'
+export type { CircularProgressProps as MuiCircularProgressProps } from './CircularProgress'
+
+export { LinearProgress as MuiLinearProgress } from './LinearProgress'
+export type { LinearProgressProps as MuiLinearProgressProps } from './LinearProgress'

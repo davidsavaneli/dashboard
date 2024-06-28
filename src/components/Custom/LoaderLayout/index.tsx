@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import Loader from '../Loader'
+import ComponentLoader from '../ComponentLoader'
 
 export interface LoaderLayoutProps {
   children?: ReactNode
@@ -7,7 +7,7 @@ export interface LoaderLayoutProps {
 }
 
 const LoaderLayout = ({ children, isLoading }: LoaderLayoutProps) => {
-  return isLoading ? <Loader /> : children
+  return isLoading ? <ComponentLoader /> : children
 }
 
 export default LoaderLayout
