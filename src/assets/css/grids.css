@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: var(--tzy-padding-xs);
+  padding-left: var(--tzy-padding-xs);
   margin-right: auto;
   margin-left: auto;
 }
@@ -11,8 +11,8 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: calc(-1 * var(--tzy-margin-xs));
+  margin-left: calc(-1 * var(--tzy-margin-xs));
 }
 
 .no-gutters {
@@ -21,7 +21,7 @@
 }
 
 .no-gutters > .col,
-.no-gutters > [class*="col-"] {
+.no-gutters > [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -126,8 +126,8 @@
 .col-xs-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: var(--tzy-padding-xs);
+  padding-left: var(--tzy-padding-xs);
 }
 
 .col {

@@ -1,0 +1,10 @@
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--tzy-drawer-width);
+  max-width: var(--tzy-drawer-width);
+  border-right: 1px dashed var(--tzy-color-line-primary);
+  height: 100dvh;
+  z-index: 999;
+}

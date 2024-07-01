@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100dvh;
+}
+
+.wrapper {
+  width: calc(100% - var(--tzy-drawer-width));
+  margin-left: var(--tzy-drawer-width);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: var(--tzy-padding-sm) var(--tzy-padding-xl) var(--tzy-padding-lg) var(--tzy-padding-xl);
+  flex: 1 0 auto;
+  margin-top: var(--tzy-header-height);
+}

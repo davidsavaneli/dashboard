@@ -1,6 +1,8 @@
 :root {
   /* All Colors */
 
+  --tzy-color-primary-bg-rgb: 255, 255, 255;
+  --tzy-color-secondary-bg-rgb: 0, 0, 0;
   --tzy-color-primary-rgb: 47, 53, 58;
   --tzy-color-secondary-rgb: 21, 115, 245;
   --tzy-color-success-rgb: 53, 173, 101;
@@ -15,13 +17,18 @@
   --tzy-color-warning: rgb(var(--tzy-color-warning-rgb));
   --tzy-color-info: rgb(var(--tzy-color-info-rgb));
 
-  --tzy-color-body-bg: rgb(255, 255, 255);
+  --tzy-color-body-bg: var(--tzy-color-primary-bg-rgb);
+  --tzy-color-content-bg: var(--tzy-color-primary-bg-rgb);
+  --tzy-color-header-bg: rgba(var(--tzy-color-primary-bg-rgb), 0.5);
+  --tzy-color-line-primary: rgba(var(--tzy-color-secondary-bg-rgb), 0.3);
+  --tzy-color-line-secondary: rgba(var(--tzy-color-secondary-bg-rgb), 0.08);
+  --tzy-box-shadow-card: 0px 6px 24px rgba(var(--tzy-color-secondary-bg-rgb), 0.06);
 
   /* General */
-  --tzy-color-text-primary: var(--tzy-color-primary);
-
-  /* --tzy-font-family: "Nunito", sans-serif; */
   --tzy-font-family: 'Inter var';
+  --tzy-color-text-primary: var(--tzy-color-primary);
+  --tzy-drawer-width: 300px;
+  --tzy-header-height: 74px;
 
   --tzy-font-weight-normal: 400;
   --tzy-font-weight-medium: 500;
@@ -44,6 +51,12 @@
   --tzy-padding-md: 24px;
   --tzy-padding-lg: 32px;
   --tzy-padding-xl: 40px;
+
+  --tzy-margin-xs: 8px;
+  --tzy-margin-sm: 16px;
+  --tzy-margin-md: 24px;
+  --tzy-margin-lg: 32px;
+  --tzy-margin-xl: 40px;
 
   --tzy-tr-dur: 0.2s;
 }

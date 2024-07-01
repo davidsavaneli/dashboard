@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 
 import {
+  MainLayout,
+  Drawer,
+  Header,
+  ContentLayout,
+  Card,
   Checkbox,
   FormGroup,
   FormLabel,
@@ -66,7 +71,41 @@ const tabs = [
 function App() {
   return (
     <div>
-      <RouterLink to='/'>Home</RouterLink>&nbsp;&nbsp;
+      <MainLayout drawer={<Drawer />} header={<Header />}>
+        <ContentLayout
+          label='Home Page'
+          breadcrumbs={
+            <Breadcrumbs
+              breadcrumbs={[
+                {
+                  label: 'Home',
+                  to: '/',
+                },
+                {
+                  label: 'List Page',
+                  to: '/list-page',
+                },
+                {
+                  label: 'Inner Page',
+                  to: '',
+                },
+              ]}
+            />
+          }
+        >
+          <div className='row'>
+            <div className='col-6'>
+              <Card>1</Card>
+            </div>
+            <div className='col-6'>
+              <Card>2</Card>
+            </div>
+          </div>
+          <Card>3</Card>
+          <Card>4</Card>
+        </ContentLayout>
+      </MainLayout>
+      {/* <RouterLink to='/'>Home</RouterLink>&nbsp;&nbsp;
       <RouterLink to='/about'>About</RouterLink>&nbsp;&nbsp;
       <RouterLink to='/products'>Products</RouterLink>&nbsp;&nbsp;
       <RouterLink to='/products/product-inner'>Product Inner</RouterLink>&nbsp;&nbsp;
@@ -74,18 +113,15 @@ function App() {
       <RouterLink to='/nothing-here'>Nothing Here</RouterLink>
       <br />
       <br />
-      <CustomRouter routes={routes} />
+      <CustomRouter routes={routes} /> */}
     </div>
   )
 }
 
 const Home = () => {
   return (
-    <div className='container'>
+    <div>
       <ToastContainer />
-      <br />
-      <br />
-      <hr />
       <Avatar src='https://picsum.photos/200/200'></Avatar>
       <hr />
       <ToggleButtonGroup value='left' orientation='vertical'>
@@ -226,7 +262,6 @@ const Home = () => {
       <Pagination count={10} />
       <hr />
       <Tabs tabs={tabs} onChange={(e, newValue: number) => console.log(newValue)} />
-      <div style={{ height: '400px' }}></div>
     </div>
   )
 }

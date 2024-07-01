@@ -1,0 +1,8 @@
+.card {
+  position: relative;
+  background-color: var(--tzy-color-content-bg);
+  border: 1px solid var(--tzy-color-line-secondary);
+  border-radius: var(--tzy-border-radius-md);
+  box-shadow: var(--tzy-box-shadow-card);
+  padding: var(--tzy-padding-md);
+}
