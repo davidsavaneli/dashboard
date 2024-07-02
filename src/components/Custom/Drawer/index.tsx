@@ -1,7 +1,8 @@
 import React, { ReactNode, useState } from 'react'
-import { List, ListItem, ListItemText, Collapse, ListItemIcon } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { List } from '@mui/material'
 import { IRoutes, IRouteItem } from '../../../router'
+import RouterLink from '../RouterLink'
+import { Collapse } from '../../Mui/Collapse'
 import styles from './styles.module.css'
 
 export type DrawerProps = {
@@ -45,63 +46,22 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes) => {
 
   return items.map((item) => (
     <React.Fragment key={item.path}>
-      <ListItem button onClick={() => handleClick(item.path)}>
-        {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
+      <div onClick={() => handleClick(item.path)}>
+        {item.icon}
         {item.element === '' ? (
           <>
-            <ListItemText primary={item.name} />
+            {item.name}
             {open[item.path] ? <>Less</> : <>More</>}
           </>
         ) : (
-          <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <ListItemText primary={item.name} />
-          </Link>
+          <RouterLink to={item.path}>{item.name}</RouterLink>
         )}
-      </ListItem>
+      </div>
       {item.children && item.children.length > 0 && (
-        <Collapse in={open[item.path]} timeout='auto' unmountOnExit>
-          <List component='div' disablePadding>
-            {renderLinks(item.children, routes)}
-          </List>
+        <Collapse in={open[item.path]}>
+          <div>{renderLinks(item.children, routes)}</div>
         </Collapse>
       )}
     </React.Fragment>
   ))
 }
-
-// const DrawerComponent: React.FC<{ routes: IRoutes2 }> = ({ routes }) => {
-//   const [open, setOpen] = useState<{ [key: string]: boolean }>(() => getDefaultOpenState(routes))
-
-//   const handleClick = (path: string) => {
-//     setOpen((prev) => ({ ...prev, [path]: !prev[path] }))
-//   }
-
-//   const renderLinks = (items: RouteItem[]) => {
-//     return items.map((item) => (
-//       <React.Fragment key={item.path}>
-//         <ListItem button onClick={() => handleClick(item.path)}>
-//           {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
-//           {item.element === '' ? (
-//             <>
-//               <ListItemText primary={item.name} />
-//               {open[item.path] ? <>Less</> : <>More</>}
-//             </>
-//           ) : (
-//             <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
-//               <ListItemText primary={item.name} />
-//             </Link>
-//           )}
-//         </ListItem>
-//         {item.children && item.children.length > 0 && (
-//           <Collapse in={open[item.path]} timeout='auto' unmountOnExit>
-//             <List component='div' disablePadding>
-//               {renderLinks(item.children)}
-//             </List>
-//           </Collapse>
-//         )}
-//       </React.Fragment>
-//     ))
-//   }
-
-//   return <List>{renderLinks(routes.items)}</List>
-// }
