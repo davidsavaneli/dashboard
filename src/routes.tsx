@@ -71,7 +71,15 @@ export const routes: IRoutes = {
               path: '/components/forms/text-field',
               icon: '',
               element: <TextFieldPage />,
-              children: [],
+              children: [
+                {
+                  name: 'tdfdf',
+                  path: '/components/forms/text-field/dsfdf',
+                  icon: '',
+                  element: <>Text Field Inner</>,
+                  children: [],
+                },
+              ],
             },
           ],
         },
