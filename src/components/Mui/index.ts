@@ -119,3 +119,9 @@ export type { IconButtonProps as MuiIconButtonProps } from './IconButton'
 
 export { Fab as MuiFab } from './Fab'
 export type { FabProps as MuiFabProps } from './Fab'
+
+export { SpeedDial as MuiSpeedDial } from './SpeedDial'
+export type { SpeedDialProps as MuiSpeedDialProps } from './SpeedDial'
+
+export { SpeedDialAction as MuiSpeedDialAction } from './SpeedDialAction'
+export type { SpeedDialActionProps as MuiSpeedDialActionProps } from './SpeedDialAction'

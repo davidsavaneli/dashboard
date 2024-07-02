@@ -2,6 +2,7 @@ import HomePage from './pages/Home'
 import ButtonPage from './pages/Button'
 import IconButtonPage from './pages/IconButton'
 import FabPage from './pages/Fab'
+import SpeedDialPage from './pages/SpeedDial'
 import AvatarPage from './pages/Avatar'
 import ToggleButtonPage from './pages/ToggleButton'
 import CollapseCardPage from './pages/CollapseCard'
@@ -38,53 +39,7 @@ import PaginationPage from './pages/Pagination'
 import TabsPage from './pages/Tabs'
 import CardPage from './pages/Card'
 
-import {
-  MainLayout,
-  Drawer,
-  Header,
-  ContentLayout,
-  Card,
-  Checkbox,
-  FormGroup,
-  FormLabel,
-  RadioGroup,
-  Radio,
-  Switch,
-  TextField,
-  Autocomplete,
-  Chip,
-  LocalizationProvider,
-  TimePicker,
-  DatePicker,
-  DateTimePicker,
-  Alert,
-  Pagination,
-  Menu,
-  Title,
-  Text,
-  Divider,
-  ColorPicker,
-  Select,
-  LoaderLayout,
-  LinearProgress,
-  NumberInput,
-  TextEditor,
-  Button,
-  Icon,
-  Toast,
-  Tabs,
-  Tooltip,
-  Breadcrumbs,
-  RouterLink,
-  Link,
-  Badge,
-  Avatar,
-  ToggleButtonGroup,
-  ToggleButton,
-  IconButton,
-  NoData,
-  CollapseCard,
-} from './components'
+import { MainLayout, Drawer, Header, RouterLink } from './components'
 import { IRoutes } from './types'
 import CustomRouter from './router'
 
@@ -110,6 +65,11 @@ const routes: IRoutes = {
     {
       path: '/fab',
       element: <FabPage />,
+      children: [],
+    },
+    {
+      path: '/speed-dial',
+      element: <SpeedDialPage />,
       children: [],
     },
     {
@@ -320,6 +280,8 @@ const DrawerItems = () => (
     <RouterLink to='/icon-button'>Icon Button</RouterLink>
     <br />
     <RouterLink to='/fab'>Fab</RouterLink>
+    <br />
+    <RouterLink to='/speed-dial'>Speed Dial</RouterLink>
     <br />
     <RouterLink to='/avatar'>Avatar</RouterLink>
     <br />

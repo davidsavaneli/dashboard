@@ -170,6 +170,12 @@ export type { IconButtonProps } from './IconButton'
 export { default as Fab } from './Fab'
 export type { FabProps } from './Fab'
 
+export { default as SpeedDial } from './SpeedDial'
+export type { SpeedDialProps } from './SpeedDial'
+
+export { default as SpeedDialAction } from './SpeedDialAction'
+export type { SpeedDialActionProps } from './SpeedDialAction'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 
