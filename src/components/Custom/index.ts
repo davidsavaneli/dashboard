@@ -167,6 +167,9 @@ export type { CardProps } from './Card'
 export { default as IconButton } from './IconButton'
 export type { IconButtonProps } from './IconButton'
 
+export { default as Fab } from './Fab'
+export type { FabProps } from './Fab'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 

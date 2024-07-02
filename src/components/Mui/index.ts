@@ -116,3 +116,6 @@ export type { LinearProgressProps as MuiLinearProgressProps } from './LinearProg
 
 export { IconButton as MuiIconButton } from './IconButton'
 export type { IconButtonProps as MuiIconButtonProps } from './IconButton'
+
+export { Fab as MuiFab } from './Fab'
+export type { FabProps as MuiFabProps } from './Fab'

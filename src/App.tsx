@@ -1,6 +1,7 @@
 import HomePage from './pages/Home'
 import ButtonPage from './pages/Button'
 import IconButtonPage from './pages/IconButton'
+import FabPage from './pages/Fab'
 import AvatarPage from './pages/Avatar'
 import ToggleButtonPage from './pages/ToggleButton'
 import CollapseCardPage from './pages/CollapseCard'
@@ -104,6 +105,11 @@ const routes: IRoutes = {
     {
       path: '/icon-button',
       element: <IconButtonPage />,
+      children: [],
+    },
+    {
+      path: '/fab',
+      element: <FabPage />,
       children: [],
     },
     {
@@ -312,6 +318,8 @@ const DrawerItems = () => (
     <RouterLink to='/button'>Button</RouterLink>
     <br />
     <RouterLink to='/icon-button'>Icon Button</RouterLink>
+    <br />
+    <RouterLink to='/fab'>Fab</RouterLink>
     <br />
     <RouterLink to='/avatar'>Avatar</RouterLink>
     <br />
