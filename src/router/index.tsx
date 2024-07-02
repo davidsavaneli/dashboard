@@ -1,17 +1,30 @@
 import React from 'react'
 import { Routes, Route, Outlet } from 'react-router-dom'
-import { IRoutes, IRouteItems } from '../types'
+
+export interface IRouteItem {
+  name: string
+  path: string
+  icon: React.ReactNode
+  element: React.ReactNode
+  children?: IRouteItem[]
+}
+
+export interface IRoutes {
+  mainPath: string
+  indexElement: React.ReactNode
+  items: IRouteItem[]
+}
 
 export interface CustomRouterProps {
   routes: IRoutes
 }
 
-const CustomRoute = (items: IRouteItems[]) =>
-  items.map((route: IRouteItems, index: number) => (
+const CustomRoute = (items: IRouteItem[]) =>
+  items.map((route: IRouteItem, index: number) => (
     <React.Fragment key={index}>
       <Route key={route.path} path={route.path} element={route.element} />
       {route?.children?.length
-        ? route?.children.map((childRoute: IRouteItems) => (
+        ? route?.children.map((childRoute: IRouteItem) => (
             <>
               <Route key={childRoute.path} path={childRoute.path} element={childRoute.element} />
               {CustomRoute(childRoute?.children || [])}
