@@ -1,5 +1,6 @@
 import HomePage from './pages/Home'
 import ButtonPage from './pages/Button'
+import IconButtonPage from './pages/IconButton'
 import AvatarPage from './pages/Avatar'
 import ToggleButtonPage from './pages/ToggleButton'
 import CollapseCardPage from './pages/CollapseCard'
@@ -19,6 +20,22 @@ import DatePickerPage from './pages/DatePicker'
 import TimePickerPage from './pages/TimePicker'
 import DateTimePickerPage from './pages/DateTimePicker'
 import ColorPickerPage from './pages/ColorPicker'
+import NumberInputPage from './pages/NumberInput'
+import ChipPage from './pages/Chip'
+import TextEditorPage from './pages/TextEditor'
+import DividerPage from './pages/Divider'
+import IconPage from './pages/Icon'
+import TitlePage from './pages/Title'
+import TextPage from './pages/Text'
+import AlertPage from './pages/Alert'
+import ToastPage from './pages/Toast'
+import LinearProgressPage from './pages/LinearProgress'
+import CircularProgressPage from './pages/CircularProgress'
+import LoaderLayoutPage from './pages/LoaderLayout'
+import MenuPage from './pages/Menu'
+import PaginationPage from './pages/Pagination'
+import TabsPage from './pages/Tabs'
+import CardPage from './pages/Card'
 
 import {
   MainLayout,
@@ -82,6 +99,11 @@ const routes: IRoutes = {
     {
       path: '/button',
       element: <ButtonPage />,
+      children: [],
+    },
+    {
+      path: '/icon-button',
+      element: <IconButtonPage />,
       children: [],
     },
     {
@@ -179,6 +201,86 @@ const routes: IRoutes = {
       element: <ColorPickerPage />,
       children: [],
     },
+    {
+      path: '/number-input',
+      element: <NumberInputPage />,
+      children: [],
+    },
+    {
+      path: '/chip',
+      element: <ChipPage />,
+      children: [],
+    },
+    {
+      path: '/text-editor',
+      element: <TextEditorPage />,
+      children: [],
+    },
+    {
+      path: '/divider',
+      element: <DividerPage />,
+      children: [],
+    },
+    {
+      path: '/icon',
+      element: <IconPage />,
+      children: [],
+    },
+    {
+      path: '/title',
+      element: <TitlePage />,
+      children: [],
+    },
+    {
+      path: '/text',
+      element: <TextPage />,
+      children: [],
+    },
+    {
+      path: '/alert',
+      element: <AlertPage />,
+      children: [],
+    },
+    {
+      path: '/toast',
+      element: <ToastPage />,
+      children: [],
+    },
+    {
+      path: '/linear-progress',
+      element: <LinearProgressPage />,
+      children: [],
+    },
+    {
+      path: '/circular-progress',
+      element: <CircularProgressPage />,
+      children: [],
+    },
+    {
+      path: '/loader-layout',
+      element: <LoaderLayoutPage />,
+      children: [],
+    },
+    {
+      path: '/menu',
+      element: <MenuPage />,
+      children: [],
+    },
+    {
+      path: '/pagination',
+      element: <PaginationPage />,
+      children: [],
+    },
+    {
+      path: '/tabs',
+      element: <TabsPage />,
+      children: [],
+    },
+    {
+      path: '/card',
+      element: <CardPage />,
+      children: [],
+    },
   ],
 }
 
@@ -208,6 +310,8 @@ const DrawerItems = () => (
     <RouterLink to='/'>Home</RouterLink>
     <br />
     <RouterLink to='/button'>Button</RouterLink>
+    <br />
+    <RouterLink to='/icon-button'>Icon Button</RouterLink>
     <br />
     <RouterLink to='/avatar'>Avatar</RouterLink>
     <br />
@@ -247,65 +351,39 @@ const DrawerItems = () => (
     <br />
     <RouterLink to='/color-picker'>Color Picker</RouterLink>
     <br />
+    <RouterLink to='/number-input'>Number Input</RouterLink>
+    <br />
+    <RouterLink to='/chip'>Chip</RouterLink>
+    <br />
+    <RouterLink to='/text-editor'>Text Editor</RouterLink>
+    <br />
+    <RouterLink to='/divider'>Divider</RouterLink>
+    <br />
+    <RouterLink to='/icon'>Icon</RouterLink>
+    <br />
+    <RouterLink to='/title'>Title</RouterLink>
+    <br />
+    <RouterLink to='/text'>Text</RouterLink>
+    <br />
+    <RouterLink to='/alert'>Alert</RouterLink>
+    <br />
+    <RouterLink to='/toast'>Toast</RouterLink>
+    <br />
+    <RouterLink to='/linear-progress'>Linear Progress</RouterLink>
+    <br />
+    <RouterLink to='/circular-progress'>Circular Progress</RouterLink>
+    <br />
+    <RouterLink to='/loader-layout'>Loader Layout</RouterLink>
+    <br />
+    <RouterLink to='/menu'>Menu</RouterLink>
+    <br />
+    <RouterLink to='/pagination'>Pagination</RouterLink>
+    <br />
+    <RouterLink to='/tabs'>Tabs</RouterLink>
+    <br />
+    <RouterLink to='/card'>Card</RouterLink>
+    <br />
     <RouterLink to='/nothing-here'>Nothing Here</RouterLink>
     <br />
   </>
 )
-
-/////////
-
-const tabs = [
-  { id: 0, label: 'Tab One', name: 'tabName1', content: <>Content of Tab One</>, defaultOpen: false },
-  { id: 1, label: 'Tab Two', name: 'tabName2', content: <>Content of Tab Two</>, defaultOpen: true },
-  { id: 2, label: 'Tab Three', name: 'tabName3', content: <>Content of Tab Three</>, defaultOpen: false },
-]
-
-const Home = () => {
-  return (
-    <div>
-      <hr />
-
-      <hr />
-      <NumberInput max={5} value={0} onValueChange={(e) => console.log(e)} />
-      <hr />
-      <Chip label='Chip' onDelete={() => console.log('Delete')} />
-      <hr />
-      <TextEditor size='small' editorId='1' value='' placeholder='Description' onChange={(e) => console.log(e)} />
-      <hr />
-      <Divider />
-      <hr />
-      <Icon name='Home' />
-      <hr />
-      <Title>Title</Title>
-      <hr />
-      <Text>Text</Text>
-      <hr />
-      <Alert severity='success'>This is an outlined success Alert.</Alert>
-      <hr />
-      <Button onClick={() => Toast.success('Success toast text ...')}>Toast</Button>
-      <hr />
-      <LoaderLayout isLoading>Content ...</LoaderLayout>
-      <hr />
-      <LinearProgress />
-      <hr />
-      <Menu
-        component={<Button>Menu</Button>}
-        items={[
-          {
-            children: <div>some element</div>,
-            onClick: () => console.log('Do not close'),
-            disableClose: true,
-          },
-          {
-            children: <div>some element</div>,
-            onClick: () => console.log('Default close on click'),
-          },
-        ]}
-      />
-      <hr />
-      <Pagination count={10} />
-      <hr />
-      <Tabs tabs={tabs} onChange={(e, newValue: number) => console.log(newValue)} />
-    </div>
-  )
-}
