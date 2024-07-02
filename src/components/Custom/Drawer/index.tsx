@@ -1,49 +1,62 @@
-import React, { ReactNode, useState } from 'react';
-import clsx from 'clsx';
-import { IRoutes, IRouteItem } from '../../../router';
-import RouterLink from '../RouterLink';
-import { Collapse } from '../../Mui/Collapse';
-import styles from './styles.module.css';
+import React, { ReactNode, useState, useEffect } from 'react'
+import clsx from 'clsx'
+import { IRoutes, IRouteItem } from '../../../router'
+import RouterLink from '../RouterLink'
+import { Collapse } from '../../Mui/Collapse'
+import styles from './styles.module.css'
 
 export type DrawerProps = {
-  sss?: boolean;
-  routes: IRoutes;
-};
+  routes: IRoutes
+  openFirstLevel?: boolean
+}
 
-const Drawer = ({ sss = true, routes }: DrawerProps) => {
+const Drawer = ({ routes, openFirstLevel = true }: DrawerProps) => {
   return (
     <div className={styles.drawer}>
-      <div className={styles.header}><div className={styles.headerInner}></div></div>
-      <div className={styles.drawerItems}>{renderLinks(routes.items, routes)}</div>
+      <div className={styles.header}>
+        <div className={styles.headerInner}></div>
+      </div>
+      <div className={styles.drawerItems}>{renderLinks(routes.items, routes, 0, openFirstLevel)}</div>
     </div>
-  );
-};
+  )
+}
 
-export default Drawer;
+export default Drawer
 
-const getDefaultOpenState = (routes: IRoutes, pathPrefix: string = ''): { [key: string]: boolean } => {
-  const openState: { [key: string]: boolean } = {};
-  const traverse = (items: IRouteItem[], prefix: string) => {
+const getDefaultOpenState = (
+  routes: IRoutes,
+  pathPrefix: string = '',
+  openFirstLevel: boolean,
+): { [key: string]: boolean } => {
+  const openState: { [key: string]: boolean } = {}
+  const traverse = (items: IRouteItem[], prefix: string, depth: number) => {
     items.forEach((item) => {
-      const fullPath = `${prefix}${item.path}`;
+      const fullPath = `${prefix}${item.path}`
       if (item.children && item.children.length > 0) {
-        openState[fullPath] = item.children.some((child) => window.location.pathname.startsWith(child.path));
-        traverse(item.children, '');
+        openState[fullPath] =
+          openFirstLevel && depth === 0
+            ? true
+            : item.children.some((child) => window.location.pathname.startsWith(child.path))
+        traverse(item.children, '', depth + 1)
       }
-    });
-  };
-  traverse(routes.items, pathPrefix);
-  return openState;
-};
+    })
+  }
+  traverse(routes.items, pathPrefix, 0)
+  return openState
+}
 
-const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0) => {
-  const [open, setOpen] = useState<{ [key: string]: boolean }>(() => getDefaultOpenState(routes));
+const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, openFirstLevel: boolean) => {
+  const [open, setOpen] = useState<{ [key: string]: boolean }>(() => getDefaultOpenState(routes, '', openFirstLevel))
+
+  useEffect(() => {
+    setOpen(getDefaultOpenState(routes, '', openFirstLevel))
+  }, [routes, openFirstLevel])
 
   const handleClick = (path: string) => {
-    setOpen((prev) => ({ ...prev, [path]: !prev[path] }));
-  };
+    setOpen((prev) => ({ ...prev, [path]: !prev[path] }))
+  }
 
-  return items.map((item, index) => (
+  return items.map((item) => (
     <React.Fragment key={item.path}>
       <div
         className={clsx({
@@ -59,17 +72,26 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0) =>
         {item.element === '' ? (
           <>
             {item.name}
-            {open[item.path] ? <>Less</> : <>More</>}
+            {item.children && item.children.length > 0 && (!openFirstLevel || depth > 0) && (
+              <>&nbsp;&nbsp;&nbsp;{open[item.path] ? '-' : '+'}</>
+            )}
           </>
         ) : (
-          <RouterLink to={item.path}>{item.name}</RouterLink>
+          <>
+            <RouterLink to={item.path}>{item.name}</RouterLink>
+            {item.children && item.children.length > 0 && <>&nbsp;&nbsp;&nbsp;{open[item.path] ? '-' : '+'}</>}
+          </>
         )}
       </div>
-      {item.children && item.children.length > 0 && (
-        <Collapse in={open[item.path]}>
-          <div>{renderLinks(item.children, routes, depth + 1)}</div>
-        </Collapse>
-      )}
+      {item.children &&
+        item.children.length > 0 &&
+        (openFirstLevel && depth === 0 ? (
+          <div>{renderLinks(item.children, routes, depth + 1, openFirstLevel)}</div>
+        ) : (
+          <Collapse in={open[item.path]}>
+            <div>{renderLinks(item.children, routes, depth + 1, openFirstLevel)}</div>
+          </Collapse>
+        ))}
     </React.Fragment>
-  ));
-};
+  ))
+}

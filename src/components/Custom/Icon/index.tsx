@@ -16,7 +16,7 @@ export interface IconProps extends IconsaxIconProps {
   name: IconName
 }
 
-const Icon = ({ name, size = 24, color = '#000', variant = 'Linear', ...props }: IconProps) => {
+const Icon = ({ name, size = 20, color = '#000', variant = 'Linear', ...props }: IconProps) => {
   const IconComponent = Icons[name]
 
   return IconComponent ? <IconComponent size={size} color={color} variant={variant} {...props} /> : null

@@ -2,9 +2,9 @@ import HomePage from './pages/Home'
 import ButtonPage from './pages/Button'
 import IconButtonPage from './pages/IconButton'
 import FabPage from './pages/Fab'
+import ToggleButtonPage from './pages/ToggleButton'
 import SpeedDialPage from './pages/SpeedDial'
 import AvatarPage from './pages/Avatar'
-import ToggleButtonPage from './pages/ToggleButton'
 import CollapseCardPage from './pages/CollapseCard'
 import NoDataPage from './pages/NoData'
 import RouterLinkPage from './pages/RouterLink'
@@ -71,29 +71,42 @@ export const routes: IRoutes = {
               path: '/components/forms/text-field',
               icon: '',
               element: <TextFieldPage />,
-              children: [
-                {
-                  name: 'tdfdf',
-                  path: '/components/forms/text-field/dsfdf',
-                  icon: '',
-                  element: <>Text Field Inner</>,
-                  children: [],
-                },
-              ],
+              children: [],
             },
           ],
         },
         {
-          name: 'navigation',
-          path: '/components/navigation',
+          name: 'data display',
+          path: '/components/data-display',
           icon: <Icon name='Trash' />,
           element: '',
           children: [
             {
-              name: 'pagination',
-              path: '/components/navigation/pagination',
+              name: 'icon',
+              path: '/components/data-display/icon',
               icon: '',
-              element: <PaginationPage />,
+              element: <IconPage />,
+              children: [],
+            },
+            {
+              name: 'icon button',
+              path: '/components/data-display/icon-button',
+              icon: '',
+              element: <IconButtonPage />,
+              children: [],
+            },
+            {
+              name: 'title',
+              path: '/components/data-display/title',
+              icon: '',
+              element: <TitlePage />,
+              children: [],
+            },
+            {
+              name: 'text',
+              path: '/components/data-display/text',
+              icon: '',
+              element: <TextPage />,
               children: [],
             },
           ],
@@ -111,12 +124,30 @@ export const routes: IRoutes = {
           path: '/hooks/use-media-query',
           icon: <Icon name='HambergerMenu' />,
           element: <>useMediaQuery Page</>,
+          children: [
+            {
+              name: 'useMediaQuery inner',
+              path: '/hooks/use-media-query/inner',
+              icon: '',
+              element: <>useMediaQuery Page inner</>,
+              children: [
+                {
+                  name: 'useMediaQuery inner 2',
+                  path: '/hooks/use-media-query/inner/inner',
+                  icon: '',
+                  element: <>useMediaQuery Page inner 2</>,
+                  children: [],
+                },
+              ],
+            },
+          ],
         },
         {
           name: 'useLocalStorage',
           path: '/hooks/use-local-storage',
           icon: <Icon name='TickSquare' />,
           element: <>useLocalStorage Page</>,
+          children: [],
         },
       ],
     },
