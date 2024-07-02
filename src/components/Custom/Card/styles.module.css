@@ -26,7 +26,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-top: 1px solid var(--tzy-color-line-secondary);
+  border-top: 1px dashed var(--tzy-color-line-secondary);
   padding: var(--tzy-padding-sm) var(--tzy-padding-md);
   min-height: 70px;
   gap: var(--tzy-padding-sm);

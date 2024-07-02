@@ -1,4 +1,6 @@
 import { ReactNode } from 'react'
+import LocalizationProvider from '../LocalizationProvider'
+import ToastContainer from '../ToastContainer'
 import styles from './styles.module.css'
 
 export type MainLayoutProps = {
@@ -9,13 +11,18 @@ export type MainLayoutProps = {
 
 const MainLayout = ({ children, header, drawer }: MainLayoutProps) => {
   return (
-    <div className={styles.container}>
-      {drawer}
-      <div className={styles.wrapper}>
-        {header}
-        <main className={styles.main}>{children}</main>
-      </div>
-    </div>
+    <>
+      <LocalizationProvider>
+        <div className={styles.container}>
+          {drawer}
+          <div className={styles.wrapper}>
+            {header}
+            <main className={styles.main}>{children}</main>
+          </div>
+        </div>
+      </LocalizationProvider>
+      <ToastContainer />
+    </>
   )
 }
 

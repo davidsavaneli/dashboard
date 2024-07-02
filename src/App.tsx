@@ -1,4 +1,24 @@
-import React, { useState } from 'react'
+import HomePage from './pages/Home'
+import ButtonPage from './pages/Button'
+import AvatarPage from './pages/Avatar'
+import ToggleButtonPage from './pages/ToggleButton'
+import CollapseCardPage from './pages/CollapseCard'
+import NoDataPage from './pages/NoData'
+import RouterLinkPage from './pages/RouterLink'
+import LinkPage from './pages/Link'
+import BadgePage from './pages/Badge'
+import TooltipPage from './pages/Tooltip'
+import BreadcrumbsPage from './pages/Breadcrumbs'
+import CheckboxPage from './pages/Checkbox'
+import RadioPage from './pages/Radio'
+import SwitchPage from './pages/Switch'
+import TextFieldPage from './pages/TextField'
+import SelectPage from './pages/Select'
+import AutocompletePage from './pages/Autocomplete'
+import DatePickerPage from './pages/DatePicker'
+import TimePickerPage from './pages/TimePicker'
+import DateTimePickerPage from './pages/DateTimePicker'
+import ColorPickerPage from './pages/ColorPicker'
 
 import {
   MainLayout,
@@ -46,22 +66,193 @@ import {
   IconButton,
   NoData,
   CollapseCard,
-  ToastContainer,
 } from './components'
 import { IRoutes } from './types'
 import CustomRouter from './router'
 
-const selectOptions = [
-  { value: 'option1', label: 'Option 1' },
-  { value: 'option2', label: 'Option 2' },
-  { value: 'option3', label: 'Option 3' },
-]
+const routes: IRoutes = {
+  mainPath: '/',
+  indexElement: <HomePage />,
+  items: [
+    {
+      path: '/home',
+      element: <HomePage />,
+      children: [],
+    },
+    {
+      path: '/button',
+      element: <ButtonPage />,
+      children: [],
+    },
+    {
+      path: '/avatar',
+      element: <AvatarPage />,
+      children: [],
+    },
+    {
+      path: '/toggle-button',
+      element: <ToggleButtonPage />,
+      children: [],
+    },
+    {
+      path: '/collapse-card',
+      element: <CollapseCardPage />,
+      children: [],
+    },
+    {
+      path: '/no-data',
+      element: <NoDataPage />,
+      children: [],
+    },
+    {
+      path: '/router-link',
+      element: <RouterLinkPage />,
+      children: [],
+    },
+    {
+      path: '/link',
+      element: <LinkPage />,
+      children: [],
+    },
+    {
+      path: '/badge',
+      element: <BadgePage />,
+      children: [],
+    },
+    {
+      path: '/tooltip',
+      element: <TooltipPage />,
+      children: [],
+    },
+    {
+      path: '/breadcrumbs',
+      element: <BreadcrumbsPage />,
+      children: [],
+    },
+    {
+      path: '/checkbox',
+      element: <CheckboxPage />,
+      children: [],
+    },
+    {
+      path: '/radio',
+      element: <RadioPage />,
+      children: [],
+    },
+    {
+      path: '/switch',
+      element: <SwitchPage />,
+      children: [],
+    },
+    {
+      path: '/text-field',
+      element: <TextFieldPage />,
+      children: [],
+    },
+    {
+      path: '/select',
+      element: <SelectPage />,
+      children: [],
+    },
+    {
+      path: '/autocomplete',
+      element: <AutocompletePage />,
+      children: [],
+    },
+    {
+      path: '/date-picker',
+      element: <DatePickerPage />,
+      children: [],
+    },
+    {
+      path: '/time-picker',
+      element: <TimePickerPage />,
+      children: [],
+    },
+    {
+      path: '/date-time-picker',
+      element: <DateTimePickerPage />,
+      children: [],
+    },
+    {
+      path: '/color-picker',
+      element: <ColorPickerPage />,
+      children: [],
+    },
+  ],
+}
 
-const autocompleteOptions = [
-  { value: 'option1', label: 'Option 1' },
-  { value: 'option2', label: 'Option 2' },
-  { value: 'option3', label: 'Option 3' },
-]
+const App = () => {
+  return (
+    <div>
+      <MainLayout
+        drawer={
+          <Drawer>
+            <DrawerItems />
+          </Drawer>
+        }
+        header={<Header />}
+      >
+        <CustomRouter routes={routes} />
+      </MainLayout>
+      <br />
+      <br />
+    </div>
+  )
+}
+
+export default App
+
+const DrawerItems = () => (
+  <>
+    <RouterLink to='/'>Home</RouterLink>
+    <br />
+    <RouterLink to='/button'>Button</RouterLink>
+    <br />
+    <RouterLink to='/avatar'>Avatar</RouterLink>
+    <br />
+    <RouterLink to='/toggle-button'>Toggle Button</RouterLink>
+    <br />
+    <RouterLink to='/collapse-card'>Collapse Card</RouterLink>
+    <br />
+    <RouterLink to='/no-data'>No Data</RouterLink>
+    <br />
+    <RouterLink to='/router-link'>Router Link</RouterLink>
+    <br />
+    <RouterLink to='/link'>Link</RouterLink>
+    <br />
+    <RouterLink to='/badge'>Badge</RouterLink>
+    <br />
+    <RouterLink to='/tooltip'>Tooltip</RouterLink>
+    <br />
+    <RouterLink to='/breadcrumbs'>Breadcrumbs</RouterLink>
+    <br />
+    <RouterLink to='/checkbox'>Checkbox</RouterLink>
+    <br />
+    <RouterLink to='/radio'>Radio</RouterLink>
+    <br />
+    <RouterLink to='/switch'>Switch</RouterLink>
+    <br />
+    <RouterLink to='/text-field'>Text Field</RouterLink>
+    <br />
+    <RouterLink to='/select'>Select</RouterLink>
+    <br />
+    <RouterLink to='/autocomplete'>Autocomplete</RouterLink>
+    <br />
+    <RouterLink to='/date-picker'>Date Picker</RouterLink>
+    <br />
+    <RouterLink to='/time-picker'>Time Picker</RouterLink>
+    <br />
+    <RouterLink to='/date-time-picker'>Date Time Picker</RouterLink>
+    <br />
+    <RouterLink to='/color-picker'>Color Picker</RouterLink>
+    <br />
+    <RouterLink to='/nothing-here'>Nothing Here</RouterLink>
+    <br />
+  </>
+)
+
+/////////
 
 const tabs = [
   { id: 0, label: 'Tab One', name: 'tabName1', content: <>Content of Tab One</>, defaultOpen: false },
@@ -69,153 +260,11 @@ const tabs = [
   { id: 2, label: 'Tab Three', name: 'tabName3', content: <>Content of Tab Three</>, defaultOpen: false },
 ]
 
-function App() {
-  return (
-    <div>
-      <MainLayout drawer={<Drawer />} header={<Header />}>
-        <ContentLayout label='Home Page'>
-          <div className='row'>
-            <div className='col-6'>
-              <Card
-                title='Card Layout Title'
-                headerActions={
-                  <IconButton onClick={() => console.log('More')}>
-                    <Icon name='More' />
-                  </IconButton>
-                }
-                footerActions={
-                  <>
-                    <Button variant='text'>Cancel</Button>
-                    <Button>Button</Button>
-                  </>
-                }
-              >
-              <RouterLink to='/'>Home</RouterLink>&nbsp;&nbsp;
-              <RouterLink to='/about'>About</RouterLink>&nbsp;&nbsp;
-              <RouterLink to='/products'>Products</RouterLink>&nbsp;&nbsp;
-              <RouterLink to='/products/product-inner'>Product Inner</RouterLink>&nbsp;&nbsp;
-              <RouterLink to='/products/product-inner/product-inner-inner'>Product Inner Inner</RouterLink>&nbsp;&nbsp;
-              <RouterLink to='/nothing-here'>Nothing Here</RouterLink>
-              </Card>
-            </div>
-            <div className='col-6'>
-              <Card>2</Card>
-            </div>
-          </div>
-          <Card>3</Card>
-          <Card>4</Card>
-        </ContentLayout>
-      </MainLayout>
-      <br />
-      <br />
-      <CustomRouter routes={routes} />
-    </div>
-  )
-}
-
 const Home = () => {
   return (
     <div>
-      <ToastContainer />
-      <Avatar src='https://picsum.photos/200/200'></Avatar>
       <hr />
-      <ToggleButtonGroup value='left' orientation='vertical'>
-        <ToggleButton value='left' aria-label='left aligned'>
-          <Icon name='Home' />
-        </ToggleButton>
-        <ToggleButton value='center' aria-label='centered'>
-          <Icon name='Home' />
-        </ToggleButton>
-        <ToggleButton value='right' aria-label='right aligned'>
-          <Icon name='Home' />
-        </ToggleButton>
-      </ToggleButtonGroup>
-      <hr />
-      <ToggleButton value='check' selected>
-        <Icon name='Home' />
-      </ToggleButton>
-      <hr />
-      <CollapseCard title='Collapse Card Title'>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas temporibus autem laborum. Unde rem dolore est
-        mollitia pariatur ullam adipisci velit corporis vitae itaque animi quaerat.
-      </CollapseCard>
-      <hr />
-      <NoData text='Results Not Found' />
-      <hr />
-      <RouterLink to='/products/product-inner'>RouterLink</RouterLink>
-      <hr />
-      <Link href='/products/product-inner'>Link</Link>
-      <hr />
-      <Badge color='secondary' badgeContent={2}>
-        <Button>Badge</Button>
-      </Badge>
-      <hr />
-      <Tooltip title='Tooltip Title'>
-        <Button>Tooltip</Button>
-      </Tooltip>
-      <hr />
-      <Breadcrumbs
-        breadcrumbs={[
-          {
-            label: 'Home',
-            to: '/',
-          },
-          {
-            label: 'List Page',
-            to: '/list-page',
-          },
-          {
-            label: 'Inner Page',
-            to: '',
-          },
-        ]}
-      />
-      <hr />
-      <Button variant='outlined'>Button</Button>
-      <hr />
-      <Checkbox label='Checkbox' />
-      <hr />
-      <FormLabel>Checkbox Group</FormLabel>
-      <FormGroup>
-        <Checkbox label='Checkbox' />
-        <Checkbox label='Checkbox' />
-      </FormGroup>
-      <hr />
-      <FormLabel>Checkbox Group</FormLabel>
-      <FormGroup row>
-        <Checkbox label='Checkbox' />
-        <Checkbox label='Checkbox' />
-      </FormGroup>
-      <hr />
-      <FormLabel>Radio Group</FormLabel>
-      <RadioGroup>
-        <Radio label='Radio' value='male' />
-        <Radio label='Radio' value='female' />
-      </RadioGroup>
-      <hr />
-      <FormLabel>Radio Group</FormLabel>
-      <RadioGroup row>
-        <Radio label='Radio' value='male' />
-        <Radio label='Radio' value='female' />
-      </RadioGroup>
-      <hr />
-      <Switch label='Switch' />
-      <hr />
-      <TextField label='Text Field' />
-      <hr />
-      <Select label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} multiple />
-      <hr />
-      <Autocomplete multiple options={autocompleteOptions} label='Autocomplete' onChange={(e) => console.log(e)} />
-      <LocalizationProvider>
-        <hr />
-        <DatePicker label='Date Picker' />
-        <hr />
-        <TimePicker label='Time Picker' />
-        <hr />
-        <DateTimePicker label='Date Time Picker' />
-        <hr />
-      </LocalizationProvider>
-      <ColorPicker label='Color Picker' onChange={(e) => console.log(e)} />
+
       <hr />
       <NumberInput max={5} value={0} onValueChange={(e) => console.log(e)} />
       <hr />
@@ -259,40 +308,4 @@ const Home = () => {
       <Tabs tabs={tabs} onChange={(e, newValue: number) => console.log(newValue)} />
     </div>
   )
-}
-
-export default App
-
-const routes: IRoutes = {
-  mainPath: '/',
-  indexElement: <Home />,
-  items: [
-    {
-      path: '/home',
-      element: <Home />,
-      children: [],
-    },
-    {
-      path: '/about',
-      element: <>About Element</>,
-      children: [],
-    },
-    {
-      path: '/products',
-      element: <>Products Element</>,
-      children: [
-        {
-          path: '/products/product-inner',
-          element: <>Product Inner Element</>,
-          children: [
-            {
-              path: '/products/product-inner/product-inner-inner',
-              element: <>Product Inner Inner Element</>,
-              children: [],
-            },
-          ],
-        },
-      ],
-    },
-  ],
 }
