@@ -164,6 +164,9 @@ export type { ContentLayoutProps } from './ContentLayout'
 export { default as Card } from './Card'
 export type { CardProps } from './Card'
 
+export { default as IconButton } from './IconButton'
+export type { IconButtonProps } from './IconButton'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 

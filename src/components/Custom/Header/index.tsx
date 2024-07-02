@@ -1,3 +1,4 @@
+import IconButton from '../IconButton'
 import Icon from '../Icon'
 import Avatar from '../Avatar'
 import styles from './styles.module.css'
@@ -9,7 +10,11 @@ export type HeaderProps = {
 const Header = ({ label }: HeaderProps) => {
   return (
     <header className={styles.header}>
-      <div><Icon name='HambergerMenu' /></div>
+      <div>
+        <IconButton>
+          <Icon name='HambergerMenu' />
+        </IconButton>
+      </div>
       <div>
         <Avatar src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png'></Avatar>
       </div>

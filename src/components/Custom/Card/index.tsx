@@ -2,15 +2,23 @@ import { ReactNode } from 'react'
 import styles from './styles.module.css'
 
 export type CardProps = {
-  label?: string
-  children?: ReactNode
+  title?: string
+  headerActions?: ReactNode
+  footerActions?: ReactNode
+  children: ReactNode
 }
 
-const Card = ({ label, children }: CardProps) => {
+const Card = ({ title, headerActions, footerActions, children }: CardProps) => {
   return (
     <div className={styles.card}>
-      {label && <h1>{label}</h1>}
-      {children}
+      {(title || headerActions) && (
+        <div className={styles.header}>
+          <div>{title && <h4>{title}</h4>}</div>
+          {headerActions && <div className={styles.headerActions}>{headerActions}</div>}
+        </div>
+      )}
+      <div className={styles.content}>{children}</div>
+      {footerActions && <div className={styles.footerActions}>{footerActions}</div>}
     </div>
   )
 }

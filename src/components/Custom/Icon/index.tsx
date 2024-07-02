@@ -1,10 +1,11 @@
 import { IconProps as IconsaxIconProps } from 'iconsax-react'
-import { Home, Home2, HambergerMenu, Trash, TickSquare } from 'iconsax-react'
+import { Home, Home2, HambergerMenu, More, Trash, TickSquare } from 'iconsax-react'
 
 const Icons = {
   Home,
   Home2,
   HambergerMenu,
+  More,
   Trash,
   TickSquare,
 }

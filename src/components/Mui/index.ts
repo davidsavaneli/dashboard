@@ -113,3 +113,6 @@ export type { CircularProgressProps as MuiCircularProgressProps } from './Circul
 
 export { LinearProgress as MuiLinearProgress } from './LinearProgress'
 export type { LinearProgressProps as MuiLinearProgressProps } from './LinearProgress'
+
+export { IconButton as MuiIconButton } from './IconButton'
+export type { IconButtonProps as MuiIconButtonProps } from './IconButton'

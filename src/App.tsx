@@ -43,6 +43,7 @@ import {
   Avatar,
   ToggleButtonGroup,
   ToggleButton,
+  IconButton,
   NoData,
   CollapseCard,
   ToastContainer,
@@ -72,30 +73,30 @@ function App() {
   return (
     <div>
       <MainLayout drawer={<Drawer />} header={<Header />}>
-        <ContentLayout
-          label='Home Page'
-          breadcrumbs={
-            <Breadcrumbs
-              breadcrumbs={[
-                {
-                  label: 'Home',
-                  to: '/',
-                },
-                {
-                  label: 'List Page',
-                  to: '/list-page',
-                },
-                {
-                  label: 'Inner Page',
-                  to: '',
-                },
-              ]}
-            />
-          }
-        >
+        <ContentLayout label='Home Page'>
           <div className='row'>
             <div className='col-6'>
-              <Card>1</Card>
+              <Card
+                title='Card Layout Title'
+                headerActions={
+                  <IconButton onClick={() => console.log('More')}>
+                    <Icon name='More' />
+                  </IconButton>
+                }
+                footerActions={
+                  <>
+                    <Button variant='text'>Cancel</Button>
+                    <Button>Button</Button>
+                  </>
+                }
+              >
+              <RouterLink to='/'>Home</RouterLink>&nbsp;&nbsp;
+              <RouterLink to='/about'>About</RouterLink>&nbsp;&nbsp;
+              <RouterLink to='/products'>Products</RouterLink>&nbsp;&nbsp;
+              <RouterLink to='/products/product-inner'>Product Inner</RouterLink>&nbsp;&nbsp;
+              <RouterLink to='/products/product-inner/product-inner-inner'>Product Inner Inner</RouterLink>&nbsp;&nbsp;
+              <RouterLink to='/nothing-here'>Nothing Here</RouterLink>
+              </Card>
             </div>
             <div className='col-6'>
               <Card>2</Card>
@@ -105,15 +106,9 @@ function App() {
           <Card>4</Card>
         </ContentLayout>
       </MainLayout>
-      {/* <RouterLink to='/'>Home</RouterLink>&nbsp;&nbsp;
-      <RouterLink to='/about'>About</RouterLink>&nbsp;&nbsp;
-      <RouterLink to='/products'>Products</RouterLink>&nbsp;&nbsp;
-      <RouterLink to='/products/product-inner'>Product Inner</RouterLink>&nbsp;&nbsp;
-      <RouterLink to='/products/product-inner/product-inner-inner'>Product Inner Inner</RouterLink>&nbsp;&nbsp;
-      <RouterLink to='/nothing-here'>Nothing Here</RouterLink>
       <br />
       <br />
-      <CustomRouter routes={routes} /> */}
+      <CustomRouter routes={routes} />
     </div>
   )
 }
