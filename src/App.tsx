@@ -1,9 +1,13 @@
-import { MainLayout, Drawer, Header } from './components'
+import { MainLayout, Drawer, Header, Breadcrumbs } from './components'
 import CustomRouter from './router'
 import { routes } from './routes'
 
 const App = () => (
-  <MainLayout drawer={<Drawer routes={routes}></Drawer>} header={<Header />}>
+  <MainLayout
+    drawer={<Drawer routes={routes}></Drawer>}
+    header={<Header />}
+    breadcrumbs={<Breadcrumbs routes={routes} />}
+  >
     <CustomRouter routes={routes} />
   </MainLayout>
 )

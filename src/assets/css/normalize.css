@@ -348,5 +348,5 @@ h6 * {
 }
 
 .MuiTouchRipple-root {
-  display: none !important;
+  /* display: none !important; */
 }

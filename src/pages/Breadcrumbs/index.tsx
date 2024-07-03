@@ -4,7 +4,8 @@ const BreadcrumbsPage = () => {
   return (
     <ContentLayout label='Breadcrumbs Page'>
       <Card title='Breadcrumbs'>
-        <Breadcrumbs
+        Breadcrumbs
+        {/* <Breadcrumbs
           breadcrumbs={[
             {
               label: 'Home',
@@ -19,7 +20,7 @@ const BreadcrumbsPage = () => {
               to: '/components/breadcrumbs',
             },
           ]}
-        />
+        /> */}
       </Card>
     </ContentLayout>
   )
