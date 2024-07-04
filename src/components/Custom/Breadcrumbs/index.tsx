@@ -17,7 +17,7 @@ export interface BreadcrumbsProps extends MuiBreadcrumbsProps {
 
 const findRouteByPath = (routes: IRoutes, path: string): IBreadcrumbs[] => {
   const pathSegments = path.split('/').filter((segment) => segment)
-  const breadcrumbs: IBreadcrumbs[] = [{ label: 'Home', to: '/', element: true }]
+  const breadcrumbs: IBreadcrumbs[] = [{ label: 'Dashboard', to: '/', element: true }]
 
   if (path === '/') return breadcrumbs
 

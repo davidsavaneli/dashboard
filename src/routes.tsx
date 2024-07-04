@@ -43,8 +43,15 @@ import { IRoutes } from './router'
 
 export const routes: IRoutes = {
   mainPath: '/',
-  indexElement: <div>HomePagedsf</div>,
+  indexElement: <>Dashboard</>,
   items: [
+    {
+      name: 'Dashboard',
+      path: '/',
+      iconName: 'Home',
+      element: <>Dashboard</>,
+      children: [],
+    },
     {
       name: 'Components',
       path: '/components',
