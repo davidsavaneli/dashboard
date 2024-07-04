@@ -31,7 +31,7 @@ body {
   touch-action: manipulation;
   color: var(--tzy-color-text-primary);
   background-color: var(--tzy-color-body-bg);
-  font-size: var(--tzy-font-size-sm) !important;
-  font-weight: var(--tzy-font-weight-normal) !important;
+  font-size: var(--tzy-font-size-text-sm) !important;
+  font-weight: var(--tzy-font-weight-light) !important;
   font-family: var(--tzy-font-family) !important;
 }

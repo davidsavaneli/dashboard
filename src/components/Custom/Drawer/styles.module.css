@@ -25,28 +25,43 @@
 }
 
 .drawerItems {
-  padding: 20px 10px;
+  padding: var(--tzy-padding-sm) 0;
 }
 
 .drawerItem {
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  padding: var(--tzy-padding-xs) var(--tzy-padding-sm);
+  margin-right: var(--tzy-margin-sm);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: var(--tzy-border-radius-sm);
+}
+
+.drawerItemWithIcon {
+  color: white
 }
 
 .drawerItemFirstLevel {
   background-color: red;
+  margin-left: var(--tzy-margin-sm);
 }
 
 .drawerItemSecondLevel {
   background-color: green;
-  margin-left: 20px;
+  margin-left: var(--tzy-margin-md);
 }
 
 .drawerItemThirdLevel {
   background-color: yellow;
-  margin-left: 40px;
+  margin-left: var(--tzy-margin-lg);
 }
 
 .drawerItemFourthLevel {
   background-color: blue;
-  margin-left: 60px;
+  margin-left: var(--tzy-margin-xl);
+}
+
+.icon {
+  margin-right: var(--tzy-margin-sm);
 }

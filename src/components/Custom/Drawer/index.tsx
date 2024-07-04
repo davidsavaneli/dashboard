@@ -66,10 +66,15 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
           [styles.drawerItemSecondLevel]: depth === 1,
           [styles.drawerItemThirdLevel]: depth === 2,
           [styles.drawerItemFourthLevel]: depth === 3,
+          [styles.drawerItemWithIcon]: item.iconName,
         })}
         onClick={() => handleClick(item.path)}
       >
-        {item.iconName && <Icon name={item.iconName} />}
+        {item.iconName && (
+          <div className={styles.icon}>
+            <Icon name={item.iconName} />
+          </div>
+        )}
         {item.element === '' ? (
           <>
             {item.name}

@@ -1,0 +1,75 @@
+.titleBox {
+  position: relative;
+}
+
+.titleBox h1 {
+  font-size: var(--tzy-font-size-title-xxl);
+}
+
+.titleBox h2 {
+  font-size: var(--tzy-font-size-title-xl);
+}
+
+.titleBox h3 {
+  font-size: var(--tzy-font-size-title-lg);
+}
+
+.titleBox h4 {
+  font-size: var(--tzy-font-size-title-md);
+}
+
+.titleBox h5 {
+  font-size: var(--tzy-font-size-title-sm);
+}
+
+.titleBox h6 {
+  font-size: var(--tzy-font-size-title-xs);
+}
+
+.titleBox.colorPrimary > * {
+  color: var(--tzy-color-primary);
+}
+
+.titleBox.colorSecondary > * {
+  color: var(--tzy-color-secondary);
+}
+
+.titleBox.colorDark > * {
+  color: var(--tzy-color-dark);
+}
+
+.titleBox.colorMedium > * {
+  color: var(--tzy-color-medium);
+}
+
+.titleBox.colorLight > * {
+  color: var(--tzy-color-light);
+}
+
+.titleBox.colorSuccess > * {
+  color: var(--tzy-color-success);
+}
+
+.titleBox.colorError > * {
+  color: var(--tzy-color-error);
+}
+
+.titleBox.colorInfo > * {
+  color: var(--tzy-color-info);
+}
+
+.titleBox.colorWarning > * {
+  color: var(--tzy-color-warning);
+}
+
+.titleBox.weightLight > * {
+  font-weight: var(--tzy-font-weight-light);
+}
+
+.titleBox.weightMedium > * {
+  font-weight: var(--tzy-font-weight-medium);
+}
+
+.titleBox.weightBold > * {
+  font-weight: var(--tzy-font-weight-bold);
+}
