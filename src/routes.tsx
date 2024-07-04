@@ -41,71 +41,69 @@ import CardPage from './pages/Card'
 
 import { IRoutes } from './router'
 
-import { Icon } from './components'
-
 export const routes: IRoutes = {
   mainPath: '/',
-  indexElement: <div>HomePage</div>,
+  indexElement: <div>HomePagedsf</div>,
   items: [
     {
-      name: 'components',
+      name: 'Components',
       path: '/components',
-      icon: '',
+      iconName: '',
       element: '',
       children: [
         {
-          name: 'forms',
+          name: 'Forms',
           path: '/components/forms',
-          icon: <Icon name='Home' />,
+          iconName: 'Home',
           element: '',
           children: [
             {
-              name: 'button',
+              name: 'Button',
               path: '/components/forms/button',
-              icon: '',
+              iconName: '',
               element: <ButtonPage />,
               children: [],
             },
             {
-              name: 'text field',
+              name: 'Text Field',
               path: '/components/forms/text-field',
-              icon: '',
+              iconName: '',
               element: <TextFieldPage />,
               children: [],
             },
           ],
         },
         {
-          name: 'data display',
+          name: 'Data Display',
           path: '/components/data-display',
-          icon: <Icon name='Trash' />,
+          iconName: 'Trash',
           element: '',
           children: [
             {
-              name: 'icon',
+              name: 'Icon',
               path: '/components/data-display/icon',
-              icon: '',
+              iconName: '',
               element: <IconPage />,
               children: [],
             },
             {
-              name: 'icon button',
+              name: 'Icon Button',
               path: '/components/data-display/icon-button',
-              icon: '',
+              iconName: '',
               element: <IconButtonPage />,
               children: [],
             },
             {
-              name: 'title',
+              name: 'Title',
               path: '/components/data-display/title',
-              icon: '',
+              iconName: '',
               element: <TitlePage />,
               children: [],
             },
             {
-              name: 'text',
+              name: 'Text',
               path: '/components/data-display/text',
-              icon: '',
+              iconName: '',
               element: <TextPage />,
               children: [],
             },
@@ -116,25 +114,25 @@ export const routes: IRoutes = {
     {
       name: 'hooks',
       path: '/hooks',
-      icon: '',
+      iconName: '',
       element: '',
       children: [
         {
           name: 'useMediaQuery',
           path: '/hooks/use-media-query',
-          icon: <Icon name='HambergerMenu' />,
+          iconName: 'HambergerMenu',
           element: <>useMediaQuery Page</>,
           children: [
             {
               name: 'useMediaQuery inner',
               path: '/hooks/use-media-query/inner',
-              icon: '',
+              iconName: '',
               element: <>useMediaQuery Page inner</>,
               children: [
                 {
                   name: 'useMediaQuery inner 2',
                   path: '/hooks/use-media-query/inner/inner',
-                  icon: '',
+                  iconName: '',
                   element: <>useMediaQuery Page inner 2</>,
                   children: [],
                 },
@@ -145,7 +143,7 @@ export const routes: IRoutes = {
         {
           name: 'useLocalStorage',
           path: '/hooks/use-local-storage',
-          icon: <Icon name='TickSquare' />,
+          iconName: 'TickSquare',
           element: <>useLocalStorage Page</>,
           children: [],
         },

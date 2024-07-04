@@ -1,11 +1,12 @@
-import React from 'react'
-import { Routes, Route, Outlet } from 'react-router-dom'
+import React, { useEffect, ReactNode } from 'react'
+import { Routes, Route, Outlet, useNavigate } from 'react-router-dom'
+import { IconName } from '../components'
 
 export interface IRouteItem {
   name: string
   path: string
-  icon: React.ReactNode
-  element: React.ReactNode
+  iconName: IconName | ''
+  element: ReactNode
   children?: IRouteItem[]
 }
 
@@ -40,10 +41,26 @@ const CustomRouter = ({ routes }: CustomRouterProps) => {
       <Route key={routes.mainPath} path={routes.mainPath} element={<Outlet />}>
         <Route index element={routes.indexElement} />
         {CustomRoute(routes.items)}
-        <Route path='*' element={<>No Match</>} />
+        <Route path='*' element={<NoMatch />} />
       </Route>
     </Routes>
   )
 }
 
 export default CustomRouter
+
+const NoMatch = () => {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    setTimeout(() => navigate('/'), 1000)
+  })
+
+  return (
+    <div>
+      No Match Component
+      <br />
+      Redirect to ./
+    </div>
+  )
+}

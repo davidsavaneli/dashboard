@@ -4,6 +4,7 @@ import { IRoutes, IRouteItem } from '../../../router'
 import RouterLink from '../RouterLink'
 import { Collapse } from '../../Mui/Collapse'
 import styles from './styles.module.css'
+import Icon from '../Icon'
 
 export type DrawerProps = {
   routes: IRoutes
@@ -68,7 +69,7 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
         })}
         onClick={() => handleClick(item.path)}
       >
-        {item.icon}
+        {item.iconName && <Icon name={item.iconName} />}
         {item.element === '' ? (
           <>
             {item.name}

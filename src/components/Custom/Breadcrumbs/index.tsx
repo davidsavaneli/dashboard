@@ -49,6 +49,10 @@ const Breadcrumbs = forwardRef<HTMLDivElement, BreadcrumbsProps>(
       setBreadcrumbs(newBreadcrumbs)
     }, [location, routes])
 
+    if (breadcrumbs.length === 1) {
+      return null
+    }
+
     return (
       <MuiBreadcrumbs ref={ref} separator={separator} {...props}>
         {breadcrumbs.map((breadcrumb, index) => {
