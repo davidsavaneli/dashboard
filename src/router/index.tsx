@@ -23,11 +23,11 @@ export interface CustomRouterProps {
 const CustomRoute = (items: IRouteItem[]) =>
   items.map((route: IRouteItem, index: number) => (
     <React.Fragment key={index}>
-      <Route key={route.path} path={route.path} element={route.element} />
+      <Route key={route.path} path={route.path} element={route.element || <NoMatch />} />
       {route?.children?.length
         ? route?.children.map((childRoute: IRouteItem) => (
             <>
-              <Route key={childRoute.path} path={childRoute.path} element={childRoute.element} />
+              <Route key={childRoute.path} path={childRoute.path} element={childRoute.element || <NoMatch />} />
               {CustomRoute(childRoute?.children || [])}
             </>
           ))
@@ -53,14 +53,8 @@ const NoMatch = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    setTimeout(() => navigate('/'), 1000)
+    setTimeout(() => navigate('/'), 2000)
   })
 
-  return (
-    <div>
-      No Match Component
-      <br />
-      Redirect to ./
-    </div>
-  )
+  return <div>No Match! Redirect to './' (2s)</div>
 }
