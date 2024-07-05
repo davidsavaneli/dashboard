@@ -2,12 +2,12 @@
   position: fixed;
   top: 0;
   right: 0;
-  height: var(--tzy-header-height);
+  height: var(--header-height);
   width: inherit;
-  background-color: var(--tzy-color-header-bg);
+  background-color: var(--color-header-bg);
   backdrop-filter: blur(8px);
-  padding-left: var(--tzy-padding-xl);
-  padding-right: var(--tzy-padding-xl);
+  padding-left: var(--padding-xl);
+  padding-right: var(--padding-xl);
   display: flex;
   align-items: center;
   justify-content: space-between;

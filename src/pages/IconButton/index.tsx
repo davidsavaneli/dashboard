@@ -1,27 +1,182 @@
-import { ContentLayout, Card, IconButton } from '../../components'
+import { ContentLayout, Card, IconButton, Title, Text, Divider } from '../../components'
 
 const IconButtonPage = () => {
   return (
-    <ContentLayout label='Icon Button Page'>
-      <Card title='Icon Button'>
-        <IconButton iconName='Trash' onClick={() => console.log('onIconButtonClick')} />
-        <br />
-        <IconButton size='sm' iconName='Trash' />
-        <br />
-        <IconButton size='md' iconName='Trash' />
-        <br />
-        <IconButton size='lg' iconName='Trash' />
-        <br />
-        <IconButton iconName='Edit' color='primary' />
-        <IconButton iconName='Edit' color='secondary' />
-        <IconButton iconName='Edit' color='dark' />
-        <IconButton iconName='Edit' color='medium' />
-        <IconButton iconName='Edit' color='light' />
-        <IconButton iconName='Edit' color='success' />
-        <IconButton iconName='Edit' color='error' />
-        <IconButton iconName='Edit' color='info' />
-        <IconButton iconName='Edit' color='warning' />
-      </Card>
+    <ContentLayout label='Icon Button Component'>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Default'>
+            <IconButton iconName='Setting2' />
+            <br />
+            <br />
+            <Text>Variant: Filled / Size: md / Color: Primary</Text>
+          </Card>
+          <br />
+          <Card title='Variant'>
+            <IconButton iconName='Box1' variant='transparent' />
+            <br />
+            <br />
+            <Text>Variant: Transparent</Text>
+            <Divider />
+            <IconButton iconName='Box1' variant='contained' />
+            <br />
+            <br />
+            <Text>Variant: Contained</Text>
+            <Divider />
+            <IconButton iconName='Box1' variant='outlined' />
+            <br />
+            <br />
+            <Text>Variant: Outlined</Text>
+            <Divider />
+            <IconButton iconName='Box1' variant='filled' />
+            <br />
+            <br />
+            <Text>Variant: Filled</Text>
+          </Card>
+          <br />
+          <Card title='Rounded'>
+            <IconButton iconName='Verify' variant='transparent' rounded />
+            <br />
+            <br />
+            <Text>Variant: Transparent / Rounded: true</Text>
+            <Divider />
+            <IconButton iconName='Verify' variant='contained' rounded />
+            <br />
+            <br />
+            <Text>Variant: Contained / Rounded: true</Text>
+            <Divider />
+            <IconButton iconName='Verify' variant='outlined' rounded />
+            <br />
+            <br />
+            <Text>Variant: Outlined / Rounded: true</Text>
+            <Divider />
+            <IconButton iconName='Verify' variant='filled' rounded />
+            <br />
+            <br />
+            <Text>Variant: Filled / Rounded: true</Text>
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Colors'>
+            <IconButton iconName='Bag2' color='primary' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='primary' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='primary' variant='outlined' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='primary' variant='filled' />
+            <br />
+            <br />
+            <Text>Color: Primary</Text>
+            <Divider />
+            <IconButton iconName='Bag2' color='secondary' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='secondary' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='secondary' variant='outlined' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='secondary' variant='filled' />
+            <br />
+            <br />
+            <Text>Color: Secondary</Text>
+            <Divider />
+            <IconButton iconName='Bag2' color='dark' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='dark' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='dark' variant='outlined' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='dark' variant='filled' />
+            <br />
+            <br />
+            <Text>Color: Dark</Text>
+            <Divider />
+            <IconButton iconName='Bag2' color='medium' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='medium' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='medium' variant='outlined' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='medium' variant='filled' />
+            <br />
+            <br />
+            <Text>Color: Medium</Text>
+            <Divider />
+            <IconButton iconName='Bag2' color='light' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='light' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='light' variant='outlined' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='light' variant='filled' />
+            <br />
+            <br />
+            <Text>Color: Light</Text>
+            <Divider />
+            <IconButton iconName='Bag2' color='success' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='success' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='success' variant='outlined' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='success' variant='filled' />
+            <br />
+            <br />
+            <Text>Color: Success</Text>
+            <Divider />
+            <IconButton iconName='Bag2' color='error' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='error' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='error' variant='outlined' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='error' variant='filled' />
+            <br />
+            <br />
+            <Text>Color: Error</Text>
+            <Divider />
+            <IconButton iconName='Bag2' color='info' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='info' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='info' variant='outlined' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='info' variant='filled' />
+            <br />
+            <br />
+            <Text>Color: Info</Text>
+            <Divider />
+            <IconButton iconName='Bag2' color='warning' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='warning' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='warning' variant='outlined' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' color='warning' variant='filled' />
+            <br />
+            <br />
+            <Text>Color: Warning</Text>
+            <Divider />
+          </Card>
+          <br />
+          <Card title='Sizes'>
+            <IconButton iconName='Bag2' size='sm' />
+            <br />
+            <br />
+            <Text>Size: sm</Text>
+            <Divider />
+            <IconButton iconName='Bag2' size='md' />
+            <br />
+            <br />
+            <Text>Size: md</Text>
+            <Divider />
+            <IconButton iconName='Bag2' size='lg' />
+            <br />
+            <br />
+            <Text>Size: lg</Text>
+          </Card>
+        </div>
+      </div>
     </ContentLayout>
   )
 }

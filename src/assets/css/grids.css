@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
-  padding-right: var(--tzy-padding-xs);
-  padding-left: var(--tzy-padding-xs);
+  padding-right: var(--padding-xs);
+  padding-left: var(--padding-xs);
   margin-right: auto;
   margin-left: auto;
 }
@@ -11,8 +11,8 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: calc(-1 * var(--tzy-margin-xs));
-  margin-left: calc(-1 * var(--tzy-margin-xs));
+  margin-right: calc(-1 * var(--margin-xs));
+  margin-left: calc(-1 * var(--margin-xs));
 }
 
 .no-gutters {
@@ -126,8 +126,8 @@
 .col-xs-auto {
   position: relative;
   width: 100%;
-  padding-right: var(--tzy-padding-xs);
-  padding-left: var(--tzy-padding-xs);
+  padding-right: var(--padding-xs);
+  padding-left: var(--padding-xs);
 }
 
 .col {

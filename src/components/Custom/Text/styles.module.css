@@ -3,73 +3,73 @@
 }
 
 .text.sizeXxl {
-  font-size: var(--tzy-font-size-text-xxl);
+  font-size: var(--font-size-text-xxl);
 }
 
 .text.sizeXl {
-  font-size: var(--tzy-font-size-text-xl);
+  font-size: var(--font-size-text-xl);
 }
 
 .text.sizeLg {
-  font-size: var(--tzy-font-size-text-lg);
+  font-size: var(--font-size-text-lg);
 }
 
 .text.sizeMd {
-  font-size: var(--tzy-font-size-text-md);
+  font-size: var(--font-size-text-md);
 }
 
 .text.sizeSm {
-  font-size: var(--tzy-font-size-text-sm);
+  font-size: var(--font-size-text-sm);
 }
 
 .text.sizeXs {
-  font-size: var(--tzy-font-size-text-xs);
+  font-size: var(--font-size-text-xs);
 }
 
 .text.colorPrimary {
-  color: var(--tzy-color-primary);
+  color: var(--color-primary);
 }
 
 .text.colorSecondary {
-  color: var(--tzy-color-secondary);
+  color: var(--color-secondary);
 }
 
 .text.colorDark {
-  color: var(--tzy-color-dark);
+  color: var(--color-dark);
 }
 
 .text.colorMedium {
-  color: var(--tzy-color-medium);
+  color: var(--color-medium);
 }
 
 .text.colorLight {
-  color: var(--tzy-color-light);
+  color: var(--color-light);
 }
 
 .text.colorSuccess {
-  color: var(--tzy-color-success);
+  color: var(--color-success);
 }
 
 .text.colorError {
-  color: var(--tzy-color-error);
+  color: var(--color-error);
 }
 
 .text.colorInfo {
-  color: var(--tzy-color-info);
+  color: var(--color-info);
 }
 
 .text.colorWarning {
-  color: var(--tzy-color-warning);
+  color: var(--color-warning);
 }
 
 .text.weightRegular {
-  font-weight: var(--tzy-font-weight-regular);
+  font-weight: var(--font-weight-regular);
 }
 
 .text.weightMedium {
-  font-weight: var(--tzy-font-weight-medium);
+  font-weight: var(--font-weight-medium);
 }
 
 .text.weightBold {
-  font-weight: var(--tzy-font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }

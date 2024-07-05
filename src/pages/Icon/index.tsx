@@ -42,10 +42,9 @@ const IconPage = () => {
             <br />
             <br />
             <Text>Variant: TwoTone</Text>
-            <Divider />
           </Card>
           <br />
-          <Card title='Colors'>
+          <Card title='Sizes'>
             <Icon name='Calendar' size='sm' />
             <br />
             <br />

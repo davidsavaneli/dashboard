@@ -4,39 +4,39 @@
 }
 
 .icon.colorPrimary {
-  color: var(--tzy-color-primary);
+  color: var(--color-primary);
 }
 
 .icon.colorSecondary {
-  color: var(--tzy-color-secondary);
+  color: var(--color-secondary);
 }
 
 .icon.colorDark {
-  color: var(--tzy-color-dark);
+  color: var(--color-dark);
 }
 
 .icon.colorMedium {
-  color: var(--tzy-color-medium);
+  color: var(--color-medium);
 }
 
 .icon.colorLight {
-  color: var(--tzy-color-light);
+  color: var(--color-light);
 }
 
 .icon.colorSuccess {
-  color: var(--tzy-color-success);
+  color: var(--color-success);
 }
 
 .icon.colorError {
-  color: var(--tzy-color-error);
+  color: var(--color-error);
 }
 
 .icon.colorInfo {
-  color: var(--tzy-color-info);
+  color: var(--color-info);
 }
 
 .icon.colorWarning {
-  color: var(--tzy-color-warning);
+  color: var(--color-warning);
 }
 
 .icon.sizeSm {

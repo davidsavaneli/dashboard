@@ -1,20 +1,14 @@
 .MuiBreadcrumbs-li > a,
 .MuiBreadcrumbs-li > span {
-  font-size: var(--tzy-breadcrumb-font-size) !important;
-  color: var(--tzy-breadcrumb-font-color) !important;
+  font-size: var(--font-size-text-sm) !important;
+  color: var(rgba(var(--color-primary-rgb), 0.6)) !important;
 }
 
 .MuiBreadcrumbs-li > a {
-  transition: color var(--tzy-tr-dur) !important;
-}
-
-@media (hover: hover) {
-  .MuiBreadcrumbs-li a:hover {
-    color: var(--tzy-breadcrumb-font-color-hover) !important;
-  }
+  transition: color var(--tr-dur) !important;
 }
 
 .MuiBreadcrumbs-separator {
-  font-size: var(--tzy-breadcrumb-font-size) !important;
-  color: var(--tzy-breadcrumb-font-color) !important;
+  font-size: var(--font-size-text-sm) !important;
+  color: var(rgba(var(--color-primary-rgb), 0.6)) !important;
 }

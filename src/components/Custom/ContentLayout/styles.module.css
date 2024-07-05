@@ -3,11 +3,11 @@
 }
 
 .topSection {
-  margin-bottom: var(--tzy-margin-md);
+  margin-bottom: var(--margin-md);
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--tzy-margin-sm) 0;
+  gap: var(--margin-sm) 0;
 }

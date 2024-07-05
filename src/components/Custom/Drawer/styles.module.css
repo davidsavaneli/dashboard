@@ -2,9 +2,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: var(--tzy-drawer-width);
-  max-width: var(--tzy-drawer-width);
-  border-right: 1px dashed var(--tzy-color-line-primary);
+  width: var(--drawer-width);
+  max-width: var(--drawer-width);
+  border-right: 1px dashed var(--color-line-primary);
   height: 100dvh;
   z-index: 999;
   overflow: auto;
@@ -26,17 +26,17 @@
 }
 
 .drawerItems {
-  padding: var(--tzy-padding-sm) 0;
+  padding: var(--padding-sm) 0;
 }
 
 .drawerItem {
   display: flex;
   align-items: center;
-  padding: var(--tzy-padding-xs) var(--tzy-padding-sm);
-  margin-right: var(--tzy-margin-sm);
+  padding: var(--padding-xs) var(--padding-sm);
+  margin-right: var(--margin-sm);
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: var(--tzy-border-radius-sm);
+  border-radius: var(--border-radius-sm);
 }
 
 .drawerItemWithIcon {
@@ -45,24 +45,24 @@
 
 .drawerItemFirstLevel {
   background-color: red;
-  margin-left: var(--tzy-margin-sm);
+  margin-left: var(--margin-sm);
 }
 
 .drawerItemSecondLevel {
   background-color: green;
-  margin-left: var(--tzy-margin-md);
+  margin-left: var(--margin-md);
 }
 
 .drawerItemThirdLevel {
   background-color: yellow;
-  margin-left: var(--tzy-margin-lg);
+  margin-left: var(--margin-lg);
 }
 
 .drawerItemFourthLevel {
   background-color: blue;
-  margin-left: var(--tzy-margin-xl);
+  margin-left: var(--margin-xl);
 }
 
 .icon {
-  margin-right: var(--tzy-margin-sm);
+  margin-right: var(--margin-sm);
 }

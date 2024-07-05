@@ -1,6 +1,5 @@
 @import './fonts.css';
 @import './variables.css';
-@import './component-variables.css';
 @import './normalize.css';
 @import './grids.css';
 
@@ -10,7 +9,7 @@
   letter-spacing: inherit;
   font-weight: inherit;
   font-size: inherit;
-  font-family: var(--tzy-font-family) !important;
+  font-family: var(--font-family) !important;
 }
 
 *,
@@ -34,9 +33,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "salt";
   touch-action: manipulation;
-  color: var(--tzy-color-text-primary);
-  background-color: var(--tzy-color-body-bg);
-  font-size: var(--tzy-font-size-text-sm) !important;
-  font-weight: var(--tzy-font-weight-regular) !important;
-  font-family: var(--tzy-font-family) !important;
+  color: var(--color-text-primary);
+  background-color: var(--color-body-bg);
+  font-size: var(--font-size-text-sm) !important;
+  font-weight: var(--font-weight-regular) !important;
+  font-family: var(--font-family) !important;
 }

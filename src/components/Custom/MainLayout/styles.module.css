@@ -5,18 +5,18 @@
 }
 
 .wrapper {
-  width: calc(100% - var(--tzy-drawer-width));
-  margin-left: var(--tzy-drawer-width);
+  width: calc(100% - var(--drawer-width));
+  margin-left: var(--drawer-width);
   display: flex;
   flex-direction: column;
 }
 
 main {
-  padding: var(--tzy-padding-sm) var(--tzy-padding-xl) var(--tzy-padding-lg) var(--tzy-padding-xl);
+  padding: var(--padding-sm) var(--padding-xl) var(--padding-lg) var(--padding-xl);
   flex: 1 0 auto;
-  margin-top: var(--tzy-header-height);
+  margin-top: var(--header-height);
 }
 
 .breadcrumbs {
-  margin-bottom: var(--tzy-margin-xs);
+  margin-bottom: var(--margin-xs);
 }

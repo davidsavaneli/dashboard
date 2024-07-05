@@ -312,22 +312,22 @@ li {
 
 b,
 strong {
-  font-weight: var(--tzy-font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 .f-regular,
 .f-regular * {
-  font-weight: var(--tzy-font-weight-regular);
+  font-weight: var(--font-weight-regular);
 }
 
 .f-medium,
 .f-medium * {
-  font-weight: var(--tzy-font-weight-medium);
+  font-weight: var(--font-weight-medium);
 }
 
 .f-bold,
 .f-bold * {
-  font-weight: var(--tzy-font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 h1,
@@ -342,7 +342,7 @@ h3 *,
 h4 *,
 h5 *,
 h6 * {
-  font-weight: var(--tzy-font-weight-bold);
+  font-weight: var(--font-weight-bold);
   text-transform: none;
   margin: 0;
 }

@@ -1,5 +1,5 @@
 import { MuiIconButton, MuiIconButtonProps } from '../../Mui'
-import Icon, { IconName } from '../Icon'
+import Icon, { IconName, IconProps } from '../Icon'
 import clsx from 'clsx'
 
 import './styles.css'
@@ -31,10 +31,25 @@ declare module '@mui/material/IconButton' {
 
 export interface IconButtonProps extends MuiIconButtonProps {
   iconName: IconName
+  rounded?: boolean
+  variant?: 'transparent' | 'contained' | 'outlined' | 'filled'
+  iconVariant?: IconProps['variant']
 }
 
-const IconButton = ({ color = 'primary', size, iconName, ...props }: IconButtonProps) => {
+const IconButton = ({
+  color = 'primary',
+  size = 'md',
+  iconName,
+  variant = 'filled',
+  rounded = false,
+  iconVariant,
+  ...props
+}: IconButtonProps) => {
   const classNames = clsx({
+    ['MuiIconButton-variantTransparent']: variant === 'transparent',
+    ['MuiIconButton-variantContained']: variant === 'contained',
+    ['MuiIconButton-variantOutlined']: variant === 'outlined',
+    ['MuiIconButton-variantFilled']: variant === 'filled',
     ['MuiIconButton-colorPrimary']: color === 'primary',
     ['MuiIconButton-colorSecondary']: color === 'secondary',
     ['MuiIconButton-colorDark']: color === 'dark',
@@ -47,11 +62,12 @@ const IconButton = ({ color = 'primary', size, iconName, ...props }: IconButtonP
     ['MuiIconButton-sizeSm']: size === 'sm',
     ['MuiIconButton-sizeMd']: size === 'md',
     ['MuiIconButton-sizeLg']: size === 'lg',
+    ['MuiIconButton-rounded']: rounded,
   })
 
   return (
     <MuiIconButton className={classNames} {...props}>
-      {<Icon name={iconName} size={size} color={color} />}
+      {<Icon name={iconName} size={size} color={color} variant={iconVariant} />}
     </MuiIconButton>
   )
 }
