@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 
 export type TextProps = {
   color?: 'primary' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
-  weight?: 'light' | 'medium' | 'bold'
+  weight?: 'regular' | 'medium' | 'bold'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
   uppercase?: boolean
   children?: ReactNode
@@ -12,7 +12,7 @@ export type TextProps = {
 
 const Text = ({
   color = 'primary',
-  weight = 'light',
+  weight = 'regular',
   size = 'sm',
   uppercase = false,
   children,
@@ -29,7 +29,7 @@ const Text = ({
     [styles.colorError]: color === 'error',
     [styles.colorInfo]: color === 'info',
     [styles.colorWarning]: color === 'warning',
-    [styles.weightLight]: weight === 'light',
+    [styles.weightRegular]: weight === 'regular',
     [styles.weightMedium]: weight === 'medium',
     [styles.weightBold]: weight === 'bold',
     [styles.sizeXs]: size === 'xs',

@@ -36,21 +36,7 @@
 
   --tzy-tr-dur: 0.2s;
 
-  --tzy-font-size-text-xs: 12px;
-  --tzy-font-size-text-sm: 14px;
-  --tzy-font-size-text-md: 16px;
-  --tzy-font-size-text-lg: 18px;
-  --tzy-font-size-text-xl: 20px;
-  --tzy-font-size-text-xxl: 24px;
-
-  --tzy-font-size-title-xs: 12px;
-  --tzy-font-size-title-sm: 14px;
-  --tzy-font-size-title-md: 16px;
-  --tzy-font-size-title-lg: 18px;
-  --tzy-font-size-title-xl: 20px;
-  --tzy-font-size-title-xxl: 24px;
-
-  --tzy-font-weight-light: 400;
+  --tzy-font-weight-regular: 400;
   --tzy-font-weight-medium: 500;
   --tzy-font-weight-bold: 600;
 

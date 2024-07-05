@@ -1,4 +1,5 @@
 import { MuiDivider, MuiDividerProps } from '../../Mui'
+import './styles.css'
 
 export interface DividerProps extends MuiDividerProps {}
 

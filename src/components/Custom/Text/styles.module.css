@@ -62,8 +62,8 @@
   color: var(--tzy-color-warning);
 }
 
-.text.weightLight {
-  font-weight: var(--tzy-font-weight-light);
+.text.weightRegular {
+  font-weight: var(--tzy-font-weight-regular);
 }
 
 .text.weightMedium {

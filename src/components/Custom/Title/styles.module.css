@@ -62,8 +62,8 @@
   color: var(--tzy-color-warning);
 }
 
-.titleBox.weightLight > * {
-  font-weight: var(--tzy-font-weight-light);
+.titleBox.weightRegular > * {
+  font-weight: var(--tzy-font-weight-regular);
 }
 
 .titleBox.weightMedium > * {

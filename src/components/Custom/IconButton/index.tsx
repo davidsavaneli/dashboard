@@ -30,8 +30,6 @@ declare module '@mui/material/IconButton' {
 }
 
 export interface IconButtonProps extends MuiIconButtonProps {
-  // color?: 'primary' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
-  // size?: 'sm' | 'md' | 'lg'
   iconName: IconName
 }
 

@@ -1,4 +1,20 @@
 :root {
+  /* Text */
+  --tzy-font-size-text-xs: 12px;
+  --tzy-font-size-text-sm: 14px;
+  --tzy-font-size-text-md: 16px;
+  --tzy-font-size-text-lg: 18px;
+  --tzy-font-size-text-xl: 20px;
+  --tzy-font-size-text-xxl: 22px;
+
+  /* Title */
+  --tzy-font-size-title-xs: 12px;
+  --tzy-font-size-title-sm: 14px;
+  --tzy-font-size-title-md: 16px;
+  --tzy-font-size-title-lg: 20px;
+  --tzy-font-size-title-xl: 24px;
+  --tzy-font-size-title-xxl: 28px;
+
   /* Breadcrumbs */
   --tzy-breadcrumb-font-size: var(--tzy-font-size-text-sm);
   --tzy-breadcrumb-font-color: rgba(var(--tzy-color-primary-rgb), 0.6);
@@ -14,4 +30,5 @@
   --tzy-icon-button-bg-error: rgba(var(--tzy-color-error-rgb), 0.06);
   --tzy-icon-button-bg-info: rgba(var(--tzy-color-info-rgb), 0.06);
   --tzy-icon-button-bg-warning: rgba(var(--tzy-color-warning-rgb), 0.06);
+
 }

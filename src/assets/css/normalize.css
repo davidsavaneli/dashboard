@@ -315,9 +315,9 @@ strong {
   font-weight: var(--tzy-font-weight-bold);
 }
 
-.f-light,
-.f-light * {
-  font-weight: var(--tzy-font-weight-light);
+.f-regular,
+.f-regular * {
+  font-weight: var(--tzy-font-weight-regular);
 }
 
 .f-medium,
