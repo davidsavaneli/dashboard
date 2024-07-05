@@ -6,10 +6,6 @@
   margin-bottom: var(--tzy-margin-md);
 }
 
-.breadcrumbs {
-  margin-bottom: var(--tzy-margin-xs);
-}
-
 .content {
   display: flex;
   flex-direction: column;

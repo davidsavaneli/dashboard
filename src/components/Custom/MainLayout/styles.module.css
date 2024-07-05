@@ -16,3 +16,7 @@ main {
   flex: 1 0 auto;
   margin-top: var(--tzy-header-height);
 }
+
+.breadcrumbs {
+  margin-bottom: var(--tzy-margin-xs);
+}

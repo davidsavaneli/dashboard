@@ -1,0 +1,20 @@
+.MuiBreadcrumbs-li > a,
+.MuiBreadcrumbs-li > span {
+  font-size: var(--tzy-breadcrumb-font-size) !important;
+  color: var(--tzy-breadcrumb-font-color) !important;
+}
+
+.MuiBreadcrumbs-li > a {
+  transition: color var(--tzy-tr-dur) !important;
+}
+
+@media (hover: hover) {
+  .MuiBreadcrumbs-li a:hover {
+    color: var(--tzy-breadcrumb-font-color-hover) !important;
+  }
+}
+
+.MuiBreadcrumbs-separator {
+  font-size: var(--tzy-breadcrumb-font-size) !important;
+  color: var(--tzy-breadcrumb-font-color) !important;
+}

@@ -4,6 +4,8 @@ import { MuiBreadcrumbs, MuiBreadcrumbsProps } from '../../Mui'
 import RouterLink from '../RouterLink'
 import { IRoutes } from '../../../router'
 
+import './styles.css'
+
 export interface IBreadcrumbs {
   label: string
   to: string

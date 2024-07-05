@@ -1,10 +1,15 @@
 @import './fonts.css';
 @import './variables.css';
+@import './component-variables.css';
 @import './normalize.css';
 @import './grids.css';
 
 * {
   outline: none;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  font-size: inherit;
   font-family: var(--tzy-font-family) !important;
 }
 

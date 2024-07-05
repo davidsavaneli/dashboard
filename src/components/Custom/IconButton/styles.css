@@ -1,0 +1,51 @@
+.MuiIconButton-root {
+  border-radius: var(--tzy-border-radius-sm) !important;
+}
+
+.MuiIconButton-colorPrimary {
+  background-color: var(--tzy-icon-button-bg-primary) !important;
+}
+
+.MuiIconButton-colorSecondary {
+  background-color: var(--tzy-icon-button-bg-secondary) !important;
+}
+
+.MuiIconButton-colorDark {
+  background-color: var(--tzy-icon-button-bg-dark) !important;
+}
+
+.MuiIconButton-colorMedium {
+  background-color: var(--tzy-icon-button-bg-medium) !important;
+}
+
+.MuiIconButton-colorLight {
+  background-color: var(--tzy-icon-button-bg-light) !important;
+}
+
+.MuiIconButton-colorSuccess {
+  background-color: var(--tzy-icon-button-bg-success) !important;
+}
+
+.MuiIconButton-colorError {
+  background-color: var(--tzy-icon-button-bg-error) !important;
+}
+
+.MuiIconButton-colorInfo {
+  background-color: var(--tzy-icon-button-bg-info) !important;
+}
+
+.MuiIconButton-colorWarning {
+  background-color: var(--tzy-icon-button-bg-warning) !important;
+}
+
+.MuiIconButton-sizeSm {
+  padding: 7px !important;
+}
+
+.MuiIconButton-sizeMd {
+  padding: 8px !important;
+}
+
+.MuiIconButton-sizeLg {
+  padding: 9px !important;
+}

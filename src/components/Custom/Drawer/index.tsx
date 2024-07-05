@@ -72,20 +72,28 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
       >
         {item.iconName && (
           <div className={styles.icon}>
-            <Icon name={item.iconName} />
+            <Icon variant='Bulk' name={item.iconName} />
           </div>
         )}
         {item.element === '' ? (
           <>
             {item.name}
             {item.children && item.children.length > 0 && (!openFirstLevel || depth > 0) && (
-              <>&nbsp;&nbsp;&nbsp;{open[item.path] ? '-' : '+'}</>
+              <>
+                &nbsp;&nbsp;&nbsp;
+                {open[item.path] ? <Icon name='ArrowUp2' size='sm' /> : <Icon name='ArrowDown2' size='sm' />}
+              </>
             )}
           </>
         ) : (
           <>
             <RouterLink to={item.path}>{item.name}</RouterLink>
-            {item.children && item.children.length > 0 && <>&nbsp;&nbsp;&nbsp;{open[item.path] ? '-' : '+'}</>}
+            {item.children && item.children.length > 0 && (
+              <>
+                &nbsp;&nbsp;&nbsp;
+                {open[item.path] ? <Icon name='ArrowUp2' size='sm' /> : <Icon name='ArrowDown2' size='sm' />}
+              </>
+            )}
           </>
         )}
       </div>

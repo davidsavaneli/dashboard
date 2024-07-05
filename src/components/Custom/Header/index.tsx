@@ -1,5 +1,4 @@
 import IconButton from '../IconButton'
-import Icon from '../Icon'
 import Avatar from '../Avatar'
 import styles from './styles.module.css'
 
@@ -11,9 +10,7 @@ const Header = ({ label }: HeaderProps) => {
   return (
     <header className={styles.header}>
       <div>
-        <IconButton>
-          <Icon name='HambergerMenu' />
-        </IconButton>
+        <IconButton iconName='HambergerMenu' />
       </div>
       <div>
         <Avatar src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png'></Avatar>

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Title from '../Title'
 import styles from './styles.module.css'
 
 export type ContentLayoutProps = {
@@ -9,7 +10,7 @@ export type ContentLayoutProps = {
 const ContentLayout = ({ label, children }: ContentLayoutProps) => {
   return (
     <div className={styles.contentWrapper}>
-      {label && <div className={styles.topSection}>{label && <h1>{label}</h1>}</div>}
+      {label && <div className={styles.topSection}>{label && <Title variant='h1'>{label}</Title>}</div>}
       <div className={styles.content}>{children}</div>
     </div>
   )

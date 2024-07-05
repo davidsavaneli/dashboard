@@ -2,10 +2,12 @@ import { forwardRef, useState } from 'react'
 import { MuiTextField, MuiTextFieldProps } from '../../Mui'
 import FormControl from '../FormControl'
 import InputAdornment from '../InputAdornment'
+import IconButton from '../IconButton'
+import Icon, { IconName } from '../Icon'
 
 export type TextFieldProps = MuiTextFieldProps & {
   isPassword?: boolean
-  iconName?: string
+  iconName?: IconName | ''
 }
 
 const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
@@ -13,12 +15,16 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
     const [showPassword, setShowPassword] = useState<boolean>(!!isPassword)
     const handleShowPassword = () => setShowPassword(!showPassword)
 
-    const Icon = isPassword ? (
+    const IconComponent = isPassword ? (
       <InputAdornment position='end'>
-        <div onClick={handleShowPassword}>Password</div>
+        <IconButton onClick={handleShowPassword} iconName={showPassword ? 'EyeSlash' : 'Eye'} />
       </InputAdornment>
     ) : (
-      iconName && <InputAdornment position='end'>Icon</InputAdornment>
+      iconName && (
+        <InputAdornment position='end'>
+          <IconButton iconName={iconName} />
+        </InputAdornment>
+      )
     )
 
     return (
@@ -28,7 +34,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           variant={variant}
           type={!showPassword ? 'text' : 'password'}
           InputProps={{
-            endAdornment: Icon,
+            endAdornment: IconComponent,
           }}
           {...props}
         />

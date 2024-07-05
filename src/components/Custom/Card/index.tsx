@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Title from '../Title'
 import styles from './styles.module.css'
 
 export type CardProps = {
@@ -13,7 +14,7 @@ const Card = ({ title, headerActions, footerActions, children }: CardProps) => {
     <div className={styles.card}>
       {(title || headerActions) && (
         <div className={styles.header}>
-          <div>{title && <h4>{title}</h4>}</div>
+          <div>{title && <Title variant='h5'>{title}</Title>}</div>
           {headerActions && <div className={styles.headerActions}>{headerActions}</div>}
         </div>
       )}
