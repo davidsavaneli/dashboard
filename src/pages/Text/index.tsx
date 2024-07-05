@@ -93,12 +93,12 @@ const TextPage = () => {
             <br />
             <Text>Color: Warning</Text>
           </Card>
+          <br />
           <Card title='Uppercase'>
             <Text uppercase>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
             <br />
             <Text>Uppercase: true</Text>
           </Card>
-          <br />
         </div>
       </div>
     </ContentLayout>
