@@ -41,10 +41,18 @@ const TextPage = () => {
             <Text>xxl / Size: 22px</Text>
           </Card>
           <br />
-          <Card title='Uppercase'>
-            <Text uppercase>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
+          <Card title='Weight'>
+            <Text weight='regular'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Text>
             <br />
-            <Text>Uppercase: true</Text>
+            <Text>Weight: Regular</Text>
+            <Divider />
+            <Text weight='medium'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Text>
+            <br />
+            <Text>Weight: Medium</Text>
+            <Divider />
+            <Text weight='bold'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Text>
+            <br />
+            <Text>Weight: Bold</Text>
           </Card>
         </div>
         <div className='col-6'>
@@ -85,20 +93,12 @@ const TextPage = () => {
             <br />
             <Text>Color: Warning</Text>
           </Card>
-          <br />
-          <Card title='Weight'>
-            <Text weight='regular'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Text>
+          <Card title='Uppercase'>
+            <Text uppercase>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Text>
             <br />
-            <Text>Weight: Regular</Text>
-            <Divider />
-            <Text weight='medium'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Text>
-            <br />
-            <Text>Weight: Medium</Text>
-            <Divider />
-            <Text weight='bold'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Text>
-            <br />
-            <Text>Weight: Bold</Text>
+            <Text>Uppercase: true</Text>
           </Card>
+          <br />
         </div>
       </div>
     </ContentLayout>

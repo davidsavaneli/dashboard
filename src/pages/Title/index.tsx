@@ -37,10 +37,18 @@ const TitlePage = () => {
             <Text>xxl / Size: 28px</Text>
           </Card>
           <br />
-          <Card title='Uppercase'>
-            <Text uppercase>Heading Title</Text>
+          <Card title='Weight'>
+            <Title weight='regular'>Heading Title</Title>
             <br />
-            <Text>Uppercase: true</Text>
+            <Text>Weight: Regular</Text>
+            <Divider />
+            <Title weight='medium'>Heading Title</Title>
+            <br />
+            <Text>Weight: Medium</Text>
+            <Divider />
+            <Title weight='bold'>Heading Title</Title>
+            <br />
+            <Text>Weight: Bold</Text>
           </Card>
         </div>
         <div className='col-6'>
@@ -82,18 +90,10 @@ const TitlePage = () => {
             <Text>Color: Warning</Text>
           </Card>
           <br />
-          <Card title='Weight'>
-            <Title weight='regular'>Heading Title</Title>
+          <Card title='Uppercase'>
+            <Text uppercase>Heading Title</Text>
             <br />
-            <Text>Weight: Regular</Text>
-            <Divider />
-            <Title weight='medium'>Heading Title</Title>
-            <br />
-            <Text>Weight: Medium</Text>
-            <Divider />
-            <Title weight='bold'>Heading Title</Title>
-            <br />
-            <Text>Weight: Bold</Text>
+            <Text>Uppercase: true</Text>
           </Card>
         </div>
       </div>
