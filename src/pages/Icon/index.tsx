@@ -1,23 +1,116 @@
-import { ContentLayout, Card, Icon } from '../../components'
+import { ContentLayout, Card, Icon, Text, Divider } from '../../components'
 
 const IconPage = () => {
   return (
-    <ContentLayout label='Icon Page'>
-      <Card title='Icon'>
-        <Icon name='Home' color='primary' />
-        <Icon name='Home' color='secondary' />
-        <Icon name='Home' color='dark' />
-        <Icon name='Home' color='medium' />
-        <Icon name='Home' color='light' />
-        <Icon name='Home' color='success' />
-        <Icon name='Home' color='error' />
-        <Icon name='Home' color='info' />
-        <Icon name='Home' color='warning' />
-        <br />
-        <Icon name='Home' size='sm' />
-        <Icon name='Home' size='md' />
-        <Icon name='Home' size='lg' />
-      </Card>
+    <ContentLayout label='Icon Component'>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Default'>
+            <Icon name='Box1' variant='Linear' />
+            <br />
+            <br />
+            <Text>Variant: Linear / Size: md / Color: Primary</Text>
+          </Card>
+          <br />
+          <Card title='Variant'>
+            <Icon name='Setting2' variant='Linear' />
+            <br />
+            <br />
+            <Text>Variant: Linear</Text>
+            <Divider />
+            <Icon name='Setting2' variant='Outline' />
+            <br />
+            <br />
+            <Text>Variant: Outline</Text>
+            <Divider />
+            <Icon name='Setting2' variant='Bold' />
+            <br />
+            <br />
+            <Text>Variant: Bold</Text>
+            <Divider />
+            <Icon name='Setting2' variant='Bulk' />
+            <br />
+            <br />
+            <Text>Variant: Bulk</Text>
+            <Divider />
+            <Icon name='Setting2' variant='Broken' />
+            <br />
+            <br />
+            <Text>Variant: Broken</Text>
+            <Divider />
+            <Icon name='Setting2' variant='TwoTone' />
+            <br />
+            <br />
+            <Text>Variant: TwoTone</Text>
+            <Divider />
+          </Card>
+          <br />
+          <Card title='Colors'>
+            <Icon name='Calendar' size='sm' />
+            <br />
+            <br />
+            <Text>Size: sm</Text>
+            <Divider />
+            <Icon name='Calendar' size='md' />
+            <br />
+            <br />
+            <Text>Size: md</Text>
+            <Divider />
+            <Icon name='Calendar' size='lg' />
+            <br />
+            <br />
+            <Text>Size: lg</Text>
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Colors'>
+            <Icon name='Bag2' color='primary' />
+            <br />
+            <br />
+            <Text>Color: Primary</Text>
+            <Divider />
+            <Icon name='Bag2' color='secondary' />
+            <br />
+            <br />
+            <Text>Color: Secondary</Text>
+            <Divider />
+            <Icon name='Bag2' color='dark' />
+            <br />
+            <br />
+            <Text>Color: Dark</Text>
+            <Divider />
+            <Icon name='Bag2' color='medium' />
+            <br />
+            <br />
+            <Text>Color: Medium</Text>
+            <Divider />
+            <Icon name='Bag2' color='light' />
+            <br />
+            <br />
+            <Text>Color: Light</Text>
+            <Divider />
+            <Icon name='Bag2' color='success' />
+            <br />
+            <br />
+            <Text>Color: Success</Text>
+            <Divider />
+            <Icon name='Bag2' color='error' />
+            <br />
+            <br />
+            <Text>Color: Error</Text>
+            <Divider />
+            <Icon name='Bag2' color='info' />
+            <br />
+            <br />
+            <Text>Color: Info</Text>
+            <Divider />
+            <Icon name='Bag2' color='warning' />
+            <br />
+            <br />
+            <Text>Color: Warning</Text>
+          </Card>
+        </div>
+      </div>
     </ContentLayout>
   )
 }
