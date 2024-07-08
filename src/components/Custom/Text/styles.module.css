@@ -30,6 +30,10 @@
   color: var(--color-primary);
 }
 
+.text.colorPrimaryLight {
+  color: var(--color-primaryLight);
+}
+
 .text.colorSecondary {
   color: var(--color-secondary);
 }

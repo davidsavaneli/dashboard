@@ -30,6 +30,10 @@
   color: var(--color-primary);
 }
 
+.titleBox.colorPrimaryLight > * {
+  color: var(--color-primaryLight);
+}
+
 .titleBox.colorSecondary > * {
   color: var(--color-secondary);
 }

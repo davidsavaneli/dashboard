@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 
 export type TitleProps = {
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  color?: 'primary' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
+  color?: 'primary' | 'primaryLight' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
   weight?: 'regular' | 'medium' | 'bold'
   uppercase?: boolean
   children?: ReactNode
@@ -22,6 +22,7 @@ const Title = ({
 
   const classNames = clsx(styles.titleBox, {
     [styles.colorPrimary]: color === 'primary',
+    [styles.colorPrimaryLight]: color === 'primaryLight',
     [styles.colorSecondary]: color === 'secondary',
     [styles.colorDark]: color === 'dark',
     [styles.colorMedium]: color === 'medium',

@@ -127,7 +127,7 @@ export type IconName = keyof typeof Icons
 
 export interface IconProps extends IconsaxIconProps {
   name: IconName
-  color?: 'primary' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
+  color?: 'primary' | 'primaryLight' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
   size?: 'sm' | 'md' | 'lg'
   variant?: 'Linear' | 'Outline' | 'Broken' | 'Bold' | 'Bulk' | 'TwoTone'
 }
@@ -137,6 +137,7 @@ const Icon = ({ name, size = 'md', color = 'primary', variant = 'Linear', ...pro
 
   const classNames = clsx(styles.icon, {
     [styles.colorPrimary]: color === 'primary',
+    [styles.colorPrimaryLight]: color === 'primaryLight',
     [styles.colorSecondary]: color === 'secondary',
     [styles.colorDark]: color === 'dark',
     [styles.colorMedium]: color === 'medium',

@@ -144,6 +144,21 @@ export const routes: IRoutes = {
             },
           ],
         },
+        {
+          name: 'Feedback',
+          path: '/components/feedback',
+          iconName: 'Home',
+          element: '',
+          children: [
+            {
+              name: 'Circular Progress',
+              path: '/components/forms/circular-progress',
+              iconName: '',
+              element: <CircularProgressPage />,
+              children: [],
+            },
+          ],
+        },
       ],
     },
     {

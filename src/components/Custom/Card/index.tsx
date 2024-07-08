@@ -14,7 +14,7 @@ const Card = ({ title, headerActions, footerActions, children }: CardProps) => {
     <div className={styles.card}>
       {(title || headerActions) && (
         <div className={styles.header}>
-          <div>{title && <Title variant='h5'>{title}</Title>}</div>
+          <div>{title && <Title variant='h4'>{title}</Title>}</div>
           {headerActions && <div className={styles.headerActions}>{headerActions}</div>}
         </div>
       )}

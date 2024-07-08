@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import styles from './styles.module.css'
 
 export type TextProps = {
-  color?: 'primary' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
+  color?: 'primary' | 'primaryLight' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
   weight?: 'regular' | 'medium' | 'bold'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
   uppercase?: boolean
@@ -21,6 +21,7 @@ const Text = ({
   const classNames = clsx(styles.text, {
     ['f-upper']: uppercase,
     [styles.colorPrimary]: color === 'primary',
+    [styles.colorPrimaryLight]: color === 'primaryLight',
     [styles.colorSecondary]: color === 'secondary',
     [styles.colorDark]: color === 'dark',
     [styles.colorMedium]: color === 'medium',

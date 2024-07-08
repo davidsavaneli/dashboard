@@ -9,6 +9,7 @@ declare module '@mui/material/IconButton' {
     inherit: false
     default: false
     primary: true
+    primaryLight: true
     secondary: true
     dark: true
     light: true
@@ -51,6 +52,7 @@ const IconButton = ({
     ['MuiIconButton-variantOutlined']: variant === 'outlined',
     ['MuiIconButton-variantFilled']: variant === 'filled',
     ['MuiIconButton-colorPrimary']: color === 'primary',
+    ['MuiIconButton-colorPrimaryLight']: color === 'primaryLight',
     ['MuiIconButton-colorSecondary']: color === 'secondary',
     ['MuiIconButton-colorDark']: color === 'dark',
     ['MuiIconButton-colorMedium']: color === 'medium',

@@ -1,7 +1,8 @@
 :root {
   /* All Colors */
 
-  --color-primary-rgb: 19, 25, 32;
+  --color-primary-rgb: 51, 64, 78;
+  --color-primaryLight-rgb: 112, 121, 131;
   --color-secondary-rgb: 255, 255, 255;
   --color-dark-rgb: 66, 55, 213;
   --color-medium-rgb: 114, 101, 230;
@@ -12,6 +13,7 @@
   --color-warning-rgb: 255, 191, 0;
 
   --color-primary: rgba(var(--color-primary-rgb), 1);
+  --color-primaryLight: rgba(var(--color-primaryLight-rgb), 1);
   --color-secondary: rgba(var(--color-secondary-rgb), 1);
   --color-dark: rgba(var(--color-dark-rgb), 1);
   --color-medium: rgba(var(--color-medium-rgb), 1);
@@ -21,52 +23,67 @@
   --color-info: rgba(var(--color-info-rgb), 1);
   --color-warning: rgba(var(--color-warning-rgb), 1);
 
-  --color-primary-tone-very-light: rgba(var(--color-primary-rgb), 0.06);
-  --color-secondary-tone-very-light: rgba(var(--color-secondary-rgb), 0.06);
-  --color-dark-tone-very-light: rgba(var(--color-dark-rgb), 0.06);
-  --color-medium-tone-very-light: rgba(var(--color-medium-rgb), 0.06);
-  --color-light-tone-very-light: rgba(var(--color-light-rgb), 0.06);
-  --color-success-tone-very-light: rgba(var(--color-success-rgb), 0.06);
-  --color-error-tone-very-light: rgba(var(--color-error-rgb), 0.06);
-  --color-info-tone-very-light: rgba(var(--color-info-rgb), 0.06);
-  --color-warning-tone-very-light: rgba(var(--color-warning-rgb), 0.06);
+  --color-primary-toneVeryLight: rgba(var(--color-primary-rgb), 0.06);
+  --color-primaryLight-toneVeryLight: rgba(var(--color-primaryLight-rgb), 0.06);
+  --color-secondary-toneVeryLight: rgba(var(--color-secondary-rgb), 0.06);
+  --color-dark-toneVeryLight: rgba(var(--color-dark-rgb), 0.06);
+  --color-medium-toneVeryLight: rgba(var(--color-medium-rgb), 0.06);
+  --color-light-toneVeryLight: rgba(var(--color-light-rgb), 0.06);
+  --color-success-toneVeryLight: rgba(var(--color-success-rgb), 0.06);
+  --color-error-toneVeryLight: rgba(var(--color-error-rgb), 0.06);
+  --color-info-toneVeryLight: rgba(var(--color-info-rgb), 0.06);
+  --color-warning-toneVeryLight: rgba(var(--color-warning-rgb), 0.06);
 
-  --color-primary-tone-light: rgba(var(--color-primary-rgb), 0.12);
-  --color-secondary-tone-light: rgba(var(--color-secondary-rgb), 0.12);
-  --color-dark-tone-light: rgba(var(--color-dark-rgb), 0.12);
-  --color-medium-tone-light: rgba(var(--color-medium-rgb), 0.12);
-  --color-light-tone-light: rgba(var(--color-light-rgb), 0.12);
-  --color-success-tone-light: rgba(var(--color-success-rgb), 0.12);
-  --color-error-tone-light: rgba(var(--color-error-rgb), 0.12);
-  --color-info-tone-light: rgba(var(--color-info-rgb), 0.12);
-  --color-warning-tone-light: rgba(var(--color-warning-rgb), 0.12);
+  --color-primary-toneLight: rgba(var(--color-primary-rgb), 0.12);
+  --color-primaryLight-toneLight: rgba(var(--color-primaryLight-rgb), 0.12);
+  --color-secondary-toneLight: rgba(var(--color-secondary-rgb), 0.12);
+  --color-dark-toneLight: rgba(var(--color-dark-rgb), 0.12);
+  --color-medium-toneLight: rgba(var(--color-medium-rgb), 0.12);
+  --color-light-toneLight: rgba(var(--color-light-rgb), 0.12);
+  --color-success-toneLight: rgba(var(--color-success-rgb), 0.12);
+  --color-error-toneLight: rgba(var(--color-error-rgb), 0.12);
+  --color-info-toneLight: rgba(var(--color-info-rgb), 0.12);
+  --color-warning-toneLight: rgba(var(--color-warning-rgb), 0.12);
 
-  --color-primary-tone-medium: rgba(var(--color-primary-rgb), 0.5);
-  --color-secondary-tone-medium: rgba(var(--color-secondary-rgb), 0.5);
-  --color-dark-tone-medium: rgba(var(--color-dark-rgb), 0.5);
-  --color-medium-tone-medium: rgba(var(--color-medium-rgb), 0.5);
-  --color-light-tone-medium: rgba(var(--color-light-rgb), 0.5);
-  --color-success-tone-medium: rgba(var(--color-success-rgb), 0.5);
-  --color-error-tone-medium: rgba(var(--color-error-rgb), 0.5);
-  --color-info-tone-medium: rgba(var(--color-info-rgb), 0.5);
-  --color-warning-tone-medium: rgba(var(--color-warning-rgb), 0.5);
+  --color-primary-toneMediumLight: rgba(var(--color-primary-rgb), 0.3);
+  --color-primaryLight-toneMediumLight: rgba(var(--color-primaryLight-rgb), 0.3);
+  --color-secondary-toneMediumLight: rgba(var(--color-secondary-rgb), 0.3);
+  --color-dark-toneMediumLight: rgba(var(--color-dark-rgb), 0.3);
+  --color-medium-toneMediumLight: rgba(var(--color-medium-rgb), 0.3);
+  --color-light-toneMediumLight: rgba(var(--color-light-rgb), 0.3);
+  --color-success-toneMediumLight: rgba(var(--color-success-rgb), 0.3);
+  --color-error-toneMediumLight: rgba(var(--color-error-rgb), 0.3);
+  --color-info-toneMediumLight: rgba(var(--color-info-rgb), 0.3);
+  --color-warning-toneMediumLight: rgba(var(--color-warning-rgb), 0.3);
 
-  --color-primary-tone-very-dark: rgba(var(--color-primary-rgb), 0.9);
-  --color-secondary-tone-very-dark: rgba(var(--color-secondary-rgb), 0.9);
-  --color-dark-tone-very-dark: rgba(var(--color-dark-rgb), 0.9);
-  --color-medium-tone-very-dark: rgba(var(--color-medium-rgb), 0.9);
-  --color-light-tone-very-dark: rgba(var(--color-light-rgb), 0.9);
-  --color-success-tone-very-dark: rgba(var(--color-success-rgb), 0.9);
-  --color-error-tone-very-dark: rgba(var(--color-error-rgb), 0.9);
-  --color-info-tone-very-dark: rgba(var(--color-info-rgb), 0.9);
-  --color-warning-tone-very-dark: rgba(var(--color-warning-rgb), 0.9);
+  --color-primary-toneMedium: rgba(var(--color-primary-rgb), 0.5);
+  --color-primaryLight-toneMedium: rgba(var(--color-primaryLight-rgb), 0.5);
+  --color-secondary-toneMedium: rgba(var(--color-secondary-rgb), 0.5);
+  --color-dark-toneMedium: rgba(var(--color-dark-rgb), 0.5);
+  --color-medium-toneMedium: rgba(var(--color-medium-rgb), 0.5);
+  --color-light-toneMedium: rgba(var(--color-light-rgb), 0.5);
+  --color-success-toneMedium: rgba(var(--color-success-rgb), 0.5);
+  --color-error-toneMedium: rgba(var(--color-error-rgb), 0.5);
+  --color-info-toneMedium: rgba(var(--color-info-rgb), 0.5);
+  --color-warning-toneMedium: rgba(var(--color-warning-rgb), 0.5);
+
+  --color-primary-toneVeryDark: rgba(var(--color-primary-rgb), 0.9);
+  --color-primaryLight-toneVeryDark: rgba(var(--color-primaryLight-rgb), 0.9);
+  --color-secondary-toneVeryDark: rgba(var(--color-secondary-rgb), 0.9);
+  --color-dark-toneVeryDark: rgba(var(--color-dark-rgb), 0.9);
+  --color-medium-toneVeryDark: rgba(var(--color-medium-rgb), 0.9);
+  --color-light-toneVeryDark: rgba(var(--color-light-rgb), 0.9);
+  --color-success-toneVeryDark: rgba(var(--color-success-rgb), 0.9);
+  --color-error-toneVeryDark: rgba(var(--color-error-rgb), 0.9);
+  --color-info-toneVeryDark: rgba(var(--color-info-rgb), 0.9);
+  --color-warning-toneVeryDark: rgba(var(--color-warning-rgb), 0.9);
 
   --color-body-bg: var(--color-secondary);
   --color-content-bg: var(--color-secondary);
-  --color-header-bg: rgba(var(--color-secondary), 0.5);
-  --color-line-primary: rgba(var(--color-primary-rgb), 0.3);
-  --color-line-secondary: rgba(var(--color-primary-rgb), 0.08);
-  --box-shadow-card: 0px 6px 24px rgba(var(--color-primary-rgb), 0.06);
+  --color-header-bg: var(--color-secondary-toneMedium);
+  --color-line-primary: var(--color-primary-toneMediumLight);
+  --color-line-secondary: var(--color-primary-toneLight);
+  --box-shadow-card: 0px 6px 24px var(--color-primary-toneLight);
 
   /* General */
   --font-family: 'Inter var';
