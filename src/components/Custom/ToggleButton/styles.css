@@ -1,0 +1,254 @@
+.MuiToggleButton-root.Mui-disabled {
+  opacity: 0.7 !important;
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
+}
+
+.MuiToggleButton-root {
+  border-radius: var(--border-radius-sm) !important;
+}
+
+.MuiToggleButtonGroup-hotizontal .MuiToggleButtonGroup-firstButton,
+.MuiToggleButtonGroup-hotizontal .MuiToggleButtonGroup-middleButton {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.MuiToggleButtonGroup-hotizontal .MuiToggleButtonGroup-lastButton,
+.MuiToggleButtonGroup-hotizontal .MuiToggleButtonGroup-middleButton {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.MuiToggleButtonGroup-hotizontal .MuiToggleButtonGroup-lastButton,
+.MuiToggleButtonGroup-hotizontal .MuiToggleButtonGroup-middleButton {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.MuiToggleButtonGroup-vertical .MuiToggleButtonGroup-firstButton,
+.MuiToggleButtonGroup-vertical .MuiToggleButtonGroup-middleButton {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.MuiToggleButtonGroup-vertical .MuiToggleButtonGroup-lastButton,
+.MuiToggleButtonGroup-vertical .MuiToggleButtonGroup-middleButton {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.MuiToggleButtonGroup-vertical .MuiToggleButtonGroup-lastButton,
+.MuiToggleButtonGroup-vertical .MuiToggleButtonGroup-middleButton {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorPrimary {
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorPrimaryLight {
+  border-color: var(--color-primaryLight) !important;
+  color: var(--color-primaryLight) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorSecondary {
+  border-color: var(--color-secondary) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorDark {
+  border-color: var(--color-dark) !important;
+  color: var(--color-dark) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorMedium {
+  border-color: var(--color-medium) !important;
+  color: var(--color-medium) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorLight {
+  border-color: var(--color-light) !important;
+  color: var(--color-light) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorSuccess {
+  border-color: var(--color-success) !important;
+  color: var(--color-success) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorError {
+  border-color: var(--color-error) !important;
+  color: var(--color-error) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorInfo {
+  border-color: var(--color-info) !important;
+  color: var(--color-info) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorWarning {
+  border-color: var(--color-warning) !important;
+  color: var(--color-warning) !important;
+}
+
+/*  */
+
+.MuiToggleButton-root.MuiToggleButton-colorPrimary > * {
+  color: var(--color-primary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorPrimaryLight > * {
+  color: var(--color-primaryLight) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorSecondary > * {
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorDark > * {
+  color: var(--color-dark) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorMedium > * {
+  color: var(--color-medium) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorLight > * {
+  color: var(--color-light) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorSuccess > * {
+  color: var(--color-success) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorError > * {
+  color: var(--color-error) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorInfo > * {
+  color: var(--color-info) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorWarning > * {
+  color: var(--color-warning) !important;
+}
+
+@media (hover: hover) {
+  .MuiToggleButton-root.MuiToggleButton-colorPrimary:hover {
+    background-color: var(--color-primary-toneVeryLight) !important;
+  }
+
+  .MuiToggleButton-root.MuiToggleButton-colorPrimaryLight:hover {
+    background-color: var(--color-primaryLight-toneVeryLight) !important;
+  }
+
+  .MuiToggleButton-root.MuiToggleButton-colorSecondary:hover {
+    background-color: var(--color-secondary-toneVeryLight) !important;
+  }
+
+  .MuiToggleButton-root.MuiToggleButton-colorDark:hover {
+    background-color: var(--color-dark-toneVeryLight) !important;
+  }
+
+  .MuiToggleButton-root.MuiToggleButton-colorMedium:hover {
+    background-color: var(--color-medium-toneVeryLight) !important;
+  }
+
+  .MuiToggleButton-root.MuiToggleButton-colorLight:hover {
+    background-color: var(--color-light-toneVeryLight) !important;
+  }
+
+  .MuiToggleButton-root.MuiToggleButton-colorSuccess:hover {
+    background-color: var(--color-success-toneVeryLight) !important;
+  }
+
+  .MuiToggleButton-root.MuiToggleButton-colorError:hover {
+    background-color: var(--color-error-toneVeryLight) !important;
+  }
+
+  .MuiToggleButton-root.MuiToggleButton-colorInfo:hover {
+    background-color: var(--color-info-toneVeryLight) !important;
+  }
+
+  .MuiToggleButton-root.MuiToggleButton-colorWarning:hover {
+    background-color: var(--color-warning-toneVeryLight) !important;
+  }
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorPrimary.Mui-selected {
+  background-color: var(--color-primary) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorPrimaryLight.Mui-selected {
+  background-color: var(--color-primaryLight) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorSecondary.Mui-selected {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorDark.Mui-selected {
+  background-color: var(--color-dark) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorMedium.Mui-selected {
+  background-color: var(--color-medium) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorLight.Mui-selected {
+  background-color: var(--color-light) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorSuccess.Mui-selected {
+  background-color: var(--color-success) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorError.Mui-selected {
+  background-color: var(--color-error) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorInfo.Mui-selected {
+  background-color: var(--color-info) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorWarning.Mui-selected {
+  background-color: var(--color-warning) !important;
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-colorPrimary.Mui-selected > *,
+.MuiToggleButton-root.MuiToggleButton-colorPrimaryLight.Mui-selected > *,
+.MuiToggleButton-root.MuiToggleButton-colorSecondary.Mui-selected > *,
+.MuiToggleButton-root.MuiToggleButton-colorDark.Mui-selected > *,
+.MuiToggleButton-root.MuiToggleButton-colorMedium.Mui-selected > *,
+.MuiToggleButton-root.MuiToggleButton-colorLight.Mui-selected > *,
+.MuiToggleButton-root.MuiToggleButton-colorSuccess.Mui-selected > *,
+.MuiToggleButton-root.MuiToggleButton-colorError.Mui-selected > *,
+.MuiToggleButton-root.MuiToggleButton-colorInfo.Mui-selected > *,
+.MuiToggleButton-root.MuiToggleButton-colorWarning.Mui-selected > * {
+  color: var(--color-secondary) !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-sizeSm {
+  padding: 6px !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-sizeMd {
+  padding: 7px !important;
+}
+
+.MuiToggleButton-root.MuiToggleButton-sizeLg {
+  padding: 8px !important;
+}

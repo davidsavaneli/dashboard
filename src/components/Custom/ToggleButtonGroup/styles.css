@@ -1,0 +1,39 @@
+.MuiToggleButtonGroup-colorPrimary .MuiToggleButton-root {
+  border-color: var(--color-primary) !important;
+}
+
+.MuiToggleButtonGroup-colorPrimaryLight .MuiToggleButton-root {
+  border-color: var(--color-primaryLight) !important;
+}
+
+.MuiToggleButtonGroup-colorSecondary .MuiToggleButton-root {
+  border-color: var(--color-secondary) !important;
+}
+
+.MuiToggleButtonGroup-colorDark .MuiToggleButton-root {
+  border-color: var(--color-dark) !important;
+}
+
+.MuiToggleButtonGroup-colorMedium .MuiToggleButton-root {
+  border-color: var(--color-medium) !important;
+}
+
+.MuiToggleButtonGroup-colorLight .MuiToggleButton-root {
+  border-color: var(--color-light) !important;
+}
+
+.MuiToggleButtonGroup-colorSuccess .MuiToggleButton-root {
+  border-color: var(--color-success) !important;
+}
+
+.MuiToggleButtonGroup-colorError .MuiToggleButton-root {
+  border-color: var(--color-error) !important;
+}
+
+.MuiToggleButtonGroup-colorInfo .MuiToggleButton-root {
+  border-color: var(--color-info) !important;
+}
+
+.MuiToggleButtonGroup-colorWarning .MuiToggleButton-root {
+  border-color: var(--color-warning) !important;
+}

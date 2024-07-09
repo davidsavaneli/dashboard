@@ -321,6 +321,13 @@ const IconButtonPage = () => {
             <br />
             <Text color='primaryLight'>Size: lg / Color: Error / Loading: true</Text>
           </Card>
+          <br />
+          <Card title='Tooltip'>
+            <IconButton iconName='Filter' tooltipTitle='Filter' />
+            <br />
+            <br />
+            <Text color='primaryLight'>tooltipTitle: string</Text>
+          </Card>
         </div>
       </div>
     </ContentLayout>

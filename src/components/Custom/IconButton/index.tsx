@@ -1,6 +1,7 @@
 import { MuiIconButton, MuiIconButtonProps } from '../../Mui'
 import Icon, { IconName, IconProps } from '../Icon'
 import CircularProgress from '../CircularProgress'
+import Tooltip from '../Tooltip'
 import clsx from 'clsx'
 
 import './styles.css'
@@ -13,8 +14,8 @@ declare module '@mui/material/IconButton' {
     primaryLight: true
     secondary: true
     dark: true
-    light: true
     medium: true
+    light: true
     success: true
     error: true
     info: true
@@ -37,6 +38,7 @@ export interface IconButtonProps extends MuiIconButtonProps {
   variant?: 'transparent' | 'contained' | 'outlined' | 'filled'
   iconVariant?: IconProps['variant']
   loading?: boolean
+  tooltipTitle?: string
 }
 
 const IconButton = ({
@@ -47,6 +49,7 @@ const IconButton = ({
   rounded = false,
   iconVariant,
   loading = false,
+  tooltipTitle,
   ...props
 }: IconButtonProps) => {
   const classNames = clsx({
@@ -71,7 +74,7 @@ const IconButton = ({
     ['MuiIconButton-loading']: loading,
   })
 
-  return (
+  const IconButtonComponent = () => (
     <MuiIconButton className={classNames} {...props}>
       {loading ? (
         <CircularProgress size={size} color={color} />
@@ -79,6 +82,14 @@ const IconButton = ({
         <Icon name={iconName} size={size} color={color} variant={iconVariant} />
       )}
     </MuiIconButton>
+  )
+
+  return tooltipTitle ? (
+    <Tooltip title={tooltipTitle}>
+      <IconButtonComponent />
+    </Tooltip>
+  ) : (
+    <IconButtonComponent />
   )
 }
 
