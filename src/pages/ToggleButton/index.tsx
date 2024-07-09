@@ -65,13 +65,13 @@ const ToggleButtonPage = () => {
           <Card title='Children'>
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1'>
-                <Text size='sm'>Left</Text>
+                <Text>Left</Text>
               </ToggleButton>
               <ToggleButton value='2'>
-                <Text size='sm'>Center</Text>
+                <Text>Center</Text>
               </ToggleButton>
               <ToggleButton value='3'>
-                <Text size='sm'>Right</Text>
+                <Text>Right</Text>
               </ToggleButton>
             </ToggleButtonGroup>
           </Card>
