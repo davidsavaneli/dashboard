@@ -1,0 +1,69 @@
+.MuiCircularProgress-root.MuiCircularProgress-colorPrimary {
+  color: var(--color-primary) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-colorPrimaryLight {
+  color: var(--color-primaryLight) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-colorSecondary {
+  color: var(--color-secondary) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-colorDark {
+  color: var(--color-dark) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-colorMedium {
+  color: var(--color-medium) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-colorLight {
+  color: var(--color-light) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-colorSuccess {
+  color: var(--color-success) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-colorError {
+  color: var(--color-error) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-colorInfo {
+  color: var(--color-info) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-colorWarning {
+  color: var(--color-warning) !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-sizeXs {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-sizeSm {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-sizeMd {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-sizeLg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-sizeXl {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.MuiCircularProgress-root.MuiCircularProgress-sizeXxl {
+  width: 32px !important;
+  height: 32px !important;
+}

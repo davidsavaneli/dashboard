@@ -1,5 +1,6 @@
 import { MuiIconButton, MuiIconButtonProps } from '../../Mui'
 import Icon, { IconName, IconProps } from '../Icon'
+import CircularProgress from '../CircularProgress'
 import clsx from 'clsx'
 
 import './styles.css'
@@ -35,6 +36,7 @@ export interface IconButtonProps extends MuiIconButtonProps {
   rounded?: boolean
   variant?: 'transparent' | 'contained' | 'outlined' | 'filled'
   iconVariant?: IconProps['variant']
+  loading?: boolean
 }
 
 const IconButton = ({
@@ -44,6 +46,7 @@ const IconButton = ({
   variant = 'filled',
   rounded = false,
   iconVariant,
+  loading = false,
   ...props
 }: IconButtonProps) => {
   const classNames = clsx({
@@ -65,11 +68,16 @@ const IconButton = ({
     ['MuiIconButton-sizeMd']: size === 'md',
     ['MuiIconButton-sizeLg']: size === 'lg',
     ['MuiIconButton-rounded']: rounded,
+    ['MuiIconButton-loading']: loading,
   })
 
   return (
     <MuiIconButton className={classNames} {...props}>
-      {<Icon name={iconName} size={size} color={color} variant={iconVariant} />}
+      {loading ? (
+        <CircularProgress size={size} color={color} />
+      ) : (
+        <Icon name={iconName} size={size} color={color} variant={iconVariant} />
+      )}
     </MuiIconButton>
   )
 }

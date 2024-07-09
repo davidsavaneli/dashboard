@@ -59,7 +59,13 @@ const IconButtonPage = () => {
           <Card title='Disabled'>
             <IconButton disabled iconName='Bag2' color='primary' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='primary' variant='contained' onClick={() => console.log('ssss')} />
+            <IconButton
+              disabled
+              iconName='Bag2'
+              color='primary'
+              variant='contained'
+              onClick={() => console.log('ssss')}
+            />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='primary' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -298,6 +304,23 @@ const IconButtonPage = () => {
             <br />
             <br />
             <Text color='primaryLight'>Size: lg</Text>
+          </Card>
+          <br />
+          <Card title='Loading'>
+            <IconButton iconName='Setting2' size='sm' color='primary' loading />
+            <br />
+            <br />
+            <Text color='primaryLight'>Size: sm / Color: Primary / Loading: true</Text>
+            <Divider />
+            <IconButton iconName='Setting2' size='md' color='success' loading />
+            <br />
+            <br />
+            <Text color='primaryLight'>Size: md / Color: Primary / Loading: true</Text>
+            <Divider />
+            <IconButton iconName='Setting2' size='lg' color='error' loading />
+            <br />
+            <br />
+            <Text color='primaryLight'>Size: lg / Color: Primary / Loading: true</Text>
           </Card>
         </div>
       </div>
