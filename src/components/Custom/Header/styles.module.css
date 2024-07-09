@@ -6,8 +6,8 @@
   width: inherit;
   background-color: var(--color-header-bg);
   backdrop-filter: blur(8px);
-  padding-left: var(--padding-xl);
-  padding-right: var(--padding-xl);
+  padding-left: var(--padding-xxl);
+  padding-right: var(--padding-xxl);
   display: flex;
   align-items: center;
   justify-content: space-between;

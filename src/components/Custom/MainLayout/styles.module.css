@@ -12,7 +12,7 @@
 }
 
 main {
-  padding: var(--padding-sm) var(--padding-xl) var(--padding-lg) var(--padding-xl);
+  padding: var(--padding-sm) var(--padding-xxl) var(--padding-lg) var(--padding-xxl);
   flex: 1 0 auto;
   margin-top: var(--header-height);
 }

@@ -172,7 +172,6 @@ const IconButtonPage = () => {
             <br />
             <br />
             <Text color='primaryLight'>Color: Warning</Text>
-            <Divider />
           </Card>
         </div>
         <div className='col-6'>
@@ -315,12 +314,12 @@ const IconButtonPage = () => {
             <IconButton iconName='Setting2' size='md' color='success' loading />
             <br />
             <br />
-            <Text color='primaryLight'>Size: md / Color: Primary / Loading: true</Text>
+            <Text color='primaryLight'>Size: md / Color: Success / Loading: true</Text>
             <Divider />
             <IconButton iconName='Setting2' size='lg' color='error' loading />
             <br />
             <br />
-            <Text color='primaryLight'>Size: lg / Color: Primary / Loading: true</Text>
+            <Text color='primaryLight'>Size: lg / Color: Error / Loading: true</Text>
           </Card>
         </div>
       </div>
