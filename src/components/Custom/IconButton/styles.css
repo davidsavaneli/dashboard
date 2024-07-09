@@ -13,10 +13,6 @@
   border-radius: 50% !important;
 }
 
-/* .MuiIconButton-root.MuiIconButton-loading > svg {
-  opacity: 0.1 !important;
-} */
-
 .MuiIconButton-colorPrimary.MuiIconButton-variantContained {
   background-color: var(--color-primary) !important;
 }

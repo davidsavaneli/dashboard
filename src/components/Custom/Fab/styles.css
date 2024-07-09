@@ -1,0 +1,135 @@
+.MuiFab-root.Mui-disabled {
+  opacity: 0.7 !important;
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
+}
+
+.MuiFab-root {
+  box-shadow: none !important;
+  min-width: inherit !important;
+  min-height: inherit !important;
+  width: inherit !important;
+  height: inherit !important;
+}
+
+.MuiFab-root.MuiFab-colorPrimary {
+  background-color: var(--color-primary) !important;
+}
+
+.MuiFab-root.MuiFab-colorPrimaryLight {
+  background-color: var(--color-primaryLight) !important;
+}
+
+.MuiFab-root.MuiFab-colorSecondary {
+  background-color: var(--color-secondary) !important;
+}
+
+.MuiFab-root.MuiFab-colorDark {
+  background-color: var(--color-dark) !important;
+}
+
+.MuiFab-root.MuiFab-colorMedium {
+  background-color: var(--color-medium) !important;
+}
+
+.MuiFab-root.MuiFab-colorLight {
+  background-color: var(--color-light) !important;
+}
+
+.MuiFab-root.MuiFab-colorSuccess {
+  background-color: var(--color-success) !important;
+}
+
+.MuiFab-root.MuiFab-colorError {
+  background-color: var(--color-error) !important;
+}
+
+.MuiFab-root.MuiFab-colorInfo {
+  background-color: var(--color-info) !important;
+}
+
+.MuiFab-root.MuiFab-colorWarning {
+  background-color: var(--color-warning) !important;
+}
+
+@media (hover: hover) {
+  .MuiFab-root.MuiFab-colorPrimary:hover {
+    background-color: var(--color-primary-toneVeryDark) !important;
+  }
+
+  .MuiFab-root.MuiFab-colorPrimaryLight:hover {
+    background-color: var(--color-primaryLight-toneVeryDark) !important;
+  }
+
+  .MuiFab-root.MuiFab-colorSecondary:hover {
+    background-color: var(--color-secondary-toneVeryDark) !important;
+  }
+
+  .MuiFab-root.MuiFab-colorDark:hover {
+    background-color: var(--color-dark-toneVeryDark) !important;
+  }
+
+  .MuiFab-root.MuiFab-colorMedium:hover {
+    background-color: var(--color-medium-toneVeryDark) !important;
+  }
+
+  .MuiFab-root.MuiFab-colorLight:hover {
+    background-color: var(--color-light-toneVeryDark) !important;
+  }
+
+  .MuiFab-root.MuiFab-colorSuccess:hover {
+    background-color: var(--color-success-toneVeryDark) !important;
+  }
+
+  .MuiFab-root.MuiFab-colorError:hover {
+    background-color: var(--color-error-toneVeryDark) !important;
+  }
+
+  .MuiFab-root.MuiFab-colorInfo:hover {
+    background-color: var(--color-info-toneVeryDark) !important;
+  }
+
+  .MuiFab-root.MuiFab-colorWarning:hover {
+    background-color: var(--color-warning) !important;
+  }
+}
+
+.MuiFab-root.MuiFab-colorPrimary > *,
+.MuiFab-root.MuiFab-colorPrimaryLight > *,
+.MuiFab-root.MuiFab-colorDark > *,
+.MuiFab-root.MuiFab-colorMedium > *,
+.MuiFab-root.MuiFab-colorLight > *,
+.MuiFab-root.MuiFab-colorSuccess > *,
+.MuiFab-root.MuiFab-colorError > *,
+.MuiFab-root.MuiFab-colorInfo > *,
+.MuiFab-root.MuiFab-colorWarning > * .MuiFab-root.MuiFab-colorPrimary > svg,
+.MuiFab-root.MuiFab-colorPrimaryLight > svg,
+.MuiFab-root.MuiFab-colorDark > svg,
+.MuiFab-root.MuiFab-colorMedium > svg,
+.MuiFab-root.MuiFab-colorLight > svg,
+.MuiFab-root.MuiFab-colorSuccess > svg,
+.MuiFab-root.MuiFab-colorError > svg,
+.MuiFab-root.MuiFab-colorInfo > svg,
+.MuiFab-root.MuiFab-colorWarning > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiFab-root.MuiFab-colorSecondary > *,
+.MuiFab-root.MuiFab-colorSecondary > svg {
+  color: var(--color-primary) !important;
+}
+
+.MuiFab-sizeSm {
+  min-width: 40px !important;
+  min-height: 40px !important;
+}
+
+.MuiFab-sizeMd {
+  min-width: 46px !important;
+  min-height: 46px !important;
+}
+
+.MuiFab-sizeLg {
+  min-width: 52px !important;
+  min-height: 52px !important;
+}
