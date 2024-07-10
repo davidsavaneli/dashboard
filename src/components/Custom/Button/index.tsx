@@ -1,5 +1,8 @@
 import { forwardRef } from 'react'
 import { MuiButton, MuiButtonProps } from '../../Mui'
+import Tooltip from '../Tooltip'
+import CircularProgress from '../CircularProgress'
+import Icon, { IconName, IconProps } from '../Icon'
 import clsx from 'clsx'
 
 import './styles.css'
@@ -7,8 +10,8 @@ import './styles.css'
 declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
     text: false
+    outlined: false
     contained: true
-    outlined: true
     filled: true
     transparent: true
   }
@@ -25,8 +28,9 @@ declare module '@mui/material/Button' {
 }
 
 export interface ButtonProps extends Omit<MuiButtonProps, 'color'> {
+  iconName?: IconName
+  iconVariant?: IconProps['variant']
   rounded?: boolean
-  loading?: boolean
   color?:
     | 'primary'
     | 'primaryLight'
@@ -38,36 +42,68 @@ export interface ButtonProps extends Omit<MuiButtonProps, 'color'> {
     | 'error'
     | 'info'
     | 'warning'
+  loading?: boolean
+  tooltipTitle?: string
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { variant = 'contained', color = 'primary', size = 'md', rounded = false, loading = false, ...props }: ButtonProps,
+    {
+      variant = 'contained',
+      color = 'primary',
+      size = 'md',
+      iconName,
+      iconVariant,
+      rounded = false,
+      loading = false,
+      tooltipTitle,
+      children,
+      ...props
+    }: ButtonProps,
     ref,
   ) => {
     const classNames = clsx({
-      ['SSSSS-variantTransparent']: variant === 'transparent',
-      ['SSSSS-variantContained']: variant === 'contained',
-      ['SSSSS-variantOutlined']: variant === 'outlined',
-      ['SSSSS-variantFilled']: variant === 'filled',
-      ['SSSSS-colorPrimary']: color === 'primary',
-      ['SSSSS-colorPrimaryLight']: color === 'primaryLight',
-      ['SSSSS-colorSecondary']: color === 'secondary',
-      ['SSSSS-colorDark']: color === 'dark',
-      ['SSSSS-colorMedium']: color === 'medium',
-      ['SSSSS-colorLight']: color === 'light',
-      ['SSSSS-colorSuccess']: color === 'success',
-      ['SSSSS-colorError']: color === 'error',
-      ['SSSSS-colorInfo']: color === 'info',
-      ['SSSSS-colorWarning']: color === 'warning',
-      ['SSSSS-sizeSm']: size === 'sm',
-      ['SSSSS-sizeMd']: size === 'md',
-      ['SSSSS-sizeLg']: size === 'lg',
-      ['SSSSS-rounded']: rounded,
-      ['SSSSS-loading']: loading,
+      ['MuiButton-variantContained']: variant === 'contained',
+      ['MuiButton-variantFilled']: variant === 'filled',
+      ['MuiButton-variantTransparent']: variant === 'transparent',
+      ['MuiButton-colorPrimary']: color === 'primary',
+      ['MuiButton-colorPrimaryLight']: color === 'primaryLight',
+      ['MuiButton-colorSecondary']: color === 'secondary',
+      ['MuiButton-colorDark']: color === 'dark',
+      ['MuiButton-colorMedium']: color === 'medium',
+      ['MuiButton-colorLight']: color === 'light',
+      ['MuiButton-colorSuccess']: color === 'success',
+      ['MuiButton-colorError']: color === 'error',
+      ['MuiButton-colorInfo']: color === 'info',
+      ['MuiButton-colorWarning']: color === 'warning',
+      ['MuiButton-sizeSm']: size === 'sm',
+      ['MuiButton-sizeMd']: size === 'md',
+      ['MuiButton-sizeLg']: size === 'lg',
+      ['MuiButton-rounded']: rounded,
     })
 
-    return <MuiButton ref={ref} className={classNames} variant={variant} size={size} {...props} />
+    const ButtonComponent = () => (
+      <MuiButton ref={ref} className={classNames} {...props}>
+        {(iconName || loading) && (
+          <div className='MuiButton-adornmentBox'>
+            {loading ? (
+              <CircularProgress size={size} />
+            ) : (
+              iconName && <Icon name={iconName} size={size} variant={iconVariant} />
+            )}
+          </div>
+        )}
+        {children}
+      </MuiButton>
+    )
+
+    return tooltipTitle ? (
+      <Tooltip title={tooltipTitle}>
+        <ButtonComponent />
+      </Tooltip>
+    ) : (
+      <ButtonComponent />
+    )
   },
 )
 

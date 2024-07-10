@@ -54,39 +54,39 @@
 
 @media (hover: hover) {
   .MuiFab-root.MuiFab-colorPrimary:hover {
-    background-color: var(--color-primary-toneVeryDark) !important;
+    background-color: var(--color-primary-shade800) !important;
   }
 
   .MuiFab-root.MuiFab-colorPrimaryLight:hover {
-    background-color: var(--color-primaryLight-toneVeryDark) !important;
+    background-color: var(--color-primaryLight-shade800) !important;
   }
 
   .MuiFab-root.MuiFab-colorSecondary:hover {
-    background-color: var(--color-secondary-toneVeryDark) !important;
+    background-color: var(--color-secondary-shade800) !important;
   }
 
   .MuiFab-root.MuiFab-colorDark:hover {
-    background-color: var(--color-dark-toneVeryDark) !important;
+    background-color: var(--color-dark-shade800) !important;
   }
 
   .MuiFab-root.MuiFab-colorMedium:hover {
-    background-color: var(--color-medium-toneVeryDark) !important;
+    background-color: var(--color-medium-shade800) !important;
   }
 
   .MuiFab-root.MuiFab-colorLight:hover {
-    background-color: var(--color-light-toneVeryDark) !important;
+    background-color: var(--color-light-shade800) !important;
   }
 
   .MuiFab-root.MuiFab-colorSuccess:hover {
-    background-color: var(--color-success-toneVeryDark) !important;
+    background-color: var(--color-success-shade800) !important;
   }
 
   .MuiFab-root.MuiFab-colorError:hover {
-    background-color: var(--color-error-toneVeryDark) !important;
+    background-color: var(--color-error-shade800) !important;
   }
 
   .MuiFab-root.MuiFab-colorInfo:hover {
-    background-color: var(--color-info-toneVeryDark) !important;
+    background-color: var(--color-info-shade800) !important;
   }
 
   .MuiFab-root.MuiFab-colorWarning:hover {

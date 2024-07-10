@@ -4,6 +4,674 @@ const ButtonPage = () => {
   return (
     <ContentLayout label='Button Component'>
       <div className='row'>
+        <div className='col-4'>
+          <Card title='Color: Primary'>
+            <Button color='primary' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primary' disabled variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' disabled variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' disabled variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primary' iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primary' disabled iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' disabled iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' disabled iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primary' loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primary' disabled loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' disabled loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' disabled loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primary' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primary' iconName='Home' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' iconName='Home' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primary' iconName='Home' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+          </Card>
+        </div>
+        <div className='col-4'>
+          <Card title='Color: PrimaryLight'>
+            <Button color='primaryLight' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primaryLight' disabled variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' disabled variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' disabled variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primaryLight' iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primaryLight' disabled iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' disabled iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' disabled iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primaryLight' loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primaryLight' disabled loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' disabled loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' disabled loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primaryLight' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='primaryLight' iconName='Home' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' iconName='Home' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='primaryLight' iconName='Home' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+          </Card>
+        </div>
+        <div className='col-4'>
+          <Card title='Color: Secondary'>
+            <Button color='secondary' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='secondary' disabled variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' disabled variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' disabled variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='secondary' iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='secondary' disabled iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' disabled iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' disabled iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='secondary' loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='secondary' disabled loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' disabled loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' disabled loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='secondary' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='secondary' iconName='Home' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' iconName='Home' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='secondary' iconName='Home' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+          </Card>
+        </div>
+        <div className='col-4'>
+          <Card title='Color: Dark'>
+            <Button color='dark' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='dark' disabled variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' disabled variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' disabled variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='dark' iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='dark' disabled iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' disabled iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' disabled iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='dark' loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='dark' disabled loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' disabled loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' disabled loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='dark' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='dark' iconName='Home' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' iconName='Home' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='dark' iconName='Home' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+          </Card>
+        </div>
+        <div className='col-4'>
+          <Card title='Color: Success'>
+            <Button color='success' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='success' disabled variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' disabled variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' disabled variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='success' iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='success' disabled iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' disabled iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' disabled iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='success' loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='success' disabled loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' disabled loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' disabled loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='success' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='success' iconName='Home' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' iconName='Home' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='success' iconName='Home' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+          </Card>
+        </div>
+        <div className='col-4'>
+          <Card title='Color: Error'>
+            <Button color='error' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='error' disabled variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' disabled variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' disabled variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='error' iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='error' disabled iconName='Setting2' variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' disabled iconName='Setting2' variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' disabled iconName='Setting2' variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='error' loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='error' disabled loading variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' disabled loading variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' disabled loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='error' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Button color='error' iconName='Home' rounded variant='contained'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' iconName='Home' rounded variant='filled'>
+              Button
+            </Button>
+            &nbsp;&nbsp;&nbsp;
+            <Button color='error' iconName='Home' rounded variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+          </Card>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className='row'>
         <div className='col-6'>
           <Card title='Default'>
             <Button>Button</Button>
@@ -23,12 +691,7 @@ const ButtonPage = () => {
             <br />
             <Text color='primaryLight'>Variant: Contained</Text>
             <Divider />
-            <Button variant='outlined'>Button</Button>
-            <br />
-            <br />
-            <Text color='primaryLight'>Variant: Outlined</Text>
-            <Divider />
-            <Button variant='transparent'>Button</Button>
+            <Button variant='filled'>Button</Button>
             <br />
             <br />
             <Text color='primaryLight'>Variant: Filled</Text>
@@ -49,13 +712,6 @@ const ButtonPage = () => {
             <br />
             <Text color='primaryLight'>Variant: Contained / Rounded: true</Text>
             <Divider />
-            <Button variant='outlined' rounded>
-              Button
-            </Button>
-            <br />
-            <br />
-            <Text color='primaryLight'>Variant: Outlined / Rounded: true</Text>
-            <Divider />
             <Button variant='filled' rounded>
               Button
             </Button>
@@ -70,10 +726,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' disabled color='primary'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='primary'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -92,10 +744,6 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='primaryLight'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' disabled color='primaryLight'>
               Button
             </Button>
@@ -108,10 +756,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' disabled color='secondary'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='secondary'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -130,10 +774,6 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='dark'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' disabled color='dark'>
               Button
             </Button>
@@ -146,10 +786,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' disabled color='medium'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='medium'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -168,10 +804,6 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='light'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' disabled color='light'>
               Button
             </Button>
@@ -184,10 +816,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' disabled color='success'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='success'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -206,10 +834,6 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='error'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' disabled color='error'>
               Button
             </Button>
@@ -222,10 +846,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' disabled color='info'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='info'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -244,16 +864,24 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' disabled color='warning'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' disabled color='warning'>
               Button
             </Button>
             <br />
             <br />
             <Text color='primaryLight'>Color: Warning</Text>
+          </Card>
+          <br />
+          <Card title='With Icon'>
+            <Button iconName='Setting2'>Button</Button>
+            <br />
+            <br />
+            <Button iconName='Setting2' loading variant='transparent'>
+              Button
+            </Button>
+            <br />
+            <br />
+            <Text color='primaryLight'>Icon: Setting2 / Loading: true</Text>
           </Card>
         </div>
         <div className='col-6'>
@@ -263,10 +891,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' color='primary'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='primary'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -285,10 +909,6 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='primaryLight'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' color='primaryLight'>
               Button
             </Button>
@@ -301,10 +921,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' color='secondary'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='secondary'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -323,10 +939,6 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='dark'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' color='dark'>
               Button
             </Button>
@@ -339,10 +951,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' color='medium'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='medium'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -361,10 +969,6 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='light'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' color='light'>
               Button
             </Button>
@@ -377,10 +981,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' color='success'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='success'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -399,10 +999,6 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='error'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' color='error'>
               Button
             </Button>
@@ -418,10 +1014,6 @@ const ButtonPage = () => {
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='info'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='filled' color='info'>
               Button
             </Button>
@@ -434,10 +1026,6 @@ const ButtonPage = () => {
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button variant='contained' color='warning'>
-              Button
-            </Button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant='outlined' color='warning'>
               Button
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -467,28 +1055,34 @@ const ButtonPage = () => {
           </Card>
           <br />
           <Card title='Loading'>
-            <Button size='sm' color='primary' loading>Button</Button>
+            <Button size='sm' color='primary' loading>
+              Button
+            </Button>
             <br />
             <br />
             <Text color='primaryLight'>Size: sm / Color: Primary / Loading: true</Text>
             <Divider />
-            <Button size='md' color='success' loading>Button</Button>
+            <Button size='md' color='success' loading>
+              Button
+            </Button>
             <br />
             <br />
             <Text color='primaryLight'>Size: md / Color: Success / Loading: true</Text>
             <Divider />
-            <Button size='lg' color='error' loading>Button</Button>
+            <Button size='lg' color='error' loading>
+              Button
+            </Button>
             <br />
             <br />
             <Text color='primaryLight'>Size: lg / Color: Error / Loading: true</Text>
           </Card>
           <br />
-          {/* <Card title='Tooltip'>
-            <IconButton iconName='Filter' tooltipTitle='Filter' />
+          <Card title='Tooltip'>
+            <Button tooltipTitle='Tooltip Title'>Button</Button>
             <br />
             <br />
             <Text color='primaryLight'>tooltipTitle: string</Text>
-          </Card> */}
+          </Card>
         </div>
       </div>
     </ContentLayout>

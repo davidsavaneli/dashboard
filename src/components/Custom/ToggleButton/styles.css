@@ -138,43 +138,43 @@
 
 @media (hover: hover) {
   .MuiToggleButton-root.MuiToggleButton-colorPrimary:hover {
-    background-color: var(--color-primary-toneVeryLight) !important;
+    background-color: var(--color-primary-shade100) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorPrimaryLight:hover {
-    background-color: var(--color-primaryLight-toneVeryLight) !important;
+    background-color: var(--color-primaryLight-shade100) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorSecondary:hover {
-    background-color: var(--color-secondary-toneVeryLight) !important;
+    background-color: var(--color-secondary-shade100) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorDark:hover {
-    background-color: var(--color-dark-toneVeryLight) !important;
+    background-color: var(--color-dark-shade100) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorMedium:hover {
-    background-color: var(--color-medium-toneVeryLight) !important;
+    background-color: var(--color-medium-shade100) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorLight:hover {
-    background-color: var(--color-light-toneVeryLight) !important;
+    background-color: var(--color-light-shade100) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorSuccess:hover {
-    background-color: var(--color-success-toneVeryLight) !important;
+    background-color: var(--color-success-shade100) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorError:hover {
-    background-color: var(--color-error-toneVeryLight) !important;
+    background-color: var(--color-error-shade100) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorInfo:hover {
-    background-color: var(--color-info-toneVeryLight) !important;
+    background-color: var(--color-info-shade100) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorWarning:hover {
-    background-color: var(--color-warning-toneVeryLight) !important;
+    background-color: var(--color-warning-shade100) !important;
   }
 }
 
