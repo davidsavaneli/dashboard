@@ -23,6 +23,7 @@ declare module '@mui/material/ToggleButton' {
   }
 
   interface ToggleButtonPropsSizeOverrides {
+    string: false
     small: false
     medium: false
     large: false

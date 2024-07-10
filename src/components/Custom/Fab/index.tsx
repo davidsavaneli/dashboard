@@ -24,6 +24,7 @@ declare module '@mui/material/Fab' {
   }
 
   interface FabPropsSizeOverrides {
+    string: false
     small: false
     medium: false
     large: false

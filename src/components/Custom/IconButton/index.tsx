@@ -23,6 +23,7 @@ declare module '@mui/material/IconButton' {
   }
 
   interface IconButtonPropsSizeOverrides {
+    string: false
     small: false
     medium: false
     large: false
@@ -35,7 +36,7 @@ declare module '@mui/material/IconButton' {
 export interface IconButtonProps extends MuiIconButtonProps {
   iconName: IconName
   rounded?: boolean
-  variant?: 'transparent' | 'contained' | 'outlined' | 'filled'
+  variant?: 'contained' | 'outlined' | 'filled' | 'transparent'
   iconVariant?: IconProps['variant']
   loading?: boolean
   tooltipTitle?: string

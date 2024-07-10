@@ -10,7 +10,7 @@ const CardPage = () => {
             headerActions={<IconButton iconName='More' />}
             footerActions={
               <>
-                <Button variant='text'>Cancel</Button>
+                <Button variant='transparent'>Cancel</Button>
                 <Button>Submit</Button>
               </>
             }

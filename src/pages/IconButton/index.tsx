@@ -285,7 +285,6 @@ const IconButtonPage = () => {
             <br />
             <br />
             <Text color='primaryLight'>Color: Warning</Text>
-            <Divider />
           </Card>
           <br />
           <Card title='Sizes'>

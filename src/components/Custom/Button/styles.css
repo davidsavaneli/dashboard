@@ -1,0 +1,330 @@
+.MuiIconButton-root {
+  border-radius: var(--border-radius-sm) !important;
+  transition: background-color var(--tr-dur);
+}
+
+.MuiIconButton-root.Mui-disabled {
+  opacity: 0.7 !important;
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
+}
+
+.MuiIconButton-root.MuiIconButton-rounded {
+  border-radius: 50% !important;
+}
+
+.MuiIconButton-colorPrimary.MuiIconButton-variantContained {
+  background-color: var(--color-primary) !important;
+}
+
+.MuiIconButton-colorPrimaryLight.MuiIconButton-variantContained {
+  background-color: var(--color-primaryLight) !important;
+}
+
+.MuiIconButton-colorSecondary.MuiIconButton-variantContained {
+  background-color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorDark.MuiIconButton-variantContained {
+  background-color: var(--color-dark) !important;
+}
+
+.MuiIconButton-colorMedium.MuiIconButton-variantContained {
+  background-color: var(--color-medium) !important;
+}
+
+.MuiIconButton-colorLight.MuiIconButton-variantContained {
+  background-color: var(--color-light) !important;
+}
+
+.MuiIconButton-colorSuccess.MuiIconButton-variantContained {
+  background-color: var(--color-success) !important;
+}
+
+.MuiIconButton-colorError.MuiIconButton-variantContained {
+  background-color: var(--color-error) !important;
+}
+
+.MuiIconButton-colorInfo.MuiIconButton-variantContained {
+  background-color: var(--color-info) !important;
+}
+
+.MuiIconButton-colorWarning.MuiIconButton-variantContained {
+  background-color: var(--color-warning) !important;
+}
+
+.MuiIconButton-colorPrimary.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorPrimaryLight.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorSecondary.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorDark.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorMedium.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorLight.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorSuccess.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorError.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorInfo.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorWarning.MuiIconButton-variantContained > svg {
+  color: var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorPrimary.MuiIconButton-variantOutlined {
+  background-color: var(--color-primary-toneVeryLight) !important;
+  border: 1px solid var(--color-primary) !important;
+}
+
+.MuiIconButton-colorPrimaryLight.MuiIconButton-variantOutlined {
+  background-color: var(--color-primaryLight-toneVeryLight) !important;
+  border: 1px solid var(--color-primaryLight) !important;
+}
+
+.MuiIconButton-colorSecondary.MuiIconButton-variantOutlined {
+  background-color: var(--color-secondary-toneVeryLight) !important;
+  border: 1px solid var(--color-secondary) !important;
+}
+
+.MuiIconButton-colorDark.MuiIconButton-variantOutlined {
+  background-color: var(--color-dark-toneVeryLight) !important;
+  border: 1px solid var(--color-dark) !important;
+}
+
+.MuiIconButton-colorMedium.MuiIconButton-variantOutlined {
+  background-color: var(--color-medium-toneVeryLight) !important;
+  border: 1px solid var(--color-medium) !important;
+}
+
+.MuiIconButton-colorLight.MuiIconButton-variantOutlined {
+  background-color: var(--color-light-toneVeryLight) !important;
+  border: 1px solid var(--color-light) !important;
+}
+
+.MuiIconButton-colorSuccess.MuiIconButton-variantOutlined {
+  background-color: var(--color-success-toneVeryLight) !important;
+  border: 1px solid var(--color-success) !important;
+}
+
+.MuiIconButton-colorError.MuiIconButton-variantOutlined {
+  background-color: var(--color-error-toneVeryLight) !important;
+  border: 1px solid var(--color-error) !important;
+}
+
+.MuiIconButton-colorInfo.MuiIconButton-variantOutlined {
+  background-color: var(--color-info-toneVeryLight) !important;
+  border: 1px solid var(--color-info) !important;
+}
+
+.MuiIconButton-colorWarning.MuiIconButton-variantOutlined {
+  background-color: var(--color-warning-toneVeryLight) !important;
+  border: 1px solid var(--color-warning) !important;
+}
+
+.MuiIconButton-colorPrimary.MuiIconButton-variantFilled {
+  background-color: var(--color-primary-toneVeryLight) !important;
+}
+
+.MuiIconButton-colorPrimaryLight.MuiIconButton-variantFilled {
+  background-color: var(--color-primaryLight-toneVeryLight) !important;
+}
+
+.MuiIconButton-colorSecondary.MuiIconButton-variantFilled {
+  background-color: var(--color-secondary-toneVeryLight) !important;
+}
+
+.MuiIconButton-colorDark.MuiIconButton-variantFilled {
+  background-color: var(--color-dark-toneVeryLight) !important;
+}
+
+.MuiIconButton-colorMedium.MuiIconButton-variantFilled {
+  background-color: var(--color-medium-toneVeryLight) !important;
+}
+
+.MuiIconButton-colorLight.MuiIconButton-variantFilled {
+  background-color: var(--color-light-toneVeryLight) !important;
+}
+
+.MuiIconButton-colorSuccess.MuiIconButton-variantFilled {
+  background-color: var(--color-success-toneVeryLight) !important;
+}
+
+.MuiIconButton-colorError.MuiIconButton-variantFilled {
+  background-color: var(--color-error-toneVeryLight) !important;
+}
+
+.MuiIconButton-colorInfo.MuiIconButton-variantFilled {
+  background-color: var(--color-info-toneVeryLight) !important;
+}
+
+.MuiIconButton-colorWarning.MuiIconButton-variantFilled {
+  background-color: var(--color-warning-toneVeryLight) !important;
+}
+
+@media (hover: hover) {
+  .MuiIconButton-colorPrimary.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-primary-toneVeryLight) !important;
+  }
+
+  .MuiIconButton-colorPrimaryLight.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-primaryLight-toneVeryLight) !important;
+  }
+
+  .MuiIconButton-colorSecondary.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-secondary-toneVeryLight) !important;
+  }
+
+  .MuiIconButton-colorDark.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-dark-toneVeryLight) !important;
+  }
+
+  .MuiIconButton-colorMedium.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-medium-toneVeryLight) !important;
+  }
+
+  .MuiIconButton-colorLight.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-light-toneVeryLight) !important;
+  }
+
+  .MuiIconButton-colorSuccess.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-success-toneVeryLight) !important;
+  }
+
+  .MuiIconButton-colorError.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-error-toneVeryLight) !important;
+  }
+
+  .MuiIconButton-colorInfo.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-info-toneVeryLight) !important;
+  }
+
+  .MuiIconButton-colorWarning.MuiIconButton-variantTransparent:hover {
+    background-color: var(--color-warning-toneVeryLight) !important;
+  }
+}
+
+@media (hover: hover) {
+  .MuiIconButton-colorPrimary.MuiIconButton-variantContained:hover {
+    background-color: var(--color-primary-toneVeryDark) !important;
+  }
+  .MuiIconButton-colorPrimaryLight.MuiIconButton-variantContained:hover {
+    background-color: var(--color-primaryLight-toneVeryDark) !important;
+  }
+
+  .MuiIconButton-colorSecondary.MuiIconButton-variantContained:hover {
+    background-color: var(--color-secondary-toneVeryDark) !important;
+  }
+
+  .MuiIconButton-colorDark.MuiIconButton-variantContained:hover {
+    background-color: var(--color-dark-toneVeryDark) !important;
+  }
+
+  .MuiIconButton-colorMedium.MuiIconButton-variantContained:hover {
+    background-color: var(--color-medium-toneVeryDark) !important;
+  }
+
+  .MuiIconButton-colorLight.MuiIconButton-variantContained:hover {
+    background-color: var(--color-light-toneVeryDark) !important;
+  }
+
+  .MuiIconButton-colorSuccess.MuiIconButton-variantContained:hover {
+    background-color: var(--color-success-toneVeryDark) !important;
+  }
+
+  .MuiIconButton-colorError.MuiIconButton-variantContained:hover {
+    background-color: var(--color-error-toneVeryDark) !important;
+  }
+
+  .MuiIconButton-colorInfo.MuiIconButton-variantContained:hover {
+    background-color: var(--color-info-toneVeryDark) !important;
+  }
+
+  .MuiIconButton-colorWarning.MuiIconButton-variantContained:hover {
+    background-color: var(--color-warning-toneVeryDark) !important;
+  }
+}
+
+@media (hover: hover) {
+  .MuiIconButton-colorPrimary.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorPrimary.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-primary-toneLight) !important;
+  }
+  .MuiIconButton-colorPrimaryLight.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorPrimaryLight.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-primaryLight-toneLight) !important;
+  }
+
+  .MuiIconButton-colorSecondary.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorSecondary.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-secondary-toneLight) !important;
+  }
+
+  .MuiIconButton-colorDark.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorDark.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-dark-toneLight) !important;
+  }
+
+  .MuiIconButton-colorMedium.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorMedium.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-medium-toneLight) !important;
+  }
+
+  .MuiIconButton-colorLight.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorLight.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-light-toneLight) !important;
+  }
+
+  .MuiIconButton-colorSuccess.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorSuccess.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-success-toneLight) !important;
+  }
+
+  .MuiIconButton-colorError.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorError.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-error-toneLight) !important;
+  }
+
+  .MuiIconButton-colorInfo.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorInfo.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-info-toneLight) !important;
+  }
+
+  .MuiIconButton-colorWarning.MuiIconButton-variantFilled:hover,
+  .MuiIconButton-colorWarning.MuiIconButton-variantOutlined:hover {
+    background-color: var(--color-warning-toneLight) !important;
+  }
+}
+
+.MuiIconButton-sizeSm {
+  padding: 7px !important;
+}
+
+.MuiIconButton-sizeMd {
+  padding: 8px !important;
+}
+
+.MuiIconButton-sizeLg {
+  padding: 9px !important;
+}
