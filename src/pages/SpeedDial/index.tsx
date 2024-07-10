@@ -1,12 +1,12 @@
-import { ContentLayout, Card, SpeedDial, SpeedDialAction, Icon } from '../../components'
+import { ContentLayout, Card, SpeedDial, SpeedDialAction, Icon, Fab } from '../../components'
 
 const SpeedDialPage = () => {
   return (
-    <ContentLayout label='SpeedDial Page'>
+    <ContentLayout label='SpeedDial Component'>
       <Card title='SpeedDial With Tooltip'>
-        <SpeedDial ariaLabel='SpeedDial basic example' icon={<Icon name='More' />}>
-          <SpeedDialAction icon={<Icon name='Trash' />} tooltipTitle='Trash' />
-          <SpeedDialAction icon={<Icon name='HambergerMenu' />} tooltipTitle='HambergerMenu' />
+        <SpeedDial ariaLabel='SpeedDial basic example'>
+          <SpeedDialAction FabProps={{ iconName: 'Trash' }} tooltipTitle='Trash' />
+          <SpeedDialAction FabProps={{ iconName: 'Filter' }} tooltipTitle='Filter' />
         </SpeedDial>
       </Card>
     </ContentLayout>

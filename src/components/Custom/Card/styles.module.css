@@ -33,5 +33,6 @@
 }
 
 .content {
+  position: relative;
   padding: var(--padding-md);
 }

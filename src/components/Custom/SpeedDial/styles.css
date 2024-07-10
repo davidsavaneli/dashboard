@@ -1,0 +1,7 @@
+.MuiSpeedDial-root {
+  position: fixed !important;
+  z-index: 888 !important;
+  right: var(--padding-xxl) !important;
+  right: calc(var(--padding-xxl) - 4px) !important;
+  bottom: var(--padding-lg) !important;
+}

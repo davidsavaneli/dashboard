@@ -1,12 +1,21 @@
 import { forwardRef } from 'react'
 import { MuiSpeedDial, MuiSpeedDialProps } from '../../Mui'
+import Fab, { FabProps } from '../Fab'
 
-export interface SpeedDialProps extends MuiSpeedDialProps {}
+import './styles.css'
 
-const SpeedDial = forwardRef<HTMLButtonElement, SpeedDialProps>(
-  ({ direction = 'up', ...props }: SpeedDialProps, ref) => {
-    return <MuiSpeedDial ref={ref} direction={direction} {...props} />
-  },
-)
+export interface SpeedDialProps extends MuiSpeedDialProps {
+  FabProps?: FabProps
+}
+
+const SpeedDial = forwardRef<HTMLButtonElement, SpeedDialProps>(({ FabProps, ...props }: SpeedDialProps, ref) => {
+  return (
+    <MuiSpeedDial
+      ref={ref}
+      icon={<Fab size={FabProps?.size || 'lg'} iconName={FabProps?.iconName || 'Add'} {...FabProps} />}
+      {...props}
+    />
+  )
+})
 
 export default SpeedDial
