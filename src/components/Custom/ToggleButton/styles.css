@@ -138,43 +138,43 @@
 
 @media (hover: hover) {
   .MuiToggleButton-root.MuiToggleButton-colorPrimary:hover {
-    background-color: var(--color-primary-shade100) !important;
+    background-color: var(--color-primary-shade200) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorPrimaryLight:hover {
-    background-color: var(--color-primaryLight-shade100) !important;
+    background-color: var(--color-primaryLight-shade200) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorSecondary:hover {
-    background-color: var(--color-secondary-shade100) !important;
+    background-color: var(--color-secondary-shade200) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorDark:hover {
-    background-color: var(--color-dark-shade100) !important;
+    background-color: var(--color-dark-shade200) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorMedium:hover {
-    background-color: var(--color-medium-shade100) !important;
+    background-color: var(--color-medium-shade200) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorLight:hover {
-    background-color: var(--color-light-shade100) !important;
+    background-color: var(--color-light-shade200) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorSuccess:hover {
-    background-color: var(--color-success-shade100) !important;
+    background-color: var(--color-success-shade200) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorError:hover {
-    background-color: var(--color-error-shade100) !important;
+    background-color: var(--color-error-shade200) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorInfo:hover {
-    background-color: var(--color-info-shade100) !important;
+    background-color: var(--color-info-shade200) !important;
   }
 
   .MuiToggleButton-root.MuiToggleButton-colorWarning:hover {
-    background-color: var(--color-warning-shade100) !important;
+    background-color: var(--color-warning-shade200) !important;
   }
 }
 

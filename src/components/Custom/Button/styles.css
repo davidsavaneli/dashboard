@@ -123,16 +123,16 @@
 .MuiButton-variantTransparent.MuiButton-colorWarning .MuiButton-adornmentBox svg { color: var(--color-warning) !important; }
 
 @media (hover: hover) {
-  .MuiButton-variantTransparent.MuiButton-colorPrimary:hover { background-color: var(--color-primary-shade300) !important; }
-  .MuiButton-variantTransparent.MuiButton-colorPrimaryLight:hover { background-color: var(--color-primaryLight-shade300) !important; }
-  .MuiButton-variantTransparent.MuiButton-colorSecondary:hover { background-color: var(--color-secondary-shade300) !important; }
-  .MuiButton-variantTransparent.MuiButton-colorDark:hover { background-color: var(--color-dark-shade300) !important; }
-  .MuiButton-variantTransparent.MuiButton-colorMedium:hover { background-color: var(--color-medium-shade300) !important; }
-  .MuiButton-variantTransparent.MuiButton-colorLight:hover { background-color: var(--color-light-shade300) !important; }
-  .MuiButton-variantTransparent.MuiButton-colorSuccess:hover { background-color: var(--color-success-shade300) !important; }
-  .MuiButton-variantTransparent.MuiButton-colorError:hover { background-color: var(--color-error-shade300) !important; }
-  .MuiButton-variantTransparent.MuiButton-colorInfo:hover { background-color: var(--color-info-shade300) !important; }
-  .MuiButton-variantTransparent.MuiButton-colorWarning:hover { background-color: var(--color-warning-shade300) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorPrimary:hover { background-color: var(--color-primary-shade200) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorPrimaryLight:hover { background-color: var(--color-primaryLight-shade200) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorSecondary:hover { background-color: var(--color-secondary-shade200) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorDark:hover { background-color: var(--color-dark-shade200) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorMedium:hover { background-color: var(--color-medium-shade200) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorLight:hover { background-color: var(--color-light-shade200) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorSuccess:hover { background-color: var(--color-success-shade200) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorError:hover { background-color: var(--color-error-shade200) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorInfo:hover { background-color: var(--color-info-shade200) !important; }
+  .MuiButton-variantTransparent.MuiButton-colorWarning:hover { background-color: var(--color-warning-shade200) !important; }
 }
 
 .MuiButton-sizeSm {

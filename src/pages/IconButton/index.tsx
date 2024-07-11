@@ -23,11 +23,6 @@ const IconButtonPage = () => {
             <br />
             <Text color='primaryLight'>Variant: Contained</Text>
             <Divider />
-            <IconButton iconName='Box1' variant='outlined' />
-            <br />
-            <br />
-            <Text color='primaryLight'>Variant: Outlined</Text>
-            <Divider />
             <IconButton iconName='Box1' variant='filled' />
             <br />
             <br />
@@ -44,11 +39,6 @@ const IconButtonPage = () => {
             <br />
             <br />
             <Text color='primaryLight'>Variant: Contained / Rounded: true</Text>
-            <Divider />
-            <IconButton iconName='Verify' variant='outlined' rounded />
-            <br />
-            <br />
-            <Text color='primaryLight'>Variant: Outlined / Rounded: true</Text>
             <Divider />
             <IconButton iconName='Verify' variant='filled' rounded />
             <br />
@@ -67,8 +57,6 @@ const IconButtonPage = () => {
               onClick={() => console.log('ssss')}
             />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='primary' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='primary' variant='filled' />
             <br />
             <br />
@@ -77,8 +65,6 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='primaryLight' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='primaryLight' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='primaryLight' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='primaryLight' variant='filled' />
             <br />
@@ -89,8 +75,6 @@ const IconButtonPage = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='secondary' variant='contained' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='secondary' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='secondary' variant='filled' />
             <br />
             <br />
@@ -99,8 +83,6 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='dark' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='dark' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='dark' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='dark' variant='filled' />
             <br />
@@ -111,8 +93,6 @@ const IconButtonPage = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='medium' variant='contained' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='medium' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='medium' variant='filled' />
             <br />
             <br />
@@ -121,8 +101,6 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='light' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='light' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='light' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='light' variant='filled' />
             <br />
@@ -133,8 +111,6 @@ const IconButtonPage = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='success' variant='contained' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='success' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='success' variant='filled' />
             <br />
             <br />
@@ -143,8 +119,6 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='error' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='error' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='error' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='error' variant='filled' />
             <br />
@@ -155,8 +129,6 @@ const IconButtonPage = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='info' variant='contained' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='info' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='info' variant='filled' />
             <br />
             <br />
@@ -165,8 +137,6 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='warning' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='warning' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton disabled iconName='Bag2' color='warning' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton disabled iconName='Bag2' color='warning' variant='filled' />
             <br />
@@ -180,8 +150,6 @@ const IconButtonPage = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='primary' variant='contained' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='primary' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='primary' variant='filled' />
             <br />
             <br />
@@ -190,8 +158,6 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='primaryLight' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='primaryLight' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='primaryLight' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='primaryLight' variant='filled' />
             <br />
@@ -202,8 +168,6 @@ const IconButtonPage = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='secondary' variant='contained' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='secondary' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='secondary' variant='filled' />
             <br />
             <br />
@@ -212,8 +176,6 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='dark' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='dark' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='dark' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='dark' variant='filled' />
             <br />
@@ -224,8 +186,6 @@ const IconButtonPage = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='medium' variant='contained' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='medium' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='medium' variant='filled' />
             <br />
             <br />
@@ -234,8 +194,6 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='light' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='light' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='light' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='light' variant='filled' />
             <br />
@@ -246,8 +204,6 @@ const IconButtonPage = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='success' variant='contained' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='success' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='success' variant='filled' />
             <br />
             <br />
@@ -256,8 +212,6 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='error' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='error' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='error' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='error' variant='filled' />
             <br />
@@ -268,8 +222,6 @@ const IconButtonPage = () => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='info' variant='contained' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='info' variant='outlined' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='info' variant='filled' />
             <br />
             <br />
@@ -278,8 +230,6 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='warning' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='warning' variant='contained' />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <IconButton iconName='Bag2' color='warning' variant='outlined' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <IconButton iconName='Bag2' color='warning' variant='filled' />
             <br />

@@ -10,7 +10,7 @@ const Header = ({ label }: HeaderProps) => {
   return (
     <header className={styles.header}>
       <div>
-        <IconButton iconName='HambergerMenu' />
+        <IconButton iconName='HambergerMenu' variant='filled' />
       </div>
       <div>
         <Avatar src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png'></Avatar>

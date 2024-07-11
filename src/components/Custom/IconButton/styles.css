@@ -13,308 +13,98 @@
   border-radius: 50% !important;
 }
 
-.MuiIconButton-colorPrimary.MuiIconButton-variantContained {
-  background-color: var(--color-primary) !important;
-}
+.MuiIconButton-variantContained.MuiIconButton-colorPrimary { background-color: var(--color-primary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorPrimaryLight { background-color: var(--color-primaryLight) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorSecondary { background-color: var(--color-secondary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorDark { background-color: var(--color-dark) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorMedium { background-color: var(--color-medium) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorLight { background-color: var(--color-light) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorSuccess { background-color: var(--color-success) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorError { background-color: var(--color-error) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorInfo { background-color: var(--color-info) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorWarning { background-color: var(--color-warning) !important; }
 
-.MuiIconButton-colorPrimaryLight.MuiIconButton-variantContained {
-  background-color: var(--color-primaryLight) !important;
-}
-
-.MuiIconButton-colorSecondary.MuiIconButton-variantContained {
-  background-color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorDark.MuiIconButton-variantContained {
-  background-color: var(--color-dark) !important;
-}
-
-.MuiIconButton-colorMedium.MuiIconButton-variantContained {
-  background-color: var(--color-medium) !important;
-}
-
-.MuiIconButton-colorLight.MuiIconButton-variantContained {
-  background-color: var(--color-light) !important;
-}
-
-.MuiIconButton-colorSuccess.MuiIconButton-variantContained {
-  background-color: var(--color-success) !important;
-}
-
-.MuiIconButton-colorError.MuiIconButton-variantContained {
-  background-color: var(--color-error) !important;
-}
-
-.MuiIconButton-colorInfo.MuiIconButton-variantContained {
-  background-color: var(--color-info) !important;
-}
-
-.MuiIconButton-colorWarning.MuiIconButton-variantContained {
-  background-color: var(--color-warning) !important;
-}
-
-.MuiIconButton-colorPrimary.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorPrimaryLight.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorSecondary.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorDark.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorMedium.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorLight.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorSuccess.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorError.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorInfo.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorWarning.MuiIconButton-variantContained > svg {
-  color: var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorPrimary.MuiIconButton-variantOutlined {
-  background-color: var(--color-primary-shade100) !important;
-  border: 1px solid var(--color-primary) !important;
-}
-
-.MuiIconButton-colorPrimaryLight.MuiIconButton-variantOutlined {
-  background-color: var(--color-primaryLight-shade100) !important;
-  border: 1px solid var(--color-primaryLight) !important;
-}
-
-.MuiIconButton-colorSecondary.MuiIconButton-variantOutlined {
-  background-color: var(--color-secondary-shade100) !important;
-  border: 1px solid var(--color-secondary) !important;
-}
-
-.MuiIconButton-colorDark.MuiIconButton-variantOutlined {
-  background-color: var(--color-dark-shade100) !important;
-  border: 1px solid var(--color-dark) !important;
-}
-
-.MuiIconButton-colorMedium.MuiIconButton-variantOutlined {
-  background-color: var(--color-medium-shade100) !important;
-  border: 1px solid var(--color-medium) !important;
-}
-
-.MuiIconButton-colorLight.MuiIconButton-variantOutlined {
-  background-color: var(--color-light-shade100) !important;
-  border: 1px solid var(--color-light) !important;
-}
-
-.MuiIconButton-colorSuccess.MuiIconButton-variantOutlined {
-  background-color: var(--color-success-shade100) !important;
-  border: 1px solid var(--color-success) !important;
-}
-
-.MuiIconButton-colorError.MuiIconButton-variantOutlined {
-  background-color: var(--color-error-shade100) !important;
-  border: 1px solid var(--color-error) !important;
-}
-
-.MuiIconButton-colorInfo.MuiIconButton-variantOutlined {
-  background-color: var(--color-info-shade100) !important;
-  border: 1px solid var(--color-info) !important;
-}
-
-.MuiIconButton-colorWarning.MuiIconButton-variantOutlined {
-  background-color: var(--color-warning-shade100) !important;
-  border: 1px solid var(--color-warning) !important;
-}
-
-.MuiIconButton-colorPrimary.MuiIconButton-variantFilled {
-  background-color: var(--color-primary-shade100) !important;
-}
-
-.MuiIconButton-colorPrimaryLight.MuiIconButton-variantFilled {
-  background-color: var(--color-primaryLight-shade100) !important;
-}
-
-.MuiIconButton-colorSecondary.MuiIconButton-variantFilled {
-  background-color: var(--color-secondary-shade100) !important;
-}
-
-.MuiIconButton-colorDark.MuiIconButton-variantFilled {
-  background-color: var(--color-dark-shade100) !important;
-}
-
-.MuiIconButton-colorMedium.MuiIconButton-variantFilled {
-  background-color: var(--color-medium-shade100) !important;
-}
-
-.MuiIconButton-colorLight.MuiIconButton-variantFilled {
-  background-color: var(--color-light-shade100) !important;
-}
-
-.MuiIconButton-colorSuccess.MuiIconButton-variantFilled {
-  background-color: var(--color-success-shade100) !important;
-}
-
-.MuiIconButton-colorError.MuiIconButton-variantFilled {
-  background-color: var(--color-error-shade100) !important;
-}
-
-.MuiIconButton-colorInfo.MuiIconButton-variantFilled {
-  background-color: var(--color-info-shade100) !important;
-}
-
-.MuiIconButton-colorWarning.MuiIconButton-variantFilled {
-  background-color: var(--color-warning-shade100) !important;
-}
+.MuiIconButton-variantContained.MuiIconButton-colorPrimary svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorPrimaryLight svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorSecondary svg { color: var(--color-primary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorDark svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorMedium svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorLight svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorSuccess svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorError svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorInfo svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantContained.MuiIconButton-colorWarning svg { color: var(--color-secondary) !important; }
 
 @media (hover: hover) {
-  .MuiIconButton-colorPrimary.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-primary-shade100) !important;
-  }
-
-  .MuiIconButton-colorPrimaryLight.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-primaryLight-shade100) !important;
-  }
-
-  .MuiIconButton-colorSecondary.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-secondary-shade100) !important;
-  }
-
-  .MuiIconButton-colorDark.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-dark-shade100) !important;
-  }
-
-  .MuiIconButton-colorMedium.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-medium-shade100) !important;
-  }
-
-  .MuiIconButton-colorLight.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-light-shade100) !important;
-  }
-
-  .MuiIconButton-colorSuccess.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-success-shade100) !important;
-  }
-
-  .MuiIconButton-colorError.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-error-shade100) !important;
-  }
-
-  .MuiIconButton-colorInfo.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-info-shade100) !important;
-  }
-
-  .MuiIconButton-colorWarning.MuiIconButton-variantTransparent:hover {
-    background-color: var(--color-warning-shade100) !important;
-  }
+  .MuiIconButton-variantContained.MuiIconButton-colorPrimary:hover { background-color: var(--color-primary-shade800) !important; }
+  .MuiIconButton-variantContained.MuiIconButton-colorPrimaryLight:hover { background-color: var(--color-primaryLight-shade800) !important; }
+  .MuiIconButton-variantContained.MuiIconButton-colorSecondary:hover { background-color: var(--color-secondary-shade800) !important; }
+  .MuiIconButton-variantContained.MuiIconButton-colorDark:hover { background-color: var(--color-dark-shade800) !important; }
+  .MuiIconButton-variantContained.MuiIconButton-colorMedium:hover { background-color: var(--color-medium-shade800) !important; }
+  .MuiIconButton-variantContained.MuiIconButton-colorLight:hover { background-color: var(--color-light-shade800) !important; }
+  .MuiIconButton-variantContained.MuiIconButton-colorSuccess:hover { background-color: var(--color-success-shade800) !important; }
+  .MuiIconButton-variantContained.MuiIconButton-colorError:hover { background-color: var(--color-error-shade800) !important; }
+  .MuiIconButton-variantContained.MuiIconButton-colorInfo:hover { background-color: var(--color-info-shade800) !important; }
+  .MuiIconButton-variantContained.MuiIconButton-colorWarning:hover { background-color: var(--color-warning-shade800) !important; }
 }
 
+.MuiIconButton-variantFilled.MuiIconButton-colorPrimary { background-color: var(--color-primary-shade200) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorPrimaryLight { background-color: var(--color-primaryLight-shade200) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorSecondary { background-color: var(--color-secondary-shade200) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorDark { background-color: var(--color-dark-shade200) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorMedium { background-color: var(--color-medium-shade200) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorLight { background-color: var(--color-light-shade200) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorSuccess { background-color: var(--color-success-shade200) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorError { background-color: var(--color-error-shade200) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorInfo { background-color: var(--color-info-shade200) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorWarning { background-color: var(--color-warning-shade200) !important; }
+
+.MuiIconButton-variantFilled.MuiIconButton-colorPrimary svg { color: var(--color-primary) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorPrimaryLight svg { color: var(--color-primaryLight) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorSecondary svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorDark svg { color: var(--color-dark) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorMedium svg { color: var(--color-medium) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorLight svg { color: var(--color-light) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorSuccess svg { color: var(--color-success) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorError svg { color: var(--color-error) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorInfo svg { color: var(--color-info) !important; }
+.MuiIconButton-variantFilled.MuiIconButton-colorWarning svg { color: var(--color-warning) !important; }
+
 @media (hover: hover) {
-  .MuiIconButton-colorPrimary.MuiIconButton-variantContained:hover {
-    background-color: var(--color-primary-shade800) !important;
-  }
-  .MuiIconButton-colorPrimaryLight.MuiIconButton-variantContained:hover {
-    background-color: var(--color-primaryLight-shade800) !important;
-  }
-
-  .MuiIconButton-colorSecondary.MuiIconButton-variantContained:hover {
-    background-color: var(--color-secondary-shade800) !important;
-  }
-
-  .MuiIconButton-colorDark.MuiIconButton-variantContained:hover {
-    background-color: var(--color-dark-shade800) !important;
-  }
-
-  .MuiIconButton-colorMedium.MuiIconButton-variantContained:hover {
-    background-color: var(--color-medium-shade800) !important;
-  }
-
-  .MuiIconButton-colorLight.MuiIconButton-variantContained:hover {
-    background-color: var(--color-light-shade800) !important;
-  }
-
-  .MuiIconButton-colorSuccess.MuiIconButton-variantContained:hover {
-    background-color: var(--color-success-shade800) !important;
-  }
-
-  .MuiIconButton-colorError.MuiIconButton-variantContained:hover {
-    background-color: var(--color-error-shade800) !important;
-  }
-
-  .MuiIconButton-colorInfo.MuiIconButton-variantContained:hover {
-    background-color: var(--color-info-shade800) !important;
-  }
-
-  .MuiIconButton-colorWarning.MuiIconButton-variantContained:hover {
-    background-color: var(--color-warning-shade800) !important;
-  }
+  .MuiIconButton-variantFilled.MuiIconButton-colorPrimary:hover { background-color: var(--color-primary-shade300) !important; }
+  .MuiIconButton-variantFilled.MuiIconButton-colorPrimaryLight:hover { background-color: var(--color-primaryLight-shade300) !important; }
+  .MuiIconButton-variantFilled.MuiIconButton-colorSecondary:hover { background-color: var(--color-secondary-shade300) !important; }
+  .MuiIconButton-variantFilled.MuiIconButton-colorDark:hover { background-color: var(--color-dark-shade300) !important; }
+  .MuiIconButton-variantFilled.MuiIconButton-colorMedium:hover { background-color: var(--color-medium-shade300) !important; }
+  .MuiIconButton-variantFilled.MuiIconButton-colorLight:hover { background-color: var(--color-light-shade300) !important; }
+  .MuiIconButton-variantFilled.MuiIconButton-colorSuccess:hover { background-color: var(--color-success-shade300) !important; }
+  .MuiIconButton-variantFilled.MuiIconButton-colorError:hover { background-color: var(--color-error-shade300) !important; }
+  .MuiIconButton-variantFilled.MuiIconButton-colorInfo:hover { background-color: var(--color-info-shade300) !important; }
+  .MuiIconButton-variantFilled.MuiIconButton-colorWarning:hover { background-color: var(--color-warning-shade300) !important; }
 }
 
+.MuiIconButton-variantTransparent.MuiIconButton-colorPrimary svg { color: var(--color-primary) !important; }
+.MuiIconButton-variantTransparent.MuiIconButton-colorPrimaryLight svg { color: var(--color-primaryLight) !important; }
+.MuiIconButton-variantTransparent.MuiIconButton-colorSecondary svg { color: var(--color-secondary) !important; }
+.MuiIconButton-variantTransparent.MuiIconButton-colorDark svg { color: var(--color-dark) !important; }
+.MuiIconButton-variantTransparent.MuiIconButton-colorMedium svg { color: var(--color-medium) !important; }
+.MuiIconButton-variantTransparent.MuiIconButton-colorLight svg { color: var(--color-light) !important; }
+.MuiIconButton-variantTransparent.MuiIconButton-colorSuccess svg { color: var(--color-success) !important; }
+.MuiIconButton-variantTransparent.MuiIconButton-colorError svg { color: var(--color-error) !important; }
+.MuiIconButton-variantTransparent.MuiIconButton-colorInfo svg { color: var(--color-info) !important; }
+.MuiIconButton-variantTransparent.MuiIconButton-colorWarning svg { color: var(--color-warning) !important; }
+
 @media (hover: hover) {
-  .MuiIconButton-colorPrimary.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorPrimary.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-primary-shade200) !important;
-  }
-  .MuiIconButton-colorPrimaryLight.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorPrimaryLight.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-primaryLight-shade200) !important;
-  }
-
-  .MuiIconButton-colorSecondary.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorSecondary.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-secondary-shade200) !important;
-  }
-
-  .MuiIconButton-colorDark.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorDark.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-dark-shade200) !important;
-  }
-
-  .MuiIconButton-colorMedium.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorMedium.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-medium-shade200) !important;
-  }
-
-  .MuiIconButton-colorLight.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorLight.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-light-shade200) !important;
-  }
-
-  .MuiIconButton-colorSuccess.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorSuccess.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-success-shade200) !important;
-  }
-
-  .MuiIconButton-colorError.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorError.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-error-shade200) !important;
-  }
-
-  .MuiIconButton-colorInfo.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorInfo.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-info-shade200) !important;
-  }
-
-  .MuiIconButton-colorWarning.MuiIconButton-variantFilled:hover,
-  .MuiIconButton-colorWarning.MuiIconButton-variantOutlined:hover {
-    background-color: var(--color-warning-shade200) !important;
-  }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorPrimary:hover { background-color: var(--color-primary-shade200) !important; }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorPrimaryLight:hover { background-color: var(--color-primaryLight-shade200) !important; }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorSecondary:hover { background-color: var(--color-secondary-shade200) !important; }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorDark:hover { background-color: var(--color-dark-shade200) !important; }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorMedium:hover { background-color: var(--color-medium-shade200) !important; }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorLight:hover { background-color: var(--color-light-shade200) !important; }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorSuccess:hover { background-color: var(--color-success-shade200) !important; }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorError:hover { background-color: var(--color-error-shade200) !important; }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorInfo:hover { background-color: var(--color-info-shade200) !important; }
+  .MuiIconButton-variantTransparent.MuiIconButton-colorWarning:hover { background-color: var(--color-warning-shade200) !important; }
 }
 
 .MuiIconButton-sizeSm {

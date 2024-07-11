@@ -36,7 +36,7 @@ declare module '@mui/material/IconButton' {
 export interface IconButtonProps extends MuiIconButtonProps {
   iconName: IconName
   rounded?: boolean
-  variant?: 'contained' | 'outlined' | 'filled' | 'transparent'
+  variant?: 'contained' | 'filled' | 'transparent'
   iconVariant?: IconProps['variant']
   loading?: boolean
   tooltipTitle?: string
@@ -46,7 +46,7 @@ const IconButton = ({
   color = 'primary',
   size = 'md',
   iconName,
-  variant = 'filled',
+  variant = 'transparent',
   rounded = false,
   iconVariant,
   loading = false,
@@ -54,10 +54,9 @@ const IconButton = ({
   ...props
 }: IconButtonProps) => {
   const classNames = clsx({
-    ['MuiIconButton-variantTransparent']: variant === 'transparent',
     ['MuiIconButton-variantContained']: variant === 'contained',
-    ['MuiIconButton-variantOutlined']: variant === 'outlined',
     ['MuiIconButton-variantFilled']: variant === 'filled',
+    ['MuiIconButton-variantTransparent']: variant === 'transparent',
     ['MuiIconButton-colorPrimary']: color === 'primary',
     ['MuiIconButton-colorPrimaryLight']: color === 'primaryLight',
     ['MuiIconButton-colorSecondary']: color === 'secondary',
