@@ -14,7 +14,7 @@ const SpeedDialAction = forwardRef<HTMLButtonElement, SpeedDialActionProps>(
         icon={
           <Fab
             size={FabProps?.size || 'sm'}
-            color={FabProps?.color || 'primaryLight'}
+            color={FabProps?.color || 'primary'}
             iconName={FabProps?.iconName || 'More'}
             {...FabProps}
           />

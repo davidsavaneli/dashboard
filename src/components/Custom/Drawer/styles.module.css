@@ -33,29 +33,25 @@
   margin-right: var(--margin-xs) !important;
 }
 
-.drawerItemTitle {
+.drawerItemCategoryTitle {
   margin-left: var(--margin-md) !important;
   margin-top: var(--margin-sm) !important;
   margin-bottom: var(--margin-sm) !important;
 }
 
 .drawerItemFirstLevel {
-  /* background-color: rgb(218, 112, 112) !important; */
   margin-left: var(--margin-xs) !important;
 }
 
 .drawerItemSecondLevel {
-  /* background-color: rgb(118, 211, 118) !important; */
   margin-left: var(--margin-xs) !important;
 }
 
 .drawerItemThirdLevel {
-  /* background-color: rgb(193, 193, 109) !important; */
   margin-left: calc(var(--margin-xs) * 3) !important;
 }
 
 .drawerItemFourthLevel {
-  /* background-color: rgb(78, 204, 208) !important; */
   margin-left: calc(var(--margin-xs) * 5) !important;
 }
 
@@ -71,45 +67,3 @@
 .drawerItemDotActive {
   background-color: var(--color-medium);
 }
-
-.activeItemButton {
-  background-color: rgb(78, 204, 208) !important;
-}
-
-/* .drawerItem {
-  display: flex;
-  align-items: center;
-  padding: var(--padding-xs) var(--padding-sm);
-  margin-right: var(--margin-sm);
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: var(--border-radius-sm);
-}
-
-.drawerItemWithIcon {
-  color: white
-}
-
-.drawerItemFirstLevel {
-  background-color: red;
-  margin-left: var(--margin-sm);
-}
-
-.drawerItemSecondLevel {
-  background-color: green;
-  margin-left: var(--margin-md);
-}
-
-.drawerItemThirdLevel {
-  background-color: yellow;
-  margin-left: var(--margin-lg);
-}
-
-.drawerItemFourthLevel {
-  background-color: blue;
-  margin-left: var(--margin-xl);
-}
-
-.icon {
-  margin-right: var(--margin-sm);
-} */

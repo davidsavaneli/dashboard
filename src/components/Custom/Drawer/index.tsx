@@ -1,8 +1,7 @@
-import React, { ReactNode, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { IRoutes, IRouteItem } from '../../../router'
-import RouterLink from '../RouterLink'
 import { Collapse } from '../../Mui/Collapse'
 import Icon from '../Icon'
 import Title from '../Title'
@@ -17,21 +16,6 @@ export type DrawerProps = {
   routes: IRoutes
   openFirstLevel?: boolean
 }
-
-const Drawer = ({ routes, openFirstLevel = true }: DrawerProps) => {
-  return (
-    <div className={styles.drawer}>
-      <div className={styles.header}>
-        <div className={styles.headerInner}></div>
-      </div>
-      <div className={styles.drawerItems}>
-        <List>{renderLinks(routes.items, routes, 0, openFirstLevel)}</List>
-      </div>
-    </div>
-  )
-}
-
-export default Drawer
 
 const getDefaultOpenState = (
   routes: IRoutes,
@@ -55,6 +39,35 @@ const getDefaultOpenState = (
   return openState
 }
 
+const getListItemButtonSizes = (depth: number): ListItemButtonProps['size'] => {
+  switch (depth) {
+    case 0:
+    case 1:
+      return 'lg'
+    default:
+      return 'sm'
+  }
+}
+
+const isSelected = (path: string) => {
+  return window.location.pathname === path
+}
+
+const listItemArrowComponent = (open: boolean) =>
+  open ? (
+    <Icon name='ArrowUp2' size='sm' color='primaryLight' />
+  ) : (
+    <Icon name='ArrowDown2' size='sm' color='primaryLight' />
+  )
+
+const listItemTextComponent = (itemName: string, selected: boolean) => (
+  <ListItemText>
+    <Text weight={selected ? 'medium' : 'regular'} color={selected ? 'medium' : 'primaryLight'}>
+      {itemName}
+    </Text>
+  </ListItemText>
+)
+
 const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, openFirstLevel: boolean) => {
   const navigate = useNavigate()
 
@@ -69,20 +82,6 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
     item.element && navigate(item.path)
   }
 
-  const getListItemButtonSizes = (depth: number): ListItemButtonProps['size'] => {
-    switch (depth) {
-      case 0:
-      case 1:
-        return 'lg'
-      default:
-        return 'sm'
-    }
-  }
-
-  const isSelected = (path: string) => {
-    return window.location.pathname === path
-  }
-
   const renderItem = (item: IRouteItem, depth: number, selected: boolean) => (
     <>
       {item.iconName ? (
@@ -90,29 +89,20 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
           <Icon variant='Bulk' name={item.iconName} color={selected ? 'medium' : 'primary'} />
         </ListItemIcon>
       ) : (
-        <div
-          className={clsx(styles.drawerItemDot, {
-            [styles.drawerItemDotActive]: selected,
-          })}
-        ></div>
+        <div className={clsx(styles.drawerItemDot, selected && styles.drawerItemDotActive)}></div>
       )}
       {item.element === '' ? (
         <>
-          <ListItemText>
-            <Text color={selected ? 'medium' : 'primaryLight'}>{item.name}</Text>
-          </ListItemText>
-          {item.children && item.children.length > 0 && (!openFirstLevel || depth > 0) && (
-            <>{open[item.path] ? <Icon name='ArrowUp2' size='sm' /> : <Icon name='ArrowDown2' size='sm' />}</>
-          )}
+          {listItemTextComponent(item.name, selected)}
+          {item.children &&
+            item.children.length > 0 &&
+            (!openFirstLevel || depth > 0) &&
+            listItemArrowComponent(open[item.path])}
         </>
       ) : (
         <>
-          <ListItemText>
-            <Text color={selected ? 'medium' : 'primaryLight'}>{item.name}</Text>
-          </ListItemText>
-          {item.children && item.children.length > 0 && (
-            <>{open[item.path] ? <Icon name='ArrowUp2' size='sm' /> : <Icon name='ArrowDown2' size='sm' />}</>
-          )}
+          {listItemTextComponent(item.name, selected)}
+          {item.children && item.children.length > 0 && listItemArrowComponent(open[item.path])}
         </>
       )}
     </>
@@ -121,7 +111,7 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
   return items.map((item) => (
     <React.Fragment key={item.path}>
       {depth === 0 && !item.element ? (
-        <div className={styles.drawerItemTitle}>
+        <div className={styles.drawerItemCategoryTitle}>
           <Title variant='h6' uppercase>
             {item.name}
           </Title>
@@ -157,3 +147,18 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
     </React.Fragment>
   ))
 }
+
+const Drawer = ({ routes, openFirstLevel = true }: DrawerProps) => {
+  return (
+    <div className={styles.drawer}>
+      <div className={styles.header}>
+        <div className={styles.headerInner}></div>
+      </div>
+      <div className={styles.drawerItems}>
+        <List>{renderLinks(routes.items, routes, 0, openFirstLevel)}</List>
+      </div>
+    </div>
+  )
+}
+
+export default Drawer
