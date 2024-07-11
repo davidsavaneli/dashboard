@@ -176,6 +176,24 @@ export type { SpeedDialProps } from './SpeedDial'
 export { default as SpeedDialAction } from './SpeedDialAction'
 export type { SpeedDialActionProps } from './SpeedDialAction'
 
+export { default as List } from './List'
+export type { ListProps } from './List'
+
+export { default as ListItem } from './ListItem'
+export type { ListItemProps } from './ListItem'
+
+export { default as ListItemAvatar } from './ListItemAvatar'
+export type { ListItemAvatarProps } from './ListItemAvatar'
+
+export { default as ListItemButton } from './ListItemButton'
+export type { ListItemButtonProps } from './ListItemButton'
+
+export { default as ListItemIcon } from './ListItemIcon'
+export type { ListItemIconProps } from './ListItemIcon'
+
+export { default as ListItemText } from './ListItemText'
+export type { ListItemTextProps } from './ListItemText'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 

@@ -125,3 +125,21 @@ export type { SpeedDialProps as MuiSpeedDialProps } from './SpeedDial'
 
 export { SpeedDialAction as MuiSpeedDialAction } from './SpeedDialAction'
 export type { SpeedDialActionProps as MuiSpeedDialActionProps } from './SpeedDialAction'
+
+export { List as MuiList } from './List'
+export type { ListProps as MuiListProps } from './List'
+
+export { ListItem as MuiListItem } from './ListItem'
+export type { ListItemProps as MuiListItemProps } from './ListItem'
+
+export { ListItemAvatar as MuiListItemAvatar } from './ListItemAvatar'
+export type { ListItemAvatarProps as MuiListItemAvatarProps } from './ListItemAvatar'
+
+export { ListItemButton as MuiListItemButton } from './ListItemButton'
+export type { ListItemButtonProps as MuiListItemButtonProps } from './ListItemButton'
+
+export { ListItemIcon as MuiListItemIcon } from './ListItemIcon'
+export type { ListItemIconProps as MuiListItemIconProps } from './ListItemIcon'
+
+export { ListItemText as MuiListItemText } from './ListItemText'
+export type { ListItemTextProps as MuiListItemTextProps } from './ListItemText'
