@@ -50,7 +50,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       variant = 'contained',
-      color = 'primary',
+      color = 'medium',
       size = 'md',
       iconName,
       iconVariant,

@@ -2,6 +2,6 @@ import MuiCollapse, { CollapseProps as MuiCollapseProps } from '@mui/material/Co
 
 export interface CollapseProps extends MuiCollapseProps {}
 
-export const Collapse = ({ ...props }: CollapseProps) => {
-  return <MuiCollapse {...props} />
+export const Collapse = ({ unmountOnExit = true, timeout = 'auto', ...props }: CollapseProps) => {
+  return <MuiCollapse {...props} unmountOnExit={unmountOnExit} timeout={timeout} />
 }

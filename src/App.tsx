@@ -3,7 +3,7 @@ import CustomRouter from './router'
 import { routes } from './routes'
 const App = () => (
   <MainLayout
-    drawer={<Drawer routes={routes}></Drawer>}
+    drawer={<Drawer routes={routes} openFirstLevel></Drawer>}
     header={<Header />}
     breadcrumbs={<Breadcrumbs routes={routes} />}
   >

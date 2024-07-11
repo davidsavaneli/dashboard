@@ -1,0 +1,33 @@
+.MuiListItemButton-root {
+  border-radius: var(--border-radius-sm) !important;
+  margin-top: calc(var(--margin-xs) / 2) !important;
+  margin-bottom: calc(var(--margin-xs) / 2) !important;
+  padding-left: var(--padding-sm) !important;
+  padding-right: var(--padding-sm) !important;
+}
+
+.MuiListItemButton-root.Mui-selected {
+  background-color: var(--color-medium-shade200) !important;
+}
+
+@media (hover: hover) {
+  .MuiListItemButton-root:hover {
+    background-color: var(--color-primary-shade100) !important;
+  }
+
+  .MuiListItemButton-root.Mui-selected:hover {
+    background-color: var(--color-medium-shade200) !important;
+  }
+}
+
+.MuiListItemButton-sizeSm {
+  padding: 4px 16px 4px 16px !important;
+}
+
+.MuiListItemButton-sizeMd {
+  padding: 6px 16px 6px 16px !important;
+}
+
+.MuiListItemButton-sizeLg {
+  padding: 8px 16px 8px 16px !important;
+}

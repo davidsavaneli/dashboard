@@ -1,7 +1,6 @@
 import HomePage from './pages/Home'
 import ButtonPage from './pages/Button'
 import IconButtonPage from './pages/IconButton'
-import FabPage from './pages/Fab'
 import ToggleButtonPage from './pages/ToggleButton'
 import SpeedDialPage from './pages/SpeedDial'
 import AvatarPage from './pages/Avatar'
@@ -48,7 +47,7 @@ export const routes: IRoutes = {
     {
       name: 'Dashboard',
       path: '/',
-      iconName: 'Home',
+      iconName: 'HomeTrendUp',
       element: <>Dashboard</>,
       children: [],
     },
@@ -61,7 +60,7 @@ export const routes: IRoutes = {
         {
           name: 'Forms',
           path: '/components/forms',
-          iconName: 'Home',
+          iconName: 'NoteText',
           element: '',
           children: [
             {
@@ -83,7 +82,7 @@ export const routes: IRoutes = {
         {
           name: 'Data Display',
           path: '/components/data-display',
-          iconName: 'Trash',
+          iconName: 'Box1',
           element: '',
           children: [
             {
@@ -105,13 +104,6 @@ export const routes: IRoutes = {
               path: '/components/data-display/toggle-button',
               iconName: '',
               element: <ToggleButtonPage />,
-              children: [],
-            },
-            {
-              name: 'Floating Action Button',
-              path: '/components/data-display/fab',
-              iconName: '',
-              element: <FabPage />,
               children: [],
             },
             {
@@ -147,7 +139,7 @@ export const routes: IRoutes = {
         {
           name: 'Feedback',
           path: '/components/feedback',
-          iconName: 'Home',
+          iconName: 'I3Square',
           element: '',
           children: [
             {

@@ -1,10 +1,17 @@
 import React, { ReactNode, useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { IRoutes, IRouteItem } from '../../../router'
 import RouterLink from '../RouterLink'
 import { Collapse } from '../../Mui/Collapse'
-import styles from './styles.module.css'
 import Icon from '../Icon'
+import Title from '../Title'
+import Text from '../Text'
+import List from '../List'
+import ListItemButton, { ListItemButtonProps } from '../ListItemButton'
+import ListItemIcon from '../ListItemIcon'
+import ListItemText from '../ListItemText'
+import styles from './styles.module.css'
 
 export type DrawerProps = {
   routes: IRoutes
@@ -17,7 +24,9 @@ const Drawer = ({ routes, openFirstLevel = true }: DrawerProps) => {
       <div className={styles.header}>
         <div className={styles.headerInner}></div>
       </div>
-      <div className={styles.drawerItems}>{renderLinks(routes.items, routes, 0, openFirstLevel)}</div>
+      <div className={styles.drawerItems}>
+        <List>{renderLinks(routes.items, routes, 0, openFirstLevel)}</List>
+      </div>
     </div>
   )
 }
@@ -47,63 +56,102 @@ const getDefaultOpenState = (
 }
 
 const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, openFirstLevel: boolean) => {
+  const navigate = useNavigate()
+
   const [open, setOpen] = useState<{ [key: string]: boolean }>(() => getDefaultOpenState(routes, '', openFirstLevel))
 
   useEffect(() => {
     setOpen(getDefaultOpenState(routes, '', openFirstLevel))
   }, [routes, openFirstLevel])
 
-  const handleClick = (path: string) => {
-    setOpen((prev) => ({ ...prev, [path]: !prev[path] }))
+  const handleClick = (item: IRouteItem) => {
+    setOpen((prev) => ({ ...prev, [item.path]: !prev[item.path] }))
+    item.element && navigate(item.path)
   }
+
+  const getListItemButtonSizes = (depth: number): ListItemButtonProps['size'] => {
+    switch (depth) {
+      case 0:
+      case 1:
+        return 'lg'
+      default:
+        return 'sm'
+    }
+  }
+
+  const isSelected = (path: string) => {
+    return window.location.pathname === path
+  }
+
+  const renderItem = (item: IRouteItem, depth: number, selected: boolean) => (
+    <>
+      {item.iconName ? (
+        <ListItemIcon>
+          <Icon variant='Bulk' name={item.iconName} color={selected ? 'medium' : 'primary'} />
+        </ListItemIcon>
+      ) : (
+        <div
+          className={clsx(styles.drawerItemDot, {
+            [styles.drawerItemDotActive]: selected,
+          })}
+        ></div>
+      )}
+      {item.element === '' ? (
+        <>
+          <ListItemText>
+            <Text color={selected ? 'medium' : 'primaryLight'}>{item.name}</Text>
+          </ListItemText>
+          {item.children && item.children.length > 0 && (!openFirstLevel || depth > 0) && (
+            <>{open[item.path] ? <Icon name='ArrowUp2' size='sm' /> : <Icon name='ArrowDown2' size='sm' />}</>
+          )}
+        </>
+      ) : (
+        <>
+          <ListItemText>
+            <Text color={selected ? 'medium' : 'primaryLight'}>{item.name}</Text>
+          </ListItemText>
+          {item.children && item.children.length > 0 && (
+            <>{open[item.path] ? <Icon name='ArrowUp2' size='sm' /> : <Icon name='ArrowDown2' size='sm' />}</>
+          )}
+        </>
+      )}
+    </>
+  )
 
   return items.map((item) => (
     <React.Fragment key={item.path}>
-      <div
-        className={clsx({
-          [styles.drawerItem]: true,
-          [styles.drawerItemFirstLevel]: depth === 0,
-          [styles.drawerItemSecondLevel]: depth === 1,
-          [styles.drawerItemThirdLevel]: depth === 2,
-          [styles.drawerItemFourthLevel]: depth === 3,
-          [styles.drawerItemWithIcon]: item.iconName,
-        })}
-        onClick={() => handleClick(item.path)}
-      >
-        {item.iconName && (
-          <div className={styles.icon}>
-            <Icon variant='Bulk' name={item.iconName} />
-          </div>
-        )}
-        {item.element === '' ? (
-          <>
+      {depth === 0 && !item.element ? (
+        <div className={styles.drawerItemTitle}>
+          <Title variant='h6' uppercase>
             {item.name}
-            {item.children && item.children.length > 0 && (!openFirstLevel || depth > 0) && (
-              <>
-                &nbsp;&nbsp;&nbsp;
-                {open[item.path] ? <Icon name='ArrowUp2' size='sm' /> : <Icon name='ArrowDown2' size='sm' />}
-              </>
-            )}
-          </>
-        ) : (
-          <>
-            <RouterLink to={item.path}>{item.name}</RouterLink>
-            {item.children && item.children.length > 0 && (
-              <>
-                &nbsp;&nbsp;&nbsp;
-                {open[item.path] ? <Icon name='ArrowUp2' size='sm' /> : <Icon name='ArrowDown2' size='sm' />}
-              </>
-            )}
-          </>
-        )}
-      </div>
+          </Title>
+        </div>
+      ) : (
+        <div>
+          <ListItemButton
+            size={getListItemButtonSizes(depth)}
+            className={clsx({
+              [styles.drawerItem]: true,
+              [styles.drawerItemFirstLevel]: depth === 0,
+              [styles.drawerItemSecondLevel]: depth === 1,
+              [styles.drawerItemThirdLevel]: depth === 2,
+              [styles.drawerItemFourthLevel]: depth === 3,
+            })}
+            onClick={() => handleClick(item)}
+            selected={isSelected(item.path)}
+          >
+            {renderItem(item, depth, isSelected(item.path))}
+          </ListItemButton>
+        </div>
+      )}
+
       {item.children &&
         item.children.length > 0 &&
         (openFirstLevel && depth === 0 ? (
-          <div>{renderLinks(item.children, routes, depth + 1, openFirstLevel)}</div>
+          <List>{renderLinks(item.children, routes, depth + 1, openFirstLevel)}</List>
         ) : (
           <Collapse in={open[item.path]}>
-            <div>{renderLinks(item.children, routes, depth + 1, openFirstLevel)}</div>
+            <List>{renderLinks(item.children, routes, depth + 1, openFirstLevel)}</List>
           </Collapse>
         ))}
     </React.Fragment>

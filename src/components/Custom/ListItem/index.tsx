@@ -1,4 +1,5 @@
 import { MuiListItem, MuiListItemProps } from '../../Mui'
+import './styles.css'
 
 export interface ListItemProps extends MuiListItemProps {}
 

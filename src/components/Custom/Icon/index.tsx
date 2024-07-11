@@ -59,6 +59,13 @@ import {
   User,
   Verify,
   Setting2,
+  HomeTrendUp,
+  NoteRemove,
+  NoteText,
+  ElementEqual,
+  Element4,
+  Grid3,
+  I3Square
 } from 'iconsax-react'
 import styles from './styles.module.css'
 
@@ -121,6 +128,13 @@ const Icons = {
   User,
   Verify,
   Setting2,
+  HomeTrendUp,
+  NoteRemove,
+  NoteText,
+  ElementEqual,
+  Element4,
+  Grid3,
+  I3Square
 }
 
 export type IconName = keyof typeof Icons
