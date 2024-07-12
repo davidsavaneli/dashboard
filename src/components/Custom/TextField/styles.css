@@ -1,14 +1,9 @@
 .MuiInputBase-root {
   border-radius: var(--border-radius-sm) !important;
-  font-size: 0.875rem !important;
-  line-height: 1.4375em !important;
-  font-weight: 400 !important;
-  color: rgb(29, 38, 48) !important;
-  box-sizing: border-box !important;
-  cursor: text !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  position: relative !important;
+  font-size: var(--font-size-text-sm) !important;
+  color: var(--color-primary) !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
   padding: 0 0 !important;
 }
 
@@ -25,19 +20,13 @@
 }
 
 .MuiInputBase-input {
-  font: inherit !important;
+  font-size: var(--font-size-text-sm) !important;
+  color: var(--color-primary) !important;
+  line-height: inherit !important;
   letter-spacing: inherit !important;
-  color: currentcolor !important;
-  border: 0px !important;
-  box-sizing: content-box !important;
-  background: none !important;
-  height: 1.4375em !important;
-  margin: 0px !important;
-  -webkit-tap-highlight-color: transparent !important;
-  min-width: 0px !important;
   animation-name: mui-auto-fill-cancel !important;
-  animation-duration: 10ms !important;
   padding: 14px 14px !important;
+  height: 20px !important;
 }
 
 .MuiTextField-root:not(.MuiTextField-withIcon) .MuiInputBase-adornedStart {
