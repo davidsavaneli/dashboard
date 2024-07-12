@@ -15,6 +15,8 @@ import styles from './styles.module.css'
 export type DrawerProps = {
   routes: IRoutes
   openFirstLevel?: boolean
+  logo?: string
+  logoAltText?: string
 }
 
 const getDefaultOpenState = (
@@ -148,11 +150,13 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
   ))
 }
 
-const Drawer = ({ routes, openFirstLevel = true }: DrawerProps) => {
+const Drawer = ({ routes, openFirstLevel = true, logo, logoAltText = '' }: DrawerProps) => {
   return (
     <div className={styles.drawer}>
       <div className={styles.header}>
-        <div className={styles.headerInner}></div>
+        <div className={styles.headerLogoBox}>
+          <img src={logo} alt={logoAltText} className={styles.headerLogoImg} />
+        </div>
       </div>
       <div className={styles.drawerItems}>
         <List>{renderLinks(routes.items, routes, 0, openFirstLevel)}</List>

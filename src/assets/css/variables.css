@@ -4,9 +4,9 @@
   --color-primary-rgb: 51, 64, 78;
   --color-primaryLight-rgb: 112, 121, 131;
   --color-secondary-rgb: 255, 255, 255;
-  --color-dark-rgb: 66, 55, 213;
-  --color-medium-rgb: 114, 101, 230;
-  --color-light-rgb: 156, 147, 238;
+  --color-dark-rgb: 18, 127, 139;
+  --color-medium-rgb: 42, 161, 175;
+  --color-light-rgb: 58, 179, 193;
   --color-success-rgb: 0, 168, 84;
   --color-error-rgb: 240, 65, 52;
   --color-info-rgb: 0, 162, 174;
@@ -111,6 +111,23 @@
   --color-info-shade800: rgba(var(--color-info-rgb), 0.9);
   --color-warning-shade800: rgba(var(--color-warning-rgb), 0.9);
 
+  /* General */
+  --color-body-bg: var(--color-secondary);
+  --color-drawer-bg: var(--color-secondary);
+  --color-content-bg: var(--color-secondary);
+  --color-header-bg: var(--color-secondary-shade600);
+  --color-line-primary: var(--color-primary-shade200);
+  --color-line-secondary: var(--color-primary-shade200);
+
+  --font-family: 'Inter var';
+  --color-text-primary: var(--color-primary);
+  --drawer-width: 300px;
+  --header-height: 74px;
+
+  --tr-dur: 0.2s;
+
+  --box-shadow-card: 0px 6px 24px var(--color-primary-shade200);
+
   --box-shadow-primary: 0px 4px 12px var(--color-primary-shade200);
   --box-shadow-primaryLight: 0px 4px 12px var(--color-primaryLight-shade200);
   --box-shadow-secondary: 0px 4px 12px var(--color-secondary-shade200);
@@ -121,21 +138,6 @@
   --box-shadow-error: 0px 4px 12px var(--color-error-shade200);
   --box-shadow-info: 0px 4px 12px var(--color-info-shade200);
   --box-shadow-warning: 0px 4px 12px var(--color-warning-shade200);
-
-  --color-body-bg: var(--color-secondary);
-  --color-content-bg: var(--color-secondary);
-  --color-header-bg: var(--color-secondary-shade600);
-  --color-line-primary: var(--color-primary-shade200);
-  --color-line-secondary: var(--color-primary-shade200);
-  --box-shadow-card: 0px 6px 24px var(--color-primary-shade200);
-
-  /* General */
-  --font-family: 'Inter var';
-  --color-text-primary: var(--color-primary);
-  --drawer-width: 300px;
-  --header-height: 74px;
-
-  --tr-dur: 0.2s;
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -162,7 +164,6 @@
   --padding-xl: 40px;
   --padding-xxl: 48px;
 
-  /* Text */
   --font-size-text-xs: 12px;
   --font-size-text-sm: 14px;
   --font-size-text-md: 16px;
@@ -170,7 +171,6 @@
   --font-size-text-xl: 20px;
   --font-size-text-xxl: 22px;
 
-  /* Title */
   --font-size-title-xs: 12px;
   --font-size-title-sm: 14px;
   --font-size-title-md: 16px;
