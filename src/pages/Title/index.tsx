@@ -8,96 +8,96 @@ const TitlePage = () => {
           <Card title='Default'>
             <Title>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Size: 16px / Weight: Bold / Color: Primary</Text>
+            <Text>Size: 16px / Weight: Bold / Color: Primary</Text>
           </Card>
           <br />
           <Card title='Variant'>
             <Title variant='h6'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>xs / Size: 12px</Text>
+            <Text>xs / Size: 12px</Text>
             <Divider />
             <Title variant='h5'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>sm / Size: 14px</Text>
+            <Text>sm / Size: 14px</Text>
             <Divider />
             <Title variant='h4'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>md / Size: 16px</Text>
+            <Text>md / Size: 16px</Text>
             <Divider />
             <Title variant='h3'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>lg / Size: 20px</Text>
+            <Text>lg / Size: 20px</Text>
             <Divider />
             <Title variant='h2'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>xl / Size: 24px</Text>
+            <Text>xl / Size: 24px</Text>
             <Divider />
             <Title variant='h1'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>xxl / Size: 28px</Text>
+            <Text>xxl / Size: 28px</Text>
           </Card>
           <br />
           <Card title='Weight'>
             <Title weight='regular'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Weight: Regular</Text>
+            <Text>Weight: Regular</Text>
             <Divider />
             <Title weight='medium'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Weight: Medium</Text>
+            <Text>Weight: Medium</Text>
             <Divider />
             <Title weight='bold'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Weight: Bold</Text>
+            <Text>Weight: Bold</Text>
           </Card>
         </div>
         <div className='col-6'>
           <Card title='Colors'>
             <Title color='primary'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: Primary</Text>
+            <Text>Color: Primary</Text>
             <Divider />
             <Title color='primaryLight'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: PrimaryLight</Text>
+            <Text>Color: PrimaryLight</Text>
             <Divider />
             <Title color='secondary'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: Secondary</Text>
+            <Text>Color: Secondary</Text>
             <Divider />
             <Title color='dark'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: Dark</Text>
+            <Text>Color: Dark</Text>
             <Divider />
             <Title color='medium'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: Medium</Text>
+            <Text>Color: Medium</Text>
             <Divider />
             <Title color='light'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: Light</Text>
+            <Text>Color: Light</Text>
             <Divider />
             <Title color='success'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: Success</Text>
+            <Text>Color: Success</Text>
             <Divider />
             <Title color='error'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: Error</Text>
+            <Text>Color: Error</Text>
             <Divider />
             <Title color='info'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: Info</Text>
+            <Text>Color: Info</Text>
             <Divider />
             <Title color='warning'>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Color: Warning</Text>
+            <Text>Color: Warning</Text>
           </Card>
           <br />
           <Card title='Uppercase'>
             <Title uppercase>Heading Title</Title>
             <br />
-            <Text color='primaryLight'>Uppercase: true</Text>
+            <Text>Uppercase: true</Text>
           </Card>
         </div>
       </div>

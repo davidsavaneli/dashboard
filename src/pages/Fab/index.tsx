@@ -9,7 +9,7 @@ const FabPage = () => {
             <Fab iconName='Setting2' />
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Circular / Size: md / Color: Primary</Text>
+            <Text>Variant: Circular / Size: md / Color: Primary</Text>
           </Card>
           <br />
           <Card title='Variant'>
@@ -18,31 +18,31 @@ const FabPage = () => {
             </Fab>
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Circular / Extended / string</Text>
+            <Text>Variant: Circular / Extended / string</Text>
           </Card>
           <br />
           <Card title='Tooltip'>
             <Fab iconName='Home' tooltipTitle='Tooltip Title' />
             <br />
             <br />
-            <Text color='primaryLight'>tooltipTitle: string</Text>
+            <Text>tooltipTitle: string</Text>
           </Card>
           <br />
           <Card title='Sizes'>
             <Fab iconName='Home' size='sm' />
             <br />
             <br />
-            <Text color='primaryLight'>Size: sm</Text>
+            <Text>Size: sm</Text>
             <Divider />
             <Fab iconName='Home' size='md' />
             <br />
             <br />
-            <Text color='primaryLight'>Size: md</Text>
+            <Text>Size: md</Text>
             <Divider />
             <Fab iconName='Home' size='lg' />
             <br />
             <br />
-            <Text color='primaryLight'>Size: lg</Text>
+            <Text>Size: lg</Text>
           </Card>
           <br />
           <Card title='Disabled'>
@@ -54,52 +54,52 @@ const FabPage = () => {
             <Fab iconName='Setting2' color='primary' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Primary</Text>
+            <Text>Color: Primary</Text>
             <Divider />
             <Fab iconName='Setting2' color='primaryLight' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: PrimaryLight</Text>
+            <Text>Color: PrimaryLight</Text>
             <Divider />
             <Fab iconName='Setting2' color='secondary' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Secondary</Text>
+            <Text>Color: Secondary</Text>
             <Divider />
             <Fab iconName='Setting2' color='dark' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Dark</Text>
+            <Text>Color: Dark</Text>
             <Divider />
             <Fab iconName='Setting2' color='medium' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Medium</Text>
+            <Text>Color: Medium</Text>
             <Divider />
             <Fab iconName='Setting2' color='light' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Light</Text>
+            <Text>Color: Light</Text>
             <Divider />
             <Fab iconName='Setting2' color='success' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Success</Text>
+            <Text>Color: Success</Text>
             <Divider />
             <Fab iconName='Setting2' color='error' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Error</Text>
+            <Text>Color: Error</Text>
             <Divider />
             <Fab iconName='Setting2' color='info' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Info</Text>
+            <Text>Color: Info</Text>
             <Divider />
             <Fab iconName='Setting2' color='warning' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Warning</Text>
+            <Text>Color: Warning</Text>
           </Card>
         </div>
       </div>

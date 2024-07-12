@@ -13,7 +13,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Size: md / Color: Primary</Text>
+            <Text>Size: md / Color: Primary</Text>
           </Card>
           <br />
           <Card title='Single'>
@@ -30,7 +30,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>tooltipTitle: string</Text>
+            <Text>tooltipTitle: string</Text>
           </Card>
           <br />
           <Card title='Sizes'>
@@ -41,7 +41,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Size: sm</Text>
+            <Text>Size: sm</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' iconName='Setting2' size='md' />
@@ -50,7 +50,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Size: md</Text>
+            <Text>Size: md</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' iconName='Setting2' size='lg' />
@@ -59,7 +59,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Size: lg</Text>
+            <Text>Size: lg</Text>
           </Card>
           <br />
           <Card title='Children'>
@@ -107,7 +107,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Primary</Text>
+            <Text>Color: Primary</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' color='primaryLight' iconName='Home' />
@@ -116,7 +116,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: PrimaryLight</Text>
+            <Text>Color: PrimaryLight</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' color='secondary' iconName='Home' />
@@ -125,7 +125,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Secondary</Text>
+            <Text>Color: Secondary</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' color='dark' iconName='Home' />
@@ -134,7 +134,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Dark</Text>
+            <Text>Color: Dark</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' color='medium' iconName='Home' />
@@ -143,7 +143,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Medium</Text>
+            <Text>Color: Medium</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' color='light' iconName='Home' />
@@ -152,7 +152,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Light</Text>
+            <Text>Color: Light</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' color='success' iconName='Home' />
@@ -161,7 +161,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Success</Text>
+            <Text>Color: Success</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' color='error' iconName='Home' />
@@ -170,7 +170,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Error</Text>
+            <Text>Color: Error</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' color='info' iconName='Home' />
@@ -179,7 +179,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Info</Text>
+            <Text>Color: Info</Text>
             <Divider />
             <ToggleButtonGroup value='1'>
               <ToggleButton value='1' color='warning' iconName='Home' />
@@ -188,7 +188,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Warning</Text>
+            <Text>Color: Warning</Text>
           </Card>
           <br />
           <Card title='Orientation'>
@@ -199,7 +199,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text color='primaryLight'>Orientation: Vertical</Text>
+            <Text>Orientation: Vertical</Text>
           </Card>
         </div>
       </div>

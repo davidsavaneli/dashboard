@@ -11,7 +11,7 @@ export type TextProps = {
 }
 
 const Text = ({
-  color = 'primary',
+  color = 'primaryLight',
   weight = 'regular',
   size = 'sm',
   uppercase = false,

@@ -9,41 +9,41 @@ const IconButtonPage = () => {
             <IconButton iconName='Setting2' />
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Filled / Size: md / Color: Primary</Text>
+            <Text>Variant: Filled / Size: md / Color: Primary</Text>
           </Card>
           <br />
           <Card title='Variant'>
             <IconButton iconName='Box1' variant='transparent' />
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Transparent</Text>
+            <Text>Variant: Transparent</Text>
             <Divider />
             <IconButton iconName='Box1' variant='contained' />
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Contained</Text>
+            <Text>Variant: Contained</Text>
             <Divider />
             <IconButton iconName='Box1' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Filled</Text>
+            <Text>Variant: Filled</Text>
           </Card>
           <br />
           <Card title='Rounded'>
             <IconButton iconName='Verify' variant='transparent' rounded />
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Transparent / Rounded: true</Text>
+            <Text>Variant: Transparent / Rounded: true</Text>
             <Divider />
             <IconButton iconName='Verify' variant='contained' rounded />
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Contained / Rounded: true</Text>
+            <Text>Variant: Contained / Rounded: true</Text>
             <Divider />
             <IconButton iconName='Verify' variant='filled' rounded />
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Filled / Rounded: true</Text>
+            <Text>Variant: Filled / Rounded: true</Text>
           </Card>
           <br />
           <Card title='Disabled'>
@@ -60,7 +60,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='primary' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Primary</Text>
+            <Text>Color: Primary</Text>
             <Divider />
             <IconButton disabled iconName='Bag2' color='primaryLight' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -69,7 +69,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='primaryLight' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: PrimaryLight</Text>
+            <Text>Color: PrimaryLight</Text>
             <Divider />
             <IconButton disabled iconName='Bag2' color='secondary' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -78,7 +78,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='secondary' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Secondary</Text>
+            <Text>Color: Secondary</Text>
             <Divider />
             <IconButton disabled iconName='Bag2' color='dark' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -87,7 +87,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='dark' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Dark</Text>
+            <Text>Color: Dark</Text>
             <Divider />
             <IconButton disabled iconName='Bag2' color='medium' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -96,7 +96,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='medium' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Medium</Text>
+            <Text>Color: Medium</Text>
             <Divider />
             <IconButton disabled iconName='Bag2' color='light' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -105,7 +105,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='light' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Light</Text>
+            <Text>Color: Light</Text>
             <Divider />
             <IconButton disabled iconName='Bag2' color='success' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -114,7 +114,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='success' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Success</Text>
+            <Text>Color: Success</Text>
             <Divider />
             <IconButton disabled iconName='Bag2' color='error' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -123,7 +123,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='error' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Error</Text>
+            <Text>Color: Error</Text>
             <Divider />
             <IconButton disabled iconName='Bag2' color='info' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -132,7 +132,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='info' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Info</Text>
+            <Text>Color: Info</Text>
             <Divider />
             <IconButton disabled iconName='Bag2' color='warning' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -141,7 +141,7 @@ const IconButtonPage = () => {
             <IconButton disabled iconName='Bag2' color='warning' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Warning</Text>
+            <Text>Color: Warning</Text>
           </Card>
         </div>
         <div className='col-6'>
@@ -153,7 +153,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='primary' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Primary</Text>
+            <Text>Color: Primary</Text>
             <Divider />
             <IconButton iconName='Bag2' color='primaryLight' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -162,7 +162,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='primaryLight' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: PrimaryLight</Text>
+            <Text>Color: PrimaryLight</Text>
             <Divider />
             <IconButton iconName='Bag2' color='secondary' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -171,7 +171,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='secondary' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Secondary</Text>
+            <Text>Color: Secondary</Text>
             <Divider />
             <IconButton iconName='Bag2' color='dark' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -180,7 +180,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='dark' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Dark</Text>
+            <Text>Color: Dark</Text>
             <Divider />
             <IconButton iconName='Bag2' color='medium' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -189,7 +189,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='medium' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Medium</Text>
+            <Text>Color: Medium</Text>
             <Divider />
             <IconButton iconName='Bag2' color='light' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -198,7 +198,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='light' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Light</Text>
+            <Text>Color: Light</Text>
             <Divider />
             <IconButton iconName='Bag2' color='success' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -207,7 +207,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='success' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Success</Text>
+            <Text>Color: Success</Text>
             <Divider />
             <IconButton iconName='Bag2' color='error' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -216,7 +216,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='error' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Error</Text>
+            <Text>Color: Error</Text>
             <Divider />
             <IconButton iconName='Bag2' color='info' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -225,7 +225,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='info' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Info</Text>
+            <Text>Color: Info</Text>
             <Divider />
             <IconButton iconName='Bag2' color='warning' variant='transparent' />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -234,48 +234,48 @@ const IconButtonPage = () => {
             <IconButton iconName='Bag2' color='warning' variant='filled' />
             <br />
             <br />
-            <Text color='primaryLight'>Color: Warning</Text>
+            <Text>Color: Warning</Text>
           </Card>
           <br />
           <Card title='Sizes'>
             <IconButton iconName='Bag2' size='sm' />
             <br />
             <br />
-            <Text color='primaryLight'>Size: sm</Text>
+            <Text>Size: sm</Text>
             <Divider />
             <IconButton iconName='Bag2' size='md' />
             <br />
             <br />
-            <Text color='primaryLight'>Size: md</Text>
+            <Text>Size: md</Text>
             <Divider />
             <IconButton iconName='Bag2' size='lg' />
             <br />
             <br />
-            <Text color='primaryLight'>Size: lg</Text>
+            <Text>Size: lg</Text>
           </Card>
           <br />
           <Card title='Loading'>
             <IconButton iconName='Setting2' size='sm' color='primary' loading />
             <br />
             <br />
-            <Text color='primaryLight'>Size: sm / Color: Primary / Loading: true</Text>
+            <Text>Size: sm / Color: Primary / Loading: true</Text>
             <Divider />
             <IconButton iconName='Setting2' size='md' color='success' loading />
             <br />
             <br />
-            <Text color='primaryLight'>Size: md / Color: Success / Loading: true</Text>
+            <Text>Size: md / Color: Success / Loading: true</Text>
             <Divider />
             <IconButton iconName='Setting2' size='lg' color='error' loading />
             <br />
             <br />
-            <Text color='primaryLight'>Size: lg / Color: Error / Loading: true</Text>
+            <Text>Size: lg / Color: Error / Loading: true</Text>
           </Card>
           <br />
           <Card title='Tooltip'>
             <IconButton iconName='Filter' tooltipTitle='Filter' />
             <br />
             <br />
-            <Text color='primaryLight'>tooltipTitle: string</Text>
+            <Text>tooltipTitle: string</Text>
           </Card>
         </div>
       </div>

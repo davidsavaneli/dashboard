@@ -9,24 +9,24 @@ const ButtonPage = () => {
             <Button>Button</Button>
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Contained / Size: md / Color: Primary</Text>
+            <Text>Variant: Contained / Size: md / Color: Primary</Text>
           </Card>
           <br />
           <Card title='Variant'>
             <Button variant='transparent'>Button</Button>
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Transparent</Text>
+            <Text>Variant: Transparent</Text>
             <Divider />
             <Button variant='contained'>Button</Button>
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Contained</Text>
+            <Text>Variant: Contained</Text>
             <Divider />
             <Button variant='filled'>Button</Button>
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Filled</Text>
+            <Text>Variant: Filled</Text>
           </Card>
           <br />
           <Card title='Rounded'>
@@ -35,21 +35,21 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Transparent / Rounded: true</Text>
+            <Text>Variant: Transparent / Rounded: true</Text>
             <Divider />
             <Button variant='contained' rounded>
               Button
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Contained / Rounded: true</Text>
+            <Text>Variant: Contained / Rounded: true</Text>
             <Divider />
             <Button variant='filled' rounded>
               Button
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Variant: Filled / Rounded: true</Text>
+            <Text>Variant: Filled / Rounded: true</Text>
           </Card>
           <br />
           <Card title='Disabled'>
@@ -66,7 +66,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Primary</Text>
+            <Text>Color: Primary</Text>
             <Divider />
             <Button variant='transparent' disabled color='primaryLight'>
               Button
@@ -81,7 +81,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: PrimaryLight</Text>
+            <Text>Color: PrimaryLight</Text>
             <Divider />
             <Button variant='transparent' disabled color='secondary'>
               Button
@@ -96,7 +96,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Secondary</Text>
+            <Text>Color: Secondary</Text>
             <Divider />
             <Button variant='transparent' disabled color='dark'>
               Button
@@ -111,7 +111,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Dark</Text>
+            <Text>Color: Dark</Text>
             <Divider />
             <Button variant='transparent' disabled color='medium'>
               Button
@@ -126,7 +126,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Medium</Text>
+            <Text>Color: Medium</Text>
             <Divider />
             <Button variant='transparent' disabled color='light'>
               Button
@@ -141,7 +141,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Light</Text>
+            <Text>Color: Light</Text>
             <Divider />
             <Button variant='transparent' disabled color='success'>
               Button
@@ -156,7 +156,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Success</Text>
+            <Text>Color: Success</Text>
             <Divider />
             <Button variant='transparent' disabled color='error'>
               Button
@@ -171,7 +171,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Error</Text>
+            <Text>Color: Error</Text>
             <Divider />
             <Button variant='transparent' disabled color='info'>
               Button
@@ -186,7 +186,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Info</Text>
+            <Text>Color: Info</Text>
             <Divider />
             <Button variant='transparent' disabled color='warning'>
               Button
@@ -201,7 +201,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Warning</Text>
+            <Text>Color: Warning</Text>
           </Card>
           <br />
           <Card title='With Icon'>
@@ -213,7 +213,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Icon: Setting2 / Loading: true</Text>
+            <Text>Icon: Setting2 / Loading: true</Text>
           </Card>
         </div>
         <div className='col-6'>
@@ -231,7 +231,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Primary</Text>
+            <Text>Color: Primary</Text>
             <Divider />
             <Button variant='transparent' color='primaryLight'>
               Button
@@ -246,7 +246,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: PrimaryLight</Text>
+            <Text>Color: PrimaryLight</Text>
             <Divider />
             <Button variant='transparent' color='secondary'>
               Button
@@ -261,7 +261,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Secondary</Text>
+            <Text>Color: Secondary</Text>
             <Divider />
             <Button variant='transparent' color='dark'>
               Button
@@ -276,7 +276,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Dark</Text>
+            <Text>Color: Dark</Text>
             <Divider />
             <Button variant='transparent' color='medium'>
               Button
@@ -291,7 +291,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Medium</Text>
+            <Text>Color: Medium</Text>
             <Divider />
             <Button variant='transparent' color='light'>
               Button
@@ -306,7 +306,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Light</Text>
+            <Text>Color: Light</Text>
             <Divider />
             <Button variant='transparent' color='success'>
               Button
@@ -321,7 +321,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Success</Text>
+            <Text>Color: Success</Text>
             <Divider />
             <Button variant='transparent' color='error'>
               Button
@@ -336,7 +336,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Error</Text>
+            <Text>Color: Error</Text>
             <Divider />
             <Button variant='transparent' color='info'>
               Button
@@ -351,7 +351,7 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Info</Text>
+            <Text>Color: Info</Text>
             <Divider />
             <Button variant='transparent' color='warning'>
               Button
@@ -366,24 +366,24 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Color: Warning</Text>
+            <Text>Color: Warning</Text>
           </Card>
           <br />
           <Card title='Sizes'>
             <Button size='sm'>Button</Button>
             <br />
             <br />
-            <Text color='primaryLight'>Size: sm</Text>
+            <Text>Size: sm</Text>
             <Divider />
             <Button size='md'>Button</Button>
             <br />
             <br />
-            <Text color='primaryLight'>Size: md</Text>
+            <Text>Size: md</Text>
             <Divider />
             <Button size='lg'>Button</Button>
             <br />
             <br />
-            <Text color='primaryLight'>Size: lg</Text>
+            <Text>Size: lg</Text>
           </Card>
           <br />
           <Card title='Loading'>
@@ -392,28 +392,28 @@ const ButtonPage = () => {
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Size: sm / Color: Primary / Loading: true</Text>
+            <Text>Size: sm / Color: Primary / Loading: true</Text>
             <Divider />
             <Button size='md' color='success' loading>
               Button
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Size: md / Color: Success / Loading: true</Text>
+            <Text>Size: md / Color: Success / Loading: true</Text>
             <Divider />
             <Button size='lg' color='error' loading>
               Button
             </Button>
             <br />
             <br />
-            <Text color='primaryLight'>Size: lg / Color: Error / Loading: true</Text>
+            <Text>Size: lg / Color: Error / Loading: true</Text>
           </Card>
           <br />
           <Card title='Tooltip'>
             <Button tooltipTitle='Tooltip Title'>Button</Button>
             <br />
             <br />
-            <Text color='primaryLight'>tooltipTitle: string</Text>
+            <Text>tooltipTitle: string</Text>
           </Card>
         </div>
       </div>

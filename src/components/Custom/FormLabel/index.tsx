@@ -9,7 +9,7 @@ export interface FormLabelProps extends MuiFormLabelProps {}
 const FormLabel = forwardRef<HTMLLabelElement, FormLabelProps>(({ children, ...props }: FormLabelProps, ref) => {
   return (
     <MuiFormLabel ref={ref} {...props}>
-      <Text color='primaryLight'>{children}</Text>
+      <Text>{children}</Text>
     </MuiFormLabel>
   )
 })
