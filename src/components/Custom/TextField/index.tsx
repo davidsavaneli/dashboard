@@ -2,39 +2,72 @@ import { forwardRef, useState } from 'react'
 import { MuiTextField, MuiTextFieldProps } from '../../Mui'
 import FormControl from '../FormControl'
 import InputAdornment from '../InputAdornment'
+import FormLabel from '../FormLabel'
 import IconButton from '../IconButton'
-import Icon, { IconName } from '../Icon'
+import { IconName } from '../Icon'
+import clsx from 'clsx'
+
+import './styles.css'
 
 export type TextFieldProps = MuiTextFieldProps & {
   isPassword?: boolean
-  iconName?: IconName | ''
+  iconName?: IconName
+  iconButtonName?: IconName
+  adornmentPosition?: 'start' | 'end'
 }
 
 const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
-  ({ isPassword = false, iconName = '', variant = 'outlined', ...props }: TextFieldProps, ref) => {
+  (
+    {
+      isPassword = false,
+      iconName,
+      iconButtonName,
+      variant = 'outlined',
+      label,
+      adornmentPosition = 'end',
+      ...props
+    }: TextFieldProps,
+    ref,
+  ) => {
     const [showPassword, setShowPassword] = useState<boolean>(!!isPassword)
     const handleShowPassword = () => setShowPassword(!showPassword)
 
+    const classNames = clsx({
+      ['MuiTextField-withIcon']: iconName || iconButtonName || isPassword,
+    })
+
     const IconComponent = isPassword ? (
-      <InputAdornment position='end'>
+      <InputAdornment position={adornmentPosition}>
         <IconButton onClick={handleShowPassword} iconName={showPassword ? 'EyeSlash' : 'Eye'} />
       </InputAdornment>
     ) : (
-      iconName && (
-        <InputAdornment position='end'>
-          <IconButton iconName={iconName} />
-        </InputAdornment>
+      (iconName || iconButtonName) && (
+        <div>
+          {iconName ? (
+            <InputAdornment position={adornmentPosition}>
+              <IconButton iconName={iconName} nonClickable />
+            </InputAdornment>
+          ) : (
+            iconButtonName && (
+              <InputAdornment position={adornmentPosition}>
+                <IconButton iconName={iconButtonName} />
+              </InputAdornment>
+            )
+          )}
+        </div>
       )
     )
 
     return (
       <FormControl>
+        {label && <FormLabel>{label}</FormLabel>}
         <MuiTextField
+          className={classNames}
           ref={ref}
           variant={variant}
           type={!showPassword ? 'text' : 'password'}
           InputProps={{
-            endAdornment: IconComponent,
+            [`${adornmentPosition}Adornment`]: IconComponent,
           }}
           {...props}
         />

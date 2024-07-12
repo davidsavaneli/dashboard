@@ -1,0 +1,76 @@
+.MuiInputBase-root {
+  border-radius: var(--border-radius-sm) !important;
+  font-size: 0.875rem !important;
+  line-height: 1.4375em !important;
+  font-weight: 400 !important;
+  color: rgb(29, 38, 48) !important;
+  box-sizing: border-box !important;
+  cursor: text !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  position: relative !important;
+  padding: 0 0 !important;
+}
+
+.MuiInputBase-root.Mui-focused {
+  border-color: var(--color-light) !important;
+}
+
+.MuiTextField-withIcon .MuiInputBase-adornedEnd {
+  padding-right: 6px !important;
+}
+
+.MuiTextField-withIcon .MuiInputBase-adornedStart {
+  padding-left: 6px !important;
+}
+
+.MuiInputBase-input {
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  color: currentcolor !important;
+  border: 0px !important;
+  box-sizing: content-box !important;
+  background: none !important;
+  height: 1.4375em !important;
+  margin: 0px !important;
+  -webkit-tap-highlight-color: transparent !important;
+  min-width: 0px !important;
+  animation-name: mui-auto-fill-cancel !important;
+  animation-duration: 10ms !important;
+  padding: 14px 14px !important;
+}
+
+.MuiTextField-root:not(.MuiTextField-withIcon) .MuiInputBase-adornedStart {
+  padding-left: 14px !important;
+}
+
+.MuiTextField-root:not(.MuiTextField-withIcon) .MuiInputBase-adornedEnd {
+  padding-right: 14px !important;
+}
+
+.MuiTextField-withIcon .MuiInputBase-inputAdornedStart {
+  padding-left: 0 !important;
+}
+
+.MuiTextField-withIcon .MuiInputBase-inputAdornedEnd {
+  padding-right: 0 !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-width: 1px !important;
+  border-color: var(--color-primaryLight-shade500) !important;
+  transition:
+    border-color var(--tr-dur),
+    box-shadow var(--tr-dur) !important;
+}
+
+@media (hover: hover) {
+  .MuiInputBase-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-light) !important;
+  }
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-light) !important;
+  box-shadow: rgba(42, 161, 175, 0.1) 0px 0px 0px 2px !important;
+}

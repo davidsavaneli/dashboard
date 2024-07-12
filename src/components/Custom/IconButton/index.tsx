@@ -40,6 +40,7 @@ export interface IconButtonProps extends MuiIconButtonProps {
   iconVariant?: IconProps['variant']
   loading?: boolean
   tooltipTitle?: string
+  nonClickable?: boolean
 }
 
 const IconButton = ({
@@ -51,6 +52,7 @@ const IconButton = ({
   iconVariant,
   loading = false,
   tooltipTitle,
+  nonClickable = false,
   ...props
 }: IconButtonProps) => {
   const classNames = clsx({
@@ -72,6 +74,7 @@ const IconButton = ({
     ['MuiIconButton-sizeLg']: size === 'lg',
     ['MuiIconButton-rounded']: rounded,
     ['MuiIconButton-loading']: loading,
+    ['MuiIconButton-nonClickable']: nonClickable,
   })
 
   const IconButtonComponent = () => (
