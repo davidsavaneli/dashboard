@@ -17,6 +17,8 @@
   pointer-events: none !important;
 }
 
+.MuiIconButton-root:hover { background-color: var(--color-primary-shade200) !important; }
+
 .MuiIconButton-variantContained.MuiIconButton-colorPrimary { background-color: var(--color-primary) !important; }
 .MuiIconButton-variantContained.MuiIconButton-colorPrimaryLight { background-color: var(--color-primaryLight) !important; }
 .MuiIconButton-variantContained.MuiIconButton-colorSecondary { background-color: var(--color-secondary) !important; }

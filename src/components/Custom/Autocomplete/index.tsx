@@ -3,6 +3,10 @@ import { MuiAutocomplete, MuiAutocompleteProps, MuiAutocompleteRenderInputParams
 import TextField, { TextFieldProps } from '../TextField'
 import FormControl from '../FormControl'
 import { ChipTypeMap } from '../Chip'
+import Icon from '../Icon'
+
+import './styles.css'
+import CircularProgress from '../CircularProgress'
 
 export interface AutocompleteProps<
   T,
@@ -29,9 +33,26 @@ const Autocomplete = forwardRef(function Autocomplete<
     <FormControl>
       <MuiAutocomplete
         disableCloseOnSelect
-        renderInput={(params: MuiAutocompleteRenderInputParams) => <TextField label={label} {...params} />}
+        renderInput={(params: MuiAutocompleteRenderInputParams) => (
+          <TextField
+            className='MuiTextField-withIcon'
+            label={label}
+            {...params}
+            InputProps={{
+              ...params.InputProps,
+              endAdornment: (
+                <>
+                  {params.InputProps.endAdornment}
+                  {props.loading && <CircularProgress color='primaryLight' size={'sm'} />}
+                </>
+              ),
+            }}
+          />
+        )}
         ref={ref}
         {...props}
+        popupIcon={<Icon name='ArrowDown2' />}
+        clearIcon={<Icon name='CloseCircle' />}
       />
     </FormControl>
   )

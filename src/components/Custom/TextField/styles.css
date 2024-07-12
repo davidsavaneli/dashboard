@@ -29,6 +29,22 @@
   height: 20px !important;
 }
 
+.MuiInputBase-input::-webkit-input-placeholder {
+  color: var(--color-primary-shade-300) !important;
+}
+
+.MuiInputBase-input::-moz-placeholder {
+  color: var(--color-primary-shade-300) !important;
+}
+
+.MuiInputBase-input:-ms-input-placeholder {
+  color: var(--color-primary-shade-300) !important;
+}
+
+.MuiInputBase-input:-moz-placeholder {
+  color: var(--color-primary-shade-300) !important;
+}
+
 .MuiTextField-root:not(.MuiTextField-withIcon) .MuiInputBase-adornedStart {
   padding-left: 14px !important;
 }
@@ -62,4 +78,8 @@
 .Mui-focused .MuiOutlinedInput-notchedOutline {
   border-color: var(--color-light) !important;
   box-shadow: rgba(42, 161, 175, 0.1) 0px 0px 0px 2px !important;
+}
+
+.MuiInputBase-root .MuiIconButton-root {
+  margin-right: 0 !important;
 }

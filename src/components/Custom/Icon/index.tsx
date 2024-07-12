@@ -65,7 +65,9 @@ import {
   ElementEqual,
   Element4,
   Grid3,
-  I3Square
+  I3Square,
+  ArrowSquareDown,
+  CloseCircle,
 } from 'iconsax-react'
 import styles from './styles.module.css'
 
@@ -134,14 +136,26 @@ const Icons = {
   ElementEqual,
   Element4,
   Grid3,
-  I3Square
+  I3Square,
+  ArrowSquareDown,
+  CloseCircle,
 }
 
 export type IconName = keyof typeof Icons
 
 export interface IconProps extends IconsaxIconProps {
   name: IconName
-  color?: 'primary' | 'primaryLight' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
+  color?:
+    | 'primary'
+    | 'primaryLight'
+    | 'secondary'
+    | 'dark'
+    | 'medium'
+    | 'light'
+    | 'success'
+    | 'error'
+    | 'info'
+    | 'warning'
   size?: 'sm' | 'md' | 'lg'
   variant?: 'Linear' | 'Outline' | 'Broken' | 'Bold' | 'Bulk' | 'TwoTone'
 }

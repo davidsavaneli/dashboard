@@ -2,7 +2,7 @@ import { ContentLayout, Card, TextField, Icon } from '../../components'
 
 const TextFieldPage = () => {
   return (
-    <ContentLayout label='Text Field Page'>
+    <ContentLayout label='Text Field Component'>
       <Card title='Text Field'>
         <TextField label='Text Field' />
         <TextField label='Password' isPassword fullWidth />
