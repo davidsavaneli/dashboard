@@ -1,3 +1,12 @@
+.MuiToggleButton-root {
+  font-weight: var(--font-weight-regular) !important;
+  font-size: inherit !important;
+  line-height: 24px !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+  transition: background-color var(--tr-dur) !important;
+}
+
 .MuiToggleButton-root.Mui-disabled {
   opacity: 0.7 !important;
   pointer-events: auto !important;
@@ -230,7 +239,6 @@
 
 .MuiToggleButton-root.MuiToggleButton-colorPrimary.Mui-selected > *,
 .MuiToggleButton-root.MuiToggleButton-colorPrimaryLight.Mui-selected > *,
-.MuiToggleButton-root.MuiToggleButton-colorSecondary.Mui-selected > *,
 .MuiToggleButton-root.MuiToggleButton-colorDark.Mui-selected > *,
 .MuiToggleButton-root.MuiToggleButton-colorMedium.Mui-selected > *,
 .MuiToggleButton-root.MuiToggleButton-colorLight.Mui-selected > *,
@@ -241,14 +249,21 @@
   color: var(--color-secondary) !important;
 }
 
+.MuiToggleButton-root.MuiToggleButton-colorSecondary.Mui-selected > * {
+  color: var(--color-primary) !important;
+}
+
 .MuiToggleButton-root.MuiToggleButton-sizeSm {
-  padding: 6px !important;
+  padding: 6px 11px !important;
+  line-height: 22px !important;
 }
 
 .MuiToggleButton-root.MuiToggleButton-sizeMd {
-  padding: 7px !important;
+  padding: 7px 13px !important;
+  line-height: 24px !important;
 }
 
 .MuiToggleButton-root.MuiToggleButton-sizeLg {
-  padding: 8px !important;
+  padding: 8px 15px !important;
+  line-height: 26px !important;
 }

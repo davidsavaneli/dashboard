@@ -11,6 +11,8 @@ const SelectPage = () => {
     <ContentLayout label='Select Page'>
       <Card title='Select'>
         <Select label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} multiple />
+        <Select label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} />
+        <Select label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} disabled />
       </Card>
     </ContentLayout>
   )

@@ -1,0 +1,17 @@
+.MuiSelect-select {
+  min-height: 20px !important;
+}
+
+.MuiTextField-withIcon .MuiSelect-select ~ .MuiIconButton-root {
+  margin-right: 6px !important;
+}
+
+.MuiTextField-withIcon .MuiSelect-select ~ .MuiIconButton-root svg {
+  transform: scale(0.8) !important;
+}
+
+.MuiSelect-select ~ fieldset legend {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  width: 0 !important;
+}

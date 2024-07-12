@@ -12,7 +12,7 @@ const SpeedDial = forwardRef<HTMLButtonElement, SpeedDialProps>(({ FabProps, ...
   return (
     <MuiSpeedDial
       ref={ref}
-      icon={<Fab size={FabProps?.size || 'lg'} iconName={FabProps?.iconName || 'Add'} {...FabProps} />}
+      icon={<Fab color='medium' size={FabProps?.size || 'lg'} iconName={FabProps?.iconName || 'Add'} {...FabProps} />}
       {...props}
     />
   )

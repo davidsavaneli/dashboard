@@ -74,6 +74,20 @@ const ToggleButtonPage = () => {
                 <Text>Right</Text>
               </ToggleButton>
             </ToggleButtonGroup>
+            <br />
+            <br />
+
+            <ToggleButtonGroup value='1'>
+              <ToggleButton value='1' color='secondary'>
+                <Text>Left</Text>
+              </ToggleButton>
+              <ToggleButton value='2' color='secondary'>
+                <Text>Center</Text>
+              </ToggleButton>
+              <ToggleButton value='3' color='secondary'>
+                <Text>Right</Text>
+              </ToggleButton>
+            </ToggleButtonGroup>
           </Card>
           <br />
           <Card title='Disabled'>

@@ -43,7 +43,7 @@ const Autocomplete = forwardRef(function Autocomplete<
               endAdornment: (
                 <>
                   {params.InputProps.endAdornment}
-                  {props.loading && <CircularProgress color='primaryLight' size={'sm'} />}
+                  {props.loading && <CircularProgress color='primaryLight' size={'xs'} />}
                 </>
               ),
             }}

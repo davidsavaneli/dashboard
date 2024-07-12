@@ -3,6 +3,10 @@
   padding: 8px !important;
 }
 
+.MuiAutocomplete-endAdornment .MuiIconButton-root svg {
+  transform: scale(0.8) !important;
+}
+
 .MuiAutocomplete-endAdornment {
   right: 6px !important;
 }
