@@ -1,0 +1,213 @@
+.MuiRadio-root {
+  transition: background-color var(--tr-dur) !important;
+}
+
+.MuiRadio-icon,
+.MuiRadio-checked-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.MuiRadio-sizeSm {
+  padding: 7px !important;
+}
+
+.MuiRadio-sizeMd {
+  padding: 8px !important;
+}
+
+.MuiRadio-sizeLg {
+  padding: 9px !important;
+}
+
+.MuiRadio-sizeSm .MuiRadio-icon,
+.MuiRadio-sizeSm .MuiRadio-checked-icon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.MuiRadio-sizeMd .MuiRadio-icon,
+.MuiRadio-sizeMd .MuiRadio-checked-icon {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.MuiRadio-sizeLg .MuiRadio-icon,
+.MuiRadio-sizeLg .MuiRadio-checked-icon {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.MuiRadio-icon-inner,
+.MuiRadio-checked-icon-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  width: 18px !important;
+  height: 18px !important;
+  border: 1px solid var(--color-primaryLight) !important;
+}
+
+.MuiRadio-sizeSm .MuiRadio-icon-inner,
+.MuiRadio-sizeSm .MuiRadio-checked-icon-inner {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.MuiRadio-sizeMd .MuiRadio-icon-inner,
+.MuiRadio-sizeMd .MuiRadio-checked-icon-inner {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.MuiRadio-sizeLg .MuiRadio-icon-inner,
+.MuiRadio-sizeLg .MuiRadio-checked-icon-inner {
+  width: 21px !important;
+  height: 21px !important;
+}
+
+.MuiRadio-checked-icon-dot {
+  border-radius: 50% !important;
+  background-color: var(--color-medium) !important;
+}
+
+.MuiRadio-sizeSm .MuiRadio-checked-icon-dot {
+  width: 9px !important;
+  height: 9px !important;
+}
+
+.MuiRadio-sizeMd .MuiRadio-checked-icon-dot {
+  width: 11px !important;
+  height: 11px !important;
+}
+
+.MuiRadio-sizeLg .MuiRadio-checked-icon-dot {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+.MuiRadio-colorPrimary .MuiRadio-checked-icon-dot {
+  background-color: var(--color-primary) !important;
+}
+
+.MuiRadio-colorPrimaryLight .MuiRadio-checked-icon-dot {
+  background-color: var(--color-primaryLight) !important;
+}
+
+.MuiRadio-colorSecondary .MuiRadio-checked-icon-dot {
+  background-color: var(--color-secondary) !important;
+}
+
+.MuiRadio-colorDark .MuiRadio-checked-icon-dot {
+  background-color: var(--color-dark) !important;
+}
+
+.MuiRadio-colorMedium .MuiRadio-checked-icon-dot {
+  background-color: var(--color-medium) !important;
+}
+
+.MuiRadio-colorLight .MuiRadio-checked-icon-dot {
+  background-color: var(--color-light) !important;
+}
+
+.MuiRadio-colorSuccess .MuiRadio-checked-icon-dot {
+  background-color: var(--color-success) !important;
+}
+
+.MuiRadio-colorError .MuiRadio-checked-icon-dot {
+  background-color: var(--color-error) !important;
+}
+
+.MuiRadio-colorInfo .MuiRadio-checked-icon-dot {
+  background-color: var(--color-info) !important;
+}
+
+.MuiRadio-colorWarning .MuiRadio-checked-icon-dot {
+  background-color: var(--color-warning) !important;
+}
+
+.MuiRadio-colorPrimary .MuiRadio-checked-icon-inner {
+  border-color: var(--color-primary) !important;
+}
+
+.MuiRadio-colorPrimaryLight .MuiRadio-checked-icon-inner {
+  border-color: var(--color-primaryLight) !important;
+}
+
+.MuiRadio-colorSecondary .MuiRadio-checked-icon-inner {
+  border-color: var(--color-secondary) !important;
+}
+
+.MuiRadio-colorDark .MuiRadio-checked-icon-inner {
+  border-color: var(--color-dark) !important;
+}
+
+.MuiRadio-colorMedium .MuiRadio-checked-icon-inner {
+  border-color: var(--color-medium) !important;
+}
+
+.MuiRadio-colorLight .MuiRadio-checked-icon-inner {
+  border-color: var(--color-light) !important;
+}
+
+.MuiRadio-colorSuccess .MuiRadio-checked-icon-inner {
+  border-color: var(--color-success) !important;
+}
+
+.MuiRadio-colorError .MuiRadio-checked-icon-inner {
+  border-color: var(--color-error) !important;
+}
+
+.MuiRadio-colorInfo .MuiRadio-checked-icon-inner {
+  border-color: var(--color-info) !important;
+}
+
+.MuiRadio-colorWarning .MuiRadio-checked-icon-inner {
+  border-color: var(--color-warning) !important;
+}
+
+@media (hover: hover) {
+  .MuiRadio-colorPrimary:hover {
+    background-color: var(--color-primary-shade200) !important;
+  }
+
+  .MuiRadio-colorPrimaryLight:hover {
+    background-color: var(--color-primaryLight-shade200) !important;
+  }
+
+  .MuiRadio-colorSecondary:hover {
+    background-color: var(--color-secondary-shade200) !important;
+  }
+
+  .MuiRadio-colorDark:hover {
+    background-color: var(--color-dark-shade200) !important;
+  }
+
+  .MuiRadio-colorMedium:hover {
+    background-color: var(--color-medium-shade200) !important;
+  }
+
+  .MuiRadio-colorLight:hover {
+    background-color: var(--color-light-shade200) !important;
+  }
+
+  .MuiRadio-colorSuccess:hover {
+    background-color: var(--color-success-shade200) !important;
+  }
+
+  .MuiRadio-colorError:hover {
+    background-color: var(--color-error-shade200) !important;
+  }
+
+  .MuiRadio-colorInfo:hover {
+    background-color: var(--color-info-shade200) !important;
+  }
+
+  .MuiRadio-colorWarning:hover {
+    background-color: var(--color-warning-shade200) !important;
+  }
+}
