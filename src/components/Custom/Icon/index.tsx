@@ -68,6 +68,7 @@ import {
   I3Square,
   ArrowSquareDown,
   CloseCircle,
+  ConvertCard,
 } from 'iconsax-react'
 import styles from './styles.module.css'
 
@@ -139,6 +140,7 @@ const Icons = {
   I3Square,
   ArrowSquareDown,
   CloseCircle,
+  ConvertCard,
 }
 
 export type IconName = keyof typeof Icons
