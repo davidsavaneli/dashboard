@@ -37,7 +37,7 @@ export interface SwitchProps extends MuiSwitchProps {
 }
 
 const Radio = forwardRef<HTMLButtonElement, SwitchProps>(
-  ({ label, size = 'md', color = 'medium', ...props }: SwitchProps, ref) => {
+  ({ label, size = 'md', color = 'medium', disabled, ...props }: SwitchProps, ref) => {
     const classNames = clsx({
       ['MuiSwitch-colorPrimary']: color === 'primary',
       ['MuiSwitch-colorPrimaryLight']: color === 'primaryLight',
@@ -52,6 +52,7 @@ const Radio = forwardRef<HTMLButtonElement, SwitchProps>(
       ['MuiSwitch-sizeSm']: size === 'sm',
       ['MuiSwitch-sizeMd']: size === 'md',
       ['MuiSwitch-sizeLg']: size === 'lg',
+      ['Mui-disabled']: disabled,
     })
 
     return (

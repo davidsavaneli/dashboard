@@ -33,6 +33,28 @@ const SwitchPage = () => {
             <Switch label='Switch' size='md' />
             <Switch label='Switch' size='lg' />
           </Card>
+          <br />
+          <Card title='Disabled'>
+            <Switch label='Switch' disabled defaultChecked color='primary' />
+            <br />
+            <Switch label='Switch' disabled defaultChecked color='primaryLight' />
+            <br />
+            <Switch label='Switch' disabled defaultChecked color='secondary' />
+            <br />
+            <Switch label='Switch' disabled defaultChecked color='dark' />
+            <br />
+            <Switch label='Switch' disabled defaultChecked color='medium' />
+            <br />
+            <Switch label='Switch' disabled defaultChecked color='light' />
+            <br />
+            <Switch label='Switch' disabled defaultChecked color='success' />
+            <br />
+            <Switch label='Switch' disabled defaultChecked color='error' />
+            <br />
+            <Switch label='Switch' disabled defaultChecked color='info' />
+            <br />
+            <Switch label='Switch' disabled defaultChecked color='warning' />
+          </Card>
         </div>
       </div>
     </ContentLayout>

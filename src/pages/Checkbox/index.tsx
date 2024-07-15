@@ -38,6 +38,32 @@ const CheckboxPage = () => {
           </Card>
         </div>
       </div>
+
+      <div className='row'>
+        <div className='col-12'>
+          <Card title='Disabled'>
+            <Checkbox label='Checkbox' disabled defaultChecked color='primary' />
+            <br />
+            <Checkbox label='Checkbox' disabled defaultChecked color='primaryLight' />
+            <br />
+            <Checkbox label='Checkbox' disabled defaultChecked color='secondary' />
+            <br />
+            <Checkbox label='Checkbox' disabled defaultChecked color='dark' />
+            <br />
+            <Checkbox label='Checkbox' disabled defaultChecked color='medium' />
+            <br />
+            <Checkbox label='Checkbox' disabled defaultChecked color='light' />
+            <br />
+            <Checkbox label='Checkbox' disabled defaultChecked color='success' />
+            <br />
+            <Checkbox label='Checkbox' disabled defaultChecked color='error' />
+            <br />
+            <Checkbox label='Checkbox' disabled defaultChecked color='info' />
+            <br />
+            <Checkbox label='Checkbox' disabled defaultChecked color='warning' />
+          </Card>
+        </div>
+      </div>
       <div className='row'>
         <div className='col-4'>
           <Card title='Checkbox Size sm'>

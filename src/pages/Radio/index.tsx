@@ -39,6 +39,31 @@ const RadioPage = () => {
         </div>
       </div>
       <div className='row'>
+        <div className='col-12'>
+          <Card title='Disabled'>
+            <Radio label='Radio' disabled defaultChecked color='primary' />
+            <br />
+            <Radio label='Radio' disabled defaultChecked color='primaryLight' />
+            <br />
+            <Radio label='Radio' disabled defaultChecked color='secondary' />
+            <br />
+            <Radio label='Radio' disabled defaultChecked color='dark' />
+            <br />
+            <Radio label='Radio' disabled defaultChecked color='medium' />
+            <br />
+            <Radio label='Radio' disabled defaultChecked color='light' />
+            <br />
+            <Radio label='Radio' disabled defaultChecked color='success' />
+            <br />
+            <Radio label='Radio' disabled defaultChecked color='error' />
+            <br />
+            <Radio label='Radio' disabled defaultChecked color='info' />
+            <br />
+            <Radio label='Radio' disabled defaultChecked color='warning' />
+          </Card>
+        </div>
+      </div>
+      <div className='row'>
         <div className='col-4'>
           <Card title='Radio Size sm'>
             <Radio label='Radio' size='sm' />
