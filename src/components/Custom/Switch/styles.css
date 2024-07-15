@@ -1,0 +1,177 @@
+.MuiSwitch-root {
+  width: 56px !important;
+  height: 40px !important;
+  padding: 10px !important;
+}
+
+.MuiSwitch-root.MuiSwitch-sizeSm {
+  width: 50px !important;
+  height: 38px !important;
+  padding: 10px !important;
+}
+
+.MuiSwitch-root.MuiSwitch-sizeMd {
+  width: 58px !important;
+  height: 42px !important;
+  padding: 11px !important;
+}
+
+.MuiSwitch-root.MuiSwitch-sizeLg {
+  width: 66px !important;
+  height: 46px !important;
+  padding: 12px !important;
+}
+
+.MuiSwitch-switchBase {
+  top: 50% !important;
+  transform: translate(0, -50%) !important;
+  left: 4px !important;
+  padding: 10px !important;
+  transition:
+    background-color var(--tr-dur),
+    transform var(--tr-dur);
+}
+
+@media (hover: hover) {
+  .MuiSwitch-colorPrimary .MuiSwitch-switchBase:hover {
+    background-color: var(--color-primary-shade200) !important;
+  }
+
+  .MuiSwitch-colorPrimaryLight .MuiSwitch-switchBase:hover {
+    background-color: var(--color-primaryLight-shade200) !important;
+  }
+
+  .MuiSwitch-colorSecondary .MuiSwitch-switchBase:hover {
+    background-color: var(--color-secondary-shade200) !important;
+  }
+
+  .MuiSwitch-colorDark .MuiSwitch-switchBase:hover {
+    background-color: var(--color-dark-shade200) !important;
+  }
+
+  .MuiSwitch-colorMedium .MuiSwitch-switchBase:hover {
+    background-color: var(--color-medium-shade200) !important;
+  }
+
+  .MuiSwitch-colorLight .MuiSwitch-switchBase:hover {
+    background-color: var(--color-light-shade200) !important;
+  }
+
+  .MuiSwitch-colorSuccess .MuiSwitch-switchBase:hover {
+    background-color: var(--color-success-shade200) !important;
+  }
+
+  .MuiSwitch-colorError .MuiSwitch-switchBase:hover {
+    background-color: var(--color-error-shade200) !important;
+  }
+
+  .MuiSwitch-colorInfo .MuiSwitch-switchBase:hover {
+    background-color: var(--color-info-shade200) !important;
+  }
+
+  .MuiSwitch-colorWarning .MuiSwitch-switchBase:hover {
+    background-color: var(--color-warning-shade200) !important;
+  }
+}
+
+.MuiSwitch-sizeSm .MuiSwitch-switchBase {
+  left: 3px !important;
+}
+
+.MuiSwitch-sizeMd .MuiSwitch-switchBase {
+  left: 4px !important;
+}
+
+.MuiSwitch-sizeLg .MuiSwitch-switchBase {
+  left: 5px !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked {
+  transform: translate(16px, -50%) !important;
+}
+
+.MuiSwitch-sizeSm .MuiSwitch-switchBase.Mui-checked {
+  transform: translate(12px, -50%) !important;
+}
+
+.MuiSwitch-sizeMd .MuiSwitch-switchBase.Mui-checked {
+  transform: translate(16px, -50%) !important;
+}
+
+.MuiSwitch-sizeLg .MuiSwitch-switchBase.Mui-checked {
+  transform: translate(20px, -50%) !important;
+}
+
+.MuiSwitch-thumb {
+  width: 14px !important;
+  height: 14px !important;
+  background-color: var(--color-secondary) !important;
+}
+
+.MuiSwitch-sizeSm .MuiSwitch-thumb {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.MuiSwitch-sizeMd .MuiSwitch-thumb {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.MuiSwitch-sizeLg .MuiSwitch-thumb {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.MuiSwitch-track {
+  border-radius: 50px !important;
+  background-color: var(--color-primaryLight-shade500) !important;
+  opacity: 1 !important;
+  transition:
+    opacity var(--tr-dur),
+    background-color var(--tr-dur) !important;
+}
+
+.Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-medium) !important;
+}
+
+.MuiSwitch-colorPrimary .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-primary) !important;
+}
+
+.MuiSwitch-colorPrimaryLight .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-primaryLight) !important;
+}
+
+.MuiSwitch-colorSecondary .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-secondary) !important;
+}
+
+.MuiSwitch-colorDark .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-dark) !important;
+}
+
+.MuiSwitch-colorMedium .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-medium) !important;
+}
+
+.MuiSwitch-colorLight .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-light) !important;
+}
+
+.MuiSwitch-colorSuccess .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-success) !important;
+}
+
+.MuiSwitch-colorError .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-error) !important;
+}
+
+.MuiSwitch-colorInfo .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-info) !important;
+}
+
+.MuiSwitch-colorWarning .Mui-checked + .MuiSwitch-track {
+  background-color: var(--color-warning) !important;
+}
