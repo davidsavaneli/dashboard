@@ -1,39 +1,148 @@
-.card {
-  position: relative;
-  background-color: var(--color-content-bg);
-  border: 1px solid var(--color-line-secondary);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--box-shadow-card);
-  /* background-color: #000; */
+.MuiCheckbox-root {
+  transition: background-color var(--tr-dur) !important;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--color-line-secondary);
-  padding: var(--padding-sm) var(--padding-md);
-  min-height: 70px;
-  gap: var(--padding-sm);
+.MuiCheckbox-icon,
+.MuiCheckbox-checked-icon,
+.MuiCheckbox-indeterminate-icon {
+  width: 24px !important;
+  height: 24px !important;
 }
 
-.headerActions {
-  display: flex;
-  align-items: center;
-  gap: var(--padding-sm);
+.MuiCheckbox-sizeSm {
+  padding: 7px !important;
 }
 
-.footerActions {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  border-top: 1px dashed var(--color-line-secondary);
-  padding: var(--padding-sm) var(--padding-md);
-  min-height: 70px;
-  gap: var(--padding-sm);
+.MuiCheckbox-sizeMd {
+  padding: 8px !important;
 }
 
-.content {
-  position: relative;
-  padding: var(--padding-md);
+.MuiCheckbox-sizeLg {
+  padding: 9px !important;
+}
+
+.MuiCheckbox-sizeSm .MuiCheckbox-icon,
+.MuiCheckbox-sizeSm .MuiCheckbox-checked-icon,
+.MuiCheckbox-sizeSm .MuiCheckbox-indeterminate-icon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.MuiCheckbox-sizeMd .MuiCheckbox-icon,
+.MuiCheckbox-sizeMd .MuiCheckbox-checked-icon,
+.MuiCheckbox-sizeMd .MuiCheckbox-indeterminate-icon {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.MuiCheckbox-sizeLg .MuiCheckbox-icon,
+.MuiCheckbox-sizeLg .MuiCheckbox-checked-icon,
+.MuiCheckbox-sizeLg .MuiCheckbox-indeterminate-icon {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.MuiCheckbox-icon path {
+  stroke: var(--color-primaryLight) !important;
+}
+
+.MuiCheckbox-colorSecondary .MuiCheckbox-icon path {
+  stroke: var(--color-secondary) !important;
+}
+
+.MuiCheckbox-checked-icon path,
+.MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-medium) !important;
+}
+
+.MuiCheckbox-colorPrimary .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorPrimary .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-primary) !important;
+}
+
+.MuiCheckbox-colorPrimaryLight .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorPrimaryLight .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-primaryLight) !important;
+}
+
+.MuiCheckbox-colorSecondary .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorSecondary .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-secondary) !important;
+}
+
+.MuiCheckbox-colorDark .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorDark .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-dark) !important;
+}
+
+.MuiCheckbox-colorMedium .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorMedium .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-medium) !important;
+}
+
+.MuiCheckbox-colorLight .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorLight .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-light) !important;
+}
+
+.MuiCheckbox-colorSuccess .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorSuccess .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-success) !important;
+}
+
+.MuiCheckbox-colorError .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorError .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-error) !important;
+}
+
+.MuiCheckbox-colorInfo .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorInfo .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-info) !important;
+}
+
+.MuiCheckbox-colorWarning .MuiCheckbox-checked-icon path,
+.MuiCheckbox-colorWarning .MuiCheckbox-indeterminate-icon path {
+  fill: var(--color-warning) !important;
+}
+
+@media (hover: hover) {
+  .MuiCheckbox-colorPrimary:hover {
+    background-color: var(--color-primary-shade200) !important;
+  }
+
+  .MuiCheckbox-colorPrimaryLight:hover {
+    background-color: var(--color-primaryLight-shade200) !important;
+  }
+
+  .MuiCheckbox-colorSecondary:hover {
+    background-color: var(--color-secondary-shade200) !important;
+  }
+
+  .MuiCheckbox-colorDark:hover {
+    background-color: var(--color-dark-shade200) !important;
+  }
+
+  .MuiCheckbox-colorMedium:hover {
+    background-color: var(--color-medium-shade200) !important;
+  }
+
+  .MuiCheckbox-colorLight:hover {
+    background-color: var(--color-light-shade200) !important;
+  }
+
+  .MuiCheckbox-colorSuccess:hover {
+    background-color: var(--color-success-shade200) !important;
+  }
+
+  .MuiCheckbox-colorError:hover {
+    background-color: var(--color-error-shade200) !important;
+  }
+
+  .MuiCheckbox-colorInfo:hover {
+    background-color: var(--color-info-shade200) !important;
+  }
+
+  .MuiCheckbox-colorWarning:hover {
+    background-color: var(--color-warning-shade200) !important;
+  }
 }

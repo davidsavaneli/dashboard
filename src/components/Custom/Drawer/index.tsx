@@ -88,7 +88,7 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
     <>
       {item.iconName ? (
         <ListItemIcon>
-          <Icon variant='Bulk' name={item.iconName} color={selected ? 'medium' : 'primary'} />
+          <Icon variant={selected ? 'Bold' : 'Bulk'} name={item.iconName} color={selected ? 'medium' : 'primary'} />
         </ListItemIcon>
       ) : (
         <div className={clsx(styles.drawerItemDot, selected && styles.drawerItemDotActive)}></div>

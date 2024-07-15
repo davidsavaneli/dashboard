@@ -1,3 +1,23 @@
 .MuiFormLabel-root {
-  margin: 0 0 4px 0 !important;
+  font-weight: var(--font-weight-regular) !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  font-size: var(--font-size-text-sm) !important;
+  color: var(--color-primaryLight) !important;
+  margin-bottom: 5px !important;
+}
+
+.MuiFormLabel-sizeSm {
+  font-size: var(--font-size-text-xs) !important;
+  margin-bottom: 4px !important;
+}
+
+.MuiFormLabel-sizeMd {
+  font-size: var(--font-size-text-sm) !important;
+  margin-bottom: 5px !important;
+}
+
+.MuiFormLabel-sizeLg {
+  font-size: var(--font-size-text-md) !important;
+  margin-bottom: 6px !important;
 }

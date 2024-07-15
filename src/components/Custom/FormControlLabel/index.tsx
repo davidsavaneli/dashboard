@@ -1,11 +1,22 @@
 import { forwardRef } from 'react'
+import clsx from 'clsx'
 import { MuiFormControlLabel, MuiFormControlLabelProps } from '../../Mui'
 
-export interface FormControlLabelProps extends MuiFormControlLabelProps {}
+import './styles.css'
+
+export interface FormControlLabelProps extends MuiFormControlLabelProps {
+  size?: 'sm' | 'md' | 'lg'
+}
 
 const FormControlLabel = forwardRef<HTMLLabelElement, FormControlLabelProps>(
-  ({ ...props }: FormControlLabelProps, ref) => {
-    return <MuiFormControlLabel ref={ref} {...props} />
+  ({ size = 'md', ...props }: FormControlLabelProps, ref) => {
+    const classNames = clsx({
+      ['MuiFormControlLabel-sizeSm']: size === 'sm',
+      ['MuiFormControlLabel-sizeMd']: size === 'md',
+      ['MuiFormControlLabel-sizeLg']: size === 'lg',
+    })
+
+    return <MuiFormControlLabel ref={ref} className={classNames} {...props} />
   },
 )
 

@@ -1,0 +1,34 @@
+.MuiFormControlLabel-sizeSm {
+  margin-left: -9px !important;
+  margin-right: 14px !important;
+}
+
+.MuiFormControlLabel-sizeMd {
+  margin-left: -10px !important;
+  margin-right: 16px !important;
+}
+
+.MuiFormControlLabel-sizeLg {
+  margin-left: -11px !important;
+  margin-right: 18px !important;
+}
+
+.MuiFormControlLabel-label {
+  font-weight: var(--font-weight-regular) !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  color: var(--color-primaryLight) !important;
+  font-size: var(--font-size-text-sm) !important;
+}
+
+.MuiFormControlLabel-sizeSm .MuiFormControlLabel-label {
+  font-size: var(--font-size-text-xs) !important;
+}
+
+.MuiFormControlLabel-sizeMd .MuiFormControlLabel-label {
+  font-size: var(--font-size-text-sm) !important;
+}
+
+.MuiFormControlLabel-sizeLg .MuiFormControlLabel-label {
+  font-size: var(--font-size-text-md) !important;
+}
