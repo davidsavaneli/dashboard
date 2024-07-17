@@ -2,7 +2,7 @@ import { ContentLayout, Card, IconButton, Icon, Button } from '../../components'
 
 const CardPage = () => {
   return (
-    <ContentLayout label='Card Page'>
+    <ContentLayout label='Card Component'>
       <div className='row'>
         <div className='col-6'>
           <Card title='Default'>

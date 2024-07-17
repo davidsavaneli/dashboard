@@ -6,98 +6,71 @@ const TitlePage = () => {
       <div className='row'>
         <div className='col-6'>
           <Card title='Default'>
-            <Title>Heading Title</Title>
+            <Title>Default Title</Title>
             <br />
-            <Text>Size: 16px / Weight: Bold / Color: Primary</Text>
-          </Card>
-          <br />
-          <Card title='Variant'>
-            <Title variant='h6'>Heading Title</Title>
-            <br />
-            <Text>xs / Size: 12px</Text>
-            <Divider />
-            <Title variant='h5'>Heading Title</Title>
-            <br />
-            <Text>sm / Size: 14px</Text>
-            <Divider />
-            <Title variant='h4'>Heading Title</Title>
-            <br />
-            <Text>md / Size: 16px</Text>
-            <Divider />
-            <Title variant='h3'>Heading Title</Title>
-            <br />
-            <Text>lg / Size: 20px</Text>
-            <Divider />
-            <Title variant='h2'>Heading Title</Title>
-            <br />
-            <Text>xl / Size: 24px</Text>
-            <Divider />
-            <Title variant='h1'>Heading Title</Title>
-            <br />
-            <Text>xxl / Size: 28px</Text>
-          </Card>
-          <br />
-          <Card title='Weight'>
-            <Title weight='regular'>Heading Title</Title>
-            <br />
-            <Text>Weight: Regular</Text>
-            <Divider />
-            <Title weight='medium'>Heading Title</Title>
-            <br />
-            <Text>Weight: Medium</Text>
-            <Divider />
-            <Title weight='bold'>Heading Title</Title>
-            <br />
-            <Text>Weight: Bold</Text>
+            <Text>Variant: h4 / Font Size: 16px / Weight: bold / Color: primary</Text>
           </Card>
         </div>
         <div className='col-6'>
-          <Card title='Colors'>
-            <Title color='primary'>Heading Title</Title>
-            <br />
-            <Text>Color: Primary</Text>
-            <Divider />
-            <Title color='primaryLight'>Heading Title</Title>
-            <br />
-            <Text>Color: PrimaryLight</Text>
-            <Divider />
-            <Title color='secondary'>Heading Title</Title>
-            <br />
-            <Text>Color: Secondary</Text>
-            <Divider />
-            <Title color='dark'>Heading Title</Title>
-            <br />
-            <Text>Color: Dark</Text>
-            <Divider />
-            <Title color='medium'>Heading Title</Title>
-            <br />
-            <Text>Color: Medium</Text>
-            <Divider />
-            <Title color='light'>Heading Title</Title>
-            <br />
-            <Text>Color: Light</Text>
-            <Divider />
-            <Title color='success'>Heading Title</Title>
-            <br />
-            <Text>Color: Success</Text>
-            <Divider />
-            <Title color='error'>Heading Title</Title>
-            <br />
-            <Text>Color: Error</Text>
-            <Divider />
-            <Title color='info'>Heading Title</Title>
-            <br />
-            <Text>Color: Info</Text>
-            <Divider />
-            <Title color='warning'>Heading Title</Title>
-            <br />
-            <Text>Color: Warning</Text>
-          </Card>
-          <br />
           <Card title='Uppercase'>
-            <Title uppercase>Heading Title</Title>
+            <Title uppercase>Uppercase Title</Title>
             <br />
-            <Text>Uppercase: true</Text>
+            <Text>uppercase: true</Text>
+          </Card>
+        </div>
+      </div>
+      <Card title='Colors'>
+        <Title color='primary'>Heading Title Primary</Title>
+        <br />
+        <Title color='primaryLight'>Heading Title Primary Light</Title>
+        <br />
+        <Title color='secondary'>Heading Title Secondary</Title>
+        <br />
+        <Title color='dark'>Heading Title Dark</Title>
+        <br />
+        <Title color='medium'>Heading Title Medium</Title>
+        <br />
+        <Title color='light'>Heading Title Light</Title>
+        <br />
+        <Title color='success'>Heading Title Success</Title>
+        <br />
+        <Title color='error'>Heading Title Error</Title>
+        <br />
+        <Title color='info'>Heading Title Info</Title>
+        <br />
+        <Title color='warning'>Heading Title Warning</Title>
+        <br />
+        <Text>
+          Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
+        </Text>
+      </Card>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Variants'>
+            <Title variant='h1'>Heading Title h1</Title>
+            <br />
+            <Title variant='h2'>Heading Title h2</Title>
+            <br />
+            <Title variant='h3'>Heading Title h3</Title>
+            <br />
+            <Title variant='h4'>Heading Title h4</Title>
+            <br />
+            <Title variant='h5'>Heading Title h5</Title>
+            <br />
+            <Title variant='h6'>Heading Title h6</Title>
+            <br />
+            <Text>Variant: h1 / h2 / h3 / h4 / h5 / h6</Text>
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Weight'>
+            <Title weight='bold'>Heading Title Bold</Title>
+            <br />
+            <Title weight='medium'>Heading Title Medium</Title>
+            <br />
+            <Title weight='regular'>Heading Title Regular</Title>
+            <br />
+            <Text>Weight: bold / medium / regular</Text>
           </Card>
         </div>
       </div>
