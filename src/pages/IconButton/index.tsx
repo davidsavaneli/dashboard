@@ -1,13 +1,30 @@
-import { ContentLayout, Card, IconButton, Text, Divider } from '../../components'
+import { ContentLayout, Card, IconButton, Text } from '../../components'
 
 const IconButtonPage = () => {
   return (
     <ContentLayout label='Icon Button Component'>
-      <Card title='Default'>
-        <IconButton iconName='Setting2' />
-        <Divider />
-        <Text>Variant: transparent / Size: md / Color: primary</Text>
-      </Card>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Default'>
+            <IconButton iconName='Setting2' />
+            <br />
+            <br />
+            <Text>Variant: transparent / Size: md / Color: primary</Text>
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Variants'>
+            <IconButton iconName='Box1' color='medium' variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Box1' color='medium' variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Box1' color='medium' variant='filled' />
+            <br />
+            <br />
+            <Text>Variant: transparent / contained / filled </Text>
+          </Card>
+        </div>
+      </div>
       <Card title='Colors'>
         <IconButton iconName='Bag2' variant='contained' color='primary' />
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -28,54 +45,67 @@ const IconButtonPage = () => {
         <IconButton iconName='Bag2' variant='contained' color='info' />
         &nbsp;&nbsp;&nbsp;&nbsp;
         <IconButton iconName='Bag2' variant='contained' color='warning' />
-        <Divider />
+        <br />
+        <br />
         <Text>
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
-      <Card title='Variants'>
-        <IconButton iconName='Box1' color='medium' variant='transparent' />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <IconButton iconName='Box1' color='medium' variant='contained' />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <IconButton iconName='Box1' color='medium' variant='filled' />
-        <Divider />
-        <Text>Variant: transparent / contained / filled </Text>
-      </Card>
-      <Card title='Rounded'>
-        <IconButton iconName='Verify' color='success' rounded variant='transparent' />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <IconButton iconName='Verify' color='success' rounded variant='contained' />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <IconButton iconName='Verify' color='success' rounded variant='filled' />
-        <Divider />
-        <Text>rounded: true</Text>
-      </Card>
-      <Card title='Sizes'>
-        <IconButton iconName='Bag2' variant='contained' color='warning' size='lg' />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <IconButton iconName='Bag2' variant='contained' color='warning' size='md' />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <IconButton iconName='Bag2' variant='contained' color='warning' size='sm' />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <Divider />
-        <Text>Size: lg / md / sm</Text>
-      </Card>
-      <Card title='Disabled'>
-        <IconButton iconName='Box1' disabled />
-        <Divider />
-        <Text>disabled: true</Text>
-      </Card>
-      <Card title='Loading'>
-        <IconButton iconName='Setting2' color='medium' variant='contained' loading />
-        <Divider />
-        <Text>loading: true</Text>
-      </Card>
-      <Card title='Tooltip'>
-        <IconButton iconName='Filter' variant='filled' tooltipTitle='Tooltip Title' />
-        <Divider />
-        <Text>tooltipTitle: string</Text>
-      </Card>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Rounded'>
+            <IconButton iconName='Verify' color='success' rounded variant='transparent' />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Verify' color='success' rounded variant='contained' />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Verify' color='success' rounded variant='filled' />
+            <br />
+            <br />
+            <Text>rounded: true</Text>
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Sizes'>
+            <IconButton iconName='Bag2' variant='contained' color='warning' size='lg' />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' variant='contained' color='warning' size='md' />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <IconButton iconName='Bag2' variant='contained' color='warning' size='sm' />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <Text>Size: lg / md / sm</Text>
+          </Card>
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Disabled'>
+            <IconButton iconName='Box1' disabled />
+            <br />
+            <br />
+            <Text>disabled: true</Text>
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Loading'>
+            <IconButton iconName='Setting2' color='medium' variant='contained' loading />
+            <br />
+            <br />
+            <Text>loading: true</Text>
+          </Card>
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Tooltip'>
+            <IconButton iconName='Filter' variant='filled' tooltipTitle='Tooltip Title' />
+            <br />
+            <br />
+            <Text>tooltipTitle: string</Text>
+          </Card>
+        </div>
+      </div>
     </ContentLayout>
   )
 }

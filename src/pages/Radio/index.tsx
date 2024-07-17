@@ -3,11 +3,24 @@ import { ContentLayout, Card, Radio, FormLabel, RadioGroup, Divider, Text } from
 const RadioPage = () => {
   return (
     <ContentLayout label='Radio Component'>
-      <Card title='Default'>
-        <Radio label='Radio' />
-        <Divider />
-        <Text>Size: md / Color: medium</Text>
-      </Card>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Default'>
+            <Radio label='Radio' />
+            <Divider />
+            <Text>Size: md / Color: medium</Text>
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Disabled'>
+            <Radio defaultChecked color='primary' disabled />
+            <Radio defaultChecked color='medium' disabled />
+            <Radio defaultChecked color='success' disabled />
+            <Divider />
+            <Text>disabled: true</Text>
+          </Card>
+        </div>
+      </div>
       <Card title='Colors'>
         <Radio defaultChecked color='primary' />
         <Radio defaultChecked color='primaryLight' />
@@ -24,36 +37,39 @@ const RadioPage = () => {
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
-      <Card title='Group'>
-        <FormLabel>Form Label</FormLabel>
-        <RadioGroup>
-          <Radio label='Radio 1' />
-          <Radio label='Radio 2' />
-        </RadioGroup>
-      </Card>
-      <Card title='Group Row'>
-        <FormLabel>Form Label</FormLabel>
-        <RadioGroup row>
-          <Radio label='Radio 1' />
-          <Radio label='Radio 2' />
-        </RadioGroup>
-      </Card>
-      <Card title='Sizes'>
-        <Radio label='Large' size='lg' />
-        &nbsp;&nbsp;&nbsp;
-        <Radio label='Medium' size='md' />
-        &nbsp;&nbsp;&nbsp;
-        <Radio label='Small' size='sm' />
-        <Divider />
-        <Text>Size: lg / md / sm</Text>
-      </Card>
-      <Card title='Disabled'>
-        <Radio defaultChecked color='primary' disabled />
-        <Radio defaultChecked color='medium' disabled />
-        <Radio defaultChecked color='success' disabled />
-        <Divider />
-        <Text>disabled: true</Text>
-      </Card>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Group'>
+            <FormLabel>Form Label</FormLabel>
+            <RadioGroup>
+              <Radio label='Radio 1' />
+              <Radio label='Radio 2' />
+            </RadioGroup>
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Group Row'>
+            <FormLabel>Form Label</FormLabel>
+            <RadioGroup row>
+              <Radio label='Radio 1' />
+              <Radio label='Radio 2' />
+            </RadioGroup>
+          </Card>
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Sizes'>
+            <Radio label='Large' size='lg' />
+            &nbsp;&nbsp;&nbsp;
+            <Radio label='Medium' size='md' />
+            &nbsp;&nbsp;&nbsp;
+            <Radio label='Small' size='sm' />
+            <Divider />
+            <Text>Size: lg / md / sm</Text>
+          </Card>
+        </div>
+      </div>
     </ContentLayout>
   )
 }
