@@ -10,6 +10,9 @@ export type { InputLabelProps as MuiInputLabelProps } from './InputLabel'
 export { FormLabel as MuiFormLabel } from './FormLabel'
 export type { FormLabelProps as MuiFormLabelProps } from './FormLabel'
 
+export { FormHelperText as MuiFormHelperText } from './FormHelperText'
+export type { FormHelperTextProps as MuiFormHelperTextProps } from './FormHelperText'
+
 export { FormGroup as MuiFormGroup } from './FormGroup'
 export type { FormGroupProps as MuiFormGroupProps } from './FormGroup'
 

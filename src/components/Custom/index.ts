@@ -4,6 +4,9 @@ export type { CheckboxProps } from './Checkbox'
 export { default as FormLabel } from './FormLabel'
 export type { FormLabelProps } from './FormLabel'
 
+export { default as FormHelperText } from './FormHelperText'
+export type { FormHelperTextProps } from './FormHelperText'
+
 export { default as FormControlLabel } from './FormControlLabel'
 export type { FormControlLabelProps } from './FormControlLabel'
 

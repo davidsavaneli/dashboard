@@ -1,0 +1,16 @@
+.MuiFormHelperText-root {
+  margin-top: 4px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  font-weight: var(--font-weight-regular) !important;
+  font-size: var(--font-size-text-xs) !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  color: var(--color-primaryLight) !important;
+  text-align: left !important;
+  transition: color var(--tr-dur) !important;
+}
+
+.MuiFormHelperText-root.Mui-error {
+  color: var(--color-error) !important;
+}

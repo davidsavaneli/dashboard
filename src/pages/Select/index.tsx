@@ -33,10 +33,14 @@ const SelectPage = () => {
           </Card>
         </div>
       </div>
-      <Card title='Errors'>
-        <Select label='Label' options={selectOptions} error />
-        <Select label='Label' options={selectOptions} error helperText='Helper Text' />
-      </Card>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Errors'>
+            <Select label='Label' options={selectOptions} error />
+            <Select label='Label' options={selectOptions} error helperText='Helper Text' />
+          </Card>
+        </div>
+      </div>
     </ContentLayout>
   )
 }

@@ -4,6 +4,7 @@ import MenuItem from '../MenuItem'
 import FormControl from '../FormControl'
 import IconButton from '../IconButton'
 import FormLabel from '../FormLabel'
+import FormHelperText from '../FormHelperText'
 
 import './styles.css'
 
@@ -55,7 +56,7 @@ const Select = forwardRef<HTMLInputElement, SelectProps>(
             </MenuItem>
           ))}
         </MuiSelect>
-        {helperText && <div className='MuiFormHelperText-root'>{helperText}</div>}
+        {helperText && <FormHelperText error={props.error}>{helperText}</FormHelperText>}
       </FormControl>
     )
   },
