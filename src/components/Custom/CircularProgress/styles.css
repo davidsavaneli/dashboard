@@ -1,5 +1,5 @@
 .MuiCircularProgress-root {
-  display: flex !important;
+  display: inline-flex !important;
 }
 
 .MuiCircularProgress-root.MuiCircularProgress-colorPrimary {
