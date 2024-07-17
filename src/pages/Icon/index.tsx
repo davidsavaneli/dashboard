@@ -6,115 +6,67 @@ const IconPage = () => {
       <div className='row'>
         <div className='col-6'>
           <Card title='Default'>
-            <Icon name='Box1' variant='Linear' />
+            <Icon name='Box1' />
             <br />
             <br />
-            <Text>Variant: Linear / Size: md / Color: Primary</Text>
-          </Card>
-          <br />
-          <Card title='Variant'>
-            <Icon name='Setting2' variant='Linear' />
-            <br />
-            <br />
-            <Text>Variant: Linear</Text>
-            <Divider />
-            <Icon name='Setting2' variant='Outline' />
-            <br />
-            <br />
-            <Text>Variant: Outline</Text>
-            <Divider />
-            <Icon name='Setting2' variant='Bold' />
-            <br />
-            <br />
-            <Text>Variant: Bold</Text>
-            <Divider />
-            <Icon name='Setting2' variant='Bulk' />
-            <br />
-            <br />
-            <Text>Variant: Bulk</Text>
-            <Divider />
-            <Icon name='Setting2' variant='Broken' />
-            <br />
-            <br />
-            <Text>Variant: Broken</Text>
-            <Divider />
-            <Icon name='Setting2' variant='TwoTone' />
-            <br />
-            <br />
-            <Text>Variant: TwoTone</Text>
-          </Card>
-          <br />
-          <Card title='Sizes'>
-            <Icon name='Calendar' size='sm' />
-            <br />
-            <br />
-            <Text>Size: sm</Text>
-            <Divider />
-            <Icon name='Calendar' size='md' />
-            <br />
-            <br />
-            <Text>Size: md</Text>
-            <Divider />
-            <Icon name='Calendar' size='lg' />
-            <br />
-            <br />
-            <Text>Size: lg</Text>
+            <Text>Variant: Linear / Size: md / Color: primary</Text>
           </Card>
         </div>
         <div className='col-6'>
-          <Card title='Colors'>
-            <Icon name='Bag2' color='primary' />
+          <Card title='Sizes'>
+            <Icon name='Calendar' size='lg' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Icon name='Calendar' size='md' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Icon name='Calendar' size='sm' />
             <br />
             <br />
-            <Text>Color: Primary</Text>
-            <Divider />
-            <Icon name='Bag2' color='primaryLight' />
-            <br />
-            <br />
-            <Text>Color: PrimaryLight</Text>
-            <Divider />
-            <Icon name='Bag2' color='secondary' />
-            <br />
-            <br />
-            <Text>Color: Secondary</Text>
-            <Divider />
-            <Icon name='Bag2' color='dark' />
-            <br />
-            <br />
-            <Text>Color: Dark</Text>
-            <Divider />
-            <Icon name='Bag2' color='medium' />
-            <br />
-            <br />
-            <Text>Color: Medium</Text>
-            <Divider />
-            <Icon name='Bag2' color='light' />
-            <br />
-            <br />
-            <Text>Color: Light</Text>
-            <Divider />
-            <Icon name='Bag2' color='success' />
-            <br />
-            <br />
-            <Text>Color: Success</Text>
-            <Divider />
-            <Icon name='Bag2' color='error' />
-            <br />
-            <br />
-            <Text>Color: Error</Text>
-            <Divider />
-            <Icon name='Bag2' color='info' />
-            <br />
-            <br />
-            <Text>Color: Info</Text>
-            <Divider />
-            <Icon name='Bag2' color='warning' />
-            <br />
-            <br />
-            <Text>Color: Warning</Text>
+            <Text>Size: lg / md / sm</Text>
           </Card>
         </div>
       </div>
+      <Card title='Colors'>
+        <Icon name='Verify' color='primary' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Verify' color='primaryLight' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Verify' color='secondary' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Verify' color='dark' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Verify' color='medium' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Verify' color='light' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Verify' color='success' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Verify' color='error' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Verify' color='info' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Verify' color='warning' />
+        <br />
+        <br />
+        <Text>
+          Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
+        </Text>
+      </Card>
+      <Card title='Variants'>
+        <Icon name='Setting2' variant='Linear' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Setting2' variant='Outline' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Setting2' variant='Bold' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Setting2' variant='Bulk' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Setting2' variant='Broken' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Setting2' variant='TwoTone' />
+        <br />
+        <br />
+        <Text>Variant: Linear / Outline / Bold / Bulk / Broken / TwoTone</Text>
+      </Card>
     </ContentLayout>
   )
 }

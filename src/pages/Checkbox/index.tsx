@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Checkbox, FormLabel, FormGroup, Divider, Text } from '../../components'
+import { ContentLayout, Card, Checkbox, FormLabel, FormGroup, Text } from '../../components'
 
 const CheckboxPage = () => {
   return (
@@ -7,7 +7,8 @@ const CheckboxPage = () => {
         <div className='col-6'>
           <Card title='Default'>
             <Checkbox label='Checkbox' />
-            <Divider />
+            <br />
+            <br />
             <Text>Size: md / Color: medium</Text>
           </Card>
         </div>
@@ -16,7 +17,8 @@ const CheckboxPage = () => {
             <Checkbox defaultChecked color='primary' disabled />
             <Checkbox defaultChecked color='medium' disabled />
             <Checkbox defaultChecked color='success' disabled />
-            <Divider />
+            <br />
+            <br />
             <Text>disabled: true</Text>
           </Card>
         </div>
@@ -32,7 +34,8 @@ const CheckboxPage = () => {
         <Checkbox defaultChecked color='error' />
         <Checkbox defaultChecked color='info' />
         <Checkbox defaultChecked color='warning' />
-        <Divider />
+        <br />
+        <br />
         <Text>
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
@@ -65,7 +68,8 @@ const CheckboxPage = () => {
             <Checkbox label='Medium' size='md' />
             &nbsp;&nbsp;&nbsp;
             <Checkbox label='Small' size='sm' />
-            <Divider />
+            <br />
+            <br />
             <Text>Size: lg / md / sm</Text>
           </Card>
         </div>

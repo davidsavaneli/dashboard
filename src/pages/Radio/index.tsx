@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Radio, FormLabel, RadioGroup, Divider, Text } from '../../components'
+import { ContentLayout, Card, Radio, FormLabel, RadioGroup, Text } from '../../components'
 
 const RadioPage = () => {
   return (
@@ -7,7 +7,8 @@ const RadioPage = () => {
         <div className='col-6'>
           <Card title='Default'>
             <Radio label='Radio' />
-            <Divider />
+            <br />
+            <br />
             <Text>Size: md / Color: medium</Text>
           </Card>
         </div>
@@ -16,7 +17,8 @@ const RadioPage = () => {
             <Radio defaultChecked color='primary' disabled />
             <Radio defaultChecked color='medium' disabled />
             <Radio defaultChecked color='success' disabled />
-            <Divider />
+            <br />
+            <br />
             <Text>disabled: true</Text>
           </Card>
         </div>
@@ -32,7 +34,8 @@ const RadioPage = () => {
         <Radio defaultChecked color='error' />
         <Radio defaultChecked color='info' />
         <Radio defaultChecked color='warning' />
-        <Divider />
+        <br />
+        <br />
         <Text>
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
@@ -65,7 +68,8 @@ const RadioPage = () => {
             <Radio label='Medium' size='md' />
             &nbsp;&nbsp;&nbsp;
             <Radio label='Small' size='sm' />
-            <Divider />
+            <br />
+            <br />
             <Text>Size: lg / md / sm</Text>
           </Card>
         </div>

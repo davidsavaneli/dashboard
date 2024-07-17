@@ -35,5 +35,5 @@
 
 .content {
   position: relative;
-  padding: var(--padding-md);
+  padding: var(--padding-lg) var(--padding-md);
 }

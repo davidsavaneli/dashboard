@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Switch, Radio, Divider, Text, FormLabel, RadioGroup } from '../../components'
+import { ContentLayout, Card, Switch, Text } from '../../components'
 
 const SwitchPage = () => {
   return (
@@ -7,7 +7,8 @@ const SwitchPage = () => {
         <div className='col-6'>
           <Card title='Default'>
             <Switch label='Switch' />
-            <Divider />
+            <br />
+            <br />
             <Text>Size: md / Color: medium</Text>
           </Card>
         </div>
@@ -16,7 +17,8 @@ const SwitchPage = () => {
             <Switch defaultChecked color='primary' disabled />
             <Switch defaultChecked color='medium' disabled />
             <Switch defaultChecked color='success' disabled />
-            <Divider />
+            <br />
+            <br />
             <Text>disabled: true</Text>
           </Card>
         </div>
@@ -32,7 +34,8 @@ const SwitchPage = () => {
         <Switch defaultChecked color='error' />
         <Switch defaultChecked color='info' />
         <Switch defaultChecked color='warning' />
-        <Divider />
+        <br />
+        <br />
         <Text>
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
@@ -45,7 +48,8 @@ const SwitchPage = () => {
             <Switch label='Medium' size='md' />
             &nbsp;&nbsp;&nbsp;
             <Switch label='Small' size='sm' />
-            <Divider />
+            <br />
+            <br />
             <Text>Size: lg / md / sm</Text>
           </Card>
         </div>
