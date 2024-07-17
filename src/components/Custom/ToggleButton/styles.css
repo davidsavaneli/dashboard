@@ -254,16 +254,16 @@
 }
 
 .MuiToggleButton-root.MuiToggleButton-sizeSm {
-  padding: 6px 11px !important;
+  padding: 9px 11px !important;
   line-height: 22px !important;
 }
 
 .MuiToggleButton-root.MuiToggleButton-sizeMd {
-  padding: 7px 13px !important;
+  padding: 10px 13px !important;
   line-height: 24px !important;
 }
 
 .MuiToggleButton-root.MuiToggleButton-sizeLg {
-  padding: 8px 15px !important;
+  padding: 11px 15px !important;
   line-height: 26px !important;
 }

@@ -1,62 +1,45 @@
-import { ContentLayout, Card, Switch, Checkbox } from '../../components'
+import { ContentLayout, Card, Switch, Radio, Divider, Text, FormLabel, RadioGroup } from '../../components'
 
 const SwitchPage = () => {
   return (
     <ContentLayout label='Switch Component'>
-      <div className='row'>
-        <div className='col-6'>
-          <Card title='Default'>
-            <Switch label='Switch' />
-          </Card>
-          <br />
-          <Card title='Colors'>
-            <Switch defaultChecked color='primary' />
-            <Switch defaultChecked color='primaryLight' />
-            <Switch defaultChecked color='secondary' />
-            <Switch defaultChecked color='dark' />
-            <Switch defaultChecked color='medium' />
-            <Switch defaultChecked color='light' />
-            <Switch defaultChecked color='success' />
-            <Switch defaultChecked color='error' />
-            <Switch defaultChecked color='info' />
-            <Switch defaultChecked color='warning' />
-          </Card>
-        </div>
-        <div className='col-6'>
-          <Card title='Sizes'>
-            <Switch size='sm' />
-            <Switch size='md' />
-            <Switch size='lg' />
-            <br />
-            <br />
-            <Switch label='Switch' size='sm' />
-            <Switch label='Switch' size='md' />
-            <Switch label='Switch' size='lg' />
-          </Card>
-          <br />
-          <Card title='Disabled'>
-            <Switch label='Switch' disabled defaultChecked color='primary' />
-            <br />
-            <Switch label='Switch' disabled defaultChecked color='primaryLight' />
-            <br />
-            <Switch label='Switch' disabled defaultChecked color='secondary' />
-            <br />
-            <Switch label='Switch' disabled defaultChecked color='dark' />
-            <br />
-            <Switch label='Switch' disabled defaultChecked color='medium' />
-            <br />
-            <Switch label='Switch' disabled defaultChecked color='light' />
-            <br />
-            <Switch label='Switch' disabled defaultChecked color='success' />
-            <br />
-            <Switch label='Switch' disabled defaultChecked color='error' />
-            <br />
-            <Switch label='Switch' disabled defaultChecked color='info' />
-            <br />
-            <Switch label='Switch' disabled defaultChecked color='warning' />
-          </Card>
-        </div>
-      </div>
+      <Card title='Default'>
+        <Switch label='Switch' />
+        <Divider />
+        <Text>Size: md / Color: medium</Text>
+      </Card>
+      <Card title='Colors'>
+        <Switch defaultChecked color='primary' />
+        <Switch defaultChecked color='primaryLight' />
+        <Switch defaultChecked color='secondary' />
+        <Switch defaultChecked color='dark' />
+        <Switch defaultChecked color='medium' />
+        <Switch defaultChecked color='light' />
+        <Switch defaultChecked color='success' />
+        <Switch defaultChecked color='error' />
+        <Switch defaultChecked color='info' />
+        <Switch defaultChecked color='warning' />
+        <Divider />
+        <Text>
+          Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
+        </Text>
+      </Card>
+      <Card title='Sizes'>
+        <Switch label='Large' size='lg' />
+        &nbsp;&nbsp;&nbsp;
+        <Switch label='Medium' size='md' />
+        &nbsp;&nbsp;&nbsp;
+        <Switch label='Small' size='sm' />
+        <Divider />
+        <Text>Size: lg / md / sm</Text>
+      </Card>
+      <Card title='Disabled'>
+        <Switch defaultChecked color='primary' disabled />
+        <Switch defaultChecked color='medium' disabled />
+        <Switch defaultChecked color='success' disabled />
+        <Divider />
+        <Text>disabled: true</Text>
+      </Card>
     </ContentLayout>
   )
 }
