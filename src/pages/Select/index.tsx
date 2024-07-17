@@ -8,11 +8,34 @@ const selectOptions = [
 
 const SelectPage = () => {
   return (
-    <ContentLayout label='Select Page'>
-      <Card title='Select'>
-        <Select label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} multiple />
-        <Select label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} />
-        <Select label={'Select'} options={selectOptions} onValueChange={(e) => console.log(e)} disabled />
+    <ContentLayout label='Select Component'>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Default'>
+            <Select label='Label' options={selectOptions} />
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Multiple'>
+            <Select label='Label' options={selectOptions} multiple />
+          </Card>
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Helper Text'>
+            <Select label='Label' options={selectOptions} helperText='Helper Text' />
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Disabled'>
+            <Select label='Label' options={selectOptions} disabled />
+          </Card>
+        </div>
+      </div>
+      <Card title='Errors'>
+        <Select label='Label' options={selectOptions} error />
+        <Select label='Label' options={selectOptions} error helperText='Helper Text' />
       </Card>
     </ContentLayout>
   )

@@ -9,13 +9,14 @@ import './styles.css'
 
 export type SelectProps = MuiSelectProps & {
   label?: string
+  helperText?: string
   options: { value: any; label: string }[]
   initialValue?: any
   onValueChange?: (value: any) => void
 }
 
 const Select = forwardRef<HTMLInputElement, SelectProps>(
-  ({ label, options, initialValue, variant = 'outlined', onValueChange, ...props }: SelectProps, ref) => {
+  ({ label, helperText, options, initialValue, variant = 'outlined', onValueChange, ...props }: SelectProps, ref) => {
     const [value, setValue] = useState(initialValue || (props.multiple ? [] : ''))
     const [open, setOpen] = useState(false)
 
@@ -29,17 +30,13 @@ const Select = forwardRef<HTMLInputElement, SelectProps>(
       initialValue !== undefined && setValue(initialValue)
     }, [initialValue])
 
-    const handleIconClick = () => {
-      setOpen((prevOpen) => !prevOpen)
-    }
-
-    const ArrowIcon = () => <IconButton iconName='ArrowDown2' onClick={handleIconClick} />
+    const ArrowIcon = () => <IconButton iconName='ArrowDown2' disabled={props.disabled} onClick={() => setOpen(true)} />
 
     return (
       <FormControl>
         {label && <FormLabel>{label}</FormLabel>}
         <MuiSelect
-          className='MuiTextField-withIcon MuiSelectBase-root'
+          className='MuiSelectBase-root MuiTextField-withIcon'
           ref={ref}
           value={value}
           variant={variant}
@@ -58,6 +55,7 @@ const Select = forwardRef<HTMLInputElement, SelectProps>(
             </MenuItem>
           ))}
         </MuiSelect>
+        {helperText && <div className='MuiFormHelperText-root'>{helperText}</div>}
       </FormControl>
     )
   },

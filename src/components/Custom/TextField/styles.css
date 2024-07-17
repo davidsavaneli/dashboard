@@ -118,6 +118,7 @@
   line-height: inherit !important;
   letter-spacing: inherit !important;
   color: var(--color-primaryLight) !important;
+  text-align: left !important;
   transition: color var(--tr-dur) !important;
 }
 
