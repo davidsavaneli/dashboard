@@ -6,11 +6,13 @@ import Icon from '../Icon'
 export interface TimePickerProps extends MuiTimePickerProps {
   format?: string
   ampm?: boolean
+  error?: boolean
+  helperText?: string
 }
 
 const PickerIcon = () => <Icon name='Clock' />
 
-const TimePicker = ({ format = 'HH:mm', ampm = false, ...props }: TimePickerProps) => {
+const TimePicker = ({ format = 'HH:mm', ampm = false, error = false, helperText, ...props }: TimePickerProps) => {
   return (
     <FormControl>
       <MuiTimePicker
@@ -18,7 +20,7 @@ const TimePicker = ({ format = 'HH:mm', ampm = false, ...props }: TimePickerProp
         format={format}
         ampm={ampm}
         slots={{
-          textField: (params) => <TextField {...params} />,
+          textField: (params) => <TextField {...params} error={error} helperText={helperText} />,
           openPickerIcon: PickerIcon,
         }}
         {...props}
