@@ -34,20 +34,7 @@ const Autocomplete = forwardRef(function Autocomplete<
       <MuiAutocomplete
         disableCloseOnSelect
         renderInput={(params: MuiAutocompleteRenderInputParams) => (
-          <TextField
-            className='MuiTextField-withIcon'
-            label={label}
-            {...params}
-            InputProps={{
-              ...params.InputProps,
-              endAdornment: (
-                <>
-                  {params.InputProps.endAdornment}
-                  {props.loading && <CircularProgress color='primaryLight' size={'xs'} />}
-                </>
-              ),
-            }}
-          />
+          <TextField className='MuiTextField-withIcon' label={label} {...params} />
         )}
         ref={ref}
         {...props}

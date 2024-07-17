@@ -1,3 +1,9 @@
+.MuiAutocomplete-inputRoot {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 3.4375em !important;
+}
+
 .MuiAutocomplete-endAdornment .MuiIconButton-root,
 .MuiAutocomplete-startAdornment .MuiIconButton-root {
   padding: 8px !important;
@@ -9,10 +15,6 @@
 
 .MuiAutocomplete-endAdornment {
   right: 6px !important;
-}
-
-.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon .MuiOutlinedInput-root {
-  padding-right: 116px !important;
 }
 
 .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot {
@@ -27,4 +29,5 @@
 .MuiAutocomplete-hasPopupIcon .MuiAutocomplete-inputRoot,
 .MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot {
   padding-right: 52px !important;
+  padding-left: 11px !important;
 }
