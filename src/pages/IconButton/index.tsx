@@ -1,4 +1,4 @@
-import { ContentLayout, Card, IconButton, Title, Text, Divider, Button } from '../../components'
+import { ContentLayout, Card, IconButton, Text, Divider } from '../../components'
 
 const IconButtonPage = () => {
   return (

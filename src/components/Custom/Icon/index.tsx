@@ -69,6 +69,9 @@ import {
   ArrowSquareDown,
   CloseCircle,
   ConvertCard,
+  TextalignLeft,
+  TextalignRight,
+  TextalignCenter,
 } from 'iconsax-react'
 import styles from './styles.module.css'
 
@@ -141,6 +144,9 @@ const Icons = {
   ArrowSquareDown,
   CloseCircle,
   ConvertCard,
+  TextalignLeft,
+  TextalignRight,
+  TextalignCenter,
 }
 
 export type IconName = keyof typeof Icons
