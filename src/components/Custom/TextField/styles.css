@@ -4,11 +4,13 @@
   color: var(--color-primary) !important;
   line-height: inherit !important;
   letter-spacing: inherit !important;
-  padding: 0 0 !important;
+  padding: 14px 0 !important;
 }
 
-.MuiInputBase-root.Mui-focused {
-  border-color: var(--color-light) !important;
+.MuiInputBase-root.Mui-disabled {
+  opacity: 0.7 !important;
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
 }
 
 .MuiTextField-withIcon .MuiInputBase-adornedEnd {
@@ -25,8 +27,12 @@
   line-height: inherit !important;
   letter-spacing: inherit !important;
   animation-name: mui-auto-fill-cancel !important;
-  padding: 14px 14px !important;
-  height: 20px !important;
+  padding: 0 14px !important;
+}
+
+.MuiInputBase-root.Mui-disabled .MuiInputBase-input {
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
 }
 
 .MuiInputBase-input::-webkit-input-placeholder {
@@ -43,6 +49,12 @@
 
 .MuiInputBase-input:-moz-placeholder {
   color: var(--color-primary-shade-300) !important;
+}
+
+.MuiInputBase-inputMultiline {
+  min-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .MuiTextField-root:not(.MuiTextField-withIcon) .MuiInputBase-adornedStart {
@@ -69,17 +81,46 @@
     box-shadow var(--tr-dur) !important;
 }
 
+.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-error-shade500) !important;
+}
+
 @media (hover: hover) {
   .MuiInputBase-root:hover .MuiOutlinedInput-notchedOutline {
     border-color: var(--color-light) !important;
+  }
+
+  .MuiInputBase-root.Mui-error:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-error) !important;
   }
 }
 
 .Mui-focused .MuiOutlinedInput-notchedOutline {
   border-color: var(--color-light) !important;
-  box-shadow: rgba(42, 161, 175, 0.1) 0px 0px 0px 2px !important;
+  box-shadow: var(--color-light-shade200) 0px 0px 0px 2px !important;
+}
+
+.Mui-focused.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-error) !important;
+  box-shadow: var(--color-error-shade200) 0px 0px 0px 2px !important;
 }
 
 .MuiInputBase-root .MuiIconButton-root {
   margin-right: 0 !important;
+}
+
+.MuiFormHelperText-root {
+  margin-top: 4px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  font-weight: var(--font-weight-regular) !important;
+  font-size: var(--font-size-text-xs) !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  color: var(--color-primaryLight) !important;
+  transition: color var(--tr-dur) !important;
+}
+
+.MuiFormHelperText-root.Mui-error {
+  color: var(--color-error) !important;
 }

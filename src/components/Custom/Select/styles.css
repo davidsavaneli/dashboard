@@ -1,5 +1,11 @@
+.MuiSelectBase-root {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .MuiSelect-select {
-  min-height: 20px !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
 }
 
 .MuiTextField-withIcon .MuiSelect-select ~ .MuiIconButton-root {

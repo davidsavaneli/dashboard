@@ -25,6 +25,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
       variant = 'outlined',
       label,
       adornmentPosition = 'end',
+      disabled = false,
       ...props
     }: TextFieldProps,
     ref,
@@ -38,19 +39,19 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
 
     const IconComponent = isPassword ? (
       <InputAdornment position={adornmentPosition}>
-        <IconButton onClick={handleShowPassword} iconName={showPassword ? 'EyeSlash' : 'Eye'} />
+        <IconButton disabled={disabled} onClick={handleShowPassword} iconName={showPassword ? 'EyeSlash' : 'Eye'} />
       </InputAdornment>
     ) : (
       (iconName || iconButtonName) && (
         <div>
           {iconName ? (
             <InputAdornment position={adornmentPosition}>
-              <IconButton iconName={iconName} nonClickable />
+              <IconButton disabled={disabled} iconName={iconName} nonClickable />
             </InputAdornment>
           ) : (
             iconButtonName && (
               <InputAdornment position={adornmentPosition}>
-                <IconButton iconName={iconButtonName} />
+                <IconButton disabled={disabled} iconName={iconButtonName} />
               </InputAdornment>
             )
           )}
@@ -65,6 +66,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           className={classNames}
           ref={ref}
           variant={variant}
+          disabled={disabled}
           type={!showPassword ? 'text' : 'password'}
           InputProps={{
             [`${adornmentPosition}Adornment`]: IconComponent,

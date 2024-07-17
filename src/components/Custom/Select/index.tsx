@@ -39,7 +39,7 @@ const Select = forwardRef<HTMLInputElement, SelectProps>(
       <FormControl>
         {label && <FormLabel>{label}</FormLabel>}
         <MuiSelect
-          className='MuiTextField-withIcon'
+          className='MuiTextField-withIcon MuiSelectBase-root'
           ref={ref}
           value={value}
           variant={variant}
