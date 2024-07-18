@@ -120,13 +120,6 @@ export const routes: IRoutes = {
               children: [],
             },
             {
-              name: 'Autocomplete',
-              path: '/components/forms/autocomplete',
-              iconName: '',
-              element: <AutocompletePage />,
-              children: [],
-            },
-            {
               name: 'Date Picker',
               path: '/components/forms/date-picker',
               iconName: '',

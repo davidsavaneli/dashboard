@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import { MuiAutocomplete, MuiAutocompleteProps, MuiAutocompleteRenderInputParams } from '../../Mui'
 import TextField, { TextFieldProps } from '../TextField'
 import FormControl from '../FormControl'
-import { ChipTypeMap } from '../Chip'
+import Chip, { ChipTypeMap } from '../Chip'
 import Icon from '../Icon'
 
 import './styles.css'
