@@ -1,0 +1,114 @@
+.MuiAvatar-root {
+  font-size: var(--font-size-text-md) !important;
+  line-height: inherit !important;
+  color: var(--color-secondary) !important;
+  background-color: var(--color-medium) !important;
+  box-sizing: border-box !important;
+}
+
+.MuiAvatar-colorPrimary {
+  background-color: var(--color-primary) !important;
+}
+
+.MuiAvatar-colorPrimaryLight {
+  background-color: var(--color-primaryLight) !important;
+}
+
+.MuiAvatar-colorSecondary {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+}
+
+.MuiAvatar-colorDark {
+  background-color: var(--color-dark) !important;
+}
+
+.MuiAvatar-colorMedium {
+  background-color: var(--color-medium) !important;
+}
+
+.MuiAvatar-colorLight {
+  background-color: var(--color-light) !important;
+}
+
+.MuiAvatar-colorSuccess {
+  background-color: var(--color-success) !important;
+}
+
+.MuiAvatar-colorError {
+  background-color: var(--color-error) !important;
+}
+
+.MuiAvatar-colorWarning {
+  background-color: var(--color-warning) !important;
+}
+
+.MuiAvatar-colorInfo {
+  background-color: var(--color-info) !important;
+}
+
+.MuiAvatarGroup-sizeXs .MuiAvatar-root,
+.MuiAvatar-sizeXs {
+  width: 24px !important;
+  height: 24px !important;
+  font-size: var(--font-size-text-xs) !important;
+}
+
+.MuiAvatarGroup-sizeSm .MuiAvatar-root,
+.MuiAvatar-sizeSm {
+  width: 30px !important;
+  height: 30px !important;
+  font-size: var(--font-size-text-sm) !important;
+}
+
+.MuiAvatarGroup-sizeMd .MuiAvatar-root,
+.MuiAvatar-sizeMd {
+  width: 36px !important;
+  height: 36px !important;
+  font-size: var(--font-size-text-md) !important;
+}
+
+.MuiAvatarGroup-sizeLg .MuiAvatar-root,
+.MuiAvatar-sizeLg {
+  width: 42px !important;
+  height: 42px !important;
+  font-size: var(--font-size-text-lg) !important;
+}
+
+.MuiAvatarGroup-sizeXl .MuiAvatar-root,
+.MuiAvatar-sizeXl {
+  width: 48px !important;
+  height: 48px !important;
+  font-size: var(--font-size-text-xl) !important;
+}
+
+.MuiAvatarGroup-sizeXxl .MuiAvatar-root,
+.MuiAvatar-sizeXxl {
+  width: 54px !important;
+  height: 54px !important;
+  font-size: var(--font-size-text-xxl) !important;
+}
+
+.MuiAvatar-sizeXs > svg {
+  transform: scale(0.6) !important;
+}
+
+.MuiAvatar-sizeSm > svg {
+  transform: scale(0.8) !important;
+}
+
+.MuiAvatar-sizeMd > svg {
+  transform: scale(1) !important;
+}
+
+.MuiAvatar-sizeLg > svg {
+  transform: scale(1.2) !important;
+}
+
+.MuiAvatar-sizeXl > svg {
+  transform: scale(1.4) !important;
+}
+
+.MuiAvatar-sizeXxl > svg {
+  transform: scale(1.6) !important;
+}

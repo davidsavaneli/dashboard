@@ -99,6 +99,9 @@ export type { BadgeProps as MuiBadgeProps } from './Badge'
 export { Avatar as MuiAvatar } from './Avatar'
 export type { AvatarProps as MuiAvatarProps } from './Avatar'
 
+export { AvatarGroup as MuiAvatarGroup } from './AvatarGroup'
+export type { AvatarGroupProps as MuiAvatarGroupProps } from './AvatarGroup'
+
 export { ToggleButtonGroup as MuiToggleButtonGroup } from './ToggleButtonGroup'
 export type { ToggleButtonGroupProps as MuiToggleButtonGroupProps } from './ToggleButtonGroup'
 

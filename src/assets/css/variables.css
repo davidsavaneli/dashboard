@@ -24,11 +24,11 @@
   --color-warning: rgba(var(--color-warning-rgb), 1);
 
   --color-primary-shade100: rgba(var(--color-primary-rgb), 0.06);
-  --color-primaryLight-shade100: rgba(var(--color-primaryLight-rgb), 0.06); 
+  --color-primaryLight-shade100: rgba(var(--color-primaryLight-rgb), 0.06);
   --color-secondary-shade100: rgba(var(--color-secondary-rgb), 0.06);
   --color-dark-shade100: rgba(var(--color-dark-rgb), 0.06);
   --color-medium-shade100: rgba(var(--color-medium-rgb), 0.06);
-  --color-light-shade100: rgba(var(--color-light-rgb), 0.06); 
+  --color-light-shade100: rgba(var(--color-light-rgb), 0.06);
   --color-success-shade100: rgba(var(--color-success-rgb), 0.06);
   --color-error-shade100: rgba(var(--color-error-rgb), 0.06);
   --color-info-shade100: rgba(var(--color-info-rgb), 0.06);
@@ -39,7 +39,7 @@
   --color-secondary-shade200: rgba(var(--color-secondary-rgb), 0.1);
   --color-dark-shade200: rgba(var(--color-dark-rgb), 0.1);
   --color-medium-shade200: rgba(var(--color-medium-rgb), 0.1);
-  --color-light-shade200: rgba(var(--color-light-rgb), 0.1); 
+  --color-light-shade200: rgba(var(--color-light-rgb), 0.1);
   --color-success-shade200: rgba(var(--color-success-rgb), 0.1);
   --color-error-shade200: rgba(var(--color-error-rgb), 0.1);
   --color-info-shade200: rgba(var(--color-info-rgb), 0.1);

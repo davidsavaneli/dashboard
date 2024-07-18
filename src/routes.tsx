@@ -156,6 +156,13 @@ export const routes: IRoutes = {
           element: '',
           children: [
             {
+              name: 'Avatar',
+              path: '/components/data-display/avatar',
+              iconName: '',
+              element: <AvatarPage />,
+              children: [],
+            },
+            {
               name: 'Chip',
               path: '/components/data-display/chip',
               iconName: '',
