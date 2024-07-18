@@ -1,0 +1,20 @@
+.MuiMenuItem-root {
+  border-radius: var(--border-radius-sm) !important;
+  text-decoration: none !important;
+  color: var(--color-primaryLight) !important;
+  padding: var(--padding-xs) var(--padding-sm) !important;
+  margin: 2px 0px !important;
+  font-size: var(--font-size-text-sm) !important;
+  background-color: transparent !important;
+  transition: background-color var(--tr-dur) !important;
+}
+
+@media (hover: hover) {
+  .MuiMenuItem-root:hover {
+    background-color: var(--color-medium-shade100) !important;
+  }
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background-color: var(--color-medium-shade200) !important;
+}

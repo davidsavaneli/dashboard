@@ -31,3 +31,34 @@
   padding-right: 52px !important;
   padding-left: 11px !important;
 }
+
+.MuiAutocomplete-paper {
+  background-color: var(--color-content-bg) !important;
+  border-radius: var(--border-radius-sm) !important;
+  box-shadow: var(--box-shadow-menu) !important;
+}
+
+.MuiAutocomplete-listbox {
+  padding: 10px 10px !important;
+}
+
+.MuiAutocomplete-option {
+  border-radius: var(--border-radius-sm) !important;
+  text-decoration: none !important;
+  color: var(--color-primaryLight) !important;
+  padding: var(--padding-xs) var(--padding-sm) !important;
+  margin: 2px 0px !important;
+  font-size: var(--font-size-text-sm) !important;
+  background-color: transparent !important;
+  transition: background-color var(--tr-dur) !important;
+}
+
+@media (hover: hover) {
+  .MuiAutocomplete-option:hover {
+    background-color: var(--color-medium-shade100) !important;
+  }
+}
+
+.MuiAutocomplete-option[aria-selected='true'] {
+  background-color: var(--color-medium-shade200) !important;
+}

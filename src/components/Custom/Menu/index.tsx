@@ -2,6 +2,8 @@ import { useState, ReactNode, cloneElement, MouseEvent, forwardRef } from 'react
 import { MuiMenu, MuiMenuProps } from '../../Mui'
 import MenuItem from '../MenuItem'
 
+import './styles.css'
+
 export type MenuProps = Omit<MuiMenuProps, 'open'> & {
   component: any
   items: Array<{ children: ReactNode; onClick?: () => void; disableClose?: boolean }>
