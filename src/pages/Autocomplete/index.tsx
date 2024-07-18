@@ -10,7 +10,7 @@ const AutocompletePage = () => {
   return (
     <ContentLayout label='Autocomplete Component'>
       <Card title='Autocomplete'>
-        <Autocomplete multiple options={autocompleteOptions} label='Autocomplete' onChange={(e) => console.log(e)} loading />
+        <Autocomplete open multiple options={autocompleteOptions} label='Autocomplete' onChange={(e) => console.log(e)} loading />
       </Card>
     </ContentLayout>
   )

@@ -6,89 +6,110 @@ const ChipPage = () => {
       <div className='row'>
         <div className='col-6'>
           <Card title='Default'>
-            <Chip label='Default' />
+            <Chip variant='filled' label='Default' />
           </Card>
         </div>
         <div className='col-6'>
           <Card title='Clickable'>
-            <Chip label='Clickable' onClick={() => console.log('onClick')} />
+            <Chip variant='filled' label='Clickable' onClick={() => console.log('onClick')} />
           </Card>
         </div>
       </div>
       <Card title='Sizes'>
-        <Chip label='Small' size='sm' />
+        <Chip variant='filled' label='Small' size='sm' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Medium' size='md' />
+        <Chip variant='filled' label='Medium' size='md' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Large' size='lg' />
+        <Chip variant='filled' label='Large' size='lg' />
         <br />
         <br />
-        <Chip label='Small' size='sm' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Small' size='sm' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Medium' size='md' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Medium' size='md' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Large' size='lg' onDelete={() => console.log('onDelete')} />
-        <br />
-        <br />
-        <Chip label='Small' size='sm' onDelete={() => console.log('onDelete')} deleteIcon={<Icon name='Trash' />} />
-        &nbsp;&nbsp;&nbsp;
-        <Chip label='Medium' size='md' onDelete={() => console.log('onDelete')} deleteIcon={<Icon name='Trash' />} />
-        &nbsp;&nbsp;&nbsp;
-        <Chip label='Large' size='lg' onDelete={() => console.log('onDelete')} deleteIcon={<Icon name='Trash' />} />
+        <Chip variant='filled' label='Large' size='lg' onDelete={() => console.log('onDelete')} />
         <br />
         <br />
         <Chip
+          variant='filled'
+          label='Small'
+          size='sm'
+          onDelete={() => console.log('onDelete')}
+          deleteIcon={<Icon name='Trash' />}
+        />
+        &nbsp;&nbsp;&nbsp;
+        <Chip
+          variant='filled'
+          label='Medium'
+          size='md'
+          onDelete={() => console.log('onDelete')}
+          deleteIcon={<Icon name='Trash' />}
+        />
+        &nbsp;&nbsp;&nbsp;
+        <Chip
+          variant='filled'
+          label='Large'
+          size='lg'
+          onDelete={() => console.log('onDelete')}
+          deleteIcon={<Icon name='Trash' />}
+        />
+        <br />
+        <br />
+        <Chip
+          variant='filled'
           label='Small'
           size='sm'
           avatar={<Avatar alt='Alt Text' src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png' />}
         />
         &nbsp;&nbsp;&nbsp;
         <Chip
+          variant='filled'
           label='Medium'
           size='md'
           avatar={<Avatar alt='Alt Text' src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png' />}
         />
         &nbsp;&nbsp;&nbsp;
         <Chip
+          variant='filled'
           label='Large'
           size='lg'
           avatar={<Avatar alt='Alt Text' src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png' />}
         />
         <br />
         <br />
-        <Chip label='Small' size='sm' avatar={<Avatar color='secondary'>DS</Avatar>} />
+        <Chip variant='filled' label='Small' size='sm' avatar={<Avatar color='secondary'>DS</Avatar>} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Medium' size='md' avatar={<Avatar color='secondary'>DS</Avatar>} />
+        <Chip variant='filled' label='Medium' size='md' avatar={<Avatar color='secondary'>DS</Avatar>} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Large' size='lg' avatar={<Avatar color='secondary'>DS</Avatar>} />
+        <Chip variant='filled' label='Large' size='lg' avatar={<Avatar color='secondary'>DS</Avatar>} />
         <br />
         <br />
-        <Chip label='Small' size='sm' icon={<Icon name='Setting2' color='secondary' />} />
+        <Chip variant='filled' label='Small' size='sm' icon={<Icon name='Setting2' color='secondary' />} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Medium' size='md' icon={<Icon name='Setting2' color='secondary' />} />
+        <Chip variant='filled' label='Medium' size='md' icon={<Icon name='Setting2' color='secondary' />} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Large' size='lg' icon={<Icon name='Setting2' color='secondary' />} />
+        <Chip variant='filled' label='Large' size='lg' icon={<Icon name='Setting2' color='secondary' />} />
       </Card>
       <Card title='Colors'>
-        <Chip label='Primary' color='primary' />
+        <Chip variant='filled' label='Primary' color='primary' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Primary Light' color='primaryLight' />
+        <Chip variant='filled' label='Primary Light' color='primaryLight' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Secondary' color='secondary' />
+        <Chip variant='filled' label='Secondary' color='secondary' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Dark' color='dark' />
+        <Chip variant='filled' label='Dark' color='dark' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Medium' color='medium' />
+        <Chip variant='filled' label='Medium' color='medium' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Light' color='light' />
+        <Chip variant='filled' label='Light' color='light' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Success' color='success' />
+        <Chip variant='filled' label='Success' color='success' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Error' color='error' />
+        <Chip variant='filled' label='Error' color='error' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Info' color='info' />
+        <Chip variant='filled' label='Info' color='info' />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Warning' color='warning' />
+        <Chip variant='filled' label='Warning' color='warning' />
         <br />
         <br />
         <Chip variant='outlined' label='Primary' color='primary' />
@@ -112,25 +133,25 @@ const ChipPage = () => {
         <Chip variant='outlined' label='Warning' color='warning' />
         <br />
         <br />
-        <Chip label='Primary' color='primary' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Primary' color='primary' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Primary Light' color='primaryLight' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Primary Light' color='primaryLight' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Secondary' color='secondary' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Secondary' color='secondary' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Dark' color='dark' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Dark' color='dark' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Medium' color='medium' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Medium' color='medium' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Light' color='light' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Light' color='light' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Success' color='success' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Success' color='success' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Error' color='error' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Error' color='error' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Info' color='info' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Info' color='info' onDelete={() => console.log('onDelete')} />
         &nbsp;&nbsp;&nbsp;
-        <Chip label='Warning' color='warning' onDelete={() => console.log('onDelete')} />
+        <Chip variant='filled' label='Warning' color='warning' onDelete={() => console.log('onDelete')} />
         <br />
         <br />
         <Chip variant='outlined' label='Primary' color='primary' onDelete={() => console.log('onDelete')} />
@@ -156,7 +177,7 @@ const ChipPage = () => {
       <div className='row'>
         <div className='col-6'>
           <Card title='Deletable'>
-            <Chip label='Deletable' onDelete={() => console.log('onDelete')} />
+            <Chip variant='filled' label='Deletable' onDelete={() => console.log('onDelete')} />
           </Card>
         </div>
         <div className='col-6'>
@@ -194,12 +215,12 @@ const ChipPage = () => {
       <div className='row'>
         <div className='col-6'>
           <Card title='Avatar Letter'>
-            <Chip label='Avatar Letter' avatar={<Avatar color='secondary'>DS</Avatar>} />
+            <Chip variant='filled' label='Avatar Letter' avatar={<Avatar color='secondary'>DS</Avatar>} />
           </Card>
         </div>
         <div className='col-6'>
           <Card title='Icon'>
-            <Chip label='Icon' icon={<Icon name='Setting2' color='secondary' />} />
+            <Chip variant='filled' label='Icon' icon={<Icon name='Setting2' color='secondary' />} />
           </Card>
         </div>
       </div>

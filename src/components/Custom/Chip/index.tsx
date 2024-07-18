@@ -31,9 +31,7 @@ declare module '@mui/material/Chip' {
   }
 }
 
-export interface ChipProps extends MuiChipProps {
-  key?: any
-}
+export interface ChipProps extends MuiChipProps {}
 export interface ChipTypeMap extends MuiChipTypeMap {}
 
 const Chip = forwardRef<HTMLDivElement, ChipProps>(({ color = 'medium', size = 'md', ...props }: ChipProps, ref) => {
@@ -53,7 +51,15 @@ const Chip = forwardRef<HTMLDivElement, ChipProps>(({ color = 'medium', size = '
     ['MuiChip-sizeLg']: size === 'lg',
   })
 
-  return <MuiChip ref={ref} className={classNames} deleteIcon={<Icon name='CloseCircle' variant='Bold' />} {...props} />
+  return (
+    <MuiChip
+      ref={ref}
+      variant='outlined'
+      className={classNames}
+      deleteIcon={<Icon name='CloseCircle' variant='Bold' />}
+      {...props}
+    />
+  )
 })
 
 export default Chip
