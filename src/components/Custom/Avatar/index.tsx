@@ -45,7 +45,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
     return (
       <MuiAvatar ref={ref} {...props} className={classNames}>
         {children}
-        {iconName && <Icon name={iconName} color='secondary' size='md' />}
+        {iconName && <Icon name={iconName} color={color == 'secondary' ? 'primary' : 'secondary'} size='md' />}
       </MuiAvatar>
     )
   },
