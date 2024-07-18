@@ -1,4 +1,4 @@
-import { ContentLayout, Card, AvatarGroup, Avatar, Text, Icon } from '../../components'
+import { ContentLayout, Card, AvatarGroup, Avatar, Text } from '../../components'
 
 const AvatarPage = () => {
   return (
@@ -119,10 +119,6 @@ const AvatarPage = () => {
             </div>
           </Card>
         </div>
-      </div>
-      <div className='row'>
-        <div className='col-6'></div>
-        <div className='col-6'></div>
       </div>
     </ContentLayout>
   )

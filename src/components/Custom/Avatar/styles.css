@@ -6,6 +6,10 @@
   box-sizing: border-box !important;
 }
 
+.MuiAvatar-rounded {
+  border-radius: var(--border-radius-sm) !important;
+}
+
 .MuiAvatar-colorPrimary {
   background-color: var(--color-primary) !important;
 }

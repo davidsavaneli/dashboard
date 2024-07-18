@@ -1,0 +1,48 @@
+.MuiBadge-badge {
+  color: var(--color-secondary) !important;
+  border: 1px solid var(--color-secondary) !important;
+  font-size: var(--font-size-text-xs) !important;
+  font-weight: var(--font-weight-medium) !important;
+  letter-spacing: inherit !important;
+}
+
+.MuiBadge-colorPrimary .MuiBadge-badge {
+  background-color: var(--color-primary) !important;
+}
+
+.MuiBadge-colorPrimaryLight .MuiBadge-badge {
+  background-color: var(--color-primaryLight) !important;
+}
+
+.MuiBadge-colorSecondary .MuiBadge-badge {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+}
+
+.MuiBadge-colorDark .MuiBadge-badge {
+  background-color: var(--color-dark) !important;
+}
+
+.MuiBadge-colorMedium .MuiBadge-badge {
+  background-color: var(--color-medium) !important;
+}
+
+.MuiBadge-colorLight .MuiBadge-badge {
+  background-color: var(--color-light) !important;
+}
+
+.MuiBadge-colorSuccess .MuiBadge-badge {
+  background-color: var(--color-success) !important;
+}
+
+.MuiBadge-colorError .MuiBadge-badge {
+  background-color: var(--color-error) !important;
+}
+
+.MuiBadge-colorWarning .MuiBadge-badge {
+  background-color: var(--color-warning) !important;
+}
+
+.MuiBadge-colorInfo .MuiBadge-badge {
+  background-color: var(--color-info) !important;
+}

@@ -31,7 +31,9 @@ const Select = forwardRef<HTMLInputElement, SelectProps>(
       initialValue !== undefined && setValue(initialValue)
     }, [initialValue])
 
-    const ArrowIcon = () => <IconButton iconName='ArrowDown2' disabled={props.disabled} onClick={() => setOpen(true)} />
+    const ArrowIcon = () => (
+      <IconButton iconName={open ? 'ArrowUp2' : 'ArrowDown2'} disabled={props.disabled} onClick={() => setOpen(true)} />
+    )
 
     return (
       <FormControl>

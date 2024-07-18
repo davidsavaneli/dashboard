@@ -163,6 +163,13 @@ export const routes: IRoutes = {
               children: [],
             },
             {
+              name: 'Badge',
+              path: '/components/data-display/badge',
+              iconName: '',
+              element: <BadgePage />,
+              children: [],
+            },
+            {
               name: 'Chip',
               path: '/components/data-display/chip',
               iconName: '',
