@@ -37,6 +37,7 @@ import MenuPage from './pages/Menu'
 import PaginationPage from './pages/Pagination'
 import TabsPage from './pages/Tabs'
 import CardPage from './pages/Card'
+import FormValidationsPage from './pages/FormValidations'
 
 import { IRoutes } from './router'
 
@@ -145,6 +146,13 @@ export const routes: IRoutes = {
               path: '/components/forms/date-time-picker',
               iconName: '',
               element: <DateTimePickerPage />,
+              children: [],
+            },
+            {
+              name: 'Form Validations',
+              path: '/components/forms/form-validations',
+              iconName: '',
+              element: <FormValidationsPage />,
               children: [],
             },
           ],

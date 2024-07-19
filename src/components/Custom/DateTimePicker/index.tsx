@@ -1,5 +1,4 @@
 import { MuiDateTimePicker, MuiDateTimePickerProps } from '../../Mui'
-import FormControl from '../FormControl'
 import TextField from '../TextField'
 import Icon from '../Icon'
 
@@ -20,18 +19,16 @@ const DateTimePicker = ({
   ...props
 }: DateTimePickerProps) => {
   return (
-    <FormControl>
-      <MuiDateTimePicker
-        className='MuiTextField-withIcon'
-        format={format}
-        ampm={ampm}
-        slots={{
-          textField: (params) => <TextField {...params} error={error} helperText={helperText} />,
-          openPickerIcon: PickerIcon,
-        }}
-        {...props}
-      />
-    </FormControl>
+    <MuiDateTimePicker
+      className='MuiTextField-withIcon'
+      format={format}
+      ampm={ampm}
+      slots={{
+        textField: (params) => <TextField {...params} error={error} helperText={helperText} />,
+        openPickerIcon: PickerIcon,
+      }}
+      {...props}
+    />
   )
 }
 

@@ -1,6 +1,5 @@
 import { forwardRef, useState } from 'react'
 import { MuiTextField, MuiTextFieldProps } from '../../Mui'
-import FormControl from '../FormControl'
 import InputAdornment from '../InputAdornment'
 import FormLabel from '../FormLabel'
 import IconButton from '../IconButton'
@@ -60,7 +59,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
     )
 
     return (
-      <FormControl>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
         {label && <FormLabel>{label}</FormLabel>}
         <MuiTextField
           className={classNames}
@@ -73,7 +72,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           }}
           {...props}
         />
-      </FormControl>
+      </div>
     )
   },
 )
