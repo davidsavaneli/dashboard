@@ -14,7 +14,7 @@ const AutocompletePage = () => {
           multiple
           options={autocompleteOptions}
           label='Autocomplete'
-          onChange={(e) => console.log(e)}
+          onChange={(e, value) => console.log(value)}
           loading
         />
       </Card>

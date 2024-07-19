@@ -35,7 +35,7 @@ export { default as InputAdornment } from './InputAdornment'
 export type { InputAdornmentProps } from './InputAdornment'
 
 export { default as Autocomplete } from './Autocomplete'
-export type { AutocompleteProps } from './Autocomplete'
+// export type { AutocompleteProps } from './Autocomplete'
 
 export { default as Chip } from './Chip'
 export type { ChipProps } from './Chip'

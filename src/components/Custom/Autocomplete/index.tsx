@@ -1,45 +1,46 @@
-import { forwardRef } from 'react'
-import { MuiAutocomplete, MuiAutocompleteProps, MuiAutocompleteRenderInputParams } from '../../Mui'
-import TextField, { TextFieldProps } from '../TextField'
-import FormControl from '../FormControl'
-import Chip, { ChipTypeMap } from '../Chip'
+import { forwardRef, ReactNode } from 'react'
+import { MuiAutocomplete, MuiAutocompleteProps } from '../../Mui'
+import TextField from '../TextField'
+import Chip from '../Chip'
 import Icon from '../Icon'
+import FormControl from '../FormControl'
 
 import './styles.css'
-import CircularProgress from '../CircularProgress'
 
-export interface AutocompleteProps<
-  T,
-  Multiple extends boolean | undefined,
-  DisableClearable extends boolean | undefined,
-  FreeSolo extends boolean | undefined,
-  ChipComponent extends React.ElementType = ChipTypeMap['defaultComponent'],
-> extends Omit<MuiAutocompleteProps<T, Multiple, DisableClearable, FreeSolo, ChipComponent>, 'renderInput'> {
-  FieldProps?: TextFieldProps
-  label?: string
+export interface AutocompleteOption {
+  label: string
 }
 
-const Autocomplete = forwardRef(function Autocomplete<
-  T,
-  Multiple extends boolean | undefined = false,
-  DisableClearable extends boolean | undefined = false,
-  FreeSolo extends boolean | undefined = false,
-  ChipComponent extends React.ElementType = ChipTypeMap['defaultComponent'],
->(
-  { FieldProps, label, ...props }: AutocompleteProps<T, Multiple, DisableClearable, FreeSolo, ChipComponent>,
-  ref: React.Ref<HTMLElement>,
-): JSX.Element {
+export interface AutocompleteProps<
+  T extends AutocompleteOption | string,
+  Multiple extends boolean | undefined,
+  DisableClearable extends boolean | undefined,
+  FreeSolo extends boolean | undefined = undefined,
+> extends Omit<MuiAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>, 'renderInput'> {
+  renderInput?: MuiAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>['renderInput']
+  label?: ReactNode
+}
+
+const Autocomplete = forwardRef<
+  HTMLDivElement,
+  AutocompleteProps<AutocompleteOption | string, boolean | undefined, boolean | undefined, boolean | undefined>
+>(({ label, ...props }, ref) => {
   return (
     <FormControl>
       <MuiAutocomplete
         disableCloseOnSelect
-        renderInput={(params: MuiAutocompleteRenderInputParams) => (
-          <TextField className='MuiTextField-withIcon' label={label} {...params} />
-        )}
-        ref={ref}
-        {...props}
         popupIcon={<Icon name='ArrowDown2' />}
         clearIcon={<Icon name='CloseCircle' />}
+        renderInput={(params) => <TextField className='MuiTextField-withIcon' {...params} label={label} />}
+        renderTags={(value, getTagProps) =>
+          value.map((option, index) => {
+            const label = typeof option === 'string' ? option : option.label
+            const { key, ...tagProps } = getTagProps({ index })
+            return <Chip key={key} {...tagProps} label={label} />
+          })
+        }
+        ref={ref}
+        {...props}
       />
     </FormControl>
   )
