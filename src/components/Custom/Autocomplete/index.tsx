@@ -1,4 +1,4 @@
-import { forwardRef, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { MuiAutocomplete, MuiAutocompleteProps } from '../../Mui'
 import TextField from '../TextField'
 import Chip from '../Chip'
@@ -22,10 +22,17 @@ export interface AutocompleteProps<
   helperText?: string
 }
 
-const Autocomplete = forwardRef<
-  HTMLDivElement,
-  AutocompleteProps<AutocompleteOption | string, boolean | undefined, boolean | undefined, boolean | undefined>
->(({ label, error, helperText, ...props }, ref) => {
+const Autocomplete = <
+  T extends AutocompleteOption | string,
+  Multiple extends boolean | undefined,
+  DisableClearable extends boolean | undefined,
+  FreeSolo extends boolean | undefined = undefined,
+>({
+  label,
+  error,
+  helperText,
+  ...props
+}: AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>) => {
   return (
     <MuiAutocomplete
       className={!props.multiple ? 'MuiAutocomplete-root-single' : ''}
@@ -42,10 +49,9 @@ const Autocomplete = forwardRef<
           return <Chip key={key} {...tagProps} label={label} />
         })
       }
-      ref={ref}
       {...props}
     />
   )
-})
+}
 
 export default Autocomplete

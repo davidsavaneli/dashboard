@@ -30,12 +30,14 @@ export type { SwitchProps } from './Switch'
 
 export { default as TextField } from './TextField'
 export type { TextFieldProps } from './TextField'
+export { default as TextFieldValidator } from './ValidatorForms/TextFieldValidator'
 
 export { default as InputAdornment } from './InputAdornment'
 export type { InputAdornmentProps } from './InputAdornment'
 
 export { default as Autocomplete } from './Autocomplete'
-// export type { AutocompleteProps } from './Autocomplete'
+export type { AutocompleteProps } from './Autocomplete'
+export { default as AutocompleteValidator } from './ValidatorForms/AutocompleteValidator'
 
 export { default as Chip } from './Chip'
 export type { ChipProps } from './Chip'
@@ -78,6 +80,7 @@ export type { ColorPickerProps } from './ColorPicker'
 
 export { default as Select } from './Select'
 export type { SelectProps } from './Select'
+export { default as SelectValidator } from './ValidatorForms/SelectValidator'
 
 export { default as ComponentLoader } from './ComponentLoader'
 

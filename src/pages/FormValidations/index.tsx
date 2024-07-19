@@ -12,7 +12,42 @@ import {
   DateTimePicker,
   Checkbox,
   Button,
+  TextFieldValidator,
+  SelectValidator,
+  AutocompleteValidator,
 } from '../../components'
+
+import { Formik, Form } from 'formik'
+import * as yup from 'yup'
+
+const appSchema = yup.object({
+  firstName: yup.string().trim().required('First Name Required').max(100, 'Maximum 100 characters'),
+  email: yup.string().email('Invalid email').required('Email required'),
+  phoneNumber: yup
+    .number()
+    .positive('The number must be positive')
+    .integer('The number must be an integer')
+    .typeError('Please enter a valid phone number')
+    .required('Phone number required'),
+  country: yup.string().required('Country required'),
+  currency: yup.array().of(yup.string().required()).min(1, 'Currency required').required('Currency required'),
+  city: yup
+    .object({
+      value: yup.string().required('City value required'),
+      label: yup.string().required('City label required'),
+    })
+    .required('City required'),
+  product: yup
+    .array()
+    .of(
+      yup.object({
+        value: yup.string().required(),
+        label: yup.string().required(),
+      }),
+    )
+    .min(1, 'Product required')
+    .required('Product required'),
+})
 
 const countryOptions = [
   { value: 'georgia', label: 'Georgia' },
@@ -42,7 +77,59 @@ const FormValidationsPage = () => {
   return (
     <ContentLayout label='Form Validations Page'>
       <div className='row'>
-        <div className='col-3'></div>
+        <div className='col-6'>
+          <Formik
+            initialValues={{
+              firstName: '',
+              email: '',
+              phoneNumber: '',
+              country: '',
+              currency: [],
+              city: null,
+              product: [],
+            }}
+            validationSchema={appSchema}
+            onSubmit={(values, { setSubmitting, resetForm }) => {
+              const resultValues = {
+                ...values,
+              }
+              console.log(JSON.stringify(resultValues, null, 2))
+              resetForm()
+            }}
+          >
+            {({ values, isSubmitting, isValid, dirty }) => (
+              <Form>
+                <Card
+                  title='Formik Yup'
+                  footerActions={
+                    <>
+                      <Button variant='transparent'>Reset</Button>
+                      <Button type='submit'>Submit</Button>
+                    </>
+                  }
+                >
+                  <TextFieldValidator label='First Name (Text Field)' name='firstName' />
+                  <TextFieldValidator label='Email (Text Field)' name='email' />
+                  <TextFieldValidator label='Phone Number (Text Field)' name='phoneNumber' />
+                  <SelectValidator label='Select Country (Single Select)' options={countryOptions} name='country' />
+                  <SelectValidator
+                    label='Select Currencies (Multiple Select)'
+                    options={currencyOptions}
+                    multiple
+                    name='currency'
+                  />
+                  <AutocompleteValidator label='Select City (Single Autocomplete)' options={cityOptions} name='city' />
+                  <AutocompleteValidator
+                    label='Select Product (Multiple Autocomplete)'
+                    options={productOptions}
+                    multiple
+                    name='product'
+                  />
+                </Card>
+              </Form>
+            )}
+          </Formik>
+        </div>
         <div className='col-6'>
           <Card
             title='Basic'
@@ -80,7 +167,6 @@ const FormValidationsPage = () => {
             <Checkbox label='Agree' />
           </Card>
         </div>
-        <div className='col-3'></div>
       </div>
     </ContentLayout>
   )
