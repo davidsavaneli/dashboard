@@ -32,6 +32,11 @@
   padding-left: 11px !important;
 }
 
+.MuiAutocomplete-root-single.MuiAutocomplete-hasPopupIcon .MuiAutocomplete-inputRoot,
+.MuiAutocomplete-root-single.MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot {
+  padding-left: 0 !important;
+}
+
 .MuiAutocomplete-paper {
   background-color: var(--color-content-bg) !important;
   border-radius: var(--border-radius-sm) !important;
