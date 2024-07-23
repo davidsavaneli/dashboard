@@ -16,6 +16,8 @@ import {
   SelectValidator,
   AutocompleteValidator,
   DatePickerValidator,
+  DateTimePickerValidator,
+  TimePickerValidator,
 } from '../../components'
 
 import { Formik, Form, Field } from 'formik'
@@ -48,7 +50,9 @@ const validationSchema = yup.object({
     )
     .min(1, 'Product required')
     .required('Product required'),
-  date: yup.date().nullable().required('Birth Date is required'),
+  datePicker: yup.date().nullable().required('Date Picker is required'),
+  timePicker: yup.date().nullable().required('Time Picker is required'),
+  dateTimePicker: yup.date().nullable().required('Date Time Picker is required'),
 })
 
 const initialValues = {
@@ -59,7 +63,9 @@ const initialValues = {
   currency: [],
   city: null,
   product: [],
-  date: null,
+  datePicker: null,
+  timePicker: null,
+  dateTimePicker: null,
 }
 
 const countryOptions = [
@@ -129,7 +135,9 @@ const FormValidationsPage = () => {
                     multiple
                     name='product'
                   />
-                  <DatePickerValidator name='date' label='Birth Date' />
+                  <DatePickerValidator name='datePicker' label='Date Picker' />
+                  <TimePickerValidator name='timePicker' label='Time Picker' />
+                  <DateTimePickerValidator name='dateTimePicker' label='Date Time Picker' />
                 </Card>
               </Form>
             )}

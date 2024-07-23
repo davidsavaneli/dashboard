@@ -9,8 +9,6 @@ export interface DateTimePickerProps extends MuiDateTimePickerProps {
   helperText?: string
 }
 
-const PickerIcon = () => <Icon name='Calendar' />
-
 const DateTimePicker = ({
   format = 'DD/MM/YYYY - HH:mm',
   ampm = false,
@@ -25,7 +23,6 @@ const DateTimePicker = ({
       ampm={ampm}
       slots={{
         textField: (params) => <TextField {...params} error={error} helperText={helperText} />,
-        openPickerIcon: PickerIcon,
       }}
       {...props}
     />

@@ -45,15 +45,17 @@ export type { ChipProps } from './Chip'
 export { default as LocalizationProvider } from './LocalizationProvider'
 export type { LocalizationProviderProps } from './LocalizationProvider'
 
-export { default as TimePicker } from './TimePicker'
-export type { TimePickerProps } from './TimePicker'
-
 export { default as DatePicker } from './DatePicker'
 export type { DatePickerProps } from './DatePicker'
 export { default as DatePickerValidator } from './ValidatorForms/DatePickerValidator'
 
+export { default as TimePicker } from './TimePicker'
+export type { TimePickerProps } from './TimePicker'
+export { default as TimePickerValidator } from './ValidatorForms/TimePickerValidator'
+
 export { default as DateTimePicker } from './DateTimePicker'
 export type { DateTimePickerProps } from './DateTimePicker'
+export { default as DateTimePickerValidator } from './ValidatorForms/DateTimePickerValidator'
 
 export { default as Alert } from './Alert'
 export type { AlertProps } from './Alert'

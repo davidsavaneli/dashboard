@@ -9,8 +9,6 @@ export interface TimePickerProps extends MuiTimePickerProps {
   helperText?: string
 }
 
-const PickerIcon = () => <Icon name='Clock' />
-
 const TimePicker = ({ format = 'HH:mm', ampm = false, error = false, helperText, ...props }: TimePickerProps) => {
   return (
     <MuiTimePicker
@@ -19,7 +17,6 @@ const TimePicker = ({ format = 'HH:mm', ampm = false, error = false, helperText,
       ampm={ampm}
       slots={{
         textField: (params) => <TextField {...params} error={error} helperText={helperText} />,
-        openPickerIcon: PickerIcon,
       }}
       {...props}
     />

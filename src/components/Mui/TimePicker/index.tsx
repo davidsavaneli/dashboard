@@ -1,4 +1,7 @@
-import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@mui/x-date-pickers/TimePicker'
+import {
+  MobileTimePicker as MuiTimePicker,
+  MobileTimePickerProps as MuiTimePickerProps,
+} from '@mui/x-date-pickers/MobileTimePicker'
 import dayjs from 'dayjs'
 
 export interface TimePickerProps extends MuiTimePickerProps<dayjs.Dayjs> {}
