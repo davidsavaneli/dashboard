@@ -50,6 +50,7 @@ export type { TimePickerProps } from './TimePicker'
 
 export { default as DatePicker } from './DatePicker'
 export type { DatePickerProps } from './DatePicker'
+export { default as DatePickerValidator } from './ValidatorForms/DatePickerValidator'
 
 export { default as DateTimePicker } from './DateTimePicker'
 export type { DateTimePickerProps } from './DateTimePicker'

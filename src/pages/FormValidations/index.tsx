@@ -15,12 +15,13 @@ import {
   TextFieldValidator,
   SelectValidator,
   AutocompleteValidator,
+  DatePickerValidator,
 } from '../../components'
 
-import { Formik, Form } from 'formik'
+import { Formik, Form, Field } from 'formik'
 import * as yup from 'yup'
 
-const appSchema = yup.object({
+const validationSchema = yup.object({
   firstName: yup.string().trim().required('First Name Required').max(100, 'Maximum 100 characters'),
   email: yup.string().email('Invalid email').required('Email required'),
   phoneNumber: yup
@@ -47,7 +48,19 @@ const appSchema = yup.object({
     )
     .min(1, 'Product required')
     .required('Product required'),
+  date: yup.date().nullable().required('Birth Date is required'),
 })
+
+const initialValues = {
+  firstName: '',
+  email: '',
+  phoneNumber: '',
+  country: '',
+  currency: [],
+  city: null,
+  product: [],
+  date: null,
+}
 
 const countryOptions = [
   { value: 'georgia', label: 'Georgia' },
@@ -79,31 +92,22 @@ const FormValidationsPage = () => {
       <div className='row'>
         <div className='col-6'>
           <Formik
-            initialValues={{
-              firstName: '',
-              email: '',
-              phoneNumber: '',
-              country: '',
-              currency: [],
-              city: null,
-              product: [],
-            }}
-            validationSchema={appSchema}
+            initialValues={initialValues}
+            validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting, resetForm }) => {
-              const resultValues = {
-                ...values,
-              }
-              console.log(JSON.stringify(resultValues, null, 2))
+              alert(JSON.stringify({ ...values }, null, 2))
               resetForm()
             }}
           >
-            {({ values, isSubmitting, isValid, dirty }) => (
+            {({ resetForm }) => (
               <Form>
                 <Card
                   title='Formik Yup'
                   footerActions={
                     <>
-                      <Button variant='transparent'>Reset</Button>
+                      <Button variant='transparent' onClick={() => resetForm()}>
+                        Reset
+                      </Button>
                       <Button type='submit'>Submit</Button>
                     </>
                   }
@@ -125,47 +129,11 @@ const FormValidationsPage = () => {
                     multiple
                     name='product'
                   />
+                  <DatePickerValidator name='date' label='Birth Date' />
                 </Card>
               </Form>
             )}
           </Formik>
-        </div>
-        <div className='col-6'>
-          <Card
-            title='Basic'
-            footerActions={
-              <>
-                <Button variant='transparent'>Reset</Button>
-                <Button>Submit</Button>
-              </>
-            }
-          >
-            <TextField label='Name (Text Field)' />
-            <TextField label='Email (Text Field)' />
-            <TextField label='Phone Number (Text Field)' />
-            <Select label='Select Country (Single Select)' options={countryOptions} />
-            <Select label='Select Currencies (Multiple Select)' multiple options={currencyOptions} />
-            <Autocomplete
-              label='Select City (Single Autocomplete)'
-              options={cityOptions}
-              onChange={(e, value) => console.log(value)}
-            />
-            <Autocomplete
-              multiple
-              label='Select Product (Multiple Autocomplete)'
-              options={productOptions}
-              onChange={(e, value) => console.log(value)}
-            />
-            <DatePicker label='Date Picker' />
-            <TimePicker label='Time Picker' />
-            <DateTimePicker label='Date Time Picker' />
-            <FormLabel>Sex</FormLabel>
-            <RadioGroup row>
-              <Radio label='Male' value='male' />
-              <Radio label='Female' value='female' />
-            </RadioGroup>
-            <Checkbox label='Agree' />
-          </Card>
         </div>
       </div>
     </ContentLayout>

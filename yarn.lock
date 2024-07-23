@@ -8637,6 +8637,11 @@ react-fast-compare@^2.0.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
+react-hook-form-mui@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form-mui/-/react-hook-form-mui-7.0.1.tgz#26c562c2bc99798db4611e5f3c49d11232ed7d1e"
+  integrity sha512-ik4upg0pc3K9VTJcKSxmGXfwwPVoDLA+mPtD+csF47h1tYx4rrrRBpJ/27fvmzBPhUZS3pFAo7rs1LgMQ94Ukw==
+
 react-hook-form@^7.52.1:
   version "7.52.1"
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.52.1.tgz#ec2c96437b977f8b89ae2d541a70736c66284852"

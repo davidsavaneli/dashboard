@@ -28,6 +28,7 @@
     "mui-color-input": "^2.0.3",
     "quill-image-resize-module-react": "^3.0.0",
     "react-hook-form": "^7.52.1",
+    "react-hook-form-mui": "^7.0.1",
     "react-quill": "^2.0.0",
     "react-router-dom": "^6.24.0",
     "react-toastify": "^10.0.5",
