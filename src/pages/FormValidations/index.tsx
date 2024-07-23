@@ -1,17 +1,6 @@
 import {
   ContentLayout,
   Card,
-  TextField,
-  Select,
-  Autocomplete,
-  RadioGroup,
-  Radio,
-  FormLabel,
-  DatePicker,
-  TimePicker,
-  DateTimePicker,
-  Checkbox,
-  Button,
   TextFieldValidator,
   SelectValidator,
   AutocompleteValidator,
@@ -20,12 +9,15 @@ import {
   TimePickerValidator,
   CheckboxValidator,
   RadioValidator,
-  RadioGroupValidator,
+  RadioGroup,
   Divider,
+  FormLabel,
   FormGroup,
+  FormHelperText,
+  Button,
 } from '../../components'
 
-import { Formik, Form, FormikProps, FormikHelpers } from 'formik'
+import { Formik, Form, FormikProps } from 'formik'
 import * as yup from 'yup'
 
 const validationSchema = yup.object({
@@ -59,7 +51,10 @@ const validationSchema = yup.object({
   timePicker: yup.date().nullable().required('Time Picker is required'),
   dateTimePicker: yup.date().nullable().required('Date Time Picker is required'),
   checkbox: yup.boolean().oneOf([true], 'Checkbox is required'),
-  checkboxGroup: yup.boolean().oneOf([true], 'Checkbox Group is required'),
+  checkboxGroup: yup
+    .array()
+    .of(yup.boolean())
+    .test('at-least-one-checked', 'At least one checkbox must be checked', (value) => value?.includes(true) || false),
   radio: yup.string().required('Radio is required'),
   radioGroup: yup.string().required('Radio Group is required'),
 })
@@ -76,13 +71,13 @@ const initialValues = {
   timePicker: null,
   dateTimePicker: null,
   checkbox: false,
-  checkboxGroup: false,
+  checkboxGroup: [false, false, false],
   radio: '',
   radioGroup: '',
 }
 
 const handleFormSubmit = (values: typeof initialValues, actions: any) => {
-  alert(JSON.stringify({ ...values }, null, 2))
+  console.log(JSON.stringify({ ...values }, null, 2))
   actions.setSubmitting(true)
   actions.resetForm()
 }
@@ -130,17 +125,25 @@ const FormValidationsPage = () => {
                   <RadioValidator name='radio' label='Mercedes' value='mercedes' />
                   <Divider />
                   <FormLabel>Sex</FormLabel>
-                  <RadioGroupValidator name='radioGroup'>
-                    <Radio label='Male' value='male' />
-                    <Radio label='Female' value='female' />
-                  </RadioGroupValidator>
+                  <RadioGroup name='radioGroup'>
+                    <RadioValidator name='radioGroup' label='Male' value='male' />
+                    <RadioValidator name='radioGroup' label='Female' value='female' />
+                    <RadioValidator name='radioGroup' label='Other' value='other' />
+                    {props.errors.radioGroup && props.touched.radioGroup && (
+                      <FormHelperText error>{props.errors.radioGroup}</FormHelperText>
+                    )}
+                  </RadioGroup>
                   <Divider />
                   <CheckboxValidator name='checkbox' label='Checkbox' />
                   <Divider />
-                  <FormLabel>Form Label</FormLabel>
-                  <FormGroup row name='checkboxGroup'>
-                    <Checkbox label='Checkbox 1' />
-                    <Checkbox label='Checkbox 2' />
+                  <FormLabel>Sex</FormLabel>
+                  <FormGroup row>
+                    <CheckboxValidator name='checkboxGroup[0]' label='Checkbox 1' />
+                    <CheckboxValidator name='checkboxGroup[1]' label='Checkbox 2' />
+                    <CheckboxValidator name='checkboxGroup[2]' label='Checkbox 3' />
+                    {props.errors.checkboxGroup && props.touched.checkboxGroup && (
+                      <FormHelperText error>{props.errors.checkboxGroup}</FormHelperText>
+                    )}
                   </FormGroup>
                 </Card>
               </Form>

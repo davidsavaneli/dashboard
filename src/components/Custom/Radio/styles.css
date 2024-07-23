@@ -180,6 +180,10 @@
   border-color: var(--color-warning) !important;
 }
 
+.MuiRadio-error .MuiRadio-icon-inner {
+  border-color: var(--color-error) !important;
+}
+
 @media (hover: hover) {
   .MuiRadio-colorPrimary:hover {
     background-color: var(--color-primary-shade200) !important;

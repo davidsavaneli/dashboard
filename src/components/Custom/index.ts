@@ -2,6 +2,13 @@ export { default as Checkbox } from './Checkbox'
 export type { CheckboxProps } from './Checkbox'
 export { default as CheckboxValidator } from './ValidatorForms/CheckboxValidator'
 
+export { default as RadioGroup } from './RadioGroup'
+export type { RadioGroupProps } from './RadioGroup'
+
+export { default as Radio } from './Radio'
+export type { RadioProps } from './Radio'
+export { default as RadioValidator } from './ValidatorForms/RadioValidator'
+
 export { default as FormLabel } from './FormLabel'
 export type { FormLabelProps } from './FormLabel'
 
@@ -19,14 +26,6 @@ export type { FormGroupProps } from './FormGroup'
 
 export { default as FormControl } from './FormControl'
 export type { FormControlProps } from './FormControl'
-
-export { default as RadioGroup } from './RadioGroup'
-export type { RadioGroupProps } from './RadioGroup'
-export { default as RadioGroupValidator } from './ValidatorForms/RadioGroupValidator'
-
-export { default as Radio } from './Radio'
-export type { RadioProps } from './Radio'
-export { default as RadioValidator } from './ValidatorForms/RadioValidator'
 
 export { default as Switch } from './Switch'
 export type { SwitchProps } from './Switch'

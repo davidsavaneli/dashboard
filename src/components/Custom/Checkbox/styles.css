@@ -115,6 +115,10 @@
   fill: var(--color-warning) !important;
 }
 
+.MuiCheckbox-error .MuiCheckbox-icon path {
+  stroke: var(--color-error) !important;
+}
+
 @media (hover: hover) {
   .MuiCheckbox-colorPrimary:hover {
     background-color: var(--color-primary-shade200) !important;

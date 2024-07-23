@@ -1,9 +1,7 @@
 import { forwardRef } from 'react'
 import clsx from 'clsx'
-import { MuiCheckbox, MuiCheckboxProps } from '../../Mui'
+import { Checkbox as MuiCheckbox, CheckboxProps as MuiCheckboxProps } from '@mui/material'
 import FormControlLabel from '../FormControlLabel'
-import FormHelperText from '../FormHelperText'
-
 import './styles.css'
 
 declare module '@mui/material/Checkbox' {
@@ -55,26 +53,24 @@ const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
       ['MuiCheckbox-sizeSm']: size === 'sm',
       ['MuiCheckbox-sizeMd']: size === 'md',
       ['MuiCheckbox-sizeLg']: size === 'lg',
+      ['MuiCheckbox-error']: error,
     })
 
     return (
-      <>
-        <FormControlLabel
-          size={size}
-          control={
-            <MuiCheckbox
-              ref={ref}
-              className={classNames}
-              icon={<CheckboxIcon />}
-              checkedIcon={<CheckboxCheckedIcon />}
-              indeterminateIcon={<CheckboxIndeterminateIcon />}
-              {...props}
-            />
-          }
-          label={label}
-        />
-        {helperText && helperText !== ' ' && <FormHelperText error={error}>{helperText}</FormHelperText>}
-      </>
+      <FormControlLabel
+        size={size}
+        control={
+          <MuiCheckbox
+            ref={ref}
+            className={classNames}
+            icon={<CheckboxIcon />}
+            checkedIcon={<CheckboxCheckedIcon />}
+            indeterminateIcon={<CheckboxIndeterminateIcon />}
+            {...props}
+          />
+        }
+        label={label}
+      />
     )
   },
 )

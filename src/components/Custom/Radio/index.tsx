@@ -2,7 +2,6 @@ import { forwardRef } from 'react'
 import clsx from 'clsx'
 import { MuiRadio, MuiRadioProps } from '../../Mui'
 import FormControlLabel from '../FormControlLabel'
-import FormHelperText from '../FormHelperText'
 
 import './styles.css'
 
@@ -55,25 +54,23 @@ const Radio = forwardRef<HTMLButtonElement, RadioProps>(
       ['MuiRadio-sizeSm']: size === 'sm',
       ['MuiRadio-sizeMd']: size === 'md',
       ['MuiRadio-sizeLg']: size === 'lg',
+      ['MuiRadio-error']: error,
     })
 
     return (
-      <>
-        <FormControlLabel
-          size={size}
-          control={
-            <MuiRadio
-              ref={ref}
-              className={classNames}
-              icon={<RadioIcon />}
-              checkedIcon={<RadioCheckedIcon />}
-              {...props}
-            />
-          }
-          label={label}
-        />
-        {helperText && helperText !== ' ' && <FormHelperText error={error}>{helperText}</FormHelperText>}
-      </>
+      <FormControlLabel
+        size={size}
+        control={
+          <MuiRadio
+            ref={ref}
+            className={classNames}
+            icon={<RadioIcon />}
+            checkedIcon={<RadioCheckedIcon />}
+            {...props}
+          />
+        }
+        label={label}
+      />
     )
   },
 )
