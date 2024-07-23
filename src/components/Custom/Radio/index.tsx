@@ -2,6 +2,7 @@ import { forwardRef } from 'react'
 import clsx from 'clsx'
 import { MuiRadio, MuiRadioProps } from '../../Mui'
 import FormControlLabel from '../FormControlLabel'
+import FormHelperText from '../FormHelperText'
 
 import './styles.css'
 
@@ -34,10 +35,12 @@ declare module '@mui/material/Radio' {
 
 export interface RadioProps extends MuiRadioProps {
   label?: string
+  error?: boolean
+  helperText?: string
 }
 
 const Radio = forwardRef<HTMLButtonElement, RadioProps>(
-  ({ label, size = 'md', color = 'medium', ...props }: RadioProps, ref) => {
+  ({ label, error, helperText, size = 'md', color = 'medium', ...props }: RadioProps, ref) => {
     const classNames = clsx({
       ['MuiRadio-colorPrimary']: color === 'primary',
       ['MuiRadio-colorPrimaryLight']: color === 'primaryLight',
@@ -55,19 +58,22 @@ const Radio = forwardRef<HTMLButtonElement, RadioProps>(
     })
 
     return (
-      <FormControlLabel
-        size={size}
-        control={
-          <MuiRadio
-            ref={ref}
-            className={classNames}
-            icon={<RadioIcon />}
-            checkedIcon={<RadioCheckedIcon />}
-            {...props}
-          />
-        }
-        label={label}
-      />
+      <>
+        <FormControlLabel
+          size={size}
+          control={
+            <MuiRadio
+              ref={ref}
+              className={classNames}
+              icon={<RadioIcon />}
+              checkedIcon={<RadioCheckedIcon />}
+              {...props}
+            />
+          }
+          label={label}
+        />
+        {helperText && helperText !== ' ' && <FormHelperText error={error}>{helperText}</FormHelperText>}
+      </>
     )
   },
 )

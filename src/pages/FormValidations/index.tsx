@@ -18,9 +18,14 @@ import {
   DatePickerValidator,
   DateTimePickerValidator,
   TimePickerValidator,
+  CheckboxValidator,
+  RadioValidator,
+  RadioGroupValidator,
+  Divider,
+  FormGroup,
 } from '../../components'
 
-import { Formik, Form, Field } from 'formik'
+import { Formik, Form, FormikProps, FormikHelpers } from 'formik'
 import * as yup from 'yup'
 
 const validationSchema = yup.object({
@@ -53,6 +58,10 @@ const validationSchema = yup.object({
   datePicker: yup.date().nullable().required('Date Picker is required'),
   timePicker: yup.date().nullable().required('Time Picker is required'),
   dateTimePicker: yup.date().nullable().required('Date Time Picker is required'),
+  checkbox: yup.boolean().oneOf([true], 'Checkbox is required'),
+  checkboxGroup: yup.boolean().oneOf([true], 'Checkbox Group is required'),
+  radio: yup.string().required('Radio is required'),
+  radioGroup: yup.string().required('Radio Group is required'),
 })
 
 const initialValues = {
@@ -66,52 +75,31 @@ const initialValues = {
   datePicker: null,
   timePicker: null,
   dateTimePicker: null,
+  checkbox: false,
+  checkboxGroup: false,
+  radio: '',
+  radioGroup: '',
 }
 
-const countryOptions = [
-  { value: 'georgia', label: 'Georgia' },
-  { value: 'france', label: 'France' },
-  { value: 'spain', label: 'Spain' },
-]
-
-const currencyOptions = [
-  { value: 'gel', label: 'Georgian Lari' },
-  { value: 'usd', label: 'US Dollar' },
-  { value: 'gbp', label: 'British Pound' },
-]
-
-const cityOptions = [
-  { value: 'tbilisi', label: 'Tbilisi' },
-  { value: 'kutaisi', label: 'Kutaisi' },
-  { value: 'batumi', label: 'Batumi' },
-]
-
-const productOptions = [
-  { value: 'food', label: 'Food' },
-  { value: 'clothes', label: 'Clothes' },
-  { value: 'coffee', label: 'Coffee' },
-]
+const handleFormSubmit = (values: typeof initialValues, actions: any) => {
+  alert(JSON.stringify({ ...values }, null, 2))
+  actions.setSubmitting(true)
+  actions.resetForm()
+}
 
 const FormValidationsPage = () => {
   return (
     <ContentLayout label='Form Validations Page'>
       <div className='row'>
         <div className='col-6'>
-          <Formik
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={(values, { setSubmitting, resetForm }) => {
-              alert(JSON.stringify({ ...values }, null, 2))
-              resetForm()
-            }}
-          >
-            {({ resetForm }) => (
+          <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleFormSubmit}>
+            {(props: FormikProps<typeof initialValues>) => (
               <Form>
                 <Card
                   title='Formik Yup'
                   footerActions={
                     <>
-                      <Button variant='transparent' onClick={() => resetForm()}>
+                      <Button variant='transparent' onClick={() => props.resetForm()}>
                         Reset
                       </Button>
                       <Button type='submit'>Submit</Button>
@@ -138,6 +126,22 @@ const FormValidationsPage = () => {
                   <DatePickerValidator name='datePicker' label='Date Picker' />
                   <TimePickerValidator name='timePicker' label='Time Picker' />
                   <DateTimePickerValidator name='dateTimePicker' label='Date Time Picker' />
+                  <Divider />
+                  <RadioValidator name='radio' label='Mercedes' value='mercedes' />
+                  <Divider />
+                  <FormLabel>Sex</FormLabel>
+                  <RadioGroupValidator name='radioGroup'>
+                    <Radio label='Male' value='male' />
+                    <Radio label='Female' value='female' />
+                  </RadioGroupValidator>
+                  <Divider />
+                  <CheckboxValidator name='checkbox' label='Checkbox' />
+                  <Divider />
+                  <FormLabel>Form Label</FormLabel>
+                  <FormGroup row name='checkboxGroup'>
+                    <Checkbox label='Checkbox 1' />
+                    <Checkbox label='Checkbox 2' />
+                  </FormGroup>
                 </Card>
               </Form>
             )}
@@ -149,3 +153,27 @@ const FormValidationsPage = () => {
 }
 
 export default FormValidationsPage
+
+const countryOptions = [
+  { value: 'georgia', label: 'Georgia' },
+  { value: 'france', label: 'France' },
+  { value: 'spain', label: 'Spain' },
+]
+
+const currencyOptions = [
+  { value: 'gel', label: 'Georgian Lari' },
+  { value: 'usd', label: 'US Dollar' },
+  { value: 'gbp', label: 'British Pound' },
+]
+
+const cityOptions = [
+  { value: 'tbilisi', label: 'Tbilisi' },
+  { value: 'kutaisi', label: 'Kutaisi' },
+  { value: 'batumi', label: 'Batumi' },
+]
+
+const productOptions = [
+  { value: 'food', label: 'Food' },
+  { value: 'clothes', label: 'Clothes' },
+  { value: 'coffee', label: 'Coffee' },
+]
