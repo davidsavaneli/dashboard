@@ -21,15 +21,15 @@ export interface CustomRouterProps {
 }
 
 const CustomRoute = (items: IRouteItem[]) =>
-  items.map((route: IRouteItem, index: number) => (
-    <React.Fragment key={index}>
+  items.map((route: IRouteItem) => (
+    <React.Fragment key={route.path}>
       <Route key={route.path} path={route.path} element={route.element || <NoMatch />} />
       {route?.children?.length
-        ? route?.children.map((childRoute: IRouteItem) => (
-            <>
+        ? route.children.map((childRoute: IRouteItem) => (
+            <React.Fragment key={childRoute.path}>
               <Route key={childRoute.path} path={childRoute.path} element={childRoute.element || <NoMatch />} />
               {CustomRoute(childRoute?.children || [])}
-            </>
+            </React.Fragment>
           ))
         : null}
     </React.Fragment>
