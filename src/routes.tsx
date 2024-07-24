@@ -212,6 +212,13 @@ export const routes: IRoutes = {
               element: <CardPage />,
               children: [],
             },
+            {
+              name: 'Tooltip',
+              path: '/components/data-display/tooltip',
+              iconName: '',
+              element: <TooltipPage />,
+              children: [],
+            },
           ],
         },
         {

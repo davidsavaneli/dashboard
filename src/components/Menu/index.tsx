@@ -29,8 +29,8 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
     const handleClose = () => setAnchorEl(null)
 
     return (
-      <div>
-        <div style={{ display: 'inline-flex' }} onClick={handleClick}>
+      <>
+        <div className='MuiMenu-button-wrapper' onClick={handleClick}>
           {component}
         </div>
         <MuiMenu
@@ -54,7 +54,7 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
             </MenuItem>
           ))}
         </MuiMenu>
-      </div>
+      </>
     )
   },
 )
