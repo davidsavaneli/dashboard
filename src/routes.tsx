@@ -221,6 +221,13 @@ export const routes: IRoutes = {
           element: '',
           children: [
             {
+              name: 'Menu',
+              path: '/components/navigation/menu',
+              iconName: '',
+              element: <MenuPage />,
+              children: [],
+            },
+            {
               name: 'Speed Dial',
               path: '/components/navigation/speed-dial',
               iconName: '',

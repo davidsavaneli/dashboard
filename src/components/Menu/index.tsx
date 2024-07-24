@@ -1,4 +1,4 @@
-import { useState, ReactNode, cloneElement, MouseEvent, forwardRef } from 'react'
+import { useState, ReactNode, forwardRef } from 'react'
 import MuiMenu, { MenuProps as MuiMenuProps } from '@mui/material/Menu'
 import MenuItem from '../MenuItem'
 
@@ -23,12 +23,16 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
     const open = Boolean(anchorEl)
 
-    const handleClick = (event: MouseEvent<HTMLButtonElement>) => setAnchorEl(event.currentTarget)
+    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+      setAnchorEl(event.currentTarget)
+    }
     const handleClose = () => setAnchorEl(null)
 
     return (
       <div>
-        {cloneElement(component, { onClick: handleClick })}
+        <div style={{ display: 'inline-flex' }} onClick={handleClick}>
+          {component}
+        </div>
         <MuiMenu
           ref={ref}
           anchorEl={anchorEl}
