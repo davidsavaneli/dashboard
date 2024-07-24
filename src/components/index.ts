@@ -62,6 +62,9 @@ export { default as DateTimePickerValidator } from './ValidatorForms/DateTimePic
 export { default as Alert } from './Alert'
 export type { AlertProps } from './Alert'
 
+export { default as AlertTitle } from './AlertTitle'
+export type { AlertTitleProps } from './AlertTitle'
+
 export { default as Menu } from './Menu'
 export type { MenuProps } from './Menu'
 

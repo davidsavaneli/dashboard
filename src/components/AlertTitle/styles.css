@@ -1,0 +1,94 @@
+.MuiAlert-root {
+  font-size: var(--font-size-text-sm) !important;
+  color: var(--color-primary) !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  font-weight: var(--font-weight-regular) !important;
+  border-radius: var(--border-radius-sm) !important;
+  padding: var(--padding-xs) var(--padding-sm) !important;
+}
+
+.MuiAlert-filled {
+  color: var(--color-secondary) !important;
+}
+
+.MuiAlert-outlined,
+.MuiAlert-standard {
+  color: var(--color-primary) !important;
+}
+
+.MuiAlert-filled.MuiAlert-colorSuccess {
+  background-color: var(--color-success) !important;
+}
+
+.MuiAlert-filled.MuiAlert-colorError {
+  background-color: var(--color-error) !important;
+}
+
+.MuiAlert-filled.MuiAlert-colorInfo {
+  background-color: var(--color-info) !important;
+}
+
+.MuiAlert-filled.MuiAlert-colorWarning {
+  background-color: var(--color-warning) !important;
+}
+
+.MuiAlert-outlined.MuiAlert-colorSuccess {
+  background-color: transparent !important;
+  border-color: var(--color-success) !important;
+}
+
+.MuiAlert-outlined.MuiAlert-colorError {
+  background-color: transparent !important;
+  border-color: var(--color-error) !important;
+}
+
+.MuiAlert-outlined.MuiAlert-colorInfo {
+  background-color: transparent !important;
+  border-color: var(--color-info) !important;
+}
+
+.MuiAlert-outlined.MuiAlert-colorWarning {
+  background-color: transparent !important;
+  border-color: var(--color-warning) !important;
+}
+
+.MuiAlert-standard.MuiAlert-colorSuccess {
+  background-color: var(--color-success-shade200) !important;
+}
+
+.MuiAlert-standard.MuiAlert-colorError {
+  background-color: var(--color-error-shade200) !important;
+}
+
+.MuiAlert-standard.MuiAlert-colorInfo {
+  background-color: var(--color-info-shade200) !important;
+}
+
+.MuiAlert-standard.MuiAlert-colorWarning {
+  background-color: var(--color-warning-shade200) !important;
+}
+
+.MuiAlert-icon {
+  opacity: 1 !important;
+  padding: var(--padding-xs) 0 !important;
+  margin-right: var(--margin-sm) !important;
+}
+
+.MuiAlert-action {
+  padding: var(--padding-xs) 0 var(--padding-xs) var(--padding-sm) !important;
+  margin-right: 0 !important;
+  align-items: center !important;
+}
+
+.MuiAlert-action .MuiIconButton-root {
+  padding: 0 !important;
+  transition: transform var(--tr-dur) !important;
+}
+
+@media (hover: hover) {
+  .MuiAlert-action .MuiIconButton-root:hover {
+    background-color: transparent !important;
+    transform: scale(1.1) !important;
+  }
+}

@@ -250,6 +250,13 @@ export const routes: IRoutes = {
           element: '',
           children: [
             {
+              name: 'Alert',
+              path: '/components/forms/alert',
+              iconName: '',
+              element: <AlertPage />,
+              children: [],
+            },
+            {
               name: 'Circular Progress',
               path: '/components/forms/circular-progress',
               iconName: '',
