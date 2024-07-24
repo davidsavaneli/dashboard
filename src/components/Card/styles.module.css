@@ -15,12 +15,29 @@
   padding: var(--padding-sm) var(--padding-md);
   min-height: 70px;
   gap: var(--padding-sm);
+  transition: border-color var(--tr-dur);
+}
+
+.header.unExpanded {
+  border-color: transparent;
+}
+
+.cardTitle {
+  margin-right: auto;
 }
 
 .headerActions {
   display: flex;
   align-items: center;
   gap: var(--padding-sm);
+  transition:
+    opacity var(--tr-dur),
+    visibility var(--tr-dur);
+}
+
+.header.unExpanded .headerActions {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .footerActions {

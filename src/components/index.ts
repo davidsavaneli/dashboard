@@ -157,9 +157,6 @@ export type { NoDataProps } from './NoData'
 export { default as Collapse } from './Collapse'
 export type { CollapseProps } from './Collapse'
 
-export { default as CollapseCard } from './CollapseCard'
-export type { CollapseCardProps } from './CollapseCard'
-
 export { default as CircularProgress } from './CircularProgress'
 export type { CircularProgressProps } from './CircularProgress'
 

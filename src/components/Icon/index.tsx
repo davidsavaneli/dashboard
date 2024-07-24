@@ -74,6 +74,7 @@ import {
   TextalignCenter,
   Warning2,
   TickCircle,
+  RowVertical,
 } from 'iconsax-react'
 import styles from './styles.module.css'
 
@@ -151,6 +152,7 @@ const Icons = {
   TextalignCenter,
   Warning2,
   TickCircle,
+  RowVertical,
 }
 
 export type IconName = keyof typeof Icons

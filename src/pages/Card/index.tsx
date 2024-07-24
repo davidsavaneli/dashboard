@@ -1,8 +1,42 @@
-import { ContentLayout, Card, IconButton, Icon, Button } from '../../components'
+import { ContentLayout, Card, IconButton, Menu, Button } from '../../components'
 
 const CardPage = () => {
   return (
     <ContentLayout label='Card Component'>
+      <div className='row'>
+        <div className='col-6'>
+          <Card
+            collapse
+            title='Collapse Card'
+            headerActions={
+              <Menu
+                component={<IconButton iconName='More' />}
+                items={[
+                  {
+                    children: 'Today',
+                  },
+                  {
+                    children: 'Weekly',
+                  },
+                  {
+                    children: 'Monthly',
+                  },
+                ]}
+              />
+            }
+            footerActions={
+              <>
+                <Button variant='transparent'>Cancel</Button>
+                <Button onClick={() => console.log('Submit')}>Submit</Button>
+              </>
+            }
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic molestiae ex molestias adipisci quidem quos
+            modi eligendi impedit reprehenderit tempore voluptates tempora nostrum quibusdam temporibus id fugiat sunt,
+            odio unde.
+          </Card>
+        </div>
+      </div>
       <div className='row'>
         <div className='col-6'>
           <Card title='Default'>
