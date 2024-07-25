@@ -7,6 +7,7 @@ import {
   DatePickerValidator,
   DateTimePickerValidator,
   TimePickerValidator,
+  ColorPickerValidator,
   CheckboxValidator,
   RadioValidator,
   RadioGroup,
@@ -50,6 +51,7 @@ const validationSchema = yup.object({
   datePicker: yup.date().nullable().required('Date Picker is required'),
   timePicker: yup.date().nullable().required('Time Picker is required'),
   dateTimePicker: yup.date().nullable().required('Date Time Picker is required'),
+  color: yup.string().trim().required('Color Picker Required'),
   checkbox: yup.boolean().oneOf([true], 'Checkbox is required'),
   checkboxGroup: yup
     .array()
@@ -70,6 +72,7 @@ const initialValues = {
   datePicker: null,
   timePicker: null,
   dateTimePicker: null,
+  color: '',
   checkbox: false,
   checkboxGroup: [false, false, false],
   radio: '',
@@ -121,6 +124,7 @@ const FormValidationsPage = () => {
                   <DatePickerValidator name='datePicker' label='Date Picker' />
                   <TimePickerValidator name='timePicker' label='Time Picker' />
                   <DateTimePickerValidator name='dateTimePicker' label='Date Time Picker' />
+                  <ColorPickerValidator name='color' label='Color Picker' />
                   <Divider />
                   <RadioValidator name='radio' label='Mercedes' value='mercedes' />
                   <Divider />

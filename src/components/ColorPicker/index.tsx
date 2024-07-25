@@ -1,6 +1,7 @@
 import { useState, forwardRef } from 'react'
 import { MuiColorInput, MuiColorInputValue, MuiColorInputFormat } from 'mui-color-input'
 import FormLabel from '../FormLabel'
+import { TextFieldProps } from '../TextField'
 
 import './styles.css'
 
@@ -11,7 +12,7 @@ export type ColorPickerProps = {
   onChange?: (newValue: string) => void
   label?: string
   disabled?: boolean
-}
+} & Pick<TextFieldProps, 'name' | 'error' | 'helperText'>
 
 const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
   ({ format = 'hex8', fallbackValue, value, onChange, label, disabled = false, ...props }: ColorPickerProps, ref) => {
@@ -19,9 +20,7 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
 
     const handleChange = (newValue: string) => {
       setColor(newValue)
-      if (onChange) {
-        onChange(newValue)
-      }
+      onChange && onChange(newValue)
     }
 
     return (

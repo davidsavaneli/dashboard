@@ -85,6 +85,7 @@ export type { DividerProps } from './Divider'
 
 export { default as ColorPicker } from './ColorPicker'
 export type { ColorPickerProps } from './ColorPicker'
+export { default as ColorPickerValidator } from './ValidatorForms/ColorPickerValidator'
 
 export { default as Select } from './Select'
 export type { SelectProps } from './Select'

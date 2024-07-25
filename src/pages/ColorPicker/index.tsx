@@ -15,6 +15,14 @@ const ColorPickerPage = () => {
           </Card>
         </div>
       </div>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Errors'>
+            <ColorPicker label='Color Picker' error />
+            <ColorPicker label='Color Picker' error helperText='Helper Text' />
+          </Card>
+        </div>
+      </div>
     </ContentLayout>
   )
 }
