@@ -64,12 +64,7 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
               selected={selectedItem === index}
               disabled={item.disabled || item.divider}
               onClick={() => {
-                if (item.onClick) {
-                  item.onClick()
-                  setSelectedItem(index)
-                } else {
-                  setSelectedItem(index)
-                }
+                item.onClick && item.onClick()
                 item.disableClose !== true && handleClose()
               }}
             >
