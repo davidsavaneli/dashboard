@@ -64,18 +64,22 @@
 
 .MuiAlert-standard.MuiAlert-colorSuccess {
   background-color: var(--color-success-shade200) !important;
+  border: 1px solid var(--color-success-shade400) !important;
 }
 
 .MuiAlert-standard.MuiAlert-colorError {
   background-color: var(--color-error-shade200) !important;
+  border: 1px solid var(--color-error-shade400) !important;
 }
 
 .MuiAlert-standard.MuiAlert-colorInfo {
   background-color: var(--color-info-shade200) !important;
+  border: 1px solid var(--color-info-shade400) !important;
 }
 
 .MuiAlert-standard.MuiAlert-colorWarning {
   background-color: var(--color-warning-shade200) !important;
+  border: 1px solid var(--color-warning-shade400) !important;
 }
 
 .MuiAlert-icon {
