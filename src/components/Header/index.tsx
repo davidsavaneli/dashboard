@@ -2,7 +2,6 @@ import IconButton from '../IconButton'
 import Avatar from '../Avatar'
 import styles from './styles.module.css'
 import Menu from '../Menu'
-import Button from '../Button'
 import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'
 import Icon from '../Icon'
@@ -30,17 +29,28 @@ const Header = ({ label }: HeaderProps) => {
               children: (
                 <ListItem
                   disablePadding
-                  secondaryAction={<IconButton iconName='LogoutCurve' variant='filled' color='error' />}
+                  secondaryAction={
+                    <IconButton
+                      iconName='LogoutCurve'
+                      variant='filled'
+                      color='error'
+                      onClick={() => console.log('Log Out')}
+                    />
+                  }
                 >
                   <ListItemAvatar>
                     <Avatar size='lg' src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png'></Avatar>
                   </ListItemAvatar>
                   <ListItemText>
-                    <Text color='primary' weight='medium'>David Savaneli</Text>
+                    <Text color='primary' weight='medium'>
+                      David Savaneli
+                    </Text>
                     <Text size='xs'>UI/UX Designer</Text>
                   </ListItemText>
                 </ListItem>
               ),
+              disableClose: true,
+              nonClickable: true,
             },
             {
               divider: true,
@@ -66,6 +76,7 @@ const Header = ({ label }: HeaderProps) => {
                   Log Out
                 </ListItem>
               ),
+              onClick: () => console.log('Log Out'),
             },
           ]}
         />

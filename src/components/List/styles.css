@@ -5,17 +5,17 @@
   max-width: 450px !important;
 }
 
-.MuiMenu-width-sm .MuiList-root {
+.MuiMenu-sizeSm .MuiList-root {
   min-width: 180px !important;
   max-width: 380px !important;
 }
 
-.MuiMenu-width-md .MuiList-root {
+.MuiMenu-sizeMd .MuiList-root {
   min-width: 240px !important;
   max-width: 440px !important;
 }
 
-.MuiMenu-width-lg .MuiList-root {
+.MuiMenu-sizeLg .MuiList-root {
   min-width: 300px !important;
   max-width: 500px !important;
 }

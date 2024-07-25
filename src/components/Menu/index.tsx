@@ -1,14 +1,17 @@
+import React from 'react'
 import { useState, forwardRef, useEffect } from 'react'
 import clsx from 'clsx'
 import MuiMenu, { MenuProps as MuiMenuProps } from '@mui/material/Menu'
 import MenuItem, { MenuItemProps } from '../MenuItem'
 import Divider from '../Divider'
+import ListItem from '../ListItem'
 
 import './styles.css'
 
 type ItemProps = Omit<MenuItemProps, 'component' | 'dense' | 'divider' | 'autoFocus'> & {
   onClick?: () => void
   disableClose?: boolean
+  nonClickable?: boolean
   divider?: boolean
 }
 
@@ -31,9 +34,9 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
     ref,
   ) => {
     const classNames = clsx({
-      ['MuiMenu-width-sm']: widthSize === 'sm',
-      ['MuiMenu-width-md']: widthSize === 'md',
-      ['MuiMenu-width-lg']: widthSize === 'lg',
+      ['MuiMenu-sizeSm']: widthSize === 'sm',
+      ['MuiMenu-sizeMd']: widthSize === 'md',
+      ['MuiMenu-sizeLg']: widthSize === 'lg',
     })
 
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -69,6 +72,8 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
               key={index}
               className={clsx({
                 ['MuiMenuItem-divider']: item.divider,
+                ['MuiMenuItem-nonClickableListItem']:
+                  React.isValidElement(item.children) && item.children.type === ListItem && item.nonClickable,
               })}
               selected={selectedItem === index}
               disabled={item.disabled || item.divider}
