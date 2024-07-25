@@ -1,24 +1,110 @@
-import { ContentLayout, Card, Menu, Button } from '../../components'
+import { ContentLayout, Card, Menu, Button, IconButton } from '../../components'
 
 const MenuPage = () => {
   return (
-    <ContentLayout label='Menu Page'>
-      <Card title='Menu'>
-        <Menu
-          component={<Button>Menu Button</Button>}
-          items={[
-            {
-              children: <div>Element 1</div>,
-              onClick: () => console.log('Don`t close'),
-              disableClose: true,
-            },
-            {
-              children: <div>Element 2</div>,
-              onClick: () => console.log('Default close on click'),
-            },
-          ]}
-        />
-      </Card>
+    <ContentLayout label='Menu Component'>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Basic'>
+            <Menu
+              component={<Button>Menu Button</Button>}
+              items={[
+                {
+                  children: <div>Element 1</div>,
+                },
+                {
+                  children: <div>Element 2</div>,
+                },
+                {
+                  children: <div>Element 3</div>,
+                },
+              ]}
+            />
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Disable Close'>
+            <Menu
+              component={<IconButton iconName='More' />}
+              items={[
+                {
+                  children: <div>Element 1 (Disable Close)</div>,
+                  disableClose: true,
+                },
+                {
+                  children: <div>Element 2</div>,
+                },
+                {
+                  children: <div>Element 3</div>,
+                },
+              ]}
+            />
+          </Card>
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Default Selected'>
+            <Menu
+              component={<IconButton iconName='Setting2' />}
+              items={[
+                {
+                  children: <div>Element 1</div>,
+                  selected: true,
+                },
+                {
+                  children: <div>Element 2</div>,
+                },
+                {
+                  children: <div>Element 3</div>,
+                },
+              ]}
+            />
+          </Card>
+        </div>
+        <div className='col-6'>
+          <Card title='Disabled Menu Item'>
+            <Menu
+              component={<IconButton iconName='Filter' />}
+              items={[
+                {
+                  children: <div>Element 1</div>,
+                },
+                {
+                  children: <div>Element 2</div>,
+                  disabled: true,
+                },
+                {
+                  children: <div>Element 3</div>,
+                },
+              ]}
+            />
+          </Card>
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Divider'>
+            <Menu
+              component={<IconButton iconName='ArrowCircleDown' />}
+              items={[
+                {
+                  children: <div>Element 1</div>,
+                },
+                {
+                  children: <div>Element 2</div>,
+                },
+                {
+                  divider: true,
+                },
+                {
+                  children: <div>Element 3</div>,
+                },
+              ]}
+            />
+          </Card>
+        </div>
+      </div>
     </ContentLayout>
   )
 }

@@ -6,6 +6,7 @@
   background-color: var(--color-content-bg) !important;
   border-radius: var(--border-radius-sm) !important;
   box-shadow: var(--box-shadow-menu) !important;
+  margin-top: 4px !important;
 }
 
 .MuiList-root.MuiMenu-list {

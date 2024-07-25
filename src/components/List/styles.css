@@ -1,5 +1,6 @@
 .MuiList-root {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  min-width: 150px !important;
+  min-width: 160px !important;
+  max-width: 450px !important;
 }
