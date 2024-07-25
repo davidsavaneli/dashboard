@@ -2,10 +2,14 @@ import { ContentLayout, Card, TextEditor } from '../../components'
 
 const TextEditorPage = () => {
   return (
-    <ContentLayout label='Text Editor Page'>
-      <Card title='Text Editor'>
-        <TextEditor size='small' editorId='1' value='' placeholder='Description' onChange={(e) => console.log(e)} />
-      </Card>
+    <ContentLayout label='Text Editor Component'>
+      <div className='row'>
+        <div className='col-6'>
+          <Card title='Default'>
+            <TextEditor size='small' editorId='1' value='' placeholder='Description' onChange={(e) => console.log(e)} />
+          </Card>
+        </div>
+      </div>
     </ContentLayout>
   )
 }

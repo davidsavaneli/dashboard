@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
+import clsx from 'clsx'
 import ReactQuill, { Quill } from 'react-quill'
 // @ts-ignore
 import ImageResize from 'quill-image-resize-module-react'
 import textEditorContext from './TextEditorStore'
-import clsx from 'clsx'
 
 import 'react-quill/dist/quill.snow.css'
 import styles from './styles.module.css'

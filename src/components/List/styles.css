@@ -2,20 +2,16 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   min-width: 160px !important;
-  max-width: 450px !important;
 }
 
 .MuiMenu-sizeSm .MuiList-root {
   min-width: 180px !important;
-  max-width: 380px !important;
 }
 
 .MuiMenu-sizeMd .MuiList-root {
   min-width: 240px !important;
-  max-width: 440px !important;
 }
 
 .MuiMenu-sizeLg .MuiList-root {
   min-width: 300px !important;
-  max-width: 500px !important;
 }

@@ -151,6 +151,13 @@ export const routes: IRoutes = {
               children: [],
             },
             {
+              name: 'Text Editor',
+              path: '/components/forms/text-editor',
+              iconName: '',
+              element: <TextEditorPage />,
+              children: [],
+            },
+            {
               name: 'Form Validations',
               path: '/components/forms/form-validations',
               iconName: '',
