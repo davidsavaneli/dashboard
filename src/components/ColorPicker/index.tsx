@@ -1,6 +1,8 @@
 import { useState, forwardRef } from 'react'
 import { MuiColorInput, MuiColorInputValue, MuiColorInputFormat } from 'mui-color-input'
-import FormControl from '../FormControl'
+import FormLabel from '../FormLabel'
+
+import './styles.css'
 
 export type ColorPickerProps = {
   format?: MuiColorInputFormat
@@ -23,7 +25,8 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
     }
 
     return (
-      <FormControl>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        {label && <FormLabel>{label}</FormLabel>}
         <MuiColorInput
           ref={ref}
           adornmentPosition={'end'}
@@ -31,11 +34,10 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
           fallbackValue={fallbackValue}
           value={color}
           onChange={handleChange}
-          label={label}
           disabled={disabled}
           {...props}
         />
-      </FormControl>
+      </div>
     )
   },
 )
