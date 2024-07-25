@@ -128,6 +128,7 @@
 
   --box-shadow-card: 0px 6px 24px var(--color-primary-shade200);
   --box-shadow-menu: 0px 4px 14px var(--color-primary-shade400);
+  --box-shadow-toast: 0px 4px 14px var(--color-primary-shade200);
 
   --box-shadow-primary: 0px 4px 12px var(--color-primary-shade200);
   --box-shadow-primaryLight: 0px 4px 12px var(--color-primaryLight-shade200);

@@ -1,4 +1,3 @@
-import HomePage from './pages/Home'
 import ButtonPage from './pages/Button'
 import IconButtonPage from './pages/IconButton'
 import ToggleButtonPage from './pages/ToggleButton'
@@ -22,7 +21,6 @@ import ColorPickerPage from './pages/ColorPicker'
 import NumberInputPage from './pages/NumberInput'
 import ChipPage from './pages/Chip'
 import TextEditorPage from './pages/TextEditor'
-import DividerPage from './pages/Divider'
 import IconPage from './pages/Icon'
 import TitlePage from './pages/Title'
 import TextPage from './pages/Text'
@@ -30,7 +28,6 @@ import AlertPage from './pages/Alert'
 import ToastPage from './pages/Toast'
 import LinearProgressPage from './pages/LinearProgress'
 import CircularProgressPage from './pages/CircularProgress'
-import LoaderLayoutPage from './pages/LoaderLayout'
 import MenuPage from './pages/Menu'
 import PaginationPage from './pages/Pagination'
 import TabsPage from './pages/Tabs'
@@ -252,6 +249,13 @@ export const routes: IRoutes = {
               path: '/components/forms/alert',
               iconName: '',
               element: <AlertPage />,
+              children: [],
+            },
+            {
+              name: 'Toast',
+              path: '/components/forms/toast',
+              iconName: '',
+              element: <ToastPage />,
               children: [],
             },
             {

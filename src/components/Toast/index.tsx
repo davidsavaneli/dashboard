@@ -2,6 +2,7 @@ import { toast, ToastContent, ToastOptions } from 'react-toastify'
 import Icon from '../Icon'
 
 import 'react-toastify/dist/ReactToastify.css'
+import './styles.css'
 
 const createToasts = (
   position: ToastOptions['position'] = 'bottom-right',

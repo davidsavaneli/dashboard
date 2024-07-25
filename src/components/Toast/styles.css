@@ -1,0 +1,7 @@
+.Toastify__toast {
+  border-radius: var(--border-radius-sm) !important;
+  box-shadow: var(--box-shadow-toast) !important;
+  margin-bottom: 8px !important;
+  padding: 14px 14px 14px 5px !important;
+  min-height: inherit !important;
+}
