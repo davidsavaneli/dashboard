@@ -57,9 +57,13 @@ const isSelected = (path: string) => {
 
 const listItemArrowComponent = (open: boolean) =>
   open ? (
-    <Icon name='ArrowUp2' size='sm' color='primaryLight' />
+    <div className={styles.arrowIcon}>
+      <Icon name='ArrowUp2' size='sm' color='primaryLight' />
+    </div>
   ) : (
-    <Icon name='ArrowDown2' size='sm' color='primaryLight' />
+    <div className={styles.arrowIcon}>
+      <Icon name='ArrowDown2' size='sm' color='primaryLight' />
+    </div>
   )
 
 const listItemTextComponent = (itemName: string, selected: boolean) => (

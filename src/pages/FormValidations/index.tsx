@@ -133,10 +133,10 @@ const FormValidationsPage = () => {
                     <RadioValidator name='radioGroup' label='Male' value='male' />
                     <RadioValidator name='radioGroup' label='Female' value='female' />
                     <RadioValidator name='radioGroup' label='Other' value='other' />
-                    {props.errors.radioGroup && props.touched.radioGroup && (
-                      <FormHelperText error>{props.errors.radioGroup}</FormHelperText>
-                    )}
                   </RadioGroup>
+                  {props.errors.radioGroup && props.touched.radioGroup && (
+                    <FormHelperText error>{props.errors.radioGroup}</FormHelperText>
+                  )}
                   <Divider />
                   <CheckboxValidator name='checkbox' label='Checkbox' />
                   <Divider />
@@ -145,10 +145,10 @@ const FormValidationsPage = () => {
                     <CheckboxValidator name='checkboxGroup[0]' label='Checkbox 1' />
                     <CheckboxValidator name='checkboxGroup[1]' label='Checkbox 2' />
                     <CheckboxValidator name='checkboxGroup[2]' label='Checkbox 3' />
-                    {props.errors.checkboxGroup && props.touched.checkboxGroup && (
-                      <FormHelperText error>{props.errors.checkboxGroup}</FormHelperText>
-                    )}
                   </FormGroup>
+                  {props.errors.checkboxGroup && props.touched.checkboxGroup && (
+                    <FormHelperText error>{props.errors.checkboxGroup}</FormHelperText>
+                  )}
                 </Card>
               </Form>
             )}

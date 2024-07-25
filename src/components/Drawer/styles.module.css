@@ -72,3 +72,7 @@
 .drawerItemDotActive {
   background-color: var(--color-medium);
 }
+
+.arrowIcon {
+  margin-left: var(--margin-sm);
+}
