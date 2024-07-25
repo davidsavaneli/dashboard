@@ -22,13 +22,12 @@ const Header = ({ label }: HeaderProps) => {
       </div>
       <div>
         <Menu
-          widthSize='md'
-          component={<Avatar src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png'></Avatar>}
+          size='md'
+          component={<Avatar src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png' size='lg'></Avatar>}
           items={[
             {
               children: (
                 <ListItem
-                  disablePadding
                   secondaryAction={
                     <IconButton
                       iconName='LogoutCurve'
@@ -39,7 +38,7 @@ const Header = ({ label }: HeaderProps) => {
                   }
                 >
                   <ListItemAvatar>
-                    <Avatar size='lg' src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png'></Avatar>
+                    <Avatar src='https://ableproadmin.com/react/assets/avatar-6-Cv0iCdgR.png' size='lg'></Avatar>
                   </ListItemAvatar>
                   <ListItemText>
                     <Text color='primary' weight='medium'>
@@ -49,27 +48,47 @@ const Header = ({ label }: HeaderProps) => {
                   </ListItemText>
                 </ListItem>
               ),
-              disableClose: true,
               nonClickable: true,
             },
             {
               divider: true,
             },
             {
-              children: <RouterLink to='./dashboard'>Dashboard</RouterLink>,
+              children: (
+                <ListItem>
+                  <ListItemIcon>
+                    <Icon name='HomeTrendUp' />
+                  </ListItemIcon>
+                  Dashboard
+                </ListItem>
+              ),
             },
             {
-              children: <>Profile</>,
+              children: (
+                <ListItem>
+                  <ListItemIcon>
+                    <Icon name='User' />
+                  </ListItemIcon>
+                  Profile
+                </ListItem>
+              ),
             },
             {
-              children: <>UI Elements</>,
+              children: (
+                <ListItem>
+                  <ListItemIcon>
+                    <Icon name='Box1' />
+                  </ListItemIcon>
+                  UI Elements
+                </ListItem>
+              ),
             },
             {
               divider: true,
             },
             {
               children: (
-                <ListItem disablePadding>
+                <ListItem>
                   <ListItemIcon>
                     <Icon name='LogoutCurve' />
                   </ListItemIcon>

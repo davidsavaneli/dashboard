@@ -47,18 +47,3 @@
 .MuiMenuItem-root.MuiMenuItem-divider {
   opacity: 1 !important;
 }
-
-.MuiMenuItem-root.MuiMenuItem-nonClickableListItem {
-  pointer-events: none !important;
-  background-color: transparent !important;
-}
-
-.MuiMenuItem-root.MuiMenuItem-nonClickableListItem * {
-  pointer-events: auto !important;
-}
-
-@media (hover: hover) {
-  .MuiMenuItem-root.MuiMenuItem-nonClickableListItem:hover {
-    background-color: transparent !important;
-  }
-}

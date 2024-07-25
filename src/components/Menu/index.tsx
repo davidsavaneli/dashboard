@@ -16,7 +16,7 @@ type ItemProps = Omit<MenuItemProps, 'component' | 'dense' | 'divider' | 'autoFo
 }
 
 export type MenuProps = Omit<MuiMenuProps, 'open'> & {
-  widthSize?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg'
   component: any
   items: Array<ItemProps>
 }
@@ -26,7 +26,7 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
     {
       component,
       items,
-      widthSize = 'sm',
+      size = 'sm',
       transformOrigin = { horizontal: 'right', vertical: 'top' },
       anchorOrigin = { horizontal: 'right', vertical: 'bottom' },
       ...props
@@ -34,9 +34,9 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
     ref,
   ) => {
     const classNames = clsx({
-      ['MuiMenu-sizeSm']: widthSize === 'sm',
-      ['MuiMenu-sizeMd']: widthSize === 'md',
-      ['MuiMenu-sizeLg']: widthSize === 'lg',
+      ['MuiMenu-sizeSm']: size === 'sm',
+      ['MuiMenu-sizeMd']: size === 'md',
+      ['MuiMenu-sizeLg']: size === 'lg',
     })
 
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -67,25 +67,28 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
           anchorOrigin={anchorOrigin}
           {...props}
         >
-          {items.map((item, index) => (
-            <MenuItem
-              key={index}
-              className={clsx({
-                ['MuiMenuItem-divider']: item.divider,
-                ['MuiMenuItem-nonClickableListItem']:
-                  React.isValidElement(item.children) && item.children.type === ListItem && item.nonClickable,
-              })}
-              selected={selectedItem === index}
-              disabled={item.disabled || item.divider}
-              onClick={() => {
-                item.onClick && item.onClick()
-                item.disableClose !== true && handleClose()
-              }}
-            >
-              {item.children}
-              {item.divider && <Divider />}
-            </MenuItem>
-          ))}
+          {items.map((item, index) =>
+            React.isValidElement(item.children) && item.children.type === ListItem && item.nonClickable ? (
+              item.children
+            ) : (
+              <MenuItem
+                key={index}
+                className={clsx({
+                  ['MuiMenuItem-divider']: item.divider,
+                  ['MuiMenuItem-listItem']: React.isValidElement(item.children) && item.children.type === ListItem,
+                })}
+                selected={selectedItem === index}
+                disabled={item.disabled || item.divider}
+                onClick={() => {
+                  item.onClick && item.onClick()
+                  item.disableClose !== true && handleClose()
+                }}
+              >
+                {item.children}
+                {item.divider && <Divider />}
+              </MenuItem>
+            ),
+          )}
         </MuiMenu>
       </>
     )

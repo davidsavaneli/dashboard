@@ -9,3 +9,19 @@
 .MuiListItemSecondaryAction-root .MuiIconButton-root {
   margin-right: 0 !important;
 }
+
+.MuiMenu-sizeSm .MuiListItem-root {
+  padding: 8px 16px !important;
+}
+
+.MuiMenu-sizeMd .MuiListItem-root {
+  padding: 10px 16px !important;
+}
+
+.MuiMenu-sizeLg .MuiListItem-root {
+  padding: 12px 16px !important;
+}
+
+.MuiMenuItem-listItem .MuiListItem-root {
+  padding: 0 !important;
+}

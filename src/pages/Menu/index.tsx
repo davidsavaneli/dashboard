@@ -135,6 +135,48 @@ const MenuPage = () => {
             />
           </Card>
         </div>
+        <div className='col-6'>
+          <Card title='Sizes'>
+            <Menu
+              size='sm'
+              component={<Button>Small</Button>}
+              items={[
+                {
+                  children: <div>Element 1</div>,
+                },
+                {
+                  children: <div>Element 2</div>,
+                },
+              ]}
+            />
+            &nbsp;&nbsp;
+            <Menu
+              size='md'
+              component={<Button>Medium</Button>}
+              items={[
+                {
+                  children: <div>Element 1</div>,
+                },
+                {
+                  children: <div>Element 2</div>,
+                },
+              ]}
+            />
+            &nbsp;&nbsp;
+            <Menu
+              size='lg'
+              component={<Button>Large</Button>}
+              items={[
+                {
+                  children: <div>Element 1</div>,
+                },
+                {
+                  children: <div>Element 2</div>,
+                },
+              ]}
+            />
+          </Card>
+        </div>
       </div>
     </ContentLayout>
   )
