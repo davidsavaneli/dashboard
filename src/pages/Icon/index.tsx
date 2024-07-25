@@ -67,6 +67,16 @@ const IconPage = () => {
         <br />
         <Text>Variant: Linear / Outline / Bold / Bulk / Broken / TwoTone</Text>
       </Card>
+      <Card title='Label'>
+        <Icon name='Calendar' size='lg' label='Label' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Calendar' size='md' label='Label' />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Icon name='Calendar' size='sm' label='Label' />
+        <br />
+        <br />
+        <Text>Variant: Linear / Outline / Bold / Bulk / Broken / TwoTone</Text>
+      </Card>
     </ContentLayout>
   )
 }

@@ -13,6 +13,7 @@ type ItemProps = Omit<MenuItemProps, 'component' | 'dense' | 'divider' | 'autoFo
 }
 
 export type MenuProps = Omit<MuiMenuProps, 'open'> & {
+  widthSize?: 'sm' | 'md' | 'lg'
   component: any
   items: Array<ItemProps>
 }
@@ -22,12 +23,19 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
     {
       component,
       items,
+      widthSize = 'sm',
       transformOrigin = { horizontal: 'right', vertical: 'top' },
       anchorOrigin = { horizontal: 'right', vertical: 'bottom' },
       ...props
     }: MenuProps,
     ref,
   ) => {
+    const classNames = clsx({
+      ['MuiMenu-width-sm']: widthSize === 'sm',
+      ['MuiMenu-width-md']: widthSize === 'md',
+      ['MuiMenu-width-lg']: widthSize === 'lg',
+    })
+
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
     const [selectedItem, setSelectedItem] = useState<number | null>(null)
 
@@ -48,6 +56,7 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
         </div>
         <MuiMenu
           ref={ref}
+          className={classNames}
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}

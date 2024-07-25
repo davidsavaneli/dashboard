@@ -1,0 +1,11 @@
+.MuiListItemSecondaryAction-root {
+  position: relative !important;
+  top: 0 !important;
+  transform: translateY(0) !important;
+  right: 0 !important;
+  margin-left: 50px !important;
+}
+
+.MuiListItemSecondaryAction-root .MuiIconButton-root {
+  margin-right: 0 !important;
+}

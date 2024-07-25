@@ -1,4 +1,14 @@
-import { ContentLayout, Card, Menu, Button, IconButton } from '../../components'
+import {
+  ContentLayout,
+  Card,
+  Menu,
+  Button,
+  IconButton,
+  Icon,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from '../../components'
 
 const MenuPage = () => {
   return (
@@ -10,13 +20,34 @@ const MenuPage = () => {
               component={<Button>Menu Button</Button>}
               items={[
                 {
-                  children: <div>Element 1</div>,
+                  children: (
+                    <ListItem disablePadding>
+                      <ListItemIcon>
+                        <Icon name='Home' />
+                      </ListItemIcon>
+                      Sample
+                    </ListItem>
+                  ),
                 },
                 {
-                  children: <div>Element 2</div>,
+                  children: (
+                    <ListItem disablePadding>
+                      <ListItemIcon>
+                        <Icon name='Setting2' />
+                      </ListItemIcon>
+                      UI Elements
+                    </ListItem>
+                  ),
                 },
                 {
-                  children: <div>Element 3</div>,
+                  children: (
+                    <ListItem disablePadding>
+                      <ListItemIcon>
+                        <Icon name='Filter' />
+                      </ListItemIcon>
+                      Filter
+                    </ListItem>
+                  ),
                 },
               ]}
             />

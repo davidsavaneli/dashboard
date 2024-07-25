@@ -4,3 +4,18 @@
   min-width: 160px !important;
   max-width: 450px !important;
 }
+
+.MuiMenu-width-sm .MuiList-root {
+  min-width: 180px !important;
+  max-width: 380px !important;
+}
+
+.MuiMenu-width-md .MuiList-root {
+  min-width: 240px !important;
+  max-width: 440px !important;
+}
+
+.MuiMenu-width-lg .MuiList-root {
+  min-width: 300px !important;
+  max-width: 500px !important;
+}

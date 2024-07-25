@@ -1,10 +1,11 @@
 .MuiMenu-button-wrapper {
   display: inline-flex !important;
+  cursor: pointer !important;
 }
 
 .MuiMenu-paper {
   background-color: var(--color-content-bg) !important;
-  border-radius: var(--border-radius-sm) !important;
+  border-radius: var(--border-radius-md) !important;
   box-shadow: var(--box-shadow-menu) !important;
   margin-top: 4px !important;
 }

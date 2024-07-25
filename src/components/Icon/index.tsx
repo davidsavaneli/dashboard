@@ -1,5 +1,6 @@
 import { IconProps as IconsaxIconProps } from 'iconsax-react'
 import clsx from 'clsx'
+import Text, { TextProps } from '../Text'
 import {
   Home,
   Home2,
@@ -76,6 +77,7 @@ import {
   TickCircle,
   RowVertical,
 } from 'iconsax-react'
+
 import styles from './styles.module.css'
 
 const Icons = {
@@ -172,9 +174,10 @@ export interface IconProps extends IconsaxIconProps {
     | 'warning'
   size?: 'sm' | 'md' | 'lg'
   variant?: 'Linear' | 'Outline' | 'Broken' | 'Bold' | 'Bulk' | 'TwoTone'
+  label?: string
 }
 
-const Icon = ({ name, size = 'md', color = 'primary', variant = 'Linear', ...props }: IconProps) => {
+const Icon = ({ name, size = 'md', color = 'primary', variant = 'Linear', label, ...props }: IconProps) => {
   const IconComponent = Icons[name]
 
   const classNames = clsx(styles.icon, {
@@ -193,7 +196,31 @@ const Icon = ({ name, size = 'md', color = 'primary', variant = 'Linear', ...pro
     [styles.sizeLg]: size === 'lg',
   })
 
-  return IconComponent ? <IconComponent className={classNames} variant={variant} {...props} /> : null
+  return IconComponent ? (
+    <div className={styles.iconBox}>
+      <IconComponent className={classNames} variant={variant} {...props} />
+      {label && (
+        <div className={styles.label}>
+          <Text size={getLabelSize(size)} color={color}>
+            {label}
+          </Text>
+        </div>
+      )}
+    </div>
+  ) : null
 }
 
 export default Icon
+
+const getLabelSize = (size: string): TextProps['size'] => {
+  switch (size) {
+    case 'sm':
+      return 'xs'
+    case 'md':
+      return 'sm'
+    case 'lg':
+      return 'md'
+    default:
+      return 'sm'
+  }
+}
