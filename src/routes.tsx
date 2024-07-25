@@ -3,9 +3,6 @@ import IconButtonPage from './pages/IconButton'
 import ToggleButtonPage from './pages/ToggleButton'
 import SpeedDialPage from './pages/SpeedDial'
 import AvatarPage from './pages/Avatar'
-import NoDataPage from './pages/NoData'
-import RouterLinkPage from './pages/RouterLink'
-import LinkPage from './pages/Link'
 import BadgePage from './pages/Badge'
 import TooltipPage from './pages/Tooltip'
 import CheckboxPage from './pages/Checkbox'
@@ -17,22 +14,25 @@ import AutocompletePage from './pages/Autocomplete'
 import DatePickerPage from './pages/DatePicker'
 import TimePickerPage from './pages/TimePicker'
 import DateTimePickerPage from './pages/DateTimePicker'
-import ColorPickerPage from './pages/ColorPicker'
-import NumberInputPage from './pages/NumberInput'
 import ChipPage from './pages/Chip'
-import TextEditorPage from './pages/TextEditor'
 import IconPage from './pages/Icon'
 import TitlePage from './pages/Title'
 import TextPage from './pages/Text'
 import AlertPage from './pages/Alert'
 import ToastPage from './pages/Toast'
-import LinearProgressPage from './pages/LinearProgress'
 import CircularProgressPage from './pages/CircularProgress'
 import MenuPage from './pages/Menu'
-import PaginationPage from './pages/Pagination'
-import TabsPage from './pages/Tabs'
 import CardPage from './pages/Card'
 import FormValidationsPage from './pages/FormValidations'
+import ColorPickerPage from './pages/ColorPicker'
+import NoDataPage from './pages/NoData'
+import RouterLinkPage from './pages/RouterLink'
+import LinkPage from './pages/Link'
+import PaginationPage from './pages/Pagination'
+import TabsPage from './pages/Tabs'
+import LinearProgressPage from './pages/LinearProgress'
+import TextEditorPage from './pages/TextEditor'
+import NumberInputPage from './pages/NumberInput'
 
 import { IRoutes } from './router'
 
@@ -141,6 +141,13 @@ export const routes: IRoutes = {
               path: '/components/forms/date-time-picker',
               iconName: '',
               element: <DateTimePickerPage />,
+              children: [],
+            },
+            {
+              name: 'Color Picker',
+              path: '/components/forms/color-picker',
+              iconName: '',
+              element: <ColorPickerPage />,
               children: [],
             },
             {

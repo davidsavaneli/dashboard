@@ -75,7 +75,10 @@ import {
   Warning2,
   TickCircle,
   RowVertical,
+  Translate,
+  LanguageSquare,
 } from 'iconsax-react'
+
 import styles from './styles.module.css'
 
 const Icons = {
@@ -153,6 +156,8 @@ const Icons = {
   Warning2,
   TickCircle,
   RowVertical,
+  Translate,
+  LanguageSquare,
 }
 
 export type IconName = keyof typeof Icons

@@ -69,7 +69,7 @@ const Menu = forwardRef<HTMLDivElement, MenuProps>(
         >
           {items.map((item, index) =>
             React.isValidElement(item.children) && item.children.type === ListItem && item.nonClickable ? (
-              item.children
+              <div key={index}>{item.children}</div>
             ) : (
               <MenuItem
                 key={index}
