@@ -67,6 +67,7 @@ const UserMenu = () => (
           <ListItem
             secondaryAction={
               <IconButton
+                tooltipTitle='Logout'
                 iconName='LogoutCurve'
                 variant='filled'
                 color='error'
@@ -119,10 +120,10 @@ const UserMenu = () => (
             <ListItemIcon>
               <Icon name='LogoutCurve' color='primaryLight' />
             </ListItemIcon>
-            Log Out
+            Logout
           </ListItem>
         ),
-        onClick: () => console.log('Log Out'),
+        onClick: () => console.log('Logout'),
       },
     ]}
   />
