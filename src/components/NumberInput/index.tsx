@@ -3,9 +3,7 @@ import IconButton from '../IconButton'
 import TextField from '../TextField'
 import InputAdornment from '../InputAdornment'
 
-const isWholeNumber = (num: number): boolean => {
-  return num % 1 === 0
-}
+const isWholeNumber = (num: number): boolean => num % 1 === 0
 
 export interface NumberInputProps {
   label?: string
