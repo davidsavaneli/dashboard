@@ -112,19 +112,18 @@
   --color-warning-shade800: rgba(var(--color-warning-rgb), 0.9);
 
   /* General */
+  --font-family: 'Inter var';
+  --color-text-primary: var(--color-primary);
+  --drawer-width: 290px;
+  --header-height: 80px;
+
+  --tr-dur: 0.2s;
+
   --color-body-bg: var(--color-secondary);
   --color-drawer-bg: var(--color-secondary);
   --color-content-bg: var(--color-secondary);
   --color-header-bg: var(--color-secondary-shade600);
   --color-line-primary: var(--color-primary-shade200);
-  --color-line-secondary: var(--color-primary-shade200);
-
-  --font-family: 'Inter var';
-  --color-text-primary: var(--color-primary);
-  --drawer-width: 300px;
-  --header-height: 74px;
-
-  --tr-dur: 0.2s;
 
   --box-shadow-card: 0px 6px 24px var(--color-primary-shade200);
   --box-shadow-menu: 0px 4px 16px var(--color-primary-shade300);

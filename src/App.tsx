@@ -47,11 +47,11 @@ const LanguageIcon = () => (
     component={<IconButton iconName='Global' variant='filled' iconVariant='Bulk' />}
     items={[
       {
-        children: <div>English (EN)</div>,
+        children: <div>(EN) English</div>,
         selected: true,
       },
       {
-        children: <div>Georgian (KA)</div>,
+        children: <div>(KA) Georgian</div>,
       },
     ]}
   />

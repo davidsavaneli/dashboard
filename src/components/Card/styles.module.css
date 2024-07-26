@@ -1,7 +1,7 @@
 .card {
   position: relative;
   background-color: var(--color-content-bg);
-  border: 1px solid var(--color-line-secondary);
+  border: 1px solid var(--color-line-primary);
   border-radius: var(--border-radius-md);
   box-shadow: var(--box-shadow-card);
   /* background-color: #000; */
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--color-line-secondary);
+  border-bottom: 1px solid var(--color-line-primary);
   padding: var(--padding-sm) var(--padding-md);
   min-height: 70px;
   gap: var(--padding-sm);
@@ -44,7 +44,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-top: 1px dashed var(--color-line-secondary);
+  border-top: 1px dashed var(--color-line-primary);
   padding: var(--padding-sm) var(--padding-md);
   min-height: 70px;
   gap: var(--padding-sm);
