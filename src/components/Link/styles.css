@@ -1,0 +1,11 @@
+.MuiLink-root {
+  font-size: var(--font-size-text-sm) !important;
+  color: var(--color-primaryLight) !important;
+  transition: color var(--tr-dur) !important;
+}
+
+@media (hover: hover) {
+  .MuiLink-root:hover {
+    color: var(--color-primary) !important;
+  }
+}

@@ -25,16 +25,16 @@ import MenuPage from './pages/Menu'
 import CardPage from './pages/Card'
 import FormValidationsPage from './pages/FormValidations'
 import ColorPickerPage from './pages/ColorPicker'
+import TextEditorPage from './pages/TextEditor'
+import UseThemePage from './pages/UseTheme'
+import UseMediaQueryPage from './pages/UseMediaQuery'
 import NoDataPage from './pages/NoData'
 import RouterLinkPage from './pages/RouterLink'
 import LinkPage from './pages/Link'
 import PaginationPage from './pages/Pagination'
 import TabsPage from './pages/Tabs'
 import LinearProgressPage from './pages/LinearProgress'
-import TextEditorPage from './pages/TextEditor'
 import NumberInputPage from './pages/NumberInput'
-import UseThemePage from './pages/UseTheme'
-import UseMediaQueryPage from './pages/UseMediaQuery'
 
 import { IRoutes } from './router'
 
@@ -250,6 +250,20 @@ export const routes: IRoutes = {
               path: '/components/navigation/speed-dial',
               iconName: '',
               element: <SpeedDialPage />,
+              children: [],
+            },
+            {
+              name: 'Router Link',
+              path: '/components/navigation/router-link',
+              iconName: '',
+              element: <RouterLinkPage />,
+              children: [],
+            },
+            {
+              name: 'Link',
+              path: '/components/navigation/link',
+              iconName: '',
+              element: <LinkPage />,
               children: [],
             },
           ],
