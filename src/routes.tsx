@@ -34,6 +34,7 @@ import LinearProgressPage from './pages/LinearProgress'
 import TextEditorPage from './pages/TextEditor'
 import NumberInputPage from './pages/NumberInput'
 import UseThemePage from './pages/UseTheme'
+import UseMediaQueryPage from './pages/UseMediaQuery'
 
 import { IRoutes } from './router'
 
@@ -301,24 +302,8 @@ export const routes: IRoutes = {
           name: 'useMediaQuery',
           path: '/hooks/use-media-query',
           iconName: '',
-          element: <>useMediaQuery Page</>,
-          children: [
-            {
-              name: 'useMediaQuery inner',
-              path: '/hooks/use-media-query/inner',
-              iconName: '',
-              element: <>useMediaQuery Page inner</>,
-              children: [
-                {
-                  name: 'useMediaQuery inner 2',
-                  path: '/hooks/use-media-query/inner/inner',
-                  iconName: '',
-                  element: <>useMediaQuery Page inner 2</>,
-                  children: [],
-                },
-              ],
-            },
-          ],
+          element: <UseMediaQueryPage />,
+          children: [],
         },
       ],
     },

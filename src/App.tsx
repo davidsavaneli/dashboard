@@ -18,15 +18,18 @@ import { routes } from './routes'
 
 import logoSrc from './assets/images/logo.svg'
 
-const App = () => (
-  <MainLayout
-    drawer={<Drawer routes={routes} openFirstLevel logo={logoSrc} logoAltText='Techzy'></Drawer>}
-    header={<Header burgerMenuIcon={<BurgerMenuIcon />} languageIcon={<LanguageIcon />} userMenu={<UserMenu />} />}
-    breadcrumbs={<Breadcrumbs routes={routes} />}
-  >
-    <CustomRouter routes={routes} />
-  </MainLayout>
-)
+const App = () => {
+
+  return (
+    <MainLayout
+      drawer={<Drawer routes={routes} openFirstLevel logo={logoSrc} logoAltText='Techzy'></Drawer>}
+      header={<Header burgerMenuIcon={<BurgerMenuIcon />} languageIcon={<LanguageIcon />} userMenu={<UserMenu />} />}
+      breadcrumbs={<Breadcrumbs routes={routes} />}
+    >
+      <CustomRouter routes={routes} />
+    </MainLayout>
+  )
+}
 
 export default App
 
