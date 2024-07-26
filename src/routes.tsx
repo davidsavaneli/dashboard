@@ -28,13 +28,13 @@ import ColorPickerPage from './pages/ColorPicker'
 import TextEditorPage from './pages/TextEditor'
 import UseThemePage from './pages/UseTheme'
 import UseMediaQueryPage from './pages/UseMediaQuery'
-import NoDataPage from './pages/NoData'
 import RouterLinkPage from './pages/RouterLink'
 import LinkPage from './pages/Link'
+import NumberInputPage from './pages/NumberInput'
+import NoDataPage from './pages/NoData'
 import PaginationPage from './pages/Pagination'
 import TabsPage from './pages/Tabs'
 import LinearProgressPage from './pages/LinearProgress'
-import NumberInputPage from './pages/NumberInput'
 
 import { IRoutes } from './router'
 
@@ -150,6 +150,13 @@ export const routes: IRoutes = {
               path: '/components/forms/color-picker',
               iconName: '',
               element: <ColorPickerPage />,
+              children: [],
+            },
+            {
+              name: 'Number Input',
+              path: '/components/forms/number-input',
+              iconName: '',
+              element: <NumberInputPage />,
               children: [],
             },
             {

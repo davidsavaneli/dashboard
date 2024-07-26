@@ -1,33 +1,28 @@
 import { ChangeEvent, useState, forwardRef } from 'react'
+import IconButton from '../IconButton'
+import TextField from '../TextField'
+import InputAdornment from '../InputAdornment'
 
 const isWholeNumber = (num: number): boolean => {
   return num % 1 === 0
 }
 
 export interface NumberInputProps {
+  label?: string
   disabled?: boolean
   value: number
   max: number
   min?: number
   onValueChange: (val: number) => void
-}
-
-interface QtyButtonProps {
-  disabled: boolean
-  icon: string
-  onClick: () => void
-}
-
-const QtyButton = ({ disabled, icon, onClick }: QtyButtonProps) => {
-  return (
-    <button onClick={onClick} disabled={disabled}>
-      {icon}
-    </button>
-  )
+  error?: boolean
+  helperText?: string
 }
 
 const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
-  ({ disabled = false, value = 0, onValueChange, min = 0, max = 0 }: NumberInputProps, ref) => {
+  (
+    { label, disabled = false, value = 0, onValueChange, min = 0, max = 0, error, helperText }: NumberInputProps,
+    ref,
+  ) => {
     if (min > max) {
       throw new Error('min must be less than max')
     }
@@ -69,30 +64,27 @@ const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
       updateState(value)
     }
 
-    const onFocus = (e: ChangeEvent<HTMLInputElement>) => {
-      if (!e.target.valueAsNumber) e.target.value = ''
-    }
-
-    const onBlur = (e: ChangeEvent<HTMLInputElement>) => {
-      if (!e.target.value) {
-        updateState(min)
-        if (min === 0) e.target.valueAsNumber = 0
-      }
-    }
-
     return (
-      <div>
-        <QtyButton icon='-' onClick={handleQtyDec} disabled={isMin} />
-        <input
-          ref={ref}
-          value={localValue}
-          type='number'
-          onChange={handleQtyChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-        />
-        <QtyButton icon='+' onClick={handleQtyInc} disabled={isMax} />
-      </div>
+      <TextField
+        ref={ref}
+        className='MuiTextField-withIcon'
+        label={label}
+        value={localValue}
+        type='number'
+        onChange={handleQtyChange}
+        disabled={disabled}
+        InputProps={{
+          [`endAdornment`]: (
+            <InputAdornment position='end'>
+              <IconButton iconName='Minus' onClick={handleQtyDec} variant='filled' disabled={isMin || disabled} />
+              &nbsp;
+              <IconButton iconName='Add' onClick={handleQtyInc} variant='filled' disabled={isMax || disabled} />
+            </InputAdornment>
+          ),
+        }}
+        error={error}
+        helperText={helperText}
+      />
     )
   },
 )
