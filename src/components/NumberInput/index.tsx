@@ -13,7 +13,7 @@ export interface NumberInputProps {
   value: number
   max: number
   min?: number
-  onValueChange: (val: number) => void
+  onValueChange?: (val: number) => void
   error?: boolean
   helperText?: string
 }
@@ -35,7 +35,7 @@ const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
 
     const updateState = (val: number) => {
       setLocalValue(val)
-      onValueChange(val)
+      onValueChange && onValueChange(val)
     }
 
     const handleQtyInc = () => {
