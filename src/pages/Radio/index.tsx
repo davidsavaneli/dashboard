@@ -45,8 +45,8 @@ const RadioPage = () => {
           <Card title='Group'>
             <FormLabel>Form Label</FormLabel>
             <RadioGroup>
-              <Radio label='Radio 1' />
-              <Radio label='Radio 2' />
+              <Radio label='Radio 1' value={1} />
+              <Radio label='Radio 2' value={2} />
             </RadioGroup>
           </Card>
         </div>
@@ -54,8 +54,8 @@ const RadioPage = () => {
           <Card title='Group Row'>
             <FormLabel>Form Label</FormLabel>
             <RadioGroup row>
-              <Radio label='Radio 1' />
-              <Radio label='Radio 2' />
+              <Radio label='Radio 1' value={1} />
+              <Radio label='Radio 2' value={2} />
             </RadioGroup>
           </Card>
         </div>
