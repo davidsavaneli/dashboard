@@ -33,6 +33,7 @@ import TabsPage from './pages/Tabs'
 import LinearProgressPage from './pages/LinearProgress'
 import TextEditorPage from './pages/TextEditor'
 import NumberInputPage from './pages/NumberInput'
+import UseThemePage from './pages/UseTheme'
 
 import { IRoutes } from './router'
 
@@ -290,9 +291,16 @@ export const routes: IRoutes = {
       element: '',
       children: [
         {
+          name: 'useTheme',
+          path: '/hooks/use-theme',
+          iconName: '',
+          element: <UseThemePage />,
+          children: [],
+        },
+        {
           name: 'useMediaQuery',
           path: '/hooks/use-media-query',
-          iconName: 'HambergerMenu',
+          iconName: '',
           element: <>useMediaQuery Page</>,
           children: [
             {
@@ -311,13 +319,6 @@ export const routes: IRoutes = {
               ],
             },
           ],
-        },
-        {
-          name: 'useLocalStorage',
-          path: '/hooks/use-local-storage',
-          iconName: 'TickSquare',
-          element: <>useLocalStorage Page</>,
-          children: [],
         },
       ],
     },

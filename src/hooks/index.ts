@@ -1,1 +1,2 @@
-export { default as useClickEvent } from './useClickEvent'
+export { default as useMediaQuery } from './useMediaQuery'
+export { default as useTheme } from './useTheme'

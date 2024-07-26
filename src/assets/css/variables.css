@@ -180,3 +180,18 @@
   --font-size-title-xl: 24px;
   --font-size-title-xxl: 28px;
 }
+
+/* Dark Theme */
+
+html.dark:root {
+  --color-primary-rgb: 255, 255, 255;
+  --color-primaryLight-rgb: 180, 180, 180;
+  --color-secondary-rgb: 20, 20, 20;
+  --color-dark-rgb: 18, 127, 139;
+  --color-medium-rgb: 42, 161, 175;
+  --color-light-rgb: 113, 198, 201;
+  --color-success-rgb: 0, 168, 84;
+  --color-error-rgb: 240, 65, 52;
+  --color-info-rgb: 0, 162, 174;
+  --color-warning-rgb: 255, 191, 0;
+}
