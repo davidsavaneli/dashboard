@@ -12,6 +12,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Text,
+  ThemeSwitcher,
 } from './components'
 import CustomRouter from './router'
 import { routes } from './routes'
@@ -19,11 +20,17 @@ import { routes } from './routes'
 import logoSrc from './assets/images/logo.svg'
 
 const App = () => {
-
   return (
     <MainLayout
       drawer={<Drawer routes={routes} openFirstLevel logo={logoSrc} logoAltText='Techzy'></Drawer>}
-      header={<Header burgerMenuIcon={<BurgerMenuIcon />} languageIcon={<LanguageIcon />} userMenu={<UserMenu />} />}
+      header={
+        <Header
+          burgerMenuIcon={<BurgerMenuIcon />}
+          languageIcon={<LanguageIcon />}
+          themeSwitcherIcon={<ThemeSwitcher />}
+          userMenu={<UserMenu />}
+        />
+      }
       breadcrumbs={<Breadcrumbs routes={routes} />}
     >
       <CustomRouter routes={routes} />
@@ -33,11 +40,11 @@ const App = () => {
 
 export default App
 
-const BurgerMenuIcon = () => <IconButton iconName='HambergerMenu' variant='filled' />
+const BurgerMenuIcon = () => <IconButton iconName='HambergerMenu' variant='filled' iconVariant='Bulk' />
 
 const LanguageIcon = () => (
   <Menu
-    component={<IconButton iconName='Global' />}
+    component={<IconButton iconName='Global' variant='filled' iconVariant='Bulk' />}
     items={[
       {
         children: <div>English (EN)</div>,

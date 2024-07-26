@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import LocalizationProvider from '../LocalizationProvider'
 import ToastContainer from '../ToastContainer'
-import { useTheme } from '../../hooks'
+import { ThemeProvider } from '../../hooks'
 
 import styles from './styles.module.css'
 
@@ -13,10 +13,8 @@ export type MainLayoutProps = {
 }
 
 const MainLayout = ({ children, header, drawer, breadcrumbs }: MainLayoutProps) => {
-  const {} = useTheme()
-
   return (
-    <>
+    <ThemeProvider>
       <LocalizationProvider>
         <div className={styles.container}>
           {drawer}
@@ -30,7 +28,7 @@ const MainLayout = ({ children, header, drawer, breadcrumbs }: MainLayoutProps) 
         </div>
       </LocalizationProvider>
       <ToastContainer />
-    </>
+    </ThemeProvider>
   )
 }
 

@@ -30,6 +30,9 @@ export type { FormControlProps } from './FormControl'
 export { default as Switch } from './Switch'
 export type { SwitchProps } from './Switch'
 
+export { default as ThemeSwitcher } from './ThemeSwitcher'
+export type { ThemeSwitcherProps } from './ThemeSwitcher'
+
 export { default as TextField } from './TextField'
 export type { TextFieldProps } from './TextField'
 export { default as TextFieldValidator } from './ValidatorForms/TextFieldValidator'

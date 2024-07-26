@@ -77,6 +77,8 @@ import {
   RowVertical,
   Translate,
   LanguageSquare,
+  Sun1,
+  Moon,
 } from 'iconsax-react'
 
 import styles from './styles.module.css'
@@ -158,6 +160,8 @@ const Icons = {
   RowVertical,
   Translate,
   LanguageSquare,
+  Sun1,
+  Moon,
 }
 
 export type IconName = keyof typeof Icons
