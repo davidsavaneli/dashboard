@@ -1,3 +1,4 @@
 .MuiDivider-root {
   margin: var(--margin-sm) 0 !important;
+  border-color: var(--color-line-secondary) !important;
 }

@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Button } from '../../components'
+import { ContentLayout, Button } from '../../components'
 import { useTheme } from '../../hooks'
 
 const UseThemePage = () => {
@@ -6,13 +6,7 @@ const UseThemePage = () => {
 
   return (
     <ContentLayout label='useDarkMode Hook'>
-      <div className='row'>
-        <div className='col-6'>
-          <Card title='Default'>
-            <Button onClick={toggleTheme}>{theme === 'light' ? 'Dark Theme' : 'Light Theme'}</Button>
-          </Card>
-        </div>
-      </div>
+      <Button onClick={toggleTheme}>{theme === 'light' ? 'Dark Theme' : 'Light Theme'}</Button>
     </ContentLayout>
   )
 }
