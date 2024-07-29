@@ -20,7 +20,7 @@ const NumberInput: React.FC<NumberInputProps> = ({
   name,
   value = 0,
   min = 0,
-  max = 100,
+  max = 999999,
   onChange,
   error,
   helperText,
