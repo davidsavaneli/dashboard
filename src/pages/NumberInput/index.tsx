@@ -6,7 +6,7 @@ const NumberInputPage = () => {
       <div className='row'>
         <div className='col-6'>
           <Card title='Default'>
-            <NumberInput label='Label' max={1000} value={0} onValueChange={(e) => console.log(e)} />
+            <NumberInput label='Label' max={1000} value={0} onChange={(e) => console.log(e)} />
           </Card>
         </div>
         <div className='col-6'>

@@ -6,12 +6,12 @@ import InputAdornment from '../../InputAdornment'
 import IconButton from '../../IconButton'
 import TimePicker from '../../TimePicker'
 
-type TimePickerComponentProps = {
+type TimePickerValidatorProps = {
   name: string
   label?: string
 }
 
-const TimePickerValidator: React.FC<TimePickerComponentProps> = ({ name, label }) => {
+const TimePickerValidator: React.FC<TimePickerValidatorProps> = ({ name, label }) => {
   const { setFieldValue } = useFormikContext()
   const [field, meta] = useField(name as string)
 

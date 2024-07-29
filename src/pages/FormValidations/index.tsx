@@ -8,6 +8,7 @@ import {
   DateTimePickerValidator,
   TimePickerValidator,
   ColorPickerValidator,
+  NumberInputValidator,
   CheckboxValidator,
   RadioValidator,
   RadioGroup,
@@ -59,6 +60,7 @@ const validationSchema = yup.object({
     .test('at-least-one-checked', 'At least one checkbox must be checked', (value) => value?.includes(true) || false),
   radio: yup.string().required('Radio is required'),
   radioGroup: yup.string().required('Radio Group is required'),
+  count: yup.number().required('Number Input is required').min(1, 'min 1'),
 })
 
 const initialValues = {
@@ -77,6 +79,7 @@ const initialValues = {
   checkboxGroup: [false, false, false],
   radio: '',
   radioGroup: '',
+  count: 0,
 }
 
 const handleFormSubmit = (values: typeof initialValues, actions: any) => {
@@ -125,6 +128,7 @@ const FormValidationsPage = () => {
                   <TimePickerValidator name='timePicker' label='Time Picker' />
                   <DateTimePickerValidator name='dateTimePicker' label='Date Time Picker' />
                   <ColorPickerValidator name='color' label='Color Picker' />
+                  <NumberInputValidator name='count' label='Number Input' />
                   <Divider />
                   <RadioValidator name='radio' label='Mercedes' value='mercedes' />
                   <Divider />

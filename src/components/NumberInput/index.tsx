@@ -8,17 +8,18 @@ const isWholeNumber = (num: number): boolean => num % 1 === 0
 export interface NumberInputProps {
   label?: string
   disabled?: boolean
-  value: number
-  max: number
+  value?: number
+  max?: number
   min?: number
-  onValueChange?: (val: number) => void
+  onChange?: (val: number) => void
   error?: boolean
   helperText?: string
+  name?: string
 }
 
 const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
   (
-    { label, disabled = false, value = 0, onValueChange, min = 0, max = 0, error, helperText }: NumberInputProps,
+    { label, disabled = false, value = 0, onChange, min = 0, max = 999999, error, helperText }: NumberInputProps,
     ref,
   ) => {
     if (min > max) {
@@ -33,7 +34,7 @@ const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
 
     const updateState = (val: number) => {
       setLocalValue(val)
-      onValueChange && onValueChange(val)
+      onChange && onChange(val)
     }
 
     const handleQtyInc = () => {

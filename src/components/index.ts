@@ -101,6 +101,7 @@ export type { LoaderLayoutProps } from './LoaderLayout'
 
 export { default as NumberInput } from './NumberInput'
 export type { NumberInputProps } from './NumberInput'
+export { default as NumberInputValidator } from './ValidatorForms/NumberInputValidator'
 
 export { default as TextEditor } from './TextEditor'
 export type { TextEditorProps } from './TextEditor'
