@@ -17,6 +17,7 @@ import {
   FormGroup,
   FormHelperText,
   Button,
+  Space,
 } from '../../components'
 
 import { Formik, Form, FormikProps } from 'formik'
@@ -107,28 +108,52 @@ const FormValidationsPage = () => {
                     </>
                   }
                 >
-                  <TextFieldValidator label='First Name (Text Field)' name='firstName' />
-                  <TextFieldValidator label='Email (Text Field)' name='email' />
-                  <TextFieldValidator label='Phone Number (Text Field)' name='phoneNumber' />
+                  <Space>
+                    <TextFieldValidator label='First Name (Text Field)' name='firstName' />
+                  </Space>
+                  <Space>
+                    <TextFieldValidator label='Email (Text Field)' name='email' />
+                  </Space>
+                  <Space>
+                    <TextFieldValidator label='Phone Number (Text Field)' name='phoneNumber' />
+                  </Space>
+                  <Space>
                   <SelectValidator label='Select Country (Single Select)' options={countryOptions} name='country' />
+                  </Space>
+                  <Space>
                   <SelectValidator
                     label='Select Currencies (Multiple Select)'
                     options={currencyOptions}
                     multiple
                     name='currency'
                   />
+                  </Space>
+                  <Space>
                   <AutocompleteValidator label='Select City (Single Autocomplete)' options={cityOptions} name='city' />
+                  </Space>
+                  <Space>
                   <AutocompleteValidator
                     label='Select Product (Multiple Autocomplete)'
                     options={productOptions}
                     multiple
                     name='product'
                   />
+                  </Space>
+                  <Space>
                   <DatePickerValidator name='datePicker' label='Date Picker' />
+                  </Space>
+                  <Space>
                   <TimePickerValidator name='timePicker' label='Time Picker' />
+                  </Space>
+                  <Space>
                   <DateTimePickerValidator name='dateTimePicker' label='Date Time Picker' />
+                  </Space>
+                  <Space>
                   <ColorPickerValidator name='color' label='Color Picker' />
+                  </Space>
+                  <Space>
                   <NumberInputValidator name='count' label='Number Input' />
+                  </Space>
                   <Divider />
                   <RadioValidator name='radio' label='Mercedes' value='mercedes' />
                   <Divider />

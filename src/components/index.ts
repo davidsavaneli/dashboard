@@ -213,6 +213,9 @@ export type { ListItemIconProps } from './ListItemIcon'
 export { default as ListItemText } from './ListItemText'
 export type { ListItemTextProps } from './ListItemText'
 
+export { default as Space } from './Space'
+export type { SpaceProps } from './Space'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 
