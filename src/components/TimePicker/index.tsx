@@ -4,6 +4,8 @@ import {
 } from '@mui/x-date-pickers/MobileTimePicker'
 import dayjs from 'dayjs'
 import TextField from '../TextField'
+import InputAdornment from '../InputAdornment'
+import IconButton from '../IconButton'
 
 export interface TimePickerProps extends MuiTimePickerProps<dayjs.Dayjs> {
   format?: string
@@ -19,7 +21,20 @@ const TimePicker = ({ format = 'HH:mm', ampm = false, error = false, helperText,
       format={format}
       ampm={ampm}
       slots={{
-        textField: (params) => <TextField {...params} error={error} helperText={helperText} />,
+        textField: (params) => (
+          <TextField
+            {...params}
+            error={error}
+            helperText={helperText}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position='end'>
+                  <IconButton iconName='Clock' />
+                </InputAdornment>
+              ),
+            }}
+          />
+        ),
       }}
       {...props}
     />

@@ -4,6 +4,8 @@ import {
 } from '@mui/x-date-pickers/MobileDatePicker'
 import dayjs from 'dayjs'
 import TextField from '../TextField'
+import InputAdornment from '../InputAdornment'
+import IconButton from '../IconButton'
 
 export interface DatePickerProps extends MuiDatePickerProps<dayjs.Dayjs> {
   format?: string
@@ -17,7 +19,20 @@ const DatePicker = ({ format = 'DD/MM/YYYY', error = false, helperText, ...props
       className='MuiTextField-withIcon'
       format={format}
       slots={{
-        textField: (params) => <TextField {...params} error={error} helperText={helperText} />,
+        textField: (params) => (
+          <TextField
+            {...params}
+            error={error}
+            helperText={helperText}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position='end'>
+                  <IconButton iconName='Calendar' />
+                </InputAdornment>
+              ),
+            }}
+          />
+        ),
       }}
       {...props}
     />

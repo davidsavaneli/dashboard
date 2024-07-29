@@ -35,7 +35,7 @@ const TimePickerValidator: React.FC<TimePickerComponentProps> = ({ name, label }
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Calendar' />
+                  <IconButton iconName='Clock' />
                 </InputAdornment>
               ),
             }}

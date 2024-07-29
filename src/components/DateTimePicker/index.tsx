@@ -4,7 +4,8 @@ import {
 } from '@mui/x-date-pickers/MobileDateTimePicker'
 import dayjs from 'dayjs'
 import TextField from '../TextField'
-import Icon from '../Icon'
+import InputAdornment from '../InputAdornment'
+import IconButton from '../IconButton'
 
 export interface DateTimePickerProps extends MuiDateTimePickerProps<dayjs.Dayjs> {
   format?: string
@@ -26,7 +27,20 @@ const DateTimePicker = ({
       format={format}
       ampm={ampm}
       slots={{
-        textField: (params) => <TextField {...params} error={error} helperText={helperText} />,
+        textField: (params) => (
+          <TextField
+            {...params}
+            error={error}
+            helperText={helperText}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position='end'>
+                  <IconButton iconName='Calendar' />
+                </InputAdornment>
+              ),
+            }}
+          />
+        ),
       }}
       {...props}
     />
