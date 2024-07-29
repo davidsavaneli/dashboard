@@ -1,91 +1,77 @@
-import { ChangeEvent, useState, forwardRef } from 'react'
+import React, { useState, useEffect, ChangeEvent } from 'react'
+import TextField, { TextFieldProps } from '../TextField'
 import IconButton from '../IconButton'
-import TextField from '../TextField'
 import InputAdornment from '../InputAdornment'
 
-const isWholeNumber = (num: number): boolean => num % 1 === 0
-
-export interface NumberInputProps {
-  label?: string
-  disabled?: boolean
+export type NumberInputProps = TextFieldProps & {
+  label?: TextFieldProps['label']
+  name?: TextFieldProps['name']
   value?: number
-  max?: number
   min?: number
-  onChange?: (val: number) => void
+  max?: number
+  onChange?: (value: number) => void
   error?: boolean
-  helperText?: string
-  name?: string
+  helperText?: TextFieldProps['helperText']
+  disabled?: TextFieldProps['disabled']
 }
 
-const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
-  (
-    { label, disabled = false, value = 0, onChange, min = 0, max = 999999, error, helperText }: NumberInputProps,
-    ref,
-  ) => {
-    if (min > max) {
-      throw new Error('min must be less than max')
+const NumberInput: React.FC<NumberInputProps> = ({
+  label,
+  name,
+  value = 0,
+  min = 0,
+  max = 100,
+  onChange,
+  error,
+  helperText,
+  disabled,
+}) => {
+  const [val, setVal] = useState<number>(value)
+
+  useEffect(() => setVal(value ?? 0), [value])
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const newValue = Number(event.target.value)
+
+    if (!isNaN(newValue)) {
+      const clampedValue = Math.max(min, Math.min(newValue, max))
+      onChange ? onChange(clampedValue) : setVal(clampedValue)
     }
+  }
 
-    const [localValue, setLocalValue] = useState<number | undefined>(
-      value !== undefined ? Math.max(min, Math.min(max, value)) : undefined,
-    )
-    const isMax = localValue === max
-    const isMin = localValue === min
+  const increaseValue = () => {
+    const newValue = Math.min(val + 1, max)
+    onChange ? onChange(newValue) : setVal(newValue)
+  }
 
-    const updateState = (val: number) => {
-      setLocalValue(val)
-      onChange && onChange(val)
-    }
+  const decreaseValue = () => {
+    const newValue = Math.max(val - 1, min)
+    onChange ? onChange(newValue) : setVal(newValue)
+  }
 
-    const handleQtyInc = () => {
-      if (localValue === undefined) updateState(min)
-      else if (localValue < max) updateState(localValue + 1)
-    }
-
-    const handleQtyDec = () => {
-      if (localValue === undefined) updateState(min)
-      else if (localValue > min) updateState(localValue - 1)
-    }
-
-    const handleQtyChange = (e: ChangeEvent<HTMLInputElement>) => {
-      const value = e.target.valueAsNumber
-
-      if (!value) {
-        return setLocalValue(undefined)
-      } else if (!isWholeNumber(value)) {
-        return
-      } else if (value > max) {
-        return updateState(max)
-      } else if (value < min) {
-        return updateState(min)
-      }
-
-      updateState(value)
-    }
-
-    return (
-      <TextField
-        ref={ref}
-        className='MuiTextField-withIcon'
-        label={label}
-        value={localValue}
-        type='number'
-        onChange={handleQtyChange}
-        disabled={disabled}
-        InputProps={{
-          [`endAdornment`]: (
-            <InputAdornment position='end'>
-              <IconButton iconName='Minus' onClick={handleQtyDec} variant='filled' disabled={isMin || disabled} />
-              &nbsp;
-              <IconButton iconName='Add' onClick={handleQtyInc} variant='filled' disabled={isMax || disabled} />
-            </InputAdornment>
-          ),
-        }}
-        error={error}
-        helperText={helperText}
-      />
-    )
-  },
-)
+  return (
+    <TextField
+      className='MuiTextField-withIcon'
+      type='number'
+      label={label}
+      name={name}
+      value={val}
+      onChange={handleChange}
+      inputProps={{ min, max, step: 1 }}
+      InputProps={{
+        endAdornment: (
+          <InputAdornment position='end'>
+            <IconButton iconName='Minus' onClick={decreaseValue} variant='filled' disabled={val <= min || disabled} />
+            &nbsp;
+            <IconButton iconName='Add' onClick={increaseValue} variant='filled' disabled={val >= max || disabled} />
+          </InputAdornment>
+        ),
+      }}
+      disabled={disabled}
+      error={error}
+      helperText={helperText}
+    />
+  )
+}
 
 export default NumberInput

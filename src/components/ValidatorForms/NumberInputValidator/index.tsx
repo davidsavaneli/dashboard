@@ -1,15 +1,20 @@
 import { useField } from 'formik'
 import NumberInput, { NumberInputProps } from '../../NumberInput'
 
-const NumberInputValidator = ({ ...props }: NumberInputProps) => {
-  const [field, mata, helpers] = useField(props.name as string)
+const NumberInputValidator = ({ label, ...props }: NumberInputProps) => {
+  const [field, meta, helpers] = useField(props.name as string)
 
-  if (mata && mata.touched && mata.error) {
-    props.error = true
-    props.helperText = mata.error
-  }
-
-  return <NumberInput {...field} {...props} onChange={(e) => helpers.setValue(e)} />
+  return (
+    <NumberInput
+      label={label}
+      name={props.name}
+      value={field.value}
+      onChange={(value) => helpers.setValue(value)}
+      error={meta.touched && !!meta.error}
+      helperText={meta.touched && meta.error ? meta.error : undefined}
+      disabled={props.disabled}
+    />
+  )
 }
 
 export default NumberInputValidator

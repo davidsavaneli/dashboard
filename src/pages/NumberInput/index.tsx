@@ -6,12 +6,12 @@ const NumberInputPage = () => {
       <div className='row'>
         <div className='col-6'>
           <Card title='Default'>
-            <NumberInput label='Label' max={1000} value={0} onChange={(e) => console.log(e)} />
+            <NumberInput />
           </Card>
         </div>
         <div className='col-6'>
           <Card title='Min - 5 / Max - 10'>
-            <NumberInput label='Label' max={10} min={5} value={0} />
+            <NumberInput  max={10} min={5} value={7} />
           </Card>
         </div>
       </div>
