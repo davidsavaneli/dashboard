@@ -4,28 +4,13 @@ import IconButton from '../IconButton'
 import InputAdornment from '../InputAdornment'
 
 export type NumberInputProps = TextFieldProps & {
-  label?: TextFieldProps['label']
-  name?: TextFieldProps['name']
   value?: number
   min?: number
   max?: number
   onChange?: (value: number) => void
-  error?: boolean
-  helperText?: TextFieldProps['helperText']
-  disabled?: TextFieldProps['disabled']
 }
 
-const NumberInput: React.FC<NumberInputProps> = ({
-  label,
-  name,
-  value = 0,
-  min = 0,
-  max = 999999,
-  onChange,
-  error,
-  helperText,
-  disabled,
-}) => {
+const NumberInput: React.FC<NumberInputProps> = ({ value = 0, min = 0, max = 999999, onChange, ...props }) => {
   const [val, setVal] = useState<number>(value)
 
   useEffect(() => setVal(value ?? 0), [value])
@@ -53,23 +38,29 @@ const NumberInput: React.FC<NumberInputProps> = ({
     <TextField
       className='MuiTextField-withIcon'
       type='number'
-      label={label}
-      name={name}
       value={val}
       onChange={handleChange}
       inputProps={{ min, max, step: 1 }}
       InputProps={{
         endAdornment: (
           <InputAdornment position='end'>
-            <IconButton iconName='Minus' onClick={decreaseValue} variant='filled' disabled={val <= min || disabled} />
+            <IconButton
+              iconName='Minus'
+              onClick={decreaseValue}
+              variant='filled'
+              disabled={val <= min || props.disabled}
+            />
             &nbsp;
-            <IconButton iconName='Add' onClick={increaseValue} variant='filled' disabled={val >= max || disabled} />
+            <IconButton
+              iconName='Add'
+              onClick={increaseValue}
+              variant='filled'
+              disabled={val >= max || props.disabled}
+            />
           </InputAdornment>
         ),
       }}
-      disabled={disabled}
-      error={error}
-      helperText={helperText}
+      {...props}
     />
   )
 }
