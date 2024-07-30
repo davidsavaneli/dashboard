@@ -255,7 +255,7 @@ export const routes: IRoutes = {
             },
             {
               name: 'Tabs',
-              path: '/components/navigation/tabs',
+              path: '/components/navigation/tabs/*',
               iconName: '',
               element: <TabsPage />,
               children: [],
