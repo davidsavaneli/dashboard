@@ -175,7 +175,7 @@ export { default as Drawer } from './Drawer'
 export type { DrawerProps } from './Drawer'
 
 export { default as Header } from './Header'
-export type { HeaderProps } from './Header'
+export type { HeaderProps, UserMenuItemsProps } from './Header'
 
 export { default as ContentLayout } from './ContentLayout'
 export type { ContentLayoutProps } from './ContentLayout'

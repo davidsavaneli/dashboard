@@ -79,6 +79,7 @@ import {
   LanguageSquare,
   Sun1,
   Moon,
+  ProfileCircle,
 } from 'iconsax-react'
 
 import styles from './styles.module.css'
@@ -162,6 +163,7 @@ const Icons = {
   LanguageSquare,
   Sun1,
   Moon,
+  ProfileCircle,
 }
 
 export type IconName = keyof typeof Icons
