@@ -254,6 +254,13 @@ export const routes: IRoutes = {
               children: [],
             },
             {
+              name: 'Tabs',
+              path: '/components/navigation/tabs',
+              iconName: '',
+              element: <TabsPage />,
+              children: [],
+            },
+            {
               name: 'Speed Dial',
               path: '/components/navigation/speed-dial',
               iconName: '',

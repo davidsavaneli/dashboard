@@ -54,5 +54,5 @@
 
 .MuiDialogContent-root {
   position: relative !important;
-  padding: var(--padding-lg) var(--padding-md) !important;
+  padding: var(--padding-md) var(--padding-md) var(--padding-lg) var(--padding-md) !important;
 }
