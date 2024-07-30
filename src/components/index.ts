@@ -216,6 +216,9 @@ export type { ListItemTextProps } from './ListItemText'
 export { default as Space } from './Space'
 export type { SpaceProps } from './Space'
 
+export { default as Dialog } from './Dialog'
+export type { DialogProps } from './Dialog'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 

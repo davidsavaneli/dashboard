@@ -4,7 +4,6 @@
   border: 1px solid var(--color-line-primary);
   border-radius: var(--border-radius-md);
   box-shadow: var(--box-shadow-card);
-  /* background-color: #000; */
 }
 
 .header {

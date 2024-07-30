@@ -31,6 +31,7 @@ import UseMediaQueryPage from './pages/UseMediaQuery'
 import RouterLinkPage from './pages/RouterLink'
 import LinkPage from './pages/Link'
 import NumberInputPage from './pages/NumberInput'
+import DialogPage from './pages/Dialog'
 import NoDataPage from './pages/NoData'
 import PaginationPage from './pages/Pagination'
 import TabsPage from './pages/Tabs'
@@ -281,6 +282,13 @@ export const routes: IRoutes = {
           iconName: 'I3Square',
           element: '',
           children: [
+            {
+              name: 'Dialog',
+              path: '/components/forms/dialog',
+              iconName: '',
+              element: <DialogPage />,
+              children: [],
+            },
             {
               name: 'Alert',
               path: '/components/forms/alert',

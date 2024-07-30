@@ -1,0 +1,58 @@
+.MuiDialog-paper {
+  background-color: var(--color-content-bg) !important;
+  border: 1px solid var(--color-line-primary) !important;
+  border-radius: var(--border-radius-md) !important;
+  box-shadow: var(--box-shadow-card) !important;
+  max-width: 600px !important;
+}
+
+.MuiDialog-sizeSm .MuiDialog-paper {
+  max-width: 400px !important;
+}
+
+.MuiDialog-sizeMd .MuiDialog-paper {
+  max-width: 600px !important;
+}
+
+.MuiDialog-sizeLg .MuiDialog-paper {
+  max-width: 900px !important;
+}
+
+.MuiDialog-sizeXl .MuiDialog-paper {
+  max-width: 1200px !important;
+}
+
+.MuiDialogTitle-root {
+  font-weight: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  padding: var(--padding-sm) var(--padding-md) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-bottom: 1px solid var(--color-line-primary) !important;
+  gap: var(--padding-sm) !important;
+}
+
+.MuiDialogTitle-root .MuiDialog-closeIcon svg {
+  transform: rotate(45deg) !important;
+}
+
+.MuiDialogActions-root {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  border-top: 1px dashed var(--color-line-primary) !important;
+  padding: var(--padding-sm) var(--padding-md) !important;
+  gap: var(--padding-sm) !important;
+}
+
+.MuiDialogActions-root > * {
+  margin: 0 !important;
+}
+
+.MuiDialogContent-root {
+  position: relative !important;
+  padding: var(--padding-lg) var(--padding-md) !important;
+}

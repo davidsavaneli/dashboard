@@ -1,45 +1,37 @@
-import { forwardRef, useState } from 'react'
+import { ReactNode } from 'react'
+import clsx from 'clsx'
 import MuiDialog, { DialogProps as MuiDialogProps } from '@mui/material/Dialog'
-import MuiDialogTitle from '@mui/material/Dialog'
-import Icon from '../Icon'
+import MuiDialogTitle from '@mui/material/DialogTitle'
+import MuiDialogContent from '@mui/material/DialogContent'
+import MuiDialogActions from '@mui/material/DialogActions'
+import Title from '../Title'
+import IconButton from '../IconButton'
 
 import './styles.css'
 
-export interface DialogProps extends MuiDialogProps {}
+export interface DialogProps extends Omit<MuiDialogProps, 'title'> {
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+  title?: string
+  actions?: ReactNode
+  onClose: () => void
+}
 
-const Dialog = () => {
-  const [open, setOpen] = useState(false)
+const Dialog = ({ size = 'md', title, actions, onClose, ...props }: DialogProps) => {
+  const classNames = clsx({
+    ['MuiDialog-sizeSm']: size === 'sm',
+    ['MuiDialog-sizeMd']: size === 'md',
+    ['MuiDialog-sizeLg']: size === 'lg',
+    ['MuiDialog-sizeXl']: size === 'xl',
+  })
 
-  const handleClickOpen = () => {
-    setOpen(true)
-  }
-
-  const handleClose = () => {
-    setOpen(false)
-  }
   return (
-    <MuiDialog
-      open={open}
-      onClose={handleClose}
-      PaperProps={{
-        component: 'form',
-        onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
-          event.preventDefault()
-          const formData = new FormData(event.currentTarget)
-          const formJson = Object.fromEntries((formData as any).entries())
-          const email = formJson.email
-          console.log(email)
-          handleClose()
-        },
-      }}
-    >
-      <MuiDialogTitle open={false}>Subscribe</MuiDialogTitle>
-      
-      {/* <DialogContent>Content</DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose}>Cancel</Button>
-        <Button type='submit'>Subscribe</Button>
-      </DialogActions> */}
+    <MuiDialog className={classNames} onClose={onClose} {...props}>
+      <MuiDialogTitle>
+        <div>{title && <Title variant='h4'>{title}</Title>}</div>
+        <IconButton className='MuiDialog-closeIcon' iconName='Add' onClick={onClose} />
+      </MuiDialogTitle>
+      <MuiDialogContent>{props.children}</MuiDialogContent>
+      {actions && <MuiDialogActions>{actions}</MuiDialogActions>}
     </MuiDialog>
   )
 }
