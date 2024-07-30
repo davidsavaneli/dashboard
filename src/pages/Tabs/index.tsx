@@ -38,78 +38,33 @@ import Box from '@mui/material/Box'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Typography from '@mui/material/Typography'
-import { MemoryRouter, Route, Routes, Link, matchPath, useLocation } from 'react-router-dom'
+import { MemoryRouter, Route, Routes, Link, useLocation, useParams, useSearchParams } from 'react-router-dom'
 import { StaticRouter } from 'react-router-dom/server'
 
-function Router(props: { children?: React.ReactNode }) {
-  const { children } = props
-  if (typeof window === 'undefined') {
-    return <StaticRouter location='/drafts'>{children}</StaticRouter>
-  }
-
-  return (
-    <MemoryRouter initialEntries={['/drafts']} initialIndex={0}>
-      {children}
-    </MemoryRouter>
-  )
-}
-
-function useRouteMatch(patterns: readonly string[]) {
-  const { pathname } = useLocation()
-
-  for (let i = 0; i < patterns.length; i += 1) {
-    const pattern = patterns[i]
-    const possibleMatch = matchPath(pattern, pathname)
-    if (possibleMatch !== null) {
-      return possibleMatch
-    }
-  }
-
-  return null
+function useQuery() {
+  return new URLSearchParams(useLocation().search)
 }
 
 function MyTabs() {
-  // You need to provide the routes in descendant order.
-  // This means that if you have nested routes like:
-  // users, users/new, users/edit.
-  // Then the order should be ['users/add', 'users/edit', 'users'].
-  const routeMatch = useRouteMatch([
-    '/components/navigation/tabs/inbox',
-    '/components/navigation/tabs/drafts',
-    '/components/navigation/tabs/trash',
-  ])
-  const currentTab = routeMatch?.pattern?.path
+  const query = useQuery()
+  const tab = query.get('tab') || 'inbox'
 
   return (
-    <Tabs value={currentTab}>
-      <Tab
-        label='Inbox'
-        value='/components/navigation/tabs/inbox'
-        to='/components/navigation/tabs/inbox'
-        component={Link}
-      />
-      <Tab
-        label='Drafts'
-        value='/components/navigation/tabs/drafts'
-        to='/components/navigation/tabs/drafts'
-        component={Link}
-      />
-      <Tab
-        label='Trash'
-        value='/components/navigation/tabs/trash'
-        to='/components/navigation/tabs/trash'
-        component={Link}
-      />
+    <Tabs value={tab}>
+      <Tab label='Inbox' value='inbox' component={Link} to='?tab=inbox' />
+      <Tab label='Drafts' value='drafts' component={Link} to='?tab=drafts' />
+      <Tab label='Trash' value='trash' component={Link} to='?tab=trash' />
     </Tabs>
   )
 }
 
 function CurrentRoute() {
-  const location = useLocation()
+  const query = useQuery()
+  const tab = query.get('tab') || 'inbox'
 
   return (
     <Typography variant='body2' sx={{ pb: 2 }} color='text.secondary'>
-      Current route: {location.pathname}
+      Current tab: {tab}
     </Typography>
   )
 }
