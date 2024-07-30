@@ -25,7 +25,3 @@
 .MuiMenuItem-listItem .MuiListItem-root {
   padding: 0 !important;
 }
-
-/* .MuiMenuItem-listItem.non-clickable {
-  pointer-events: none !important;
-} */
