@@ -21,12 +21,10 @@ const TabsPage = () => {
             <Tab label='Georgian' value='1' />
             <Tab label='English' disabled value='2' />
             <Tab label='German' value='3' />
-            <Tab label='Ukraine' value='4' />
           </TabList>
           <TabPanel value='1'>Georgian Content ...</TabPanel>
           <TabPanel value='2'>English Content ...</TabPanel>
           <TabPanel value='3'>German Content ...</TabPanel>
-          <TabPanel value='4'>Ukraine Content ...</TabPanel>
         </TabContext>
       </Card>
     </ContentLayout>
