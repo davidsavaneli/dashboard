@@ -125,6 +125,8 @@ export type { TabProps } from './Tab'
 export { default as TabPanel } from './TabPanel'
 export type { TabPanelProps } from './TabPanel'
 
+export { default as Tabs } from './Tabs'
+
 export { default as Tooltip } from './Tooltip'
 export type { TooltipProps } from './Tooltip'
 
