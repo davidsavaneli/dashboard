@@ -5,6 +5,7 @@ import {
   Card,
   Button,
   Tabs,
+  CardActions,
   IconName,
   Space,
   TextFieldValidator,
@@ -46,7 +47,7 @@ const TabsPage = () => {
       <div className='row'>
         <div className='col-6'>
           <Card title='Tabs (Form Validations)'>
-            <Tabs tabs={tabs} queryName='forms' />
+            <Tabs tabs={tabs} />
           </Card>
         </div>
       </div>
@@ -68,20 +69,15 @@ const FormContent1 = () => (
   >
     {(props: FormikProps<typeof initialValuesForm1>) => (
       <Form>
-        <Card
-          footerActions={
-            <>
-              <Button variant='transparent' onClick={() => props.resetForm()}>
-                Reset
-              </Button>
-              <Button type='submit'>Submit</Button>
-            </>
-          }
-        >
-          <Space>
-            <TextFieldValidator label='First Name' name='firstName' />
-          </Space>
-        </Card>
+        <Space>
+          <TextFieldValidator label='First Name' name='firstName' />
+        </Space>
+        <CardActions>
+          <Button variant='transparent' onClick={() => props.resetForm()}>
+            Reset
+          </Button>
+          <Button type='submit'>Submit</Button>
+        </CardActions>
       </Form>
     )}
   </Formik>
@@ -99,28 +95,23 @@ const FormContent2 = () => (
   >
     {(props: FormikProps<typeof initialValuesForm2>) => (
       <Form>
-        <Card
-          footerActions={
-            <>
-              <Button variant='transparent' onClick={() => props.resetForm()}>
-                Reset
-              </Button>
-              <Button type='submit'>Submit</Button>
-            </>
-          }
-        >
-          <Space>
-            <TextFieldValidator label='Email' name='email' />
-          </Space>
-        </Card>
+        <Space>
+          <TextFieldValidator label='Email' name='email' />
+        </Space>
+        <CardActions>
+          <Button variant='transparent' onClick={() => props.resetForm()}>
+            Reset
+          </Button>
+          <Button type='submit'>Submit</Button>
+        </CardActions>
       </Form>
     )}
   </Formik>
 )
 
 const tabs = [
-  { label: 'Form 1', value: 'form1', content: <FormContent1 /> },
-  { label: 'Form 2', value: 'form2', content: <FormContent2 /> },
+  { label: 'Form 1', value: 'form1', content: <FormContent1 />, icon: 'Profile' as IconName },
+  { label: 'Form 2', value: 'form2', content: <FormContent2 />, icon: 'Setting2' as IconName, active: true },
 ]
 
 // const ProfileC = () => <>Profile ...</>

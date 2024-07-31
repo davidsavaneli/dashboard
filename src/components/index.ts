@@ -182,6 +182,9 @@ export type { ContentLayoutProps } from './ContentLayout'
 export { default as Card } from './Card'
 export type { CardProps } from './Card'
 
+export { default as CardActions } from './CardActions'
+export type { CardActionsProps } from './CardActions'
+
 export { default as IconButton } from './IconButton'
 export type { IconButtonProps } from './IconButton'
 

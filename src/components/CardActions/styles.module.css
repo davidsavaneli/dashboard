@@ -1,0 +1,12 @@
+.cardActions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px dashed var(--color-line-primary);
+  padding: var(--padding-sm) var(--padding-md);
+  min-height: 70px;
+  gap: var(--padding-sm);
+  margin-bottom: calc(var(--margin-lg) * -1);
+  margin-left: calc(var(--margin-md) * -1);
+  margin-right: calc(var(--margin-md) * -1);
+}
