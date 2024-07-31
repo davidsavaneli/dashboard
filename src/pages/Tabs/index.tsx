@@ -1,29 +1,6 @@
 import { Formik, Form, FormikProps } from 'formik'
 import * as yup from 'yup'
-import {
-  ContentLayout,
-  Card,
-  Button,
-  Tabs,
-  CardActions,
-  IconName,
-  Space,
-  TextFieldValidator,
-  SelectValidator,
-  AutocompleteValidator,
-  DatePickerValidator,
-  DateTimePickerValidator,
-  TimePickerValidator,
-  ColorPickerValidator,
-  NumberInputValidator,
-  CheckboxValidator,
-  RadioValidator,
-  RadioGroup,
-  Divider,
-  FormLabel,
-  FormGroup,
-  FormHelperText,
-} from '../../components'
+import { ContentLayout, Card, Button, Tabs, CardActions, IconName, Space, TextFieldValidator } from '../../components'
 
 const validationSchemaForm1 = yup.object({
   firstName: yup.string().trim().required('First Name Required'),
@@ -113,30 +90,3 @@ const tabs = [
   { label: 'Form 1', value: 'form1', content: <FormContent1 />, icon: 'Profile' as IconName },
   { label: 'Form 2', value: 'form2', content: <FormContent2 />, icon: 'Setting2' as IconName, active: true },
 ]
-
-// const ProfileC = () => <>Profile ...</>
-// const SettingsC = () => <>Settings ...</>
-// const ClockC = () => <>Clock ...</>
-// const RolesC = () => (
-//   <Card title='Change Roles'>
-//     <Tabs tabs={tabs2} queryName='roles' />
-//   </Card>
-// )
-// const GeorgianC = () => <>Georgian ...</>
-// const EnglishC = () => <>English ...</>
-// const GermanC = () => <>German ...</>
-// const FranceC = () => <>France ...</>
-
-// const tabs = [
-//   { label: 'Profile', value: 'profile', content: <ProfileC />, icon: 'Profile' as IconName },
-//   { label: 'Settings', value: 'settings', content: <SettingsC />, icon: 'Setting2' as IconName, active: true },
-//   { label: 'Clock', value: 'clock', content: <ClockC />, icon: 'Clock' as IconName },
-//   { label: 'Roles', value: 'roles', content: <RolesC />, icon: 'Box1' as IconName },
-// ]
-
-// const tabs2 = [
-//   { label: 'Georgian', value: 'georgian', content: <GeorgianC />, active: true },
-//   { label: 'English', value: 'english', content: <EnglishC /> },
-//   { label: 'German', value: 'german', content: <GermanC /> },
-//   { label: 'France', value: 'france', content: <FranceC /> },
-// ]
