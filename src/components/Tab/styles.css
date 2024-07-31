@@ -22,3 +22,7 @@
   transform-origin: left center !important;
   margin-left: -1px !important;
 }
+
+.MuiTab-root .MuiTouchRipple-root {
+  display: none !important;
+}

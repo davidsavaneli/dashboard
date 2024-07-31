@@ -61,11 +61,7 @@ const Tabs = ({ tabs, queryName = 'tab', onTabChange }: TabsProps) => {
                 icon={
                   tab.icon ? (
                     <div>
-                      <Icon
-                        name={tab.icon}
-                        size='md'
-                        color={isActive ? 'medium' : 'primary'}
-                      />
+                      <Icon name={tab.icon} size='md' color={isActive ? 'medium' : 'primary'} />
                     </div>
                   ) : (
                     ''
@@ -74,23 +70,6 @@ const Tabs = ({ tabs, queryName = 'tab', onTabChange }: TabsProps) => {
               />
             )
           })}
-          {/* {tabs.map((tab) => (
-            <Tab
-              key={tab.value}
-              label={tab.label}
-              value={tab.value}
-              disabled={tab.disabled}
-              icon={
-                tab.icon ? (
-                  <div>
-                    <Icon name={tab.icon} size='md' color={activeTab ? 'medium' : 'primary'} />
-                  </div>
-                ) : (
-                  ''
-                )
-              }
-            />
-          ))} */}
         </TabList>
       </div>
       {tabs.map((tab, index) => (
