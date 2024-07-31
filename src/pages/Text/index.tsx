@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Text } from '../../components'
+import { ContentLayout, Card, Text, Space } from '../../components'
 
 const TextPage = () => {
   return (
@@ -27,6 +27,7 @@ const TextPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <Text color='primary'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Text>
         <br />
@@ -52,6 +53,7 @@ const TextPage = () => {
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Sizes'>

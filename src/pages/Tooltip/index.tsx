@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Tooltip, Icon, IconButton, Button, Avatar } from '../../components'
+import { ContentLayout, Card, Tooltip, Icon, IconButton, Button, Avatar, Space } from '../../components'
 
 const TooltipPage = () => {
   return (
@@ -19,6 +19,7 @@ const TooltipPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Button'>

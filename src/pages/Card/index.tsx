@@ -1,4 +1,4 @@
-import { ContentLayout, Card, IconButton, Menu, Button } from '../../components'
+import { ContentLayout, Card, IconButton, Menu, Button, Space } from '../../components'
 
 const CardPage = () => {
   return (
@@ -37,6 +37,7 @@ const CardPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Default'>
@@ -53,6 +54,7 @@ const CardPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Footer Actions' footerActions={<Button>Submit</Button>}>

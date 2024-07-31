@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Autocomplete } from '../../components'
+import { ContentLayout, Card, Autocomplete, Space } from '../../components'
 
 const autocompleteOptions = [
   { value: 'option1', label: 'Option 1' },
@@ -26,6 +26,7 @@ const AutocompletePage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Helper Text'>
@@ -48,6 +49,7 @@ const AutocompletePage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Errors'>

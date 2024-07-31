@@ -1,4 +1,4 @@
-import { ContentLayout, Card, TextField, Icon } from '../../components'
+import { ContentLayout, Card, TextField, Icon, Space } from '../../components'
 
 const TextFieldPage = () => {
   return (
@@ -15,6 +15,7 @@ const TextFieldPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Icon Button'>
@@ -27,6 +28,7 @@ const TextFieldPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Icon Adornment Position'>
@@ -51,6 +53,7 @@ const TextFieldPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Helper Text'>
@@ -63,9 +66,11 @@ const TextFieldPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Multiline'>
         <TextField label='Multiline' multiline rows={4} />
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Disabled'>

@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Switch, Text } from '../../components'
+import { ContentLayout, Card, Switch, Text, Space } from '../../components'
 
 const SwitchPage = () => {
   return (
@@ -23,6 +23,7 @@ const SwitchPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <Switch defaultChecked color='primary' />
         <Switch defaultChecked color='primaryLight' />
@@ -40,6 +41,7 @@ const SwitchPage = () => {
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Sizes'>

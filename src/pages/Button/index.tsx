@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Button, Text } from '../../components'
+import { ContentLayout, Card, Button, Text, Space } from '../../components'
 
 const ButtonPage = () => {
   return (
@@ -23,6 +23,7 @@ const ButtonPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <Button color='primary'>Primary</Button>&nbsp;&nbsp;&nbsp;&nbsp;
         <Button color='primaryLight'>Primary Light</Button>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -40,6 +41,7 @@ const ButtonPage = () => {
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Rounded'>
@@ -60,6 +62,7 @@ const ButtonPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Disabled'>
@@ -78,6 +81,7 @@ const ButtonPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Loading'>

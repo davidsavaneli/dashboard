@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Select } from '../../components'
+import { ContentLayout, Card, Select, Space } from '../../components'
 
 const selectOptions = [
   { value: 'option1', label: 'Option 1' },
@@ -24,6 +24,7 @@ const SelectPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Helper Text'>
@@ -36,6 +37,7 @@ const SelectPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Errors'>

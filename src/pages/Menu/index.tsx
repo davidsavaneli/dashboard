@@ -1,14 +1,4 @@
-import {
-  ContentLayout,
-  Card,
-  Menu,
-  Button,
-  IconButton,
-  Icon,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from '../../components'
+import { ContentLayout, Card, Menu, Button, IconButton, Icon, ListItem, ListItemIcon, Space } from '../../components'
 
 const MenuPage = () => {
   return (
@@ -73,6 +63,7 @@ const MenuPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Default Selected'>
@@ -113,6 +104,7 @@ const MenuPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Divider'>

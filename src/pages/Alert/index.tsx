@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Alert, Button, AlertTitle } from '../../components'
+import { ContentLayout, Card, Alert, Button, AlertTitle, Space } from '../../components'
 
 const AlertPage = () => {
   return (
@@ -27,27 +27,28 @@ const AlertPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Alert Title'>
             <Alert severity='success'>
               <AlertTitle>Success</AlertTitle>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             </Alert>
             <br />
             <Alert severity='error'>
               <AlertTitle>Success</AlertTitle>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             </Alert>
             <br />
             <Alert severity='info'>
               <AlertTitle>Success</AlertTitle>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             </Alert>
             <br />
             <Alert severity='warning'>
               <AlertTitle>Success</AlertTitle>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             </Alert>
           </Card>
         </div>
@@ -63,6 +64,7 @@ const AlertPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Variants'>

@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Checkbox, FormLabel, FormGroup, Text } from '../../components'
+import { ContentLayout, Card, Checkbox, FormLabel, FormGroup, Text, Space } from '../../components'
 
 const CheckboxPage = () => {
   return (
@@ -23,6 +23,7 @@ const CheckboxPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <Checkbox defaultChecked color='primary' />
         <Checkbox defaultChecked color='primaryLight' />
@@ -40,6 +41,7 @@ const CheckboxPage = () => {
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Group'>
@@ -60,6 +62,7 @@ const CheckboxPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Sizes'>

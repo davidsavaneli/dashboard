@@ -1,4 +1,4 @@
-import { ContentLayout, Card, ToggleButton, ToggleButtonGroup, Text } from '../../components'
+import { ContentLayout, Card, ToggleButton, ToggleButtonGroup, Text, Space } from '../../components'
 
 const ToggleButtonPage = () => {
   return (
@@ -39,6 +39,7 @@ const ToggleButtonPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <ToggleButtonGroup value='1'>
           <ToggleButton value='1' color='primary' iconName='Setting2' />
@@ -95,6 +96,7 @@ const ToggleButtonPage = () => {
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Single'>
@@ -116,6 +118,7 @@ const ToggleButtonPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Children'>
@@ -145,6 +148,7 @@ const ToggleButtonPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Orientation'>

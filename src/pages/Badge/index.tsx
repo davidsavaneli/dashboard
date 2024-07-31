@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Badge, Button, Icon, IconButton, Avatar } from '../../components'
+import { ContentLayout, Card, Badge, Button, Icon, IconButton, Avatar, Space } from '../../components'
 
 const BadgePage = () => {
   return (
@@ -35,6 +35,7 @@ const BadgePage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <Badge color='primary' badgeContent={2}>
           <IconButton iconName='Bag2' variant='filled' />
@@ -117,6 +118,7 @@ const BadgePage = () => {
           <IconButton iconName='Bag2' variant='filled' />
         </Badge>
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Icon Button'>

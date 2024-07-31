@@ -1,4 +1,4 @@
-import { ContentLayout, Card, DatePicker } from '../../components'
+import { ContentLayout, Card, DatePicker, Space } from '../../components'
 
 const DatePickerPage = () => {
   return (
@@ -15,6 +15,7 @@ const DatePickerPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Errors'>

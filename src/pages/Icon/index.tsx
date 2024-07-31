@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Icon, Text, Divider } from '../../components'
+import { ContentLayout, Card, Icon, Text, Space } from '../../components'
 
 const IconPage = () => {
   return (
@@ -25,6 +25,7 @@ const IconPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <Icon name='Verify' color='primary' />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -51,6 +52,7 @@ const IconPage = () => {
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
+      <Space />
       <Card title='Variants'>
         <Icon name='Setting2' variant='Linear' />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Title, Text, Divider } from '../../components'
+import { ContentLayout, Card, Title, Text, Divider, Space } from '../../components'
 
 const TitlePage = () => {
   return (
@@ -19,6 +19,7 @@ const TitlePage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <Title color='primary'>Heading Title Primary</Title>
         <br />
@@ -44,6 +45,7 @@ const TitlePage = () => {
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Variants'>

@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Chip, Icon, Avatar } from '../../components'
+import { ContentLayout, Card, Chip, Icon, Avatar, Space } from '../../components'
 
 const ChipPage = () => {
   return (
@@ -15,6 +15,7 @@ const ChipPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Sizes'>
         <Chip variant='filled' label='Small' size='sm' />
         &nbsp;&nbsp;&nbsp;
@@ -90,6 +91,7 @@ const ChipPage = () => {
         &nbsp;&nbsp;&nbsp;
         <Chip variant='filled' label='Large' size='lg' icon={<Icon name='Setting2' color='secondary' />} />
       </Card>
+      <Space />
       <Card title='Colors'>
         <Chip variant='filled' label='Primary' color='primary' />
         &nbsp;&nbsp;&nbsp;
@@ -174,6 +176,7 @@ const ChipPage = () => {
         &nbsp;&nbsp;&nbsp;
         <Chip variant='outlined' label='Warning' color='warning' onDelete={() => console.log('onDelete')} />
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Deletable'>
@@ -190,7 +193,7 @@ const ChipPage = () => {
           </Card>
         </div>
       </div>
-      <br />
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Custom Delete Icon'>
@@ -211,7 +214,7 @@ const ChipPage = () => {
           </Card>
         </div>
       </div>
-      <br />
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Avatar Letter'>

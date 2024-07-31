@@ -1,4 +1,4 @@
-import { ContentLayout, Card, TimePicker } from '../../components'
+import { ContentLayout, Card, TimePicker, Space } from '../../components'
 
 const TimePickerPage = () => {
   return (
@@ -15,6 +15,7 @@ const TimePickerPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Errors'>

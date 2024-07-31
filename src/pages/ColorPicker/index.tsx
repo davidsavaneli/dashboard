@@ -1,4 +1,4 @@
-import { ContentLayout, Card, ColorPicker } from '../../components'
+import { ContentLayout, Card, ColorPicker, Space } from '../../components'
 
 const ColorPickerPage = () => {
   return (
@@ -15,6 +15,7 @@ const ColorPickerPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Errors'>

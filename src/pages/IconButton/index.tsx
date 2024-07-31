@@ -1,4 +1,4 @@
-import { ContentLayout, Card, IconButton, Text } from '../../components'
+import { ContentLayout, Card, IconButton, Text, Space } from '../../components'
 
 const IconButtonPage = () => {
   return (
@@ -25,6 +25,7 @@ const IconButtonPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <IconButton iconName='Bag2' variant='contained' color='primary' />
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -51,6 +52,7 @@ const IconButtonPage = () => {
           Colors: primary / primaryLight / secondary / dark / medium / light / success / error / info / warning
         </Text>
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Rounded'>
@@ -78,6 +80,7 @@ const IconButtonPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Disabled'>
@@ -96,6 +99,7 @@ const IconButtonPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Tooltip'>

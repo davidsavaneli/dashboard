@@ -1,4 +1,4 @@
-import { ContentLayout, Card, Button, Tabs, IconName } from '../../components'
+import { ContentLayout, Card, Button, Tabs, IconName, Space } from '../../components'
 
 const TabsPage = () => {
   return (
@@ -14,6 +14,7 @@ const TabsPage = () => {
       >
         <Tabs tabs={tabs} queryName='tab' />
       </Card>
+      <Space />
       <Card
         title='Tabs2'
         footerActions={

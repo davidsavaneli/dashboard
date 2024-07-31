@@ -1,4 +1,4 @@
-import { ContentLayout, Card, CircularProgress, Text, Divider } from '../../components'
+import { ContentLayout, Card, CircularProgress, Text, Divider, Space } from '../../components'
 
 const CircularProgressPage = () => {
   return (
@@ -9,6 +9,7 @@ const CircularProgressPage = () => {
         <br />
         <Text>Size: md / Color: primary</Text>
       </Card>
+      <Space />
       <Card title='Sizes'>
         <CircularProgress size={40} />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -27,6 +28,7 @@ const CircularProgressPage = () => {
         <br />
         <Text>Size: number / xxl / xl / lg / md / sm / xs</Text>
       </Card>
+      <Space />
       <Card title='Colors'>
         <CircularProgress color='primary' />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

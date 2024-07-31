@@ -1,4 +1,4 @@
-import { ContentLayout, Card, AvatarGroup, Avatar, Text } from '../../components'
+import { ContentLayout, Card, AvatarGroup, Avatar, Text, Space } from '../../components'
 
 const AvatarPage = () => {
   return (
@@ -19,6 +19,7 @@ const AvatarPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <Card title='Colors'>
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           <Avatar color='primary'>DS</Avatar>&nbsp;&nbsp;&nbsp;
@@ -33,6 +34,7 @@ const AvatarPage = () => {
           <Avatar color='warning'>DS</Avatar>
         </div>
       </Card>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Icon'>
@@ -50,6 +52,7 @@ const AvatarPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Variants'>

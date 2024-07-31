@@ -1,4 +1,4 @@
-import { ContentLayout, Card, NumberInput } from '../../components'
+import { ContentLayout, Card, NumberInput, Space } from '../../components'
 
 const NumberInputPage = () => {
   return (
@@ -11,10 +11,11 @@ const NumberInputPage = () => {
         </div>
         <div className='col-6'>
           <Card title='Min - 5 / Max - 10'>
-            <NumberInput  max={10} min={5} value={7} />
+            <NumberInput max={10} min={5} value={7} />
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Default Value 10'>
@@ -27,6 +28,7 @@ const NumberInputPage = () => {
           </Card>
         </div>
       </div>
+      <Space />
       <div className='row'>
         <div className='col-6'>
           <Card title='Errors'>
