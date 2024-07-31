@@ -49,25 +49,49 @@ const Tabs = ({ tabs, queryName = 'tab', onTabChange }: TabsProps) => {
   return (
     <TabContext value={currentTab}>
       <div className='MuiTabs-content'>
-      <TabList onChange={handleTabChange} variant='scrollable' scrollButtons={false}>
-        {tabs.map((tab) => (
-          <Tab
-            key={tab.value}
-            label={tab.label}
-            value={tab.value}
-            disabled={tab.disabled}
-            icon={
-              tab.icon ? (
-                <div>
-                  <Icon name={tab.icon} size='md' />
-                </div>
-              ) : (
-                ''
-              )
-            }
-          />
-        ))}
-      </TabList>
+        <TabList onChange={handleTabChange} variant='scrollable' scrollButtons={false}>
+          {tabs.map((tab) => {
+            const isActive = currentTab === tab.value
+            return (
+              <Tab
+                key={tab.value}
+                label={tab.label}
+                value={tab.value}
+                disabled={tab.disabled}
+                icon={
+                  tab.icon ? (
+                    <div>
+                      <Icon
+                        name={tab.icon}
+                        size='md'
+                        color={isActive ? 'medium' : 'primary'}
+                      />
+                    </div>
+                  ) : (
+                    ''
+                  )
+                }
+              />
+            )
+          })}
+          {/* {tabs.map((tab) => (
+            <Tab
+              key={tab.value}
+              label={tab.label}
+              value={tab.value}
+              disabled={tab.disabled}
+              icon={
+                tab.icon ? (
+                  <div>
+                    <Icon name={tab.icon} size='md' color={activeTab ? 'medium' : 'primary'} />
+                  </div>
+                ) : (
+                  ''
+                )
+              }
+            />
+          ))} */}
+        </TabList>
       </div>
       {tabs.map((tab, index) => (
         <TabPanel key={index} value={tab.value}>

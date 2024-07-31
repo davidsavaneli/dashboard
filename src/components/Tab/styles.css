@@ -1,14 +1,24 @@
 .MuiTab-root {
-  font-weight: inherit !important;
+  font-weight: var(--font-weight-medium) !important;
   font-size: inherit !important;
   line-height: inherit !important;
   letter-spacing: inherit !important;
   text-transform: none !important;
   min-height: inherit !important;
-  padding: calc(var(--padding-sm) - var(--padding-sm) / 4) calc(var(--padding-sm) - var(--padding-sm) / 4) !important;
+  padding: calc(var(--padding-sm) - var(--padding-sm) / 4) 0 !important;
   min-width: 0 !important;
+  border-radius: var(--border-radius-sm) !important;
+  color: var(--color-primary) !important;
+  transition: color var(--tr-dur) !important;
+}
+
+.MuiTab-root.Mui-selected {
+  color: var(--color-medium) !important;
 }
 
 .MuiTab-iconWrapper {
   margin-right: var(--margin-xs) !important;
+  transform: scale(0.92) !important;
+  transform-origin: left center !important;
+  margin-left: -1px !important;
 }

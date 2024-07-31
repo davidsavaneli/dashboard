@@ -17,7 +17,7 @@ const App = () => {
             secondaryLabel: 'd.savaneli@techzy.app',
             menuItems: [
               {
-                icon: 'User',
+                icon: 'Profile',
                 label: 'Profile',
                 onClick: () => console.log('Profile Click'),
               },

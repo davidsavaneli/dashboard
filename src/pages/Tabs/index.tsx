@@ -34,14 +34,18 @@ export default TabsPage
 const ProfileC = () => <>Profile ...</>
 const SettingsC = () => <>Settings ...</>
 const ClockC = () => <>Clock ...</>
-const RolesC = () => <Tabs tabs={tabs2} queryName='roles' />
+const RolesC = () => (
+  <Card title='Change Roles'>
+    <Tabs tabs={tabs2} queryName='roles' />
+  </Card>
+)
 const GeorgianC = () => <>Georgian ...</>
 const EnglishC = () => <>English ...</>
 const GermanC = () => <>German ...</>
 const FranceC = () => <>France ...</>
 
 const tabs = [
-  { label: 'Profile', value: 'profile', content: <ProfileC />, icon: 'User' as IconName },
+  { label: 'Profile', value: 'profile', content: <ProfileC />, icon: 'Profile' as IconName },
   { label: 'Settings', value: 'settings', content: <SettingsC />, icon: 'Setting2' as IconName, active: true },
   { label: 'Clock', value: 'clock', content: <ClockC />, icon: 'Clock' as IconName },
   { label: 'Roles', value: 'roles', content: <RolesC />, icon: 'Box1' as IconName },

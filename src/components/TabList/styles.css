@@ -5,3 +5,11 @@
 .MuiTabs-root {
   min-height: inherit !important;
 }
+
+.MuiTabs-flexContainer {
+  gap: var(--margin-md) !important;
+}
+
+.MuiTabs-indicator {
+  background-color: var(--color-medium) !important;
+}
