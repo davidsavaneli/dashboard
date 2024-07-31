@@ -8,7 +8,7 @@ export interface TabProps extends MuiTabProps {
 }
 
 const MDTab = forwardRef<HTMLDivElement, TabProps>(({ ...props }: TabProps, ref) => {
-  return <MuiTab ref={ref} {...props} />
+  return <MuiTab ref={ref} iconPosition='start' {...props} />
 })
 
 export default MDTab

@@ -1,3 +1,7 @@
+.MuiTabs-content {
+  border-bottom: 1px solid var(--color-line-primary) !important;
+}
+
 .MuiTabs-root {
-    min-height: inherit !important;
+  min-height: inherit !important;
 }

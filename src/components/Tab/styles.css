@@ -5,23 +5,10 @@
   letter-spacing: inherit !important;
   text-transform: none !important;
   min-height: inherit !important;
-  padding: calc(var(--padding-sm) - var(--padding-sm) / 4) var(--padding-sm) !important;
+  padding: calc(var(--padding-sm) - var(--padding-sm) / 4) calc(var(--padding-sm) - var(--padding-sm) / 4) !important;
   min-width: 0 !important;
+}
 
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.25;
-  letter-spacing: 0.02857em;
-  text-transform: uppercase;
-  max-width: 360px;
-  min-width: 90px;
-  position: relative;
-  min-height: 48px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  padding: 12px 16px;
-  overflow: hidden;
-  white-space: normal;
-  text-align: center;
+.MuiTab-iconWrapper {
+  margin-right: var(--margin-xs) !important;
 }

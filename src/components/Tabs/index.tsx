@@ -1,59 +1,74 @@
 import { ReactNode } from 'react'
 import { useState, useEffect } from 'react'
-import { Link, useSearchParams, useNavigate } from 'react-router-dom'
-import { TabContext, TabList, TabPanel, Tab } from '../../components'
+import { useSearchParams, useNavigate } from 'react-router-dom'
+import { TabContext, TabList, TabPanel, Tab, Icon, IconName } from '../../components'
 
-interface Tab {
+interface TabProps {
   label: string
   value: string
   content: ReactNode
   active?: boolean
   disabled?: boolean
+  icon?: IconName
 }
 
 interface TabsProps {
-  tabs: Tab[]
+  tabs: TabProps[]
   queryName?: string
   onTabChange?: (newValue: string) => void
 }
 
 const Tabs = ({ tabs, queryName = 'tab', onTabChange }: TabsProps) => {
-  const [searchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
   const initialTab = searchParams.get(queryName) || tabs.find((tab) => tab.active)?.value || tabs[0].value
   const [currentTab, setCurrentTab] = useState(initialTab)
 
   useEffect(() => {
-    if (!searchParams.get(queryName)) {
-      navigate(`?${queryName}=${initialTab}`, { replace: true })
+    if (!searchParams.has(queryName)) {
+      const updatedParams = new URLSearchParams(searchParams.toString())
+      updatedParams.set(queryName, initialTab)
+      setSearchParams(updatedParams)
     }
-  }, [searchParams, navigate, queryName, initialTab])
+  }, [searchParams, queryName, initialTab, setSearchParams])
 
   const handleTabChange = (_: React.SyntheticEvent, newValue: string) => {
     const selectedTab = tabs.find((tab) => tab.value === newValue)
     if (selectedTab && !selectedTab.disabled) {
       setCurrentTab(newValue)
-      navigate(`?${queryName}=${newValue}`)
-      if (onTabChange) {
-        onTabChange(newValue)
-      }
+
+      const updatedParams = new URLSearchParams(searchParams.toString())
+      updatedParams.set(queryName, newValue)
+
+      navigate(`?${updatedParams.toString()}`, { replace: true })
+
+      onTabChange && onTabChange(newValue)
     }
   }
 
   return (
     <TabContext value={currentTab}>
-      <TabList onChange={handleTabChange}>
-        {tabs.map((tab, index) => (
+      <div className='MuiTabs-content'>
+      <TabList onChange={handleTabChange} variant='scrollable' scrollButtons={false}>
+        {tabs.map((tab) => (
           <Tab
-            key={index}
+            key={tab.value}
             label={tab.label}
             value={tab.value}
-            component={Link}
-            to={`?${queryName}=${tab.value}`}
             disabled={tab.disabled}
+            icon={
+              tab.icon ? (
+                <div>
+                  <Icon name={tab.icon} size='md' />
+                </div>
+              ) : (
+                ''
+              )
+            }
           />
         ))}
       </TabList>
+      </div>
       {tabs.map((tab, index) => (
         <TabPanel key={index} value={tab.value}>
           {tab.content}

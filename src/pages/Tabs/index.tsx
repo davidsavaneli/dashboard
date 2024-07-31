@@ -1,12 +1,6 @@
-import { ContentLayout, Card, Button, Tabs } from '../../components'
+import { ContentLayout, Card, Button, Tabs, IconName } from '../../components'
 
 const TabsPage = () => {
-  const tabs = [
-    { label: 'Georgian', value: 'georgian', content: 'Georgian Content ...' },
-    { label: 'English', value: 'english', content: 'English Content ...', active: true },
-    { label: 'German', value: 'german', content: 'German Content ...', disabled: true },
-  ]
-
   return (
     <ContentLayout label='Tabs Component'>
       <Card
@@ -18,10 +12,44 @@ const TabsPage = () => {
           </>
         }
       >
-        <Tabs tabs={tabs} />
+        <Tabs tabs={tabs} queryName='tab' />
+      </Card>
+      <Card
+        title='Tabs2'
+        footerActions={
+          <>
+            <Button variant='transparent'>Cancel</Button>
+            <Button onClick={() => console.log('Submit')}>Submit</Button>
+          </>
+        }
+      >
+        <Tabs tabs={tabs2} queryName='tab2' />
       </Card>
     </ContentLayout>
   )
 }
 
 export default TabsPage
+
+const ProfileC = () => <>Profile ...</>
+const SettingsC = () => <>Settings ...</>
+const ClockC = () => <>Clock ...</>
+const RolesC = () => <Tabs tabs={tabs2} queryName='roles' />
+const GeorgianC = () => <>Georgian ...</>
+const EnglishC = () => <>English ...</>
+const GermanC = () => <>German ...</>
+const FranceC = () => <>France ...</>
+
+const tabs = [
+  { label: 'Profile', value: 'profile', content: <ProfileC />, icon: 'User' as IconName },
+  { label: 'Settings', value: 'settings', content: <SettingsC />, icon: 'Setting2' as IconName, active: true },
+  { label: 'Clock', value: 'clock', content: <ClockC />, icon: 'Clock' as IconName },
+  { label: 'Roles', value: 'roles', content: <RolesC />, icon: 'Box1' as IconName },
+]
+
+const tabs2 = [
+  { label: 'Georgian', value: 'georgian', content: <GeorgianC />, active: true },
+  { label: 'English', value: 'english', content: <EnglishC /> },
+  { label: 'German', value: 'german', content: <GermanC /> },
+  { label: 'France', value: 'france', content: <FranceC /> },
+]
