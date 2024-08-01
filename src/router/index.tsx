@@ -53,7 +53,7 @@ const NoMatch = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    setTimeout(() => navigate('/'), 2000)
+    navigate('/')
   })
 
   return <div>No Match! Redirect to './' (2s)</div>

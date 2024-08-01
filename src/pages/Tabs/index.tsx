@@ -28,7 +28,7 @@ const TabsPage = () => {
           </Card>
         </div>
         <div className='col-6'>
-          <Card>
+          <Card title='Tabs (Form Validations)'>
             <Tabs tabs={tabs2} queryName='tabs2' />
           </Card>
         </div>

@@ -1,0 +1,83 @@
+.MuiLinearProgress-root {
+  border-radius: 50px !important;
+}
+
+.MuiLinearProgress-colorPrimary {
+  background-color: var(--color-primary-shade400) !important;
+}
+
+.MuiLinearProgress-colorPrimaryLight {
+  background-color: var(--color-primaryLight-shade400) !important;
+}
+
+.MuiLinearProgress-colorSecondary {
+  background-color: var(--color-secondary-shade400) !important;
+}
+
+.MuiLinearProgress-colorDark {
+  background-color: var(--color-dark-shade400) !important;
+}
+
+.MuiLinearProgress-colorMedium {
+  background-color: var(--color-medium-shade400) !important;
+}
+
+.MuiLinearProgress-colorLight {
+  background-color: var(--color-light-shade400) !important;
+}
+
+.MuiLinearProgress-colorSuccess {
+  background-color: var(--color-success-shade400) !important;
+}
+
+.MuiLinearProgress-colorError {
+  background-color: var(--color-error-shade400) !important;
+}
+
+.MuiLinearProgress-colorInfo {
+  background-color: var(--color-info-shade400) !important;
+}
+
+.MuiLinearProgress-colorWarning {
+  background-color: var(--color-warning-shade400) !important;
+}
+
+.MuiLinearProgress-colorPrimary .MuiLinearProgress-bar {
+  background-color: var(--color-primary) !important;
+}
+
+.MuiLinearProgress-colorPrimaryLight .MuiLinearProgress-bar {
+  background-color: var(--color-primaryLight) !important;
+}
+
+.MuiLinearProgress-colorSecondary .MuiLinearProgress-bar {
+  background-color: var(--color-secondary) !important;
+}
+
+.MuiLinearProgress-colorDark .MuiLinearProgress-bar {
+  background-color: var(--color-dark) !important;
+}
+
+.MuiLinearProgress-colorMedium .MuiLinearProgress-bar {
+  background-color: var(--color-medium) !important;
+}
+
+.MuiLinearProgress-colorLight .MuiLinearProgress-bar {
+  background-color: var(--color-light) !important;
+}
+
+.MuiLinearProgress-colorSuccess .MuiLinearProgress-bar {
+  background-color: var(--color-success) !important;
+}
+
+.MuiLinearProgress-colorError .MuiLinearProgress-bar {
+  background-color: var(--color-error) !important;
+}
+
+.MuiLinearProgress-colorInfo .MuiLinearProgress-bar {
+  background-color: var(--color-info) !important;
+}
+
+.MuiLinearProgress-colorWarning .MuiLinearProgress-bar {
+  background-color: var(--color-warning) !important;
+}

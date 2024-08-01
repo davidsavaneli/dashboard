@@ -317,6 +317,13 @@ export const routes: IRoutes = {
               element: <CircularProgressPage />,
               children: [],
             },
+            {
+              name: 'Linear Progress',
+              path: '/components/forms/linear-progress',
+              iconName: '',
+              element: <LinearProgressPage />,
+              children: [],
+            },
           ],
         },
       ],
