@@ -1,12 +1,12 @@
 import { ContentLayout, Button } from '../../components'
-import { useUIContext } from '../../contexts'
+import { useDarkModeContext } from '../../hooks'
 
 const UseThemePage = () => {
-  const { theme, toggleTheme } = useUIContext()
+  const { darkMode, toggleDarkMode } = useDarkModeContext()
 
   return (
     <ContentLayout label='useDarkMode Hook'>
-      <Button onClick={toggleTheme}>{theme === 'light' ? 'Dark Theme' : 'Light Theme'}</Button>
+      <Button onClick={toggleDarkMode}>{darkMode ? 'Dark Theme' : 'Light Theme'}</Button>
     </ContentLayout>
   )
 }

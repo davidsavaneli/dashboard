@@ -1,4 +1,3 @@
 export { default as useMediaQuery } from './useMediaQuery'
-export { default as useShowHideDrawer } from './useShowHideDrawer'
-export { default as useTheme } from './useTheme'
-export type { ThemeProps } from './useTheme'
+export { default as useDarkMode, DarkModeProvider, useDarkModeContext } from './useDarkMode'
+export { default as useShowDrawer, ShowDrawerProvider, useShowDrawerContext } from './useShowDrawer'
