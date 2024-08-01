@@ -1,0 +1,17 @@
+.noDataWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-light-shade100);
+  padding: var(--padding-md) var(--padding-xl) var(--padding-xl) var(--padding-xl);
+  border-radius: var(--border-radius-md);
+}
+
+.image {
+  width: 160px;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+}

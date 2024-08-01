@@ -21,6 +21,7 @@ import TextPage from './pages/Text'
 import AlertPage from './pages/Alert'
 import ToastPage from './pages/Toast'
 import CircularProgressPage from './pages/CircularProgress'
+import LinearProgressPage from './pages/LinearProgress'
 import MenuPage from './pages/Menu'
 import CardPage from './pages/Card'
 import FormValidationsPage from './pages/FormValidations'
@@ -32,10 +33,9 @@ import RouterLinkPage from './pages/RouterLink'
 import LinkPage from './pages/Link'
 import NumberInputPage from './pages/NumberInput'
 import DialogPage from './pages/Dialog'
+import TabsPage from './pages/Tabs'
 import NoDataPage from './pages/NoData'
 import PaginationPage from './pages/Pagination'
-import TabsPage from './pages/Tabs'
-import LinearProgressPage from './pages/LinearProgress'
 
 import { IRoutes } from './router'
 
@@ -322,6 +322,21 @@ export const routes: IRoutes = {
               path: '/components/forms/linear-progress',
               iconName: '',
               element: <LinearProgressPage />,
+              children: [],
+            },
+          ],
+        },
+        {
+          name: 'Other',
+          path: '/components/other',
+          iconName: 'I3Square',
+          element: '',
+          children: [
+            {
+              name: 'No Data',
+              path: '/components/forms/no-data',
+              iconName: '',
+              element: <NoDataPage />,
               children: [],
             },
           ],

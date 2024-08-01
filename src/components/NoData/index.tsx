@@ -1,16 +1,25 @@
-import Icon, { IconName } from '../Icon'
+import Title from '../Title'
+
+import styles from './styles.module.css'
+
+import imageSrc from '../../assets/images/empty-box.svg'
 
 export interface NoDataProps {
-  iconName?: IconName
   text?: string
   disableIcon?: boolean
 }
 
-const NoData = ({ text = '', iconName = 'Home', disableIcon = false }: NoDataProps) => {
+const NoData = ({ text = '' }: NoDataProps) => {
   return (
-    <div>
-      {!disableIcon && <Icon name={iconName} />}
-      {text && <div>{text}</div>}
+    <div className={styles.noDataWrapper}>
+      <div className={styles.image}>
+        <img src={imageSrc} alt='No Data Found' />
+      </div>
+      {text && (
+        <Title variant='h4' weight='medium'>
+          {text}
+        </Title>
+      )}
     </div>
   )
 }
