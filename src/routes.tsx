@@ -261,6 +261,13 @@ export const routes: IRoutes = {
               children: [],
             },
             {
+              name: 'Pagination',
+              path: '/components/navigation/pagination',
+              iconName: '',
+              element: <PaginationPage />,
+              children: [],
+            },
+            {
               name: 'Speed Dial',
               path: '/components/navigation/speed-dial',
               iconName: '',
@@ -329,7 +336,7 @@ export const routes: IRoutes = {
         {
           name: 'Other',
           path: '/components/other',
-          iconName: 'I3Square',
+          iconName: 'Code',
           element: '',
           children: [
             {

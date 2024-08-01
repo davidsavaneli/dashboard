@@ -80,6 +80,13 @@ import {
   Sun1,
   Moon,
   ProfileCircle,
+  Code,
+  ArrowLeft,
+  ArrowRight,
+  ArrowLeft2,
+  ArrowRight2,
+  ArrowLeft3,
+  ArrowRight3,
 } from 'iconsax-react'
 
 import styles from './styles.module.css'
@@ -164,6 +171,13 @@ const Icons = {
   Sun1,
   Moon,
   ProfileCircle,
+  Code,
+  ArrowLeft,
+  ArrowRight,
+  ArrowLeft2,
+  ArrowRight2,
+  ArrowLeft3,
+  ArrowRight3,
 }
 
 export type IconName = keyof typeof Icons
