@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import LocalizationProvider from '../LocalizationProvider'
 import ToastContainer from '../ToastContainer'
-import { ThemeProvider } from '../../hooks'
+import { UIProvider } from '../../contexts'
 
 import styles from './styles.module.css'
 
@@ -14,21 +14,23 @@ export type MainLayoutProps = {
 
 const MainLayout = ({ children, header, drawer, breadcrumbs }: MainLayoutProps) => {
   return (
-    <ThemeProvider>
-      <LocalizationProvider>
-        <div className={styles.container}>
-          {drawer}
-          <div className={styles.wrapper}>
-            {header}
-            <main className={styles.main}>
-              {breadcrumbs && <div className={styles.breadcrumbs}>{breadcrumbs}</div>}
-              {children}
-            </main>
+    <>
+      <UIProvider>
+        <LocalizationProvider>
+          <div className={styles.container}>
+            {drawer}
+            <div className={styles.wrapper}>
+              {header}
+              <main className={styles.main}>
+                {breadcrumbs && <div className={styles.breadcrumbs}>{breadcrumbs}</div>}
+                {children}
+              </main>
+            </div>
           </div>
-        </div>
-      </LocalizationProvider>
-      <ToastContainer />
-    </ThemeProvider>
+        </LocalizationProvider>
+        <ToastContainer />
+      </UIProvider>
+    </>
   )
 }
 

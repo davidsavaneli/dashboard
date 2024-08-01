@@ -1,5 +1,5 @@
 import IconButton, { IconButtonProps } from '../IconButton'
-import { useTheme } from '../../hooks'
+import { useUIContext } from '../../contexts'
 
 export interface ThemeSwitcherProps {
   color?: IconButtonProps['color']
@@ -8,7 +8,7 @@ export interface ThemeSwitcherProps {
 }
 
 const ThemeSwitcher = ({ color = 'primary', rounded = false, variant = 'filled' }: ThemeSwitcherProps) => {
-  const { theme, toggleTheme } = useTheme()
+  const { theme, toggleTheme } = useUIContext()
 
   return (
     <IconButton
