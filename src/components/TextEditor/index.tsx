@@ -123,7 +123,6 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
           <button className='ql-indent' value='-1' />
           <button className='ql-indent' value='+1' />
           <button className='ql-script' value='super' />
-          <button className='ql-script' value='sub' />
           <select className='ql-align' />
           <select className='ql-color' />
           <button className='ql-link' />
