@@ -4,10 +4,10 @@ import ReactQuill, { Quill } from 'react-quill'
 // @ts-ignore
 import ImageResize from 'quill-image-resize-module-react'
 import textEditorContext from './TextEditorStore'
+import FormHelperText from '../FormHelperText'
 
 import 'react-quill/dist/quill.snow.css'
 import styles from './styles.module.css'
-import FormHelperText from '../FormHelperText'
 
 const CustomUndo = () => (
   <svg viewBox='0 0 18 18'>
