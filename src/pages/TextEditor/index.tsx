@@ -1,15 +1,22 @@
-import { ContentLayout, Card, TextEditor } from '../../components'
+import { ContentLayout, Card, TextEditor, Space } from '../../components'
 
 const TextEditorPage = () => {
   return (
     <ContentLayout label='Text Editor Component'>
-      <div className='row'>
-        <div className='col-6'>
-          <Card title='Default'>
-            <TextEditor size='small' editorId='1' value='' placeholder='Description' onChange={(e) => console.log(e)} />
-          </Card>
-        </div>
-      </div>
+      <Card title='Default'>
+        <TextEditor editorId='1' value='' placeholder='Description' onChange={(e) => console.log(e)} />
+      </Card>
+      <Space />
+      <Card title='Error'>
+        <TextEditor
+          editorId='2'
+          value=''
+          placeholder='Description'
+          onChange={(e) => console.log(e)}
+          error
+          helperText='Text Editor Helper Text'
+        />
+      </Card>
     </ContentLayout>
   )
 }

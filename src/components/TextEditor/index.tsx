@@ -7,6 +7,7 @@ import textEditorContext from './TextEditorStore'
 
 import 'react-quill/dist/quill.snow.css'
 import styles from './styles.module.css'
+import FormHelperText from '../FormHelperText'
 
 const CustomUndo = () => (
   <svg viewBox='0 0 18 18'>
@@ -42,7 +43,6 @@ export interface TextEditorProps {
   value: string
   onChange: (value: string) => void
   disabled?: boolean
-  size: string
   error?: boolean
   helperText?: string
 }
@@ -82,7 +82,7 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
 
   return (
     <div
-      className={clsx(`${styles.textEditorBox} ${props.size ?? 'medium'} text-editor`, {
+      className={clsx(`${styles.textEditorBox}`, {
         disabled: disabled,
       })}
     >
@@ -97,63 +97,43 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
           dangerouslySetInnerHTML={{ __html: text || '' }}
         ></div>
         <div id={`editorId-${props.editorId}`}>
-          <span className='ql-formats'>
-            <select className='ql-size' defaultValue='size-14'>
-              <option value='size-10'>Size: 10px</option>
-              <option value='size-12'>Size: 12px</option>
-              <option value='size-14'>Size: 14px</option>
-              <option value='size-16'>Size: 16px</option>
-              <option value='size-18'>Size: 18px</option>
-              <option value='size-20'>Size: 20px</option>
-            </select>
-            <select className='ql-header' defaultValue='normal'>
-              <option value='normal'>Normal</option>
-              <option value='1'>H1</option>
-              <option value='2'>H2</option>
-              <option value='3'>H3</option>
-              <option value='4'>H4</option>
-              <option value='5'>H5</option>
-              <option value='6'>H6</option>
-            </select>
-          </span>
-          <span className='ql-formats'>
-            <button className='ql-bold' />
-            <button className='ql-italic' />
-            <button className='ql-underline' />
-            <button className='ql-strike' />
-          </span>
-          <span className='ql-formats'>
-            <button className='ql-list' value='ordered' />
-            <button className='ql-list' value='bullet' />
-            <button className='ql-indent' value='-1' />
-            <button className='ql-indent' value='+1' />
-          </span>
-          <span className='ql-formats'>
-            <button className='ql-script' value='super' />
-            <button className='ql-script' value='sub' />
-            <button className='ql-blockquote' />
-          </span>
-          <span className='ql-formats'>
-            <select className='ql-align' />
-            <select className='ql-color' />
-            <select className='ql-background' />
-          </span>
-          <span className='ql-formats'>
-            <button className='ql-link' />
-            <button className='ql-image' />
-            <button className='ql-video' />
-          </span>
-          <span className='ql-formats'>
-            <button className='ql-code-block' />
-          </span>
-          <span className='ql-formats'>
-            <button className='ql-undo'>
-              <CustomUndo />
-            </button>
-            <button className='ql-redo'>
-              <CustomRedo />
-            </button>
-          </span>
+          <select className='ql-size' defaultValue='size-14'>
+            <option value='size-10'>Size: 10px</option>
+            <option value='size-12'>Size: 12px</option>
+            <option value='size-14'>Size: 14px</option>
+            <option value='size-16'>Size: 16px</option>
+            <option value='size-18'>Size: 18px</option>
+            <option value='size-20'>Size: 20px</option>
+          </select>
+          <select className='ql-header' defaultValue='normal'>
+            <option value='normal'>Normal</option>
+            <option value='1'>H1</option>
+            <option value='2'>H2</option>
+            <option value='3'>H3</option>
+            <option value='4'>H4</option>
+            <option value='5'>H5</option>
+            <option value='6'>H6</option>
+          </select>
+          <button className='ql-bold' />
+          <button className='ql-italic' />
+          <button className='ql-underline' />
+          <button className='ql-list' value='ordered' />
+          <button className='ql-list' value='bullet' />
+          <button className='ql-indent' value='-1' />
+          <button className='ql-indent' value='+1' />
+          <button className='ql-script' value='super' />
+          <button className='ql-script' value='sub' />
+          <select className='ql-align' />
+          <select className='ql-color' />
+          <button className='ql-link' />
+          <button className='ql-image' />
+          <button className='ql-code-block' />
+          <button className='ql-undo'>
+            <CustomUndo />
+          </button>
+          <button className='ql-redo'>
+            <CustomRedo />
+          </button>
         </div>
         <ReactQuill
           theme='snow'
@@ -164,7 +144,7 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
         />
       </div>
 
-      <div className={clsx(styles.helperText, { [styles.helperTextError]: error })}>{helperText}</div>
+      {helperText && <FormHelperText error={error}>{helperText}</FormHelperText>}
     </div>
   )
 }
