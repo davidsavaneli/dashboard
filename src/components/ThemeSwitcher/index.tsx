@@ -1,5 +1,5 @@
 import IconButton, { IconButtonProps } from '../IconButton'
-import { useDarkModeContext } from '../../hooks'
+import useDarkMode from '../../hooks/useDarkMode'
 
 export interface ThemeSwitcherProps {
   color?: IconButtonProps['color']
@@ -8,7 +8,7 @@ export interface ThemeSwitcherProps {
 }
 
 const ThemeSwitcher = ({ color = 'primary', rounded = false, variant = 'filled' }: ThemeSwitcherProps) => {
-  const { darkMode, toggleDarkMode } = useDarkModeContext()
+  const { darkMode, toggleDarkMode } = useDarkMode()
 
   return (
     <IconButton

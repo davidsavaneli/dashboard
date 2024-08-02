@@ -8,6 +8,7 @@ import Avatar from '../Avatar'
 import IconButton from '../IconButton'
 import ThemeSwitcher from '../ThemeSwitcher'
 import Icon, { IconName } from '../Icon'
+import useShowDrawer from '../../hooks/useShowDrawer'
 
 import styles from './styles.module.css'
 
@@ -50,7 +51,11 @@ const Header = ({ languages = true, themeSwitcher = true, user }: HeaderProps) =
 
 export default Header
 
-const BurgerMenu = () => <IconButton iconName='HambergerMenu' variant='filled' iconVariant='Bulk' />
+const BurgerMenu = () => {
+  const { toggleShowDrawer } = useShowDrawer()
+
+  return <IconButton iconName='HambergerMenu' variant='filled' iconVariant='Bulk' onClick={toggleShowDrawer} />
+}
 
 const Languages = () => (
   <Menu

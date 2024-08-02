@@ -27,7 +27,6 @@ import CardPage from './pages/Card'
 import FormValidationsPage from './pages/FormValidations'
 import ColorPickerPage from './pages/ColorPicker'
 import TextEditorPage from './pages/TextEditor'
-import UseThemePage from './pages/UseTheme'
 import UseMediaQueryPage from './pages/UseMediaQuery'
 import RouterLinkPage from './pages/RouterLink'
 import LinkPage from './pages/Link'
@@ -356,13 +355,6 @@ export const routes: IRoutes = {
       iconName: '',
       element: '',
       children: [
-        {
-          name: 'useTheme',
-          path: '/hooks/use-theme',
-          iconName: '',
-          element: <UseThemePage />,
-          children: [],
-        },
         {
           name: 'useMediaQuery',
           path: '/hooks/use-media-query',
