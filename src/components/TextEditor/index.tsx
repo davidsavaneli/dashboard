@@ -40,11 +40,12 @@ Quill.register('modules/imageResize', ImageResize)
 export interface TextEditorProps {
   editorId: string
   placeholder: string
-  value: string
-  onChange: (value: string) => void
+  value?: string
+  onChange?: (value: string) => void
   disabled?: boolean
   error?: boolean
   helperText?: string
+  name?: string
 }
 
 export const TextEditor = ({ placeholder = '', error, helperText, disabled = false, ...props }: TextEditorProps) => {
@@ -70,13 +71,13 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
   const [text, setText] = useState('')
 
   useEffect(() => {
-    setText(props.value)
+    setText(props.value ?? '')
   }, [props.value])
 
   const handleChange = (value: any) => {
     setText(value)
 
-    props.onChange(value)
+    props.onChange && props.onChange(value)
     textEditorContext.setHtmlValue(value, props.editorId)
   }
 

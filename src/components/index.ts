@@ -108,6 +108,7 @@ export { default as NumberInputValidator } from './ValidatorForms/NumberInputVal
 
 export { default as TextEditor } from './TextEditor'
 export type { TextEditorProps } from './TextEditor'
+export { default as TextEditorValidator } from './ValidatorForms/TextEditorValidator'
 
 export { default as Icon } from './Icon'
 export type { IconProps } from './Icon'

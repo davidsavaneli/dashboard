@@ -9,6 +9,7 @@ import {
   TimePickerValidator,
   ColorPickerValidator,
   NumberInputValidator,
+  TextEditorValidator,
   CheckboxValidator,
   RadioValidator,
   RadioGroup,
@@ -62,6 +63,7 @@ const validationSchema = yup.object({
   radio: yup.string().required('Radio is required'),
   radioGroup: yup.string().required('Radio Group is required'),
   count: yup.number().required('Number Input is required').min(1, 'min 1'),
+  text: yup.string().required('Text Editor Required'),
 })
 
 const initialValues = {
@@ -81,6 +83,7 @@ const initialValues = {
   radio: '',
   radioGroup: '',
   count: 0,
+  text: '',
 }
 
 const handleFormSubmit = (values: typeof initialValues, actions: any) => {
@@ -118,41 +121,48 @@ const FormValidationsPage = () => {
                     <TextFieldValidator label='Phone Number (Text Field)' name='phoneNumber' />
                   </Space>
                   <Space>
-                  <SelectValidator label='Select Country (Single Select)' options={countryOptions} name='country' />
+                    <SelectValidator label='Select Country (Single Select)' options={countryOptions} name='country' />
                   </Space>
                   <Space>
-                  <SelectValidator
-                    label='Select Currencies (Multiple Select)'
-                    options={currencyOptions}
-                    multiple
-                    name='currency'
-                  />
+                    <SelectValidator
+                      label='Select Currencies (Multiple Select)'
+                      options={currencyOptions}
+                      multiple
+                      name='currency'
+                    />
                   </Space>
                   <Space>
-                  <AutocompleteValidator label='Select City (Single Autocomplete)' options={cityOptions} name='city' />
+                    <AutocompleteValidator
+                      label='Select City (Single Autocomplete)'
+                      options={cityOptions}
+                      name='city'
+                    />
                   </Space>
                   <Space>
-                  <AutocompleteValidator
-                    label='Select Product (Multiple Autocomplete)'
-                    options={productOptions}
-                    multiple
-                    name='product'
-                  />
+                    <AutocompleteValidator
+                      label='Select Product (Multiple Autocomplete)'
+                      options={productOptions}
+                      multiple
+                      name='product'
+                    />
                   </Space>
                   <Space>
-                  <DatePickerValidator name='datePicker' label='Date Picker' />
+                    <DatePickerValidator name='datePicker' label='Date Picker' />
                   </Space>
                   <Space>
-                  <TimePickerValidator name='timePicker' label='Time Picker' />
+                    <TimePickerValidator name='timePicker' label='Time Picker' />
                   </Space>
                   <Space>
-                  <DateTimePickerValidator name='dateTimePicker' label='Date Time Picker' />
+                    <DateTimePickerValidator name='dateTimePicker' label='Date Time Picker' />
                   </Space>
                   <Space>
-                  <ColorPickerValidator name='color' label='Color Picker' />
+                    <ColorPickerValidator name='color' label='Color Picker' />
                   </Space>
                   <Space>
-                  <NumberInputValidator name='count' label='Number Input' />
+                    <NumberInputValidator name='count' label='Number Input' />
+                  </Space>
+                  <Space>
+                    <TextEditorValidator name='text' placeholder='Text Editor' editorId='3' />
                   </Space>
                   <Divider />
                   <RadioValidator name='radio' label='Mercedes' value='mercedes' />
