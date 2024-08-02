@@ -118,6 +118,7 @@
   --header-height: 80px;
 
   --tr-dur: 0.2s;
+  --tr-dur-drawer: 0.4s;
 
   --color-body-bg: var(--color-secondary);
   --color-drawer-bg: var(--color-secondary);

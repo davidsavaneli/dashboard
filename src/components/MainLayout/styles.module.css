@@ -5,10 +5,18 @@
 }
 
 .wrapper {
-  width: calc(100% - var(--drawer-width));
-  margin-left: var(--drawer-width);
   display: flex;
   flex-direction: column;
+  width: calc(100% - var(--drawer-width));
+  margin-left: var(--drawer-width);
+  transition:
+    margin-left var(--tr-dur-drawer),
+    width var(--tr-dur-drawer);
+}
+
+html:global(.hide-drawer) .wrapper {
+  width: 100%;
+  margin-left: 0;
 }
 
 main {

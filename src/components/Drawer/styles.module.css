@@ -1,12 +1,36 @@
-.drawer {
+.drawerContainer {
   position: fixed;
   top: 0;
   left: 0;
-  width: var(--drawer-width);
-  max-width: var(--drawer-width);
-  border-right: 1px dashed var(--color-line-primary);
   height: 100dvh;
   z-index: 999;
+  overflow: hidden;
+  border-right: 1px dashed var(--color-line-primary);
+  background-color: var(--color-drawer-bg);
+  width: var(--drawer-width);
+  max-width: var(--drawer-width);
+  border-width: 1px;
+  transition:
+    max-width var(--tr-dur-drawer),
+    width var(--tr-dur-drawer),
+    border-width 0s 0s;
+}
+
+html:global(.hide-drawer) .drawerContainer {
+  width: 0;
+  max-width: 0;
+  border-width: 0;
+  transition:
+    max-width var(--tr-dur-drawer),
+    width var(--tr-dur-drawer),
+    border-width 0s var(--tr-dur-drawer);
+}
+
+.drawer {
+  position: relative;
+  width: var(--drawer-width);
+  max-width: var(--drawer-width);
+  height: 100%;
   overflow: auto;
 }
 

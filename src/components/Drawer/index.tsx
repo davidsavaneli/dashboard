@@ -156,14 +156,16 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
 
 const Drawer = ({ routes, openFirstLevel = true, logo, logoAltText = '' }: DrawerProps) => {
   return (
-    <div className={styles.drawer}>
-      <div className={styles.header}>
-        <div className={styles.headerLogoBox}>
-          <img src={logo} alt={logoAltText} className={styles.headerLogoImg} />
+    <div className={styles.drawerContainer}>
+      <div className={styles.drawer}>
+        <div className={styles.header}>
+          <div className={styles.headerLogoBox}>
+            <img src={logo} alt={logoAltText} className={styles.headerLogoImg} />
+          </div>
         </div>
-      </div>
-      <div className={styles.drawerItems}>
-        <List>{renderLinks(routes.items, routes, 0, openFirstLevel)}</List>
+        <div className={styles.drawerItems}>
+          <List>{renderLinks(routes.items, routes, 0, openFirstLevel)}</List>
+        </div>
       </div>
     </div>
   )
