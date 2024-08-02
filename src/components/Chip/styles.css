@@ -1,8 +1,8 @@
 .MuiChip-root {
-  border-radius: 10px !important;
-  background-color: var(--color-medium-shade300) !important;
-  border-color: var(--color-medium) !important;
+  border-radius: 50px !important;
+  background-color: var(--color-medium-shade200) !important;
   color: var(--color-primary) !important;
+  border: 0 !important
 }
 
 .MuiChip-root .MuiChip-deleteIcon {
@@ -60,63 +60,53 @@
 }
 
 .MuiChip-outlined.MuiChip-colorPrimary {
-  background-color: var(--color-primary-shade300) !important;
-  border-color: var(--color-primary) !important;
+  background-color: var(--color-primary-shade200) !important;
   color: var(--color-primary) !important;
 }
 
 .MuiChip-outlined.MuiChip-colorPrimaryLight {
-  background-color: var(--color-primaryLight-shade300) !important;
-  border-color: var(--color-primaryLight) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-primaryLight-shade200) !important;
+  color: var(--color-colorPrimaryLight) !important;
 }
 
 .MuiChip-outlined.MuiChip-colorSecondary {
-  background-color: var(--color-secondary-shade300) !important;
-  border-color: var(--color-secondary) !important;
+  background-color: var(--color-secondary-shade200) !important;
   color: var(--color-primary) !important;
 }
 
 .MuiChip-outlined.MuiChip-colorDark {
-  background-color: var(--color-dark-shade300) !important;
-  border-color: var(--color-dark) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-dark-shade200) !important;
+  color: var(--color-dark) !important;
 }
 
 .MuiChip-outlined.MuiChip-colorMedium {
-  background-color: var(--color-medium-shade300) !important;
-  border-color: var(--color-medium) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-medium-shade200) !important;
+  color: var(--color-medium) !important;
 }
 
 .MuiChip-outlined.MuiChip-colorLight {
-  background-color: var(--color-light-shade300) !important;
-  border-color: var(--color-light) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-light-shade200) !important;
+  color: var(--color-light) !important;
 }
 
 .MuiChip-outlined.MuiChip-colorSuccess {
-  background-color: var(--color-success-shade300) !important;
-  border-color: var(--color-success) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-success-shade200) !important;
+  color: var(--color-success) !important;
 }
 
 .MuiChip-outlined.MuiChip-colorError {
-  background-color: var(--color-error-shade300) !important;
-  border-color: var(--color-error) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-error-shade200) !important;
+  color: var(--color-error) !important;
 }
 
 .MuiChip-outlined.MuiChip-colorInfo {
-  background-color: var(--color-info-shade300) !important;
-  border-color: var(--color-info) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-info-shade200) !important;
+  color: var(--color-info) !important;
 }
 
 .MuiChip-outlined.MuiChip-colorWarning {
-  background-color: var(--color-warning-shade300) !important;
-  border-color: var(--color-warning) !important;
-  color: var(--color-primary) !important;
+  background-color: var(--color-warning-shade200) !important;
+  color: var(--color-warning) !important;
 }
 
 .MuiChip-filled .MuiChip-deleteIcon {
