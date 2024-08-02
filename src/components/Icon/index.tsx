@@ -103,6 +103,8 @@ import {
   SidebarLeft,
   SidebarRight,
   Task,
+  DocumentText1,
+  ArrowCircleDown2,
 } from 'iconsax-react'
 
 import styles from './styles.module.css'
@@ -210,6 +212,8 @@ const Icons = {
   SidebarLeft,
   SidebarRight,
   Task,
+  DocumentText1,
+  ArrowCircleDown2,
 }
 
 export type IconName = keyof typeof Icons

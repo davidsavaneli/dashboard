@@ -35,6 +35,7 @@ import DialogPage from './pages/Dialog'
 import TabsPage from './pages/Tabs'
 import NoDataPage from './pages/NoData'
 import PaginationPage from './pages/Pagination'
+import FilePage from './pages/File'
 
 import { IRoutes } from './router'
 
@@ -340,9 +341,16 @@ export const routes: IRoutes = {
           children: [
             {
               name: 'No Data',
-              path: '/components/forms/no-data',
+              path: '/components/other/no-data',
               iconName: '',
               element: <NoDataPage />,
+              children: [],
+            },
+            {
+              name: 'File',
+              path: '/components/other/file',
+              iconName: '',
+              element: <FilePage />,
               children: [],
             },
           ],

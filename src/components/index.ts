@@ -225,6 +225,9 @@ export type { SpaceProps } from './Space'
 export { default as Dialog } from './Dialog'
 export type { DialogProps } from './Dialog'
 
+export { default as File } from './File'
+export type { FileProps } from './File'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 
