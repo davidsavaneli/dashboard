@@ -8,7 +8,7 @@ import Text from '../Text'
 
 import styles from './styles.module.css'
 
-export type FileProps = {
+export interface FileProps {
   name: string
   url: string
   donwload?: boolean
@@ -35,7 +35,7 @@ const File = ({ name, url, donwload = true, ...props }: FileProps) => {
         secondaryAction={
           donwload && (
             <a className={styles.donwload} href={url} download>
-              <IconButton tooltipTitle='Download' iconName='Login' variant='filled' color='success' />
+              <IconButton tooltipTitle='Download' iconName='LoginCurve' variant='filled' color='success' size='sm' />
             </a>
           )
         }

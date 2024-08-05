@@ -12,6 +12,7 @@
 .donwload {
   transform: rotate(90deg);
 }
+
 .name p {
   max-width: 140px;
   min-width: 80px;

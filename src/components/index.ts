@@ -228,6 +228,9 @@ export type { DialogProps } from './Dialog'
 export { default as File } from './File'
 export type { FileProps } from './File'
 
+export { default as MiniFileUploader } from './MiniFileUploader'
+export type { MiniFileUploaderProps } from './MiniFileUploader'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 

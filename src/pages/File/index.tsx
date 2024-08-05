@@ -16,7 +16,8 @@ const FilePage = () => {
           url='https://meamacorestorage.blob.core.windows.net/system-notifications/418af4d2-dec5-4980-b8f4-7452ae50c15b.xlsx'
         />
       </Card>
-      <Card title='Not Download'>
+      <Space />
+      <Card title='disable Download'>
         <File
           name='Molestias voluptas mollitia'
           url='https://meamacorestorage.blob.core.windows.net/system-notifications/418af4d2-dec5-4980-b8f4-7452ae50c15b.docx'

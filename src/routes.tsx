@@ -36,6 +36,7 @@ import TabsPage from './pages/Tabs'
 import NoDataPage from './pages/NoData'
 import PaginationPage from './pages/Pagination'
 import FilePage from './pages/File'
+import MiniFileUploaderPage from './pages/MiniFileUploader'
 
 import { IRoutes } from './router'
 
@@ -351,6 +352,13 @@ export const routes: IRoutes = {
               path: '/components/other/file',
               iconName: '',
               element: <FilePage />,
+              children: [],
+            },
+            {
+              name: 'MiniFileUploader',
+              path: '/components/other/mini-file-uploader',
+              iconName: '',
+              element: <MiniFileUploaderPage />,
               children: [],
             },
           ],

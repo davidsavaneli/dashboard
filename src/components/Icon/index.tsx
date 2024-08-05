@@ -105,6 +105,7 @@ import {
   Task,
   DocumentText1,
   ArrowCircleDown2,
+  ExportCurve,
 } from 'iconsax-react'
 
 import styles from './styles.module.css'
@@ -214,6 +215,7 @@ const Icons = {
   Task,
   DocumentText1,
   ArrowCircleDown2,
+  ExportCurve,
 }
 
 export type IconName = keyof typeof Icons
