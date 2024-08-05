@@ -1,28 +1,61 @@
+import Avatar from '../Avatar'
 import Icon from '../Icon'
+import IconButton from '../IconButton'
+import ListItem from '../ListItem'
+import ListItemAvatar from '../ListItemAvatar'
+import ListItemText from '../ListItemText'
+import Text from '../Text'
 
 import styles from './styles.module.css'
 
 export type FileProps = {
   name: string
   url: string
+  donwload?: boolean
 }
 
-const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif', '.svg']
+const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif', 'svg']
 
-const hasImgExtension = (url: string) => {
-  return imageExtensions.some((ext) => url.includes(ext))
+const getFileFormat = (url: FileProps['url']) => {
+  const parts = url.split('/')
+  const fileName = parts[parts.length - 1]
+  const fileParts = fileName.split('.')
+  return fileParts[fileParts.length - 1]
 }
 
-const File = ({ name, url, ...props }: FileProps) => {
+const hasImgExtension = (url: FileProps['url']) => {
+  const format = getFileFormat(url)
+  return imageExtensions.includes(format)
+}
+
+const File = ({ name, url, donwload = true, ...props }: FileProps) => {
   return (
     <div className={styles.wrapper} {...props}>
-      <div className={styles.fileBox}>
-        <Icon className={styles.icon} name={hasImgExtension(url) ? 'Gallery' : 'DocumentText1'} />
-        <div className={styles.text}>{name}</div>
-        <a href={url} download>
-          <Icon name='Login' />
-        </a>
-      </div>
+      <ListItem
+        secondaryAction={
+          donwload && (
+            <a className={styles.donwload} href={url} download>
+              <IconButton tooltipTitle='Download' iconName='Login' variant='filled' color='success' />
+            </a>
+          )
+        }
+      >
+        <ListItemAvatar>
+          {hasImgExtension(url) ? (
+            <Avatar size='lg' src={url}></Avatar>
+          ) : (
+            <Avatar size='lg' color='primary' iconName='DocumentText1'></Avatar>
+          )}
+        </ListItemAvatar>
+        <ListItemText>
+          <div className={styles.name}>
+            <Text color='primary' weight='medium'>
+              {name}
+            </Text>
+          </div>
+          <Text size='xs'>{getFileFormat(url)}</Text>
+        </ListItemText>
+      </ListItem>
     </div>
   )
 }

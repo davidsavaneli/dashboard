@@ -1,0 +1,25 @@
+.wrapper {
+  display: inline-flex;
+  padding: var(--padding-md) var(--padding-md);
+  background-color: var(--color-primaryLight-shade200);
+  border-radius: var(--border-radius-md);
+}
+
+.wrapper :global(.MuiListItem-root) {
+  padding: 0 !important;
+}
+
+.donwload {
+  transform: rotate(90deg);
+}
+.name p {
+  max-width: 140px;
+  min-width: 80px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.wrapper :global(.MuiListItemSecondaryAction-root) {
+  margin-left: 30px !important;
+}

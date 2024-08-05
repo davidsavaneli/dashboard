@@ -54,7 +54,7 @@ export default Header
 const BurgerMenu = () => {
   const { toggleHideDrawer } = useHideDrawer()
 
-  return <IconButton iconName='HambergerMenu' variant='filled' iconVariant='Bulk' onClick={toggleHideDrawer} />
+  return <IconButton iconName='HambergerMenu' variant='filled' onClick={toggleHideDrawer} />
 }
 
 const Languages = () => (
