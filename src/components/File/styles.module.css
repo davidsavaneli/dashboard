@@ -1,6 +1,6 @@
 .wrapper {
   display: inline-flex;
-  padding: var(--padding-md) var(--padding-md);
+  padding: var(--padding-sm) var(--padding-sm);
   background-color: var(--color-primaryLight-shade200);
   border-radius: var(--border-radius-md);
 }
