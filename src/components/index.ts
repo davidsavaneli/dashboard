@@ -232,7 +232,7 @@ export { default as MiniFileUploader } from './MiniFileUploader'
 export type { MiniFileUploaderProps } from './MiniFileUploader'
 
 export { default as FileUploader } from './FileUploader'
-export type { FileUploaderProps } from './FileUploader'
+// export type { FileUploaderProps } from './FileUploader'
 
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
