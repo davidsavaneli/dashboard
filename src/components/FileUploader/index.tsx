@@ -68,6 +68,7 @@ const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) =
       onreorderfiles={(fileItems) => {
         setFiles(fileItems)
       }}
+      itemInsertLocation="after"
     />
   )
 }
