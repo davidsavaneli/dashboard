@@ -17,6 +17,7 @@ const FileUploaderPage = () => {
               },
             },
           ]}
+          onFilesChange={(files: any[]) => console.log(files)}
         />
       </Card>
     </ContentLayout>

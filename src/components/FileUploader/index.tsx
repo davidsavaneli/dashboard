@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
+import { FilePondFile, FilePondInitialFile } from 'filepond'
 import { FilePond, registerPlugin } from 'react-filepond'
-
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
 import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size'
@@ -12,7 +12,6 @@ import 'filepond/dist/filepond.min.css'
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css'
 
 import './styles.css'
-import { FilePondFile, FilePondInitialFile } from 'filepond'
 
 registerPlugin(
   FilePondPluginImageExifOrientation,
@@ -25,30 +24,19 @@ registerPlugin(
 
 interface FileUploaderProps {
   initialFiles?: FilePondInitialFile[]
+  onFilesChange?: (files: any[]) => void
 }
 
-const FileUploader = ({ initialFiles = [] }: FileUploaderProps) => {
+const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) => {
   const [files, setFiles] = useState<any[]>(initialFiles)
-  const [fileObjects, setFileObjects] = useState<{ source: string, sortIndex: number }[]>([])
+  const [fileObjects, setFileObjects] = useState<{ source: string; sortIndex: number }[]>([])
 
-  const fileToBase64 = (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader()
-      reader.readAsDataURL(file)
-      reader.onload = () => resolve(reader.result as string)
-      reader.onerror = error => reject(error)
+  const handleFileObjects = (fileItems: FilePondFile[]) => {
+    const objects = fileItems.map((item, index) => {
+      const source = item.file instanceof File ? item.getFileEncodeBase64String() : (item.source as string)
+      return { source, sortIndex: index }
     })
-  }
 
-  const handleFileObjects = async (fileItems: FilePondFile[]) => {
-    const objects = await Promise.all(
-      fileItems.map(async (item, index) => {
-        const source = item.file instanceof File
-          ? await fileToBase64(item.file)
-          : item.source as string
-        return { source, sortIndex: index }
-      })
-    )
     setFileObjects(objects)
   }
 
@@ -57,7 +45,7 @@ const FileUploader = ({ initialFiles = [] }: FileUploaderProps) => {
   }
 
   useEffect(() => {
-    console.log(fileObjects, ' - fileObjects')
+    onFilesChange && onFilesChange(fileObjects)
   }, [fileObjects])
 
   useEffect(() => {
@@ -85,3 +73,24 @@ const FileUploader = ({ initialFiles = [] }: FileUploaderProps) => {
 }
 
 export default FileUploader
+
+// const fileToBase64 = (file: File): Promise<string> => {
+//   return new Promise((resolve, reject) => {
+//     const reader = new FileReader()
+//     reader.readAsDataURL(file)
+//     reader.onload = () => resolve(reader.result as string)
+//     reader.onerror = error => reject(error)
+//   })
+// }
+
+// const handleFileObjects = async (fileItems: FilePondFile[]) => {
+//   const objects = await Promise.all(
+//     fileItems.map(async (item, index) => {
+//       const source = item.file instanceof File
+//         ? await fileToBase64(item.file)
+//         : item.source as string
+//       return { source, sortIndex: index }
+//     })
+//   )
+//   setFileObjects(objects)
+// }
