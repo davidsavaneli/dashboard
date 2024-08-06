@@ -29,15 +29,27 @@ interface FileUploaderProps {
 
 const FileUploader = ({ initialFiles = [] }: FileUploaderProps) => {
   const [files, setFiles] = useState<any[]>(initialFiles)
-  const [fileObjects, setFileObjects] = useState<any[]>([])
+  const [fileObjects, setFileObjects] = useState<{ source: string, sortIndex: number }[]>([])
 
-  const handleFileObjects = (fileItems: FilePondFile[]) => {
-    setFileObjects(
-      fileItems.map((item, index) => ({
-        file: item.getFileEncodeBase64String() || '',
-        sortIndex: index,
-      })),
+  const fileToBase64 = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader()
+      reader.readAsDataURL(file)
+      reader.onload = () => resolve(reader.result as string)
+      reader.onerror = error => reject(error)
+    })
+  }
+
+  const handleFileObjects = async (fileItems: FilePondFile[]) => {
+    const objects = await Promise.all(
+      fileItems.map(async (item, index) => {
+        const source = item.file instanceof File
+          ? await fileToBase64(item.file)
+          : item.source as string
+        return { source, sortIndex: index }
+      })
     )
+    setFileObjects(objects)
   }
 
   const handleRemoveFile = (error: any, file: FilePondFile) => {
@@ -49,12 +61,7 @@ const FileUploader = ({ initialFiles = [] }: FileUploaderProps) => {
   }, [fileObjects])
 
   useEffect(() => {
-    files.forEach((file) => {
-      if (file && typeof file === 'object' && 'file' in file && 'id' in file) {
-        console.log('----------')
-        handleFileObjects(files)
-      }
-    })
+    handleFileObjects(files)
   }, [files])
 
   return (
