@@ -143,7 +143,6 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
           modules={modules}
         />
       </div>
-
       {helperText && <FormHelperText error={error}>{helperText}</FormHelperText>}
     </div>
   )

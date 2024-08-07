@@ -41,6 +41,12 @@
   border-radius: var(--border-radius-md) !important;
   border: 1px dashed var(--color-line-primary);
   z-index: 7 !important;
+  transition: border-color var(--tr-dur) !important;
+}
+
+.filepond-error .filepond--drop-label {
+    border-color: var(--color-error);
+    background-color: var(--color-error-shade200) !important;
 }
 
 .filepond--drop-label label {

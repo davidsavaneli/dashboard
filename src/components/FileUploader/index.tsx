@@ -17,12 +17,15 @@ import ListItemAvatar from '../ListItemAvatar'
 import Avatar from '../Avatar'
 import ListItemText from '../ListItemText'
 import Text from '../Text'
+import FormHelperText from '../FormHelperText'
+import Space from '../Space'
 import { filePondLabels } from './labels'
 
 import 'filepond/dist/filepond.min.css'
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css'
 
 import './styles.css'
+import Alert from '../Alert'
 
 registerPlugin(
   FilePondPluginImageExifOrientation,
@@ -33,15 +36,15 @@ registerPlugin(
   FilePondPluginFileMetadata,
 )
 
-interface InitialFileProps {
+export interface FileUploaderInitialFileProps {
   source: string
   sortIndex: number
   altText?: string
 }
 
-interface FileUploaderProps {
-  initialFiles?: InitialFileProps[]
-  onFilesChange?: (files: InitialFileProps[]) => void
+export interface FileUploaderProps {
+  initialFiles?: FileUploaderInitialFileProps[]
+  onFilesChange?: (files: FileUploaderInitialFileProps[]) => void
   title?: string
   secondaryTitle?: string
   secondaryTitleValue?: string
@@ -56,6 +59,8 @@ interface FileUploaderProps {
   itemInsertLocation?: FilePondBaseProps['itemInsertLocation']
   maxFileSize?: FilePondOptions['maxFileSize']
   acceptedFileTypes?: FilePondOptions['acceptedFileTypes']
+  error?: boolean
+  helperText?: string
 }
 
 const FileUploader = ({
@@ -75,6 +80,8 @@ const FileUploader = ({
   itemInsertLocation = 'after',
   maxFileSize = '5MB',
   acceptedFileTypes = [],
+  error,
+  helperText,
 }: FileUploaderProps) => {
   const [openDialog, setOpenDialog] = useState(false)
   const [dialogTitle, setDialogTitle] = useState('Edit Alt Text')
@@ -91,7 +98,7 @@ const FileUploader = ({
   const sortedInitialFiles = [...initialFiles].sort((a, b) => a.sortIndex - b.sortIndex)
 
   const [files, setFiles] = useState<any[]>(sortedInitialFiles)
-  const [fileObjects, setFileObjects] = useState<InitialFileProps[]>(sortedInitialFiles)
+  const [fileObjects, setFileObjects] = useState<FileUploaderInitialFileProps[]>(sortedInitialFiles)
 
   const handleFileObjects = (fileItems: FilePondFile[]) => {
     const objects = fileItems.map((item, index) => {
@@ -143,6 +150,7 @@ const FileUploader = ({
     <div
       className={clsx('filepond-container', {
         ['filepond-disabled']: disabled,
+        ['filepond-error']: error,
       })}
     >
       <ListItem>
@@ -203,6 +211,18 @@ const FileUploader = ({
       >
         <TextField label='Alt Text' value={altText} onChange={(e) => setAltText(e.target.value)} />
       </Dialog>
+      {helperText && (
+        <>
+          {fileObjects.length ? <Space /> : null}
+          <FormHelperText error={error}>{helperText}</FormHelperText>
+        </>
+      )}
+      {fileObjects.length && !disabled ? (
+        <>
+          <Space />
+          <Alert severity='warning'>Click the image, for change 'Alt Text'</Alert>
+        </>
+      ) : null}
     </div>
   )
 }

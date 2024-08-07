@@ -4,12 +4,7 @@ const FileUploaderPage = () => {
   return (
     <ContentLayout label='FileUploader Component'>
       <Card title='Default'>
-        <FileUploader
-          onFilesChange={(files) => console.log(files)}
-          title='Main Photo'
-          secondaryTitle='Recommended Size'
-          secondaryTitleValue='1600px - 1200px'
-        />
+        <FileUploader title='Main Photo' secondaryTitle='Recommended Size' secondaryTitleValue='1600px - 1200px' />
       </Card>
       <Space />
       <Card title='Multiple'>
@@ -30,7 +25,6 @@ const FileUploaderPage = () => {
               altText: 'gogo',
             },
           ]}
-          onFilesChange={(files) => console.log(files)}
         />
       </Card>
       <Space />
@@ -50,7 +44,6 @@ const FileUploaderPage = () => {
               altText: 'gogo',
             },
           ]}
-          onFilesChange={(files) => console.log(files)}
         />
       </Card>
       <Space />
@@ -73,13 +66,11 @@ const FileUploaderPage = () => {
               altText: 'gogo',
             },
           ]}
-          onFilesChange={(files) => console.log(files)}
         />
       </Card>
       <Space />
       <Card title='Disabled'>
         <FileUploader
-          onFilesChange={(files) => console.log(files)}
           initialFiles={[
             {
               source:
@@ -91,6 +82,10 @@ const FileUploaderPage = () => {
           allowMultiple
           disabled
         />
+      </Card>
+      <Space />
+      <Card title='Error'>
+        <FileUploader error helperText='Required' />
       </Card>
     </ContentLayout>
   )

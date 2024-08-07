@@ -10,6 +10,7 @@ import {
   ColorPickerValidator,
   NumberInputValidator,
   TextEditorValidator,
+  FileUploaderValidator,
   CheckboxValidator,
   RadioValidator,
   RadioGroup,
@@ -49,7 +50,7 @@ const validationSchema = yup.object({
         label: yup.string().required(),
       }),
     )
-    .min(1, 'Product required')
+    .min(2, 'Product required min 2')
     .required('Product required'),
   datePicker: yup.date().nullable().required('Date Picker is required'),
   timePicker: yup.date().nullable().required('Time Picker is required'),
@@ -64,6 +65,17 @@ const validationSchema = yup.object({
   radioGroup: yup.string().required('Radio Group is required'),
   count: yup.number().required('Number Input is required').min(1, 'min 1'),
   text: yup.string().required('Text Editor Required'),
+  files: yup
+    .array()
+    .of(
+      yup.object({
+        source: yup.string().required(),
+        sortIndex: yup.number().required(),
+        altText: yup.string().required(),
+      }),
+    )
+    .min(2, 'Files required (Min 2)')
+    .required('Files required'),
 })
 
 const initialValues = {
@@ -84,12 +96,13 @@ const initialValues = {
   radioGroup: '',
   count: 0,
   text: '',
+  files: [],
 }
 
 const handleFormSubmit = (values: typeof initialValues, actions: any) => {
   console.log(JSON.stringify({ ...values }, null, 2))
   actions.setSubmitting(true)
-  actions.resetForm()
+  // actions.resetForm()
 }
 
 const FormValidationsPage = () => {
@@ -163,6 +176,9 @@ const FormValidationsPage = () => {
                   </Space>
                   <Space>
                     <TextEditorValidator name='text' placeholder='Text Editor' editorId='3' />
+                  </Space>
+                  <Space>
+                    <FileUploaderValidator name='files' allowMultiple initialFiles={initialValues.files} />
                   </Space>
                   <Divider />
                   <RadioValidator name='radio' label='Mercedes' value='mercedes' />

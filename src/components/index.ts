@@ -232,7 +232,8 @@ export { default as MiniFileUploader } from './MiniFileUploader'
 export type { MiniFileUploaderProps } from './MiniFileUploader'
 
 export { default as FileUploader } from './FileUploader'
-// export type { FileUploaderProps } from './FileUploader'
+export type { FileUploaderProps, FileUploaderInitialFileProps } from './FileUploader'
+export { default as FileUploaderValidator } from './ValidatorForms/FileUploaderValidator'
 
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
