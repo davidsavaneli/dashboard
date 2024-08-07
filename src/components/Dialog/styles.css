@@ -4,22 +4,27 @@
   border-radius: var(--border-radius-md) !important;
   box-shadow: var(--box-shadow-card) !important;
   max-width: 600px !important;
+  width: 600px !important;
 }
 
 .MuiDialog-sizeSm .MuiDialog-paper {
   max-width: 400px !important;
+  width: 400px !important;
 }
 
 .MuiDialog-sizeMd .MuiDialog-paper {
   max-width: 600px !important;
+  width: 600px !important;
 }
 
 .MuiDialog-sizeLg .MuiDialog-paper {
   max-width: 900px !important;
+  width: 900px !important;
 }
 
 .MuiDialog-sizeXl .MuiDialog-paper {
   max-width: 1200px !important;
+  width: 1200px !important;
 }
 
 .MuiDialogTitle-root {
