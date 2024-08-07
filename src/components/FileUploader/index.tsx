@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FilePondFile, FilePondInitialFile } from 'filepond'
+import { FilePondFile } from 'filepond'
 import { FilePond, registerPlugin } from 'react-filepond'
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
@@ -10,6 +10,7 @@ import FilePondPluginFileMetadata from 'filepond-plugin-file-metadata'
 import Dialog from '../Dialog'
 import Button from '../Button'
 import TextField from '../TextField'
+import Toast from '../Toast'
 
 import 'filepond/dist/filepond.min.css'
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css'
@@ -25,21 +26,34 @@ registerPlugin(
   FilePondPluginFileMetadata,
 )
 
+interface InitialFileProps {
+  source: string
+  sortIndex: number
+  altText?: string
+}
+
 interface FileUploaderProps {
-  initialFiles?: FilePondInitialFile[]
-  onFilesChange?: (files: any[]) => void
+  initialFiles?: InitialFileProps[]
+  onFilesChange?: (files: InitialFileProps[]) => void
 }
 
 const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) => {
   const [openDialog, setOpenDialog] = useState(false)
-  const [currentFile, setCurrentFile] = useState<FilePondFile | null>(null)
+  const [dialogTitle, setDialogTitle] = useState('Edit Alt Text')
   const [altText, setAltText] = useState('')
+  const [currentFile, setCurrentFile] = useState<FilePondFile | null>(null)
 
-  const handleDialogOpen = () => setOpenDialog(true)
+  const handleDialogOpen = (fileName: string) => {
+    setDialogTitle(fileName)
+    setOpenDialog(true)
+  }
+
   const handleDialogClose = () => setOpenDialog(false)
 
-  const [files, setFiles] = useState<any[]>(initialFiles)
-  const [fileObjects, setFileObjects] = useState<{ source: string; sortIndex: number; altText?: string }[]>([])
+  const sortedInitialFiles = [...initialFiles].sort((a, b) => a.sortIndex - b.sortIndex)
+
+  const [files, setFiles] = useState<any[]>(sortedInitialFiles)
+  const [fileObjects, setFileObjects] = useState<InitialFileProps[]>(sortedInitialFiles)
 
   const handleFileObjects = (fileItems: FilePondFile[]) => {
     const objects = fileItems.map((item, index) => {
@@ -48,14 +62,16 @@ const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) =
       return {
         source,
         sortIndex: index,
-        altText: existingObject?.altText || 'default alt text here',
+        altText: existingObject?.altText || 'Default Alt Text',
       }
     })
     setFileObjects(objects)
   }
 
   const handleRemoveFile = (error: any, file: FilePondFile) => {
-    !error && setFiles((prevFiles) => prevFiles.filter((f) => f !== file.file))
+    if (!error) {
+      setFiles((prevFiles) => prevFiles.filter((f) => f !== file.file))
+    }
   }
 
   useEffect(() => {
@@ -64,25 +80,24 @@ const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) =
 
   useEffect(() => {
     handleFileObjects(files)
-    console.log(files)
   }, [files])
 
   const cleanFileName = (fileName: string) => {
     return fileName.replace(/[()\s]/g, '').replace(/\.[^/.]+$/, '')
   }
 
-  const handleSave = () => {
+  const handleDialogSave = () => {
     if (currentFile) {
+      const fileSource = currentFile.file instanceof File ? currentFile.getFileEncodeBase64String() : currentFile.source
       setFileObjects((prevObjects) =>
         prevObjects.map((obj) =>
-          obj.source === (currentFile.file instanceof File ? currentFile.getFileEncodeBase64String() : currentFile.source)
-            ? { ...obj, altText: altText || 'default alt text here' }
-            : obj
-        )
+          obj.source === fileSource ? { ...obj, altText: altText || 'Default Alt Text' } : obj,
+        ),
       )
       handleDialogClose()
       setAltText('')
       setCurrentFile(null)
+      Toast.success('Alt Text Successfully Saved')
     }
   }
 
@@ -105,33 +120,28 @@ const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) =
           handleFileObjects(fileItems)
         }}
         onactivatefile={(file) => {
-          console.log(file)
-          console.log(cleanFileName(file.file.name))
+          const fileSource = file.file instanceof File ? file.getFileEncodeBase64String() : file.source
           setCurrentFile(file)
-          setAltText(fileObjects.find((obj) => obj.source === (file.file instanceof File ? file.getFileEncodeBase64String() : file.source))?.altText || '')
-          handleDialogOpen()
+          setAltText(fileObjects.find((obj) => obj.source === fileSource)?.altText || '')
+          handleDialogOpen(file.file.name as string)
         }}
         itemInsertLocation='after'
       />
       <Dialog
         open={openDialog}
         onClose={handleDialogClose}
-        title={'Edit Alt Text'}
+        title={dialogTitle}
         size='sm'
         actions={
           <>
             <Button onClick={handleDialogClose} variant='transparent' color='error'>
               Cancel
             </Button>
-            <Button onClick={handleSave}>Save</Button>
+            <Button onClick={handleDialogSave}>Save</Button>
           </>
         }
       >
-        <TextField
-          label='Alt Text'
-          value={altText}
-          onChange={(e) => setAltText(e.target.value)}
-        />
+        <TextField label='Alt Text' value={altText} onChange={(e) => setAltText(e.target.value)} />
       </Dialog>
     </>
   )
