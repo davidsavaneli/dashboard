@@ -55,7 +55,7 @@ const MiniFileUploader = ({
           {previewImage ? (
             <Avatar size='lg' src={previewImage}></Avatar>
           ) : (
-            <Avatar size='lg' color='primary' iconName='Gallery'></Avatar>
+            <Avatar size='lg' color='medium' iconName='Gallery'></Avatar>
           )}
         </ListItemAvatar>
         <ListItemText>

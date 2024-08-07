@@ -44,7 +44,7 @@ const File = ({ name, url, donwload = true, ...props }: FileProps) => {
           {hasImgExtension(url) ? (
             <Avatar size='lg' src={url}></Avatar>
           ) : (
-            <Avatar size='lg' color='primary' iconName='DocumentText1'></Avatar>
+            <Avatar size='lg' color='medium' iconName='DocumentText1'></Avatar>
           )}
         </ListItemAvatar>
         <ListItemText>

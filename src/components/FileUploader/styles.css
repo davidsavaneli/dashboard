@@ -36,7 +36,7 @@
   cursor: pointer !important;
   color: var(--color-primary) !important;
   font-size: var(--font-size-text-sm) !important;
-  background-color: var(--color-medium-shade200) !important;
+  background-color: var(--color-medium-shade100) !important;
   margin-bottom: 20px !important;
   border-radius: var(--border-radius-md) !important;
   border: 1px dashed var(--color-line-primary);
@@ -46,7 +46,7 @@
 
 .filepond-error .filepond--drop-label {
     border-color: var(--color-error);
-    background-color: var(--color-error-shade200) !important;
+    background-color: var(--color-error-shade100) !important;
 }
 
 .filepond--drop-label label {

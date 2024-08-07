@@ -2,7 +2,7 @@
   position: relative;
   display: inline-flex;
   padding: var(--padding-sm) var(--padding-sm);
-  background-color: var(--color-primaryLight-shade200);
+  background-color: var(--color-medium-shade200);
   border-radius: var(--border-radius-md);
   cursor: pointer;
 }
