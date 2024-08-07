@@ -1,11 +1,13 @@
 .filepond-container {
+  position: relative !important;
+  z-index: 1 !important;
   padding: var(--padding-sm) !important;
-  border: 1px solid var(--color-dark-shade200) !important;
+  border: 1px solid var(--color-line-primary) !important;
   border-radius: var(--border-radius-md) !important;
 }
 
 .filepond-container .MuiListItem-root {
-    padding: 0 0 var(--padding-sm) 0 !important;
+  padding: 0 0 var(--padding-sm) 0 !important;
 }
 
 .filepond--root {
@@ -20,6 +22,7 @@
 }
 
 .filepond--drop-label {
+  position: relative !important;
   min-height: 90px !important;
   cursor: pointer !important;
   color: var(--color-primary) !important;
@@ -28,9 +31,11 @@
   margin-bottom: 20px !important;
   border-radius: var(--border-radius-md) !important;
   border: 1px dashed var(--color-line-primary);
+  z-index: 7 !important;
 }
 
 .filepond--drop-label label {
+  cursor: pointer !important;
   padding: var(--padding-sm) var(--padding-sm) !important;
 }
 
@@ -63,12 +68,11 @@
 }
 
 .filepond--item {
-  width: calc(33.33% - 10px) !important;
-  /* width: 50% !important; */
+  width: calc(33.33% - var(--margin-sm)) !important;
   height: inherit !important;
   overflow: hidden !important;
   border-radius: 10px !important;
-  margin: 5px !important;
+  margin: calc(var(--margin-sm) / 2) !important;
 }
 
 .filepond--file-wrapper {

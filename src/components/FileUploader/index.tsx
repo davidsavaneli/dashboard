@@ -42,6 +42,9 @@ interface InitialFileProps {
 interface FileUploaderProps {
   initialFiles?: InitialFileProps[]
   onFilesChange?: (files: InitialFileProps[]) => void
+  title?: string
+  secondaryTitle?: string
+  secondaryTitleValue?: string
   name?: FilePondBaseProps['name']
   className?: FilePondBaseProps['className']
   required?: FilePondBaseProps['required']
@@ -58,6 +61,9 @@ interface FileUploaderProps {
 const FileUploader = ({
   initialFiles = [],
   onFilesChange,
+  title = 'Gallery',
+  secondaryTitle = 'Recommended Size',
+  secondaryTitleValue = '',
   name = 'filepond',
   className = null,
   required = false,
@@ -141,9 +147,12 @@ const FileUploader = ({
         </ListItemAvatar>
         <ListItemText>
           <Text color='primary' weight='medium'>
-            Gallery
+            {title}
           </Text>
-          <Text size='xs'>Recommended Size: 1600px - 1200px</Text>
+          <Text size='xs'>
+            {secondaryTitle}
+            {secondaryTitleValue && ': ' + secondaryTitleValue}
+          </Text>
         </ListItemText>
       </ListItem>
       <FilePond
