@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import clsx from 'clsx'
 import { FilePondFile, FilePondBaseProps, FilePondOptions, FilePondLabelProps } from 'filepond'
 import { FilePond, registerPlugin } from 'react-filepond'
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
@@ -11,18 +12,17 @@ import Dialog from '../Dialog'
 import Button from '../Button'
 import TextField from '../TextField'
 import Toast from '../Toast'
+import ListItem from '../ListItem'
+import ListItemAvatar from '../ListItemAvatar'
+import Avatar from '../Avatar'
+import ListItemText from '../ListItemText'
+import Text from '../Text'
 import { filePondLabels } from './labels'
 
 import 'filepond/dist/filepond.min.css'
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css'
 
 import './styles.css'
-import ListItem from '../ListItem'
-import IconButton from '../IconButton'
-import ListItemAvatar from '../ListItemAvatar'
-import Avatar from '../Avatar'
-import ListItemText from '../ListItemText'
-import Text from '../Text'
 
 registerPlugin(
   FilePondPluginImageExifOrientation,
@@ -140,7 +140,11 @@ const FileUploader = ({
   }
 
   return (
-    <div className='filepond-container'>
+    <div
+      className={clsx('filepond-container', {
+        ['filepond-disabled']: disabled,
+      })}
+    >
       <ListItem>
         <ListItemAvatar>
           <Avatar size='lg' iconName='Camera'></Avatar>

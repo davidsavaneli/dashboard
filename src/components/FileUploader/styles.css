@@ -14,6 +14,15 @@
   margin-bottom: 0 !important;
 }
 
+.filepond--root[data-disabled] {
+  cursor: not-allowed !important;
+  pointer-events: auto !important;
+}
+
+.filepond--root[data-disabled] * {
+  cursor: not-allowed !important;
+}
+
 .filepond--credits {
   display: none !important;
   opacity: 0 !important;
@@ -37,6 +46,10 @@
 .filepond--drop-label label {
   cursor: pointer !important;
   padding: var(--padding-sm) var(--padding-sm) !important;
+}
+
+.filepond--root[data-disabled] .filepond--drop-label label {
+  opacity: 0.7 !important;
 }
 
 .filepond--root .filepond--list-scroller {
@@ -65,6 +78,10 @@
   right: 0 !important;
   top: var(--padding-sm) !important;
   padding-top: var(--padding-sm) !important;
+}
+
+.filepond--root[data-disabled] .filepond--list {
+  opacity: 0.7 !important;
 }
 
 .filepond--item {

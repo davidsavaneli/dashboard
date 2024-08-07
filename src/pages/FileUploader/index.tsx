@@ -76,6 +76,22 @@ const FileUploaderPage = () => {
           onFilesChange={(files) => console.log(files)}
         />
       </Card>
+      <Space />
+      <Card title='Disabled'>
+        <FileUploader
+          onFilesChange={(files) => console.log(files)}
+          initialFiles={[
+            {
+              source:
+                'https://plus.unsplash.com/premium_photo-1722686516461-46770349c814?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D',
+              sortIndex: 1,
+              altText: 'chama',
+            },
+          ]}
+          allowMultiple
+          disabled
+        />
+      </Card>
     </ContentLayout>
   )
 }
