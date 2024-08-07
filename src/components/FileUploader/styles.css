@@ -1,96 +1,77 @@
-.filepond--item {
-    width: calc(50% - 0.5em);
+.filepond-container {
+  padding: var(--padding-sm) !important;
+  border: 1px solid var(--color-dark-shade200) !important;
+  border-radius: var(--border-radius-md) !important;
 }
 
-@media (min-width: 30em) {
-    .filepond--item {
-        width: calc(50% - 0.5em);
-    }
-}
-
-@media (min-width: 50em) {
-    .filepond--item {
-        width: calc(33.33% - 0.5em);
-    }
-}
-
-/* use a hand cursor intead of arrow for the action buttons */
-.filepond--file-action-button {
-    cursor: pointer;
-}
-
-/* the text color of the drop label*/
-.filepond--drop-label {
-    color: #555;
-}
-
-/* underline color for "Browse" button */
-.filepond--label-action {
-    text-decoration-color: #aaa;
-}
-
-/* the background color of the filepond drop area */
-.filepond--panel-root {
-    background-color: #eee;
-}
-
-/* the border radius of the drop area */
-.filepond--panel-root {
-    border-radius: 0.5em;
-}
-
-/* the border radius of the file item */
-.filepond--item-panel {
-    border-radius: 0.5em;
-}
-
-/* the background color of the file and file panel (used when dropping an image) */
-.filepond--item-panel {
-    background-color: #555;
-}
-
-/* the background color of the drop circle */
-.filepond--drip-blob {
-    background-color: #999;
-}
-
-/* the background color of the black action buttons */
-.filepond--file-action-button {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* the icon color of the black action buttons */
-.filepond--file-action-button {
-    color: white;
-}
-
-/* the color of the focus ring */
-.filepond--file-action-button:hover,
-.filepond--file-action-button:focus {
-    box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.9);
-}
-
-/* the text color of the file status and info labels */
-.filepond--file {
-    color: white;
-}
-
-/* error state color */
-[data-filepond-item-state*='error'] .filepond--item-panel,
-[data-filepond-item-state*='invalid'] .filepond--item-panel {
-    background-color: red;
-}
-
-[data-filepond-item-state='processing-complete'] .filepond--item-panel {
-    background-color: green;
-}
-
-/* bordered drop area */
-.filepond--panel-root {
-    /* background-color: transparent;
-    border: 2px solid #2c3340; */
+.filepond-container .MuiListItem-root {
+    padding: 0 0 var(--padding-sm) 0 !important;
 }
 
 .filepond--root {
-    /* max-height: 10em; */
+  margin-bottom: 0 !important;
+}
+
+.filepond--credits {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.filepond--drop-label {
+  min-height: 90px !important;
+  cursor: pointer !important;
+  color: var(--color-primary) !important;
+  font-size: var(--font-size-text-sm) !important;
+  background-color: var(--color-medium-shade200) !important;
+  margin-bottom: 20px !important;
+  border-radius: var(--border-radius-md) !important;
+  border: 1px dashed var(--color-line-primary);
+}
+
+.filepond--drop-label label {
+  padding: var(--padding-sm) var(--padding-sm) !important;
+}
+
+.filepond--root .filepond--list-scroller {
+  margin-top: 0 !important;
+}
+
+.filepond--panel.filepond--panel-root {
+  border-radius: 10px !important;
+}
+
+.filepond--panel-root {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+
+.filepond--panel-top:after {
+  background-color: transparent !important;
+}
+
+.filepond--panel-bottom:before {
+  background-color: transparent !important;
+}
+
+.filepond--list {
+  left: 0 !important;
+  right: 0 !important;
+  top: var(--padding-sm) !important;
+  padding-top: var(--padding-sm) !important;
+}
+
+.filepond--item {
+  width: calc(33.33% - 10px) !important;
+  /* width: 50% !important; */
+  height: inherit !important;
+  overflow: hidden !important;
+  border-radius: 10px !important;
+  margin: 5px !important;
+}
+
+.filepond--file-wrapper {
+  position: relative !important;
+  padding-bottom: 48% !important;
 }

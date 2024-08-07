@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FilePondFile } from 'filepond'
+import { FilePondFile, FilePondBaseProps, FilePondOptions, FilePondLabelProps } from 'filepond'
 import { FilePond, registerPlugin } from 'react-filepond'
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
@@ -11,11 +11,18 @@ import Dialog from '../Dialog'
 import Button from '../Button'
 import TextField from '../TextField'
 import Toast from '../Toast'
+import { filePondLabels } from './labels'
 
 import 'filepond/dist/filepond.min.css'
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css'
 
 import './styles.css'
+import ListItem from '../ListItem'
+import IconButton from '../IconButton'
+import ListItemAvatar from '../ListItemAvatar'
+import Avatar from '../Avatar'
+import ListItemText from '../ListItemText'
+import Text from '../Text'
 
 registerPlugin(
   FilePondPluginImageExifOrientation,
@@ -35,9 +42,34 @@ interface InitialFileProps {
 interface FileUploaderProps {
   initialFiles?: InitialFileProps[]
   onFilesChange?: (files: InitialFileProps[]) => void
+  name?: FilePondBaseProps['name']
+  className?: FilePondBaseProps['className']
+  required?: FilePondBaseProps['required']
+  disabled?: FilePondBaseProps['disabled']
+  allowDrop?: FilePondBaseProps['allowDrop']
+  allowMultiple?: FilePondBaseProps['allowMultiple']
+  allowReorder?: FilePondBaseProps['allowReorder']
+  maxFiles?: FilePondBaseProps['maxFiles']
+  itemInsertLocation?: FilePondBaseProps['itemInsertLocation']
+  maxFileSize?: FilePondOptions['maxFileSize']
+  acceptedFileTypes?: FilePondOptions['acceptedFileTypes']
 }
 
-const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) => {
+const FileUploader = ({
+  initialFiles = [],
+  onFilesChange,
+  name = 'filepond',
+  className = null,
+  required = false,
+  disabled = false,
+  allowDrop = true,
+  allowMultiple = false,
+  allowReorder = true,
+  maxFiles = null,
+  itemInsertLocation = 'after',
+  maxFileSize = '5MB',
+  acceptedFileTypes = [],
+}: FileUploaderProps) => {
   const [openDialog, setOpenDialog] = useState(false)
   const [dialogTitle, setDialogTitle] = useState('Edit Alt Text')
   const [altText, setAltText] = useState('')
@@ -102,17 +134,33 @@ const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) =
   }
 
   return (
-    <>
+    <div className='filepond-container'>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar size='lg' iconName='Camera'></Avatar>
+        </ListItemAvatar>
+        <ListItemText>
+          <Text color='primary' weight='medium'>
+            Gallery
+          </Text>
+          <Text size='xs'>Recommended Size: 1600px - 1200px</Text>
+        </ListItemText>
+      </ListItem>
       <FilePond
-        required
+        {...filePondLabels}
+        name={name}
+        className={className}
+        required={required}
+        disabled={disabled}
+        allowDrop={allowDrop}
+        allowMultiple={allowMultiple}
+        allowReorder={allowReorder}
+        maxFiles={maxFiles}
+        itemInsertLocation={itemInsertLocation}
         files={files}
-        maxFiles={10}
-        maxFileSize={'5MB'}
-        acceptedFileTypes={['image/*']}
-        allowReorder={true}
+        maxFileSize={maxFileSize}
+        acceptedFileTypes={acceptedFileTypes}
         allowFileEncode={true}
-        allowMultiple={true}
-        labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
         onremovefile={handleRemoveFile}
         onupdatefiles={setFiles}
         onreorderfiles={(fileItems) => {
@@ -125,7 +173,6 @@ const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) =
           setAltText(fileObjects.find((obj) => obj.source === fileSource)?.altText || '')
           handleDialogOpen(file.file.name as string)
         }}
-        itemInsertLocation='after'
       />
       <Dialog
         open={openDialog}
@@ -143,7 +190,7 @@ const FileUploader = ({ initialFiles = [], onFilesChange }: FileUploaderProps) =
       >
         <TextField label='Alt Text' value={altText} onChange={(e) => setAltText(e.target.value)} />
       </Dialog>
-    </>
+    </div>
   )
 }
 
