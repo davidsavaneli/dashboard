@@ -4,6 +4,12 @@ import Icon from '../Icon'
 import 'react-toastify/dist/ReactToastify.css'
 import './styles.css'
 
+const CloseIcon = ({ closeToast }: any) => (
+  <div className='Toastify__custom-close-button'>
+    <Icon name='CloseSquare' variant='Bulk' color={'secondary'} onClick={closeToast} />
+  </div>
+)
+
 const createToasts = (
   position: ToastOptions['position'] = 'bottom-right',
   autoClose: ToastOptions['autoClose'] = 3000,
@@ -13,7 +19,7 @@ const createToasts = (
   draggable: ToastOptions['draggable'] = true,
   progress: ToastOptions['progress'] = undefined,
   theme: ToastOptions['theme'] = 'light',
-  closeButton: ToastOptions['closeButton'] = true,
+  closeButton: ToastOptions['closeButton'] = CloseIcon,
 ) => {
   const params = {
     position: position,
@@ -29,7 +35,7 @@ const createToasts = (
 
   const success = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <Icon name='TickSquare' />,
+      icon: <Icon name='TickCircle' color='secondary' variant='Bold' />,
       type: 'success',
       ...params,
       ...config,
@@ -37,7 +43,7 @@ const createToasts = (
 
   const error = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <Icon name='Home' />,
+      icon: <Icon name='CloseCircle' color='secondary' variant='Bold' />,
       type: 'error',
       ...params,
       ...config,
@@ -45,7 +51,7 @@ const createToasts = (
 
   const warning = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <Icon name='Home' />,
+      icon: <Icon name='Warning2' color='secondary' variant='Bold' />,
       type: 'warning',
       ...params,
       ...config,
@@ -53,7 +59,7 @@ const createToasts = (
 
   const info = (message: ToastContent = '', config?: ToastOptions) =>
     toast(message, {
-      icon: <Icon name='Home' />,
+      icon: <Icon name='InfoCircle' color='secondary' variant='Bold' />,
       type: 'info',
       ...params,
       ...config,

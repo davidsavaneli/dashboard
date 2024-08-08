@@ -2,6 +2,59 @@
   border-radius: var(--border-radius-sm) !important;
   box-shadow: var(--box-shadow-toast) !important;
   margin-bottom: 8px !important;
-  padding: 14px 14px 14px 5px !important;
+  padding: var(--padding-xs) var(--padding-xs) var(--padding-xs) var(--padding-xs) !important;
   min-height: inherit !important;
+}
+
+.Toastify__toast--success {
+  background-color: var(--color-success) !important;
+}
+
+.Toastify__toast--error {
+  background-color: var(--color-error) !important;
+}
+
+.Toastify__toast--info {
+  background-color: var(--color-info) !important;
+}
+
+.Toastify__toast--warning {
+  background-color: var(--color-warning) !important;
+}
+
+.Toastify__toast-body {
+  padding: var(--padding-xs) var(--padding-xs) var(--padding-xs) var(--padding-xs) !important;
+}
+
+.Toastify__progress-bar--wrp {
+  display: none !important;
+}
+
+.Toastify__toast-body > div:last-child {
+  font-size: var(--font-size-text-sm) !important;
+  color: var(--color-secondary) !important;
+}
+
+.Toastify__toast-icon {
+  width: auto !important;
+  margin-inline-end: var(--margin-xs) !important;
+}
+
+.Toastify__custom-close-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 30px !important;
+  min-width: 30px !important;
+}
+
+.Toastify__custom-close-button svg {
+  cursor: pointer !important;
+  transition: transform var(--tr-dur) !important;
+}
+
+@media (hover: hover) {
+  .Toastify__custom-close-button svg:hover {
+    transform: scale(1.1) !important;
+  }
 }
