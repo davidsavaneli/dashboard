@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import LocalizationProvider from '../LocalizationProvider'
 import ToastContainer from '../ToastContainer'
+import useScrollToTop from '../../hooks/useScrollToTop'
 
 import styles from './styles.module.css'
 
@@ -12,6 +13,8 @@ export type MainLayoutProps = {
 }
 
 const MainLayout = ({ children, header, drawer, breadcrumbs }: MainLayoutProps) => {
+  useScrollToTop()
+
   return (
     <>
       <LocalizationProvider>
