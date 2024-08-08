@@ -36,22 +36,8 @@ const validationSchema = yup.object({
     .required('Phone number required'),
   country: yup.string().required('Country required'),
   currency: yup.array().of(yup.string().required()).min(1, 'Currency required').required('Currency required'),
-  city: yup
-    .object({
-      value: yup.string().required('City value required'),
-      label: yup.string().required('City label required'),
-    })
-    .required('City required'),
-  product: yup
-    .array()
-    .of(
-      yup.object({
-        value: yup.string().required(),
-        label: yup.string().required(),
-      }),
-    )
-    .min(2, 'Product required min 2')
-    .required('Product required'),
+  city: yup.object().nullable().required('City required'),
+  product: yup.array().of(yup.object()).min(2, 'Product required min 2').required('Product required'),
   datePicker: yup.date().nullable().required('Date Picker is required'),
   timePicker: yup.date().nullable().required('Time Picker is required'),
   dateTimePicker: yup.date().nullable().required('Date Time Picker is required'),
@@ -65,17 +51,7 @@ const validationSchema = yup.object({
   radioGroup: yup.string().required('Radio Group is required'),
   count: yup.number().required('Number Input is required').min(1, 'min 1'),
   text: yup.string().required('Text Editor Required'),
-  files: yup
-    .array()
-    .of(
-      yup.object({
-        source: yup.string().required(),
-        sortIndex: yup.number().required(),
-        altText: yup.string().required(),
-      }),
-    )
-    .min(2, 'Files required (Min 2)')
-    .required('Files required'),
+  files: yup.array().of(yup.object()).min(2, 'Files required (Min 2)').required('Files required'),
 })
 
 const initialValues = {

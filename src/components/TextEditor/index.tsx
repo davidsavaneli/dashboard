@@ -123,17 +123,20 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
           <button className='ql-indent' value='-1' />
           <button className='ql-indent' value='+1' />
           <button className='ql-script' value='super' />
+          <button className='ql-blockquote' />
           <select className='ql-align' />
           <select className='ql-color' />
           <button className='ql-link' />
           <button className='ql-image' />
           <button className='ql-code-block' />
-          <button className='ql-undo'>
-            <CustomUndo />
-          </button>
-          <button className='ql-redo'>
-            <CustomRedo />
-          </button>
+          <span className='ql-formats'>
+            <button className='ql-undo'>
+              <CustomUndo />
+            </button>
+            <button className='ql-redo'>
+              <CustomRedo />
+            </button>
+          </span>
         </div>
         <ReactQuill
           theme='snow'

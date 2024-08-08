@@ -10,7 +10,7 @@
   border: 1px solid var(--color-primaryLight-shade500);
   border-top-left-radius: var(--border-radius-sm);
   border-top-right-radius: var(--border-radius-sm);
-  padding: calc(var(--padding-sm) / 1.4) var(--padding-sm);
+  padding: calc(var(--padding-sm) / 1.446) var(--padding-sm);
   transition: border-color var(--tr-dur);
 }
 

@@ -12,6 +12,7 @@ const CheckboxValidator = ({ name, ...props }: CheckboxProps) => {
       onChange={(e) => helpers.setValue(e.target.checked)}
       error={meta.touched && Boolean(meta.error)}
       helperText={meta.touched && meta.error ? String(meta.error) : undefined}
+      color={meta.touched && meta.error ? 'error' : undefined}
     />
   )
 }

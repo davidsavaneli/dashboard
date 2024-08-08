@@ -9,7 +9,7 @@ const RadioValidator = ({ ...props }: RadioProps) => {
     props.helperText = mata.error
   }
 
-  return <Radio {...field} {...props} />
+  return <Radio {...field} {...props} color={props.error ? 'error' : undefined} />
 }
 
 export default RadioValidator
