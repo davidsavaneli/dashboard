@@ -25,6 +25,7 @@ const FileUploaderPage = () => {
               altText: 'gogo',
             },
           ]}
+          showAltTextAlert={false}
         />
       </Card>
       <Space />

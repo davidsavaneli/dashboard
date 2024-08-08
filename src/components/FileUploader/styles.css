@@ -45,8 +45,8 @@
 }
 
 .filepond-error .filepond--drop-label {
-    border-color: var(--color-error);
-    background-color: var(--color-error-shade100) !important;
+  border-color: var(--color-error);
+  background-color: var(--color-error-shade100) !important;
 }
 
 .filepond--drop-label label {
@@ -60,6 +60,7 @@
 
 .filepond--root .filepond--list-scroller {
   margin-top: 0 !important;
+  z-index: 7 !important;
 }
 
 .filepond--panel.filepond--panel-root {

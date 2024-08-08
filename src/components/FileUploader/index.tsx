@@ -61,6 +61,7 @@ export interface FileUploaderProps {
   acceptedFileTypes?: FilePondOptions['acceptedFileTypes']
   error?: boolean
   helperText?: string
+  showAltTextAlert?: boolean
 }
 
 const FileUploader = ({
@@ -82,12 +83,13 @@ const FileUploader = ({
   acceptedFileTypes = [],
   error,
   helperText,
+  showAltTextAlert = true,
 }: FileUploaderProps) => {
   const [openDialog, setOpenDialog] = useState(false)
   const [dialogTitle, setDialogTitle] = useState('Edit Alt Text')
   const [altText, setAltText] = useState('')
   const [currentFile, setCurrentFile] = useState<FilePondFile | null>(null)
-  const [showAlert, setShowAlert] = useState<boolean>(true)
+  const [showAlert, setShowAlert] = useState<boolean>(showAltTextAlert)
 
   const handleDialogOpen = (fileName: string) => {
     setDialogTitle(fileName)
