@@ -149,9 +149,9 @@ const FormContent4 = () => (
             </>
           }
         >
-        <Space>
-          <TextFieldValidator label='Email' name='email' />
-        </Space>
+          <Space>
+            <TextFieldValidator label='Email' name='email' />
+          </Space>
         </Card>
       </Form>
     )}

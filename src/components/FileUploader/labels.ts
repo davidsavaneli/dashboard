@@ -26,5 +26,5 @@ export const filePondLabels = {
   labelButtonAbortItemProcessing: 'Cancel',
   labelButtonUndoItemProcessing: 'Undo',
   labelButtonRetryItemProcessing: 'Retry',
-  labelButtonProcessItem: 'Upload'
+  labelButtonProcessItem: 'Upload',
 }

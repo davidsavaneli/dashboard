@@ -6,7 +6,7 @@ import './styles.css'
 export type PaginationItemProps = MuiPaginationItemProps
 
 const PaginationItem = forwardRef<HTMLDivElement, PaginationItemProps>(({ ...props }: PaginationItemProps, ref) => {
-  return <MuiPaginationItem ref={ref}  {...props} />
+  return <MuiPaginationItem ref={ref} {...props} />
 })
 
 export default PaginationItem

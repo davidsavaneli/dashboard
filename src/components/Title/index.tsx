@@ -4,7 +4,17 @@ import styles from './styles.module.css'
 
 export type TitleProps = {
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  color?: 'primary' | 'primaryLight' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
+  color?:
+    | 'primary'
+    | 'primaryLight'
+    | 'secondary'
+    | 'dark'
+    | 'medium'
+    | 'light'
+    | 'success'
+    | 'error'
+    | 'info'
+    | 'warning'
   weight?: 'regular' | 'medium' | 'bold'
   uppercase?: boolean
   children?: ReactNode

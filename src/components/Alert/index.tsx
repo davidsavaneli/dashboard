@@ -8,7 +8,9 @@ export interface AlertProps extends MuiAlertProps {}
 
 const Alert = forwardRef<HTMLDivElement, AlertProps>(
   ({ variant = 'standard', severity = 'info', ...props }: AlertProps, ref) => {
-    const CloseIcon = () => <Icon name='CloseSquare' variant='Bulk' color={variant === 'filled' ? 'secondary' : 'primary'} />
+    const CloseIcon = () => (
+      <Icon name='CloseSquare' variant='Bulk' color={variant === 'filled' ? 'secondary' : 'primary'} />
+    )
 
     return (
       <MuiAlert

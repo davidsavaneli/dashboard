@@ -3,7 +3,17 @@ import clsx from 'clsx'
 import styles from './styles.module.css'
 
 export type TextProps = {
-  color?: 'primary' | 'primaryLight' | 'secondary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
+  color?:
+    | 'primary'
+    | 'primaryLight'
+    | 'secondary'
+    | 'dark'
+    | 'medium'
+    | 'light'
+    | 'success'
+    | 'error'
+    | 'info'
+    | 'warning'
   weight?: 'regular' | 'medium' | 'bold'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
   uppercase?: boolean

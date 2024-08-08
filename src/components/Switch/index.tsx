@@ -56,7 +56,11 @@ const Radio = forwardRef<HTMLButtonElement, SwitchProps>(
     })
 
     return (
-      <FormControlLabel size={size} control={<MuiSwitch ref={ref} className={classNames} disabled={disabled} {...props} />} label={label} />
+      <FormControlLabel
+        size={size}
+        control={<MuiSwitch ref={ref} className={classNames} disabled={disabled} {...props} />}
+        label={label}
+      />
     )
   },
 )
