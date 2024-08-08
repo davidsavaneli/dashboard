@@ -87,6 +87,7 @@ const FileUploader = ({
   const [dialogTitle, setDialogTitle] = useState('Edit Alt Text')
   const [altText, setAltText] = useState('')
   const [currentFile, setCurrentFile] = useState<FilePondFile | null>(null)
+  const [showAlert, setShowAlert] = useState<boolean>(true)
 
   const handleDialogOpen = (fileName: string) => {
     setDialogTitle(fileName)
@@ -217,10 +218,12 @@ const FileUploader = ({
           <FormHelperText error={error}>{helperText}</FormHelperText>
         </>
       )}
-      {fileObjects.length && !disabled ? (
+      {fileObjects.length && !disabled && showAlert ? (
         <>
           <Space />
-          <Alert severity='warning'>Click the image, for change 'Alt Text'</Alert>
+          <Alert severity='info' onClose={() => setShowAlert(false)}>
+            Click the image, for change 'Alt Text'
+          </Alert>
         </>
       ) : null}
     </div>
