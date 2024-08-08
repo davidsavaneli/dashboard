@@ -115,20 +115,32 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
             <option value='5'>H5</option>
             <option value='6'>H6</option>
           </select>
-          <button className='ql-bold' />
-          <button className='ql-italic' />
-          <button className='ql-underline' />
-          <button className='ql-list' value='ordered' />
-          <button className='ql-list' value='bullet' />
-          <button className='ql-indent' value='-1' />
-          <button className='ql-indent' value='+1' />
-          <button className='ql-script' value='super' />
-          <button className='ql-blockquote' />
-          <select className='ql-align' />
-          <select className='ql-color' />
-          <button className='ql-link' />
-          <button className='ql-image' />
-          <button className='ql-code-block' />
+          <span className='ql-formats'>
+            <button className='ql-bold' />
+            <button className='ql-italic' />
+            <button className='ql-underline' />
+          </span>
+          <span className='ql-formats'>
+            <button className='ql-list' value='ordered' />
+            <button className='ql-list' value='bullet' />
+          </span>
+          <span className='ql-formats'>
+            <button className='ql-indent' value='-1' />
+            <button className='ql-indent' value='+1' />
+          </span>
+          <span className='ql-formats'>
+            <button className='ql-script' value='super' />
+            <button className='ql-blockquote' />
+            <select className='ql-align' />
+            <select className='ql-color' />
+          </span>
+          <span className='ql-formats'>
+            <button className='ql-link' />
+            <button className='ql-image' />
+          </span>
+          <span className='ql-formats'>
+            <button className='ql-code-block' />
+          </span>
           <span className='ql-formats'>
             <button className='ql-undo'>
               <CustomUndo />

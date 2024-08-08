@@ -85,7 +85,7 @@ const FormValidationsPage = () => {
   return (
     <ContentLayout label='Form Validations Page'>
       <div className='row'>
-        <div className='col-6'>
+        <div className='col-8'>
           <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleFormSubmit}>
             {(props: FormikProps<typeof initialValues>) => (
               <Form>
