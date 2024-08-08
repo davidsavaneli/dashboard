@@ -82,11 +82,7 @@ export const routes: IRoutes = {
               name: 'Icon Button',
               path: '/components/forms/icon-button',
               iconName: '',
-              element: (
-                <Suspense fallback={<>Loading ...</>}>
-                  <IconButtonPage />
-                </Suspense>
-              ),
+              element: <IconButtonPage />,
               children: [],
             },
             {
