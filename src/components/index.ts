@@ -235,6 +235,8 @@ export { default as FileUploader } from './FileUploader'
 export type { FileUploaderProps, FileUploaderInitialFileProps } from './FileUploader'
 export { default as FileUploaderValidator } from './ValidatorForms/FileUploaderValidator'
 
+export { default as Loadable } from './Loadable'
+
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 

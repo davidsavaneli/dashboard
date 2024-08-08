@@ -3,3 +3,11 @@
   display: flex;
   justify-content: center;
 }
+
+.loader.component {
+  margin: 40px 0;
+}
+
+.loader.page {
+  margin: 220px 0;
+}

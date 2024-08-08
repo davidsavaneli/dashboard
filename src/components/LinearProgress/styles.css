@@ -1,5 +1,6 @@
 .MuiLinearProgress-root {
   border-radius: 50px !important;
+  width: 100%;
 }
 
 .MuiLinearProgress-colorPrimary {

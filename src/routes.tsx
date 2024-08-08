@@ -1,45 +1,52 @@
-import ButtonPage from './pages/Button'
-import IconButtonPage from './pages/IconButton'
-import ToggleButtonPage from './pages/ToggleButton'
-import SpeedDialPage from './pages/SpeedDial'
-import AvatarPage from './pages/Avatar'
-import BadgePage from './pages/Badge'
-import TooltipPage from './pages/Tooltip'
-import CheckboxPage from './pages/Checkbox'
-import RadioPage from './pages/Radio'
-import SwitchPage from './pages/Switch'
-import TextFieldPage from './pages/TextField'
-import SelectPage from './pages/Select'
-import AutocompletePage from './pages/Autocomplete'
-import DatePickerPage from './pages/DatePicker'
-import TimePickerPage from './pages/TimePicker'
-import DateTimePickerPage from './pages/DateTimePicker'
-import ChipPage from './pages/Chip'
-import IconPage from './pages/Icon'
-import TitlePage from './pages/Title'
-import TextPage from './pages/Text'
-import AlertPage from './pages/Alert'
-import ToastPage from './pages/Toast'
-import CircularProgressPage from './pages/CircularProgress'
-import LinearProgressPage from './pages/LinearProgress'
-import MenuPage from './pages/Menu'
-import CardPage from './pages/Card'
-import FormValidationsPage from './pages/FormValidations'
-import ColorPickerPage from './pages/ColorPicker'
-import TextEditorPage from './pages/TextEditor'
-import UseMediaQueryPage from './pages/UseMediaQuery'
-import RouterLinkPage from './pages/RouterLink'
-import LinkPage from './pages/Link'
-import NumberInputPage from './pages/NumberInput'
-import DialogPage from './pages/Dialog'
-import TabsPage from './pages/Tabs'
-import NoDataPage from './pages/NoData'
-import PaginationPage from './pages/Pagination'
-import FilePage from './pages/File'
-import MiniFileUploaderPage from './pages/MiniFileUploader'
-import FileUploaderPage from './pages/FileUploader'
-
+import { lazy, Suspense } from 'react'
+import { Loadable } from './components'
 import { IRoutes } from './router'
+
+const ButtonPage = Loadable(lazy(() => delayForDemo(import('./pages/Button'))))
+const IconButtonPage = Loadable(lazy(() => delayForDemo(import('./pages/IconButton'))))
+const ToggleButtonPage = Loadable(lazy(() => delayForDemo(import('./pages/ToggleButton'))))
+const SpeedDialPage = Loadable(lazy(() => delayForDemo(import('./pages/SpeedDial'))))
+const AvatarPage = Loadable(lazy(() => delayForDemo(import('./pages/Avatar'))))
+const BadgePage = Loadable(lazy(() => delayForDemo(import('./pages/Badge'))))
+const TooltipPage = Loadable(lazy(() => delayForDemo(import('./pages/Tooltip'))))
+const CheckboxPage = Loadable(lazy(() => delayForDemo(import('./pages/Checkbox'))))
+const RadioPage = Loadable(lazy(() => delayForDemo(import('./pages/Radio'))))
+const SwitchPage = Loadable(lazy(() => delayForDemo(import('./pages/Switch'))))
+const TextFieldPage = Loadable(lazy(() => delayForDemo(import('./pages/TextField'))))
+const SelectPage = Loadable(lazy(() => delayForDemo(import('./pages/Select'))))
+const AutocompletePage = Loadable(lazy(() => delayForDemo(import('./pages/Autocomplete'))))
+const DatePickerPage = Loadable(lazy(() => delayForDemo(import('./pages/DatePicker'))))
+const TimePickerPage = Loadable(lazy(() => delayForDemo(import('./pages/TimePicker'))))
+const DateTimePickerPage = Loadable(lazy(() => delayForDemo(import('./pages/DateTimePicker'))))
+const ChipPage = Loadable(lazy(() => delayForDemo(import('./pages/Chip'))))
+const IconPage = Loadable(lazy(() => delayForDemo(import('./pages/Icon'))))
+const TitlePage = Loadable(lazy(() => delayForDemo(import('./pages/Title'))))
+const TextPage = Loadable(lazy(() => delayForDemo(import('./pages/Text'))))
+const AlertPage = Loadable(lazy(() => delayForDemo(import('./pages/Alert'))))
+const ToastPage = Loadable(lazy(() => delayForDemo(import('./pages/Toast'))))
+const CircularProgressPage = Loadable(lazy(() => delayForDemo(import('./pages/CircularProgress'))))
+const LinearProgressPage = Loadable(lazy(() => delayForDemo(import('./pages/LinearProgress'))))
+const MenuPage = Loadable(lazy(() => delayForDemo(import('./pages/Menu'))))
+const CardPage = Loadable(lazy(() => delayForDemo(import('./pages/Card'))))
+const FormValidationsPage = Loadable(lazy(() => delayForDemo(import('./pages/FormValidations'))))
+const ColorPickerPage = Loadable(lazy(() => delayForDemo(import('./pages/ColorPicker'))))
+const TextEditorPage = Loadable(lazy(() => delayForDemo(import('./pages/TextEditor'))))
+const UseMediaQueryPage = Loadable(lazy(() => delayForDemo(import('./pages/UseMediaQuery'))))
+const RouterLinkPage = Loadable(lazy(() => delayForDemo(import('./pages/RouterLink'))))
+const LinkPage = Loadable(lazy(() => delayForDemo(import('./pages/Link'))))
+const NumberInputPage = Loadable(lazy(() => delayForDemo(import('./pages/NumberInput'))))
+const DialogPage = Loadable(lazy(() => delayForDemo(import('./pages/Dialog'))))
+const TabsPage = Loadable(lazy(() => delayForDemo(import('./pages/Tabs'))))
+const NoDataPage = Loadable(lazy(() => delayForDemo(import('./pages/NoData'))))
+const PaginationPage = Loadable(lazy(() => delayForDemo(import('./pages/Pagination'))))
+const FilePage = Loadable(lazy(() => delayForDemo(import('./pages/File'))))
+const MiniFileUploaderPage = Loadable(lazy(() => delayForDemo(import('./pages/MiniFileUploader'))))
+const FileUploaderPage = Loadable(lazy(() => delayForDemo(import('./pages/FileUploader'))))
+
+const delayForDemo = async (promise: any) => {
+  await new Promise((resolve) => setTimeout(resolve, 300))
+  return promise
+}
 
 export const routes: IRoutes = {
   mainPath: '/',
@@ -75,7 +82,11 @@ export const routes: IRoutes = {
               name: 'Icon Button',
               path: '/components/forms/icon-button',
               iconName: '',
-              element: <IconButtonPage />,
+              element: (
+                <Suspense fallback={<>Loading ...</>}>
+                  <IconButtonPage />
+                </Suspense>
+              ),
               children: [],
             },
             {
