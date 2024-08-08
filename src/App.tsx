@@ -1,11 +1,14 @@
 import { MainLayout, Drawer, Header, Breadcrumbs } from './components'
 import CustomRouter from './router'
 import { routes } from './routes'
+import { useTranslation } from 'react-i18next'
 
 import logoSrc from './assets/images/logo.svg'
 import userSrc from './assets/images/user.png'
 
 const App = () => {
+  const { t } = useTranslation()
+
   return (
     <MainLayout
       drawer={<Drawer routes={routes} openFirstLevel logo={logoSrc} logoAltText='Techzy'></Drawer>}
@@ -23,7 +26,7 @@ const App = () => {
               },
               {
                 icon: 'HomeTrendUp',
-                label: 'Dashboard',
+                label: t('save'),
                 onClick: () => console.log('Dashboard Click'),
               },
             ],
