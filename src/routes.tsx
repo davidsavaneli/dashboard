@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { lazy } from 'react'
 import { Loadable } from './components'
 import { IRoutes } from './router'
 
