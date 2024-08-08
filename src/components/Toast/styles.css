@@ -27,7 +27,9 @@
 }
 
 .Toastify__progress-bar--wrp {
-  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  height: 0 !important;
 }
 
 .Toastify__toast-body > div:last-child {
