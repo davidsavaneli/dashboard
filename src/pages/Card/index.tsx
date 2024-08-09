@@ -47,7 +47,7 @@ const CardPage = () => {
           </Card>
         </div>
         <div className='col-6'>
-          <Card title='Header Actions' headerActions={<IconButton iconName='More' />}>
+          <Card title='Header Actions' icon='Wallet3' headerActions={<IconButton iconName='More' />}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic molestiae ex molestias adipisci quidem quos
             modi eligendi impedit reprehenderit tempore voluptates tempora nostrum quibusdam temporibus id fugiat sunt,
             odio unde.

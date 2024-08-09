@@ -107,6 +107,7 @@ import {
   ArrowCircleDown2,
   ExportCurve,
   Camera,
+  Wallet3,
 } from 'iconsax-react'
 
 import styles from './styles.module.css'
@@ -218,6 +219,7 @@ const Icons = {
   ArrowCircleDown2,
   ExportCurve,
   Camera,
+  Wallet3,
 }
 
 export type IconName = keyof typeof Icons

@@ -3,12 +3,16 @@ import clsx from 'clsx'
 import Title from '../Title'
 import Collapse from '../Collapse'
 import IconButton from '../IconButton'
+import { IconName, IconProps } from '../Icon'
 import TranslationText from '../TranslationText'
 
 import styles from './styles.module.css'
 
 export interface CardProps {
   title?: string
+  icon?: IconName
+  iconColor?: IconProps['color']
+  iconVariant?: IconProps['variant']
   headerActions?: ReactNode
   footerActions?: ReactNode
   children: ReactNode
@@ -16,16 +20,33 @@ export interface CardProps {
   open?: boolean
 }
 
-const Card = ({ title, headerActions, footerActions, children, collapse = false, open = false }: CardProps) => {
+const Card = ({
+  title,
+  icon,
+  iconColor = 'medium',
+  iconVariant = 'Linear',
+  headerActions,
+  footerActions,
+  children,
+  collapse = false,
+  open = false,
+}: CardProps) => {
   const [expanded, setExpanded] = useState<boolean>(open)
 
   const handleExpand = () => setExpanded((prev) => !prev)
 
   return (
     <div className={styles.card}>
-      {(title || headerActions || collapse) && (
+      {(title || icon || headerActions || collapse) && (
         <div className={clsx(styles.header, collapse && !expanded && styles.unExpanded)}>
-          <div className={styles.cardTitle}>{title && <Title variant='h4'>{title}</Title>}</div>
+          <div className={styles.cardTitle}>
+            {icon && (
+              <div className={styles.icon}>
+                <IconButton iconName={icon} variant='filled' color={iconColor} iconVariant={iconVariant} />
+              </div>
+            )}
+            {title && <Title variant='h5'>{title}</Title>}
+          </div>
           {headerActions && <div className={styles.headerActions}>{headerActions}</div>}
           {collapse && (
             <IconButton
