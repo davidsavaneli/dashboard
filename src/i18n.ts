@@ -21,19 +21,13 @@ i18next
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    lng: 'en',
+    lng: 'ka',
     fallbackLng: 'en',
     supportedLngs: ['en', 'ka'],
     resources,
   })
   .then(() => {
     const currentLanguage = i18next.language as Language
-    console.log(currentLanguage)
-    if (currentLanguage === 'en') {
-      i18next.changeLanguage('en')
-      localStorage.setItem('i18nextLng', 'en')
-    } else if (currentLanguage === 'ka') {
-      i18next.changeLanguage('ka')
-      localStorage.setItem('i18nextLng', 'ka')
-    }
+    i18next.changeLanguage(currentLanguage)
+    localStorage.setItem('i18nextLng', currentLanguage)
   })

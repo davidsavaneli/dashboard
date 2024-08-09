@@ -9,19 +9,19 @@ import useFile from './useFile'
 
 import styles from './styles.module.css'
 
-export interface MiniFileUploaderProps {
+export interface MiniImageUploaderProps {
   onFileSelect?: (file: File) => void
   text?: string
   url?: string
   disabled?: boolean
 }
 
-const MiniFileUploader = ({
+const MiniImageUploader = ({
   onFileSelect = () => {},
   text = 'Upload Image',
   url = '',
   disabled = false,
-}: MiniFileUploaderProps) => {
+}: MiniImageUploaderProps) => {
   const { handelSelect, previewImage, selectedFile, fileType } = useFile({
     url,
     onFileSelect,
@@ -78,4 +78,4 @@ const MiniFileUploader = ({
   )
 }
 
-export default MiniFileUploader
+export default MiniImageUploader

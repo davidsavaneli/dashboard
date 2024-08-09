@@ -60,6 +60,7 @@
 :global(.ql-snow.ql-toolbar button),
 :global(.ql-snow .ql-toolbar button) {
   border: 1px solid var(--color-primaryLight-shade400);
+  border-radius: 6px;
 }
 
 :global(.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options) {
@@ -95,6 +96,7 @@
   padding: 3px 5px;
   width: 28px;
   border: 1px solid var(--color-primaryLight-shade400);
+  border-radius: 6px;
 }
 
 :global(.ql-snow .ql-color-picker .ql-picker-label svg),

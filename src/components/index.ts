@@ -228,8 +228,8 @@ export type { DialogProps } from './Dialog'
 export { default as File } from './File'
 export type { FileProps } from './File'
 
-export { default as MiniFileUploader } from './MiniFileUploader'
-export type { MiniFileUploaderProps } from './MiniFileUploader'
+export { default as MiniImageUploader } from './MiniImageUploader'
+export type { MiniImageUploaderProps } from './MiniImageUploader'
 
 export { default as FileUploader } from './FileUploader'
 export type { FileUploaderProps, FileUploaderInitialFileProps } from './FileUploader'

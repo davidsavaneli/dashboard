@@ -40,7 +40,7 @@ const TabsPage = Loadable(lazy(() => delayForDemo(import('./pages/Tabs'))))
 const NoDataPage = Loadable(lazy(() => delayForDemo(import('./pages/NoData'))))
 const PaginationPage = Loadable(lazy(() => delayForDemo(import('./pages/Pagination'))))
 const FilePage = Loadable(lazy(() => delayForDemo(import('./pages/File'))))
-const MiniFileUploaderPage = Loadable(lazy(() => delayForDemo(import('./pages/MiniFileUploader'))))
+const MiniImageUploaderPage = Loadable(lazy(() => delayForDemo(import('./pages/MiniImageUploader'))))
 const FileUploaderPage = Loadable(lazy(() => delayForDemo(import('./pages/FileUploader'))))
 
 const delayForDemo = async (promise: any) => {
@@ -370,10 +370,10 @@ export const routes: IRoutes = {
               children: [],
             },
             {
-              name: 'MiniFileUploader',
-              path: '/components/other/mini-file-uploader',
+              name: 'MiniImageUploader',
+              path: '/components/other/mini-image-uploader',
               iconName: '',
-              element: <MiniFileUploaderPage />,
+              element: <MiniImageUploaderPage />,
               children: [],
             },
           ],

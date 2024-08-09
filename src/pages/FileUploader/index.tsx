@@ -2,7 +2,7 @@ import { ContentLayout, Card, FileUploader, Space } from '../../components'
 
 const FileUploaderPage = () => {
   return (
-    <ContentLayout label='FileUploader Component'>
+    <ContentLayout label='File Uploader Component'>
       <Card title='Default'>
         <FileUploader title='Main Photo' secondaryTitle='Recommended Size' secondaryTitleValue='1600px - 1200px' />
       </Card>
