@@ -36,7 +36,11 @@ const DateTimePicker = ({
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Calendar' tooltipTitle={<TranslationText text='chooseDateAndTime' />} />
+                  <IconButton
+                    disabled={props.disabled}
+                    iconName='Calendar'
+                    tooltipTitle={!props.disabled && <TranslationText text='chooseDateAndTime' />}
+                  />
                 </InputAdornment>
               ),
             }}

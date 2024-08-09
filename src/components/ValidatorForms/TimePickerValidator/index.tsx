@@ -4,15 +4,15 @@ import { Dayjs } from 'dayjs'
 import TextField from '../../TextField'
 import InputAdornment from '../../InputAdornment'
 import IconButton from '../../IconButton'
-import TimePicker from '../../TimePicker'
+import TimePicker, { TimePickerProps } from '../../TimePicker'
 import TranslationText from '../../TranslationText'
 
-type TimePickerValidatorProps = {
+interface TimePickerValidatorProps extends TimePickerProps {
   name: string
   label?: string
 }
 
-const TimePickerValidator: React.FC<TimePickerValidatorProps> = ({ name, label }) => {
+const TimePickerValidator = ({ name, label, ...props }: TimePickerValidatorProps) => {
   const { setFieldValue } = useFormikContext()
   const [field, meta] = useField(name as string)
 
@@ -23,6 +23,7 @@ const TimePickerValidator: React.FC<TimePickerValidatorProps> = ({ name, label }
   return (
     <TimePicker
       {...field}
+      {...props}
       value={field.value || null}
       onChange={handleChange}
       slots={{
@@ -36,7 +37,11 @@ const TimePickerValidator: React.FC<TimePickerValidatorProps> = ({ name, label }
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Clock' tooltipTitle={<TranslationText text='chooseTime' />} />
+                  <IconButton
+                    iconName='Clock'
+                    disabled={props.disabled}
+                    tooltipTitle={!props.disabled && <TranslationText text='chooseTime' />}
+                  />
                 </InputAdornment>
               ),
             }}

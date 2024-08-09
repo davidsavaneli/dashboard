@@ -30,7 +30,11 @@ const TimePicker = ({ format = 'HH:mm', ampm = false, error = false, helperText,
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Clock' tooltipTitle={<TranslationText text='chooseTime' />} />
+                  <IconButton
+                    disabled={props.disabled}
+                    iconName='Clock'
+                    tooltipTitle={!props.disabled && <TranslationText text='chooseTime' />}
+                  />
                 </InputAdornment>
               ),
             }}

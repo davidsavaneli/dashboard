@@ -50,7 +50,7 @@ const NumberInput: React.FC<NumberInputProps> = ({ value = 0, min = 0, max = 999
               onClick={decreaseValue}
               variant='filled'
               disabled={val <= min || props.disabled}
-              tooltipTitle={<TranslationText text='decrease' />}
+              tooltipTitle={!props.disabled && <TranslationText text='decrease' />}
             />
             &nbsp;
             <IconButton
@@ -58,7 +58,7 @@ const NumberInput: React.FC<NumberInputProps> = ({ value = 0, min = 0, max = 999
               onClick={increaseValue}
               variant='filled'
               disabled={val >= max || props.disabled}
-              tooltipTitle={<TranslationText text='increase' />}
+              tooltipTitle={!props.disabled && <TranslationText text='increase' />}
             />
           </InputAdornment>
         ),

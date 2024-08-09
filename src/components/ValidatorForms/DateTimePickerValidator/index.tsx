@@ -4,15 +4,15 @@ import { Dayjs } from 'dayjs'
 import TextField from '../../TextField'
 import InputAdornment from '../../InputAdornment'
 import IconButton from '../../IconButton'
-import DateTimePicker from '../../DateTimePicker'
+import DateTimePicker, { DateTimePickerProps } from '../../DateTimePicker'
 import TranslationText from '../../TranslationText'
 
-type DateTimePickerComponentProps = {
+interface DateTimePickerComponentProps extends DateTimePickerProps {
   name: string
   label?: string
 }
 
-const DateTimePickerValidator: React.FC<DateTimePickerComponentProps> = ({ name, label }) => {
+const DateTimePickerValidator = ({ name, label, ...props }: DateTimePickerComponentProps) => {
   const { setFieldValue } = useFormikContext()
   const [field, meta] = useField(name as string)
 
@@ -23,6 +23,7 @@ const DateTimePickerValidator: React.FC<DateTimePickerComponentProps> = ({ name,
   return (
     <DateTimePicker
       {...field}
+      {...props}
       value={field.value || null}
       onChange={handleChange}
       slots={{
@@ -36,7 +37,11 @@ const DateTimePickerValidator: React.FC<DateTimePickerComponentProps> = ({ name,
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Calendar' tooltipTitle={<TranslationText text='chooseDateAndTime' />} />
+                  <IconButton
+                    iconName='Calendar'
+                    disabled={props.disabled}
+                    tooltipTitle={!props.disabled && <TranslationText text='chooseDateAndTime' />}
+                  />
                 </InputAdornment>
               ),
             }}

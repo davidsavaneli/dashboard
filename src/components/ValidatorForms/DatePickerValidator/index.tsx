@@ -4,15 +4,15 @@ import { Dayjs } from 'dayjs'
 import TextField from '../../TextField'
 import InputAdornment from '../../InputAdornment'
 import IconButton from '../../IconButton'
-import DatePicker from '../../DatePicker'
+import DatePicker, { DatePickerProps } from '../../DatePicker'
 import TranslationText from '../../TranslationText'
 
-type DatePickerComponentProps = {
+interface DatePickerComponentProps extends DatePickerProps {
   name: string
   label?: string
 }
 
-const DatePickerValidator: React.FC<DatePickerComponentProps> = ({ name, label }) => {
+const DatePickerValidator = ({ name, label, ...props }: DatePickerComponentProps) => {
   const { setFieldValue } = useFormikContext()
   const [field, meta] = useField(name as string)
 
@@ -23,6 +23,7 @@ const DatePickerValidator: React.FC<DatePickerComponentProps> = ({ name, label }
   return (
     <DatePicker
       {...field}
+      {...props}
       value={field.value || null}
       onChange={handleChange}
       slots={{
@@ -36,7 +37,11 @@ const DatePickerValidator: React.FC<DatePickerComponentProps> = ({ name, label }
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Calendar' tooltipTitle={<TranslationText text='chooseDate' />} />
+                  <IconButton
+                    iconName='Calendar'
+                    disabled={props.disabled}
+                    tooltipTitle={!props.disabled && <TranslationText text='chooseDate' />}
+                  />
                 </InputAdornment>
               ),
             }}
