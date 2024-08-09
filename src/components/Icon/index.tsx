@@ -108,6 +108,7 @@ import {
   ExportCurve,
   Camera,
   Wallet3,
+  ChartSquare,
 } from 'iconsax-react'
 
 import styles from './styles.module.css'
@@ -220,6 +221,7 @@ const Icons = {
   ExportCurve,
   Camera,
   Wallet3,
+  ChartSquare,
 }
 
 export type IconName = keyof typeof Icons

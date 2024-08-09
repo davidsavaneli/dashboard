@@ -42,6 +42,7 @@ const PaginationPage = Loadable(lazy(() => delayForDemo(import('./pages/Paginati
 const FilePage = Loadable(lazy(() => delayForDemo(import('./pages/File'))))
 const MiniImageUploaderPage = Loadable(lazy(() => delayForDemo(import('./pages/MiniImageUploader'))))
 const FileUploaderPage = Loadable(lazy(() => delayForDemo(import('./pages/FileUploader'))))
+const ChartsPage = Loadable(lazy(() => delayForDemo(import('./pages/Charts'))))
 
 const delayForDemo = async (promise: any) => {
   await new Promise((resolve) => setTimeout(resolve, 500))
@@ -65,6 +66,13 @@ export const routes: IRoutes = {
       iconName: '',
       element: '',
       children: [
+        {
+          name: 'Charts',
+          path: '/components/charts',
+          iconName: 'ChartSquare',
+          element: <ChartsPage />,
+          children: []
+        },
         {
           name: 'Forms',
           path: '/components/forms',

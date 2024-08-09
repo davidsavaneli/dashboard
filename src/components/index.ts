@@ -240,4 +240,7 @@ export { default as Loadable } from './Loadable'
 export { default as ToastContainer } from './ToastContainer'
 export type { ToastContainerProps } from './ToastContainer'
 
+export { default as BarChartSmall } from './Charts/BarChartSmall'
+export type { BarChartSmallProps } from './Charts/BarChartSmall'
+
 export { default as Toast } from './Toast'
