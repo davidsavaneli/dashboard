@@ -53,9 +53,16 @@ const Header = ({ languages = true, themeSwitcher = true, user }: HeaderProps) =
 export default Header
 
 const BurgerMenu = () => {
-  const { toggleHideDrawer } = useHideDrawer()
+  const { hideDrawer, toggleHideDrawer } = useHideDrawer()
 
-  return <IconButton iconName='HambergerMenu' variant='filled' onClick={toggleHideDrawer} />
+  return (
+    <IconButton
+      iconName='HambergerMenu'
+      variant='filled'
+      onClick={toggleHideDrawer}
+      tooltipTitle={hideDrawer ? <TranslationText text='showDrawer' /> : <TranslationText text='hideDrawer' />}
+    />
+  )
 }
 
 const Languages = () => (

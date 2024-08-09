@@ -7,6 +7,8 @@ const resources = {
     translation: {
       hide: 'Hide',
       show: 'Show',
+      hideDrawer: 'Hide Drawer',
+      showDrawer: 'Show Drawer',
       chooseDate: 'Choose Date',
       chooseDateAndTime: 'Choose Date & Time',
       chooseTime: 'Choose Time',
@@ -26,6 +28,8 @@ const resources = {
     translation: {
       hide: 'დამალვა',
       show: 'ჩვენება',
+      hideDrawer: 'მენიუს დამალვა',
+      showDrawer: 'მენიუს ჩვენება',
       chooseDate: 'აირჩიეთ თარიღი',
       chooseDateAndTime: 'აირჩიეთ თარიღი და დრო',
       chooseTime: 'აირჩიეთ დრო',
