@@ -9,6 +9,9 @@ const resources = {
       show: 'Show',
       hideDrawer: 'Hide Drawer',
       showDrawer: 'Show Drawer',
+      chooseLanguage: 'Choose Language',
+      languageEn: 'English',
+      languageKa: 'ქართული',
       chooseDate: 'Choose Date',
       chooseDateAndTime: 'Choose Date & Time',
       chooseTime: 'Choose Time',
@@ -30,6 +33,9 @@ const resources = {
       show: 'ჩვენება',
       hideDrawer: 'მენიუს დამალვა',
       showDrawer: 'მენიუს ჩვენება',
+      chooseLanguage: 'აირჩიეთ ენა',
+      languageEn: 'English',
+      languageKa: 'ქართული',
       chooseDate: 'აირჩიეთ თარიღი',
       chooseDateAndTime: 'აირჩიეთ თარიღი და დრო',
       chooseTime: 'აირჩიეთ დრო',
@@ -53,7 +59,6 @@ i18next
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    lng: 'en',
     fallbackLng: 'en',
     supportedLngs: ['en', 'ka'],
     resources,
