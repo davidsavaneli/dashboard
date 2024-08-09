@@ -2,6 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react'
 import TextField, { TextFieldProps } from '../TextField'
 import IconButton from '../IconButton'
 import InputAdornment from '../InputAdornment'
+import TranslationText from '../TranslationText'
 
 export type NumberInputProps = TextFieldProps & {
   value?: number
@@ -49,6 +50,7 @@ const NumberInput: React.FC<NumberInputProps> = ({ value = 0, min = 0, max = 999
               onClick={decreaseValue}
               variant='filled'
               disabled={val <= min || props.disabled}
+              tooltipTitle={<TranslationText text='decrease' />}
             />
             &nbsp;
             <IconButton
@@ -56,6 +58,7 @@ const NumberInput: React.FC<NumberInputProps> = ({ value = 0, min = 0, max = 999
               onClick={increaseValue}
               variant='filled'
               disabled={val >= max || props.disabled}
+              tooltipTitle={<TranslationText text='increase' />}
             />
           </InputAdornment>
         ),

@@ -5,6 +5,7 @@ import TextField from '../../TextField'
 import InputAdornment from '../../InputAdornment'
 import IconButton from '../../IconButton'
 import TimePicker from '../../TimePicker'
+import TranslationText from '../../TranslationText'
 
 type TimePickerValidatorProps = {
   name: string
@@ -35,7 +36,7 @@ const TimePickerValidator: React.FC<TimePickerValidatorProps> = ({ name, label }
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Clock' />
+                  <IconButton iconName='Clock' tooltipTitle={<TranslationText text='chooseTime' />} />
                 </InputAdornment>
               ),
             }}

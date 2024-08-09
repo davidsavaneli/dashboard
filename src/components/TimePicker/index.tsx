@@ -6,6 +6,7 @@ import dayjs from 'dayjs'
 import TextField from '../TextField'
 import InputAdornment from '../InputAdornment'
 import IconButton from '../IconButton'
+import TranslationText from '../TranslationText'
 
 export interface TimePickerProps extends MuiTimePickerProps<dayjs.Dayjs> {
   format?: string
@@ -29,7 +30,7 @@ const TimePicker = ({ format = 'HH:mm', ampm = false, error = false, helperText,
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Clock' />
+                  <IconButton iconName='Clock' tooltipTitle={<TranslationText text='chooseTime' />} />
                 </InputAdornment>
               ),
             }}

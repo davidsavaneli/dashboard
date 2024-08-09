@@ -5,6 +5,7 @@ import TextField from '../../TextField'
 import InputAdornment from '../../InputAdornment'
 import IconButton from '../../IconButton'
 import DateTimePicker from '../../DateTimePicker'
+import TranslationText from '../../TranslationText'
 
 type DateTimePickerComponentProps = {
   name: string
@@ -35,7 +36,7 @@ const DateTimePickerValidator: React.FC<DateTimePickerComponentProps> = ({ name,
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Calendar' />
+                  <IconButton iconName='Calendar' tooltipTitle={<TranslationText text='chooseDateAndTime' />} />
                 </InputAdornment>
               ),
             }}

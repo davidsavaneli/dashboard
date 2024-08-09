@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import { forwardRef, ReactNode } from 'react'
 import MuiFab, { FabProps as MuiFabProps } from '@mui/material/Fab'
 import Icon, { IconName } from '../Icon'
 import Tooltip from '../Tooltip'
@@ -36,7 +36,7 @@ declare module '@mui/material/Fab' {
 
 export interface FabProps extends MuiFabProps {
   iconName?: IconName
-  tooltipTitle?: string
+  tooltipTitle?: ReactNode
 }
 
 const Fab = forwardRef<HTMLButtonElement, FabProps>(

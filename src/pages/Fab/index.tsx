@@ -25,7 +25,7 @@ const FabPage = () => {
             <Fab iconName='Home' tooltipTitle='Tooltip Title' />
             <br />
             <br />
-            <Text>tooltipTitle: string</Text>
+            <Text>tooltipTitle: ReactNode</Text>
           </Card>
           <br />
           <Card title='Sizes'>

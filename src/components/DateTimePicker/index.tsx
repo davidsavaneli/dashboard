@@ -6,6 +6,7 @@ import dayjs from 'dayjs'
 import TextField from '../TextField'
 import InputAdornment from '../InputAdornment'
 import IconButton from '../IconButton'
+import TranslationText from '../TranslationText'
 
 export interface DateTimePickerProps extends MuiDateTimePickerProps<dayjs.Dayjs> {
   format?: string
@@ -35,7 +36,7 @@ const DateTimePicker = ({
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton iconName='Calendar' />
+                  <IconButton iconName='Calendar' tooltipTitle={<TranslationText text='chooseDateAndTime' />} />
                 </InputAdornment>
               ),
             }}

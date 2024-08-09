@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import { forwardRef, ReactNode } from 'react'
 import MuiToggleButton, { ToggleButtonProps as MuiToggleButtonProps } from '@mui/material/ToggleButton'
 import Icon, { IconName } from '../Icon'
 import Tooltip from '../Tooltip'
@@ -35,7 +35,7 @@ declare module '@mui/material/ToggleButton' {
 
 export interface ToggleButtonProps extends MuiToggleButtonProps {
   iconName?: IconName
-  tooltipTitle?: string
+  tooltipTitle?: ReactNode
 }
 
 const ToggleButton = forwardRef<HTMLButtonElement, ToggleButtonProps>(

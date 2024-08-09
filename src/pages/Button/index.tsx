@@ -96,7 +96,7 @@ const ButtonPage = () => {
             <Button tooltipTitle='Tooltip Title'>Tooltip</Button>
             <br />
             <br />
-            <Text>tooltipTitle: string</Text>
+            <Text>tooltipTitle: ReactNode</Text>
           </Card>
         </div>
       </div>

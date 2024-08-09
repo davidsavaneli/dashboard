@@ -144,7 +144,7 @@ const ToggleButtonPage = () => {
             </ToggleButtonGroup>
             <br />
             <br />
-            <Text>tooltipTitle: string</Text>
+            <Text>tooltipTitle: ReactNode</Text>
           </Card>
         </div>
       </div>

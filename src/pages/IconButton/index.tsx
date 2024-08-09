@@ -106,7 +106,7 @@ const IconButtonPage = () => {
             <IconButton iconName='Filter' variant='filled' tooltipTitle='Tooltip Title' />
             <br />
             <br />
-            <Text>tooltipTitle: string</Text>
+            <Text>tooltipTitle: ReactNode</Text>
           </Card>
         </div>
       </div>

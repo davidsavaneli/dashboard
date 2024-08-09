@@ -1,10 +1,10 @@
 import Avatar from '../Avatar'
-import Icon from '../Icon'
 import IconButton from '../IconButton'
 import ListItem from '../ListItem'
 import ListItemAvatar from '../ListItemAvatar'
 import ListItemText from '../ListItemText'
 import Text from '../Text'
+import TranslationText from '../TranslationText'
 
 import styles from './styles.module.css'
 
@@ -35,7 +35,13 @@ const File = ({ name, url, donwload = true, ...props }: FileProps) => {
         secondaryAction={
           donwload && (
             <a className={styles.donwload} href={url} download>
-              <IconButton tooltipTitle='Download' iconName='LoginCurve' variant='filled' color='success' size='sm' />
+              <IconButton
+                tooltipTitle={<TranslationText text='download' />}
+                iconName='LoginCurve'
+                variant='filled'
+                color='success'
+                size='sm'
+              />
             </a>
           )
         }

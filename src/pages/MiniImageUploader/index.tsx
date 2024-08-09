@@ -9,7 +9,6 @@ const MiniImageUploaderPage = () => {
       <Space />
       <Card title='Not Uploaded'>
         <MiniImageUploader
-          text='Upload Image'
           onFileSelect={(file) => {
             console.log(file)
           }}

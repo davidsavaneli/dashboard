@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import clsx from 'clsx'
 import MuiTextField, { TextFieldProps as MuiTextFieldProps } from '@mui/material/TextField'
 import InputAdornment from '../InputAdornment'
 import FormLabel from '../FormLabel'
 import IconButton from '../IconButton'
 import { IconName } from '../Icon'
-import clsx from 'clsx'
+import TranslationText from '../TranslationText'
 
 import './styles.css'
 
@@ -34,7 +35,12 @@ const TextField = ({
 
   const IconComponent = isPassword ? (
     <InputAdornment position={adornmentPosition}>
-      <IconButton disabled={disabled} onClick={handleShowPassword} iconName={showPassword ? 'EyeSlash' : 'Eye'} />
+      <IconButton
+        disabled={disabled}
+        onClick={handleShowPassword}
+        iconName={showPassword ? 'EyeSlash' : 'Eye'}
+        tooltipTitle={showPassword ? <TranslationText text='showPassword' /> : <TranslationText text='hidePassword' />}
+      />
     </InputAdornment>
   ) : (
     (iconName || iconButtonName) && (

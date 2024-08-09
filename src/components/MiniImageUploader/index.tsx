@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import clsx from 'clsx'
 import Avatar from '../Avatar'
 import ListItem from '../ListItem'
@@ -6,19 +7,20 @@ import ListItemAvatar from '../ListItemAvatar'
 import ListItemText from '../ListItemText'
 import Text from '../Text'
 import useFile from './useFile'
+import TranslationText from '../TranslationText'
 
 import styles from './styles.module.css'
 
 export interface MiniImageUploaderProps {
   onFileSelect?: (file: File) => void
-  text?: string
+  text?: ReactNode
   url?: string
   disabled?: boolean
 }
 
 const MiniImageUploader = ({
   onFileSelect = () => {},
-  text = 'Upload Image',
+  text = <TranslationText text='uploadImage' />,
   url = '',
   disabled = false,
 }: MiniImageUploaderProps) => {

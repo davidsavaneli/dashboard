@@ -9,6 +9,7 @@ import IconButton from '../IconButton'
 import ThemeSwitcher from '../ThemeSwitcher'
 import Icon, { IconName } from '../Icon'
 import useHideDrawer from '../../hooks/useHideDrawer'
+import TranslationText from '../TranslationText'
 
 import styles from './styles.module.css'
 
@@ -124,7 +125,7 @@ const UserMenu = ({ user }: { user: UserProps }) => (
             <ListItem
               secondaryAction={
                 <IconButton
-                  tooltipTitle='Logout'
+                  tooltipTitle={<TranslationText text='logout' />}
                   iconName='LogoutCurve'
                   variant='filled'
                   color='error'
@@ -175,7 +176,7 @@ const UserMenu = ({ user }: { user: UserProps }) => (
               <ListItemIcon>
                 <Icon name='LogoutCurve' color='primaryLight' />
               </ListItemIcon>
-              Logout
+              <TranslationText text='logout' />
             </ListItem>
           ),
           onClick: user.onLogout,

@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import { forwardRef, ReactNode } from 'react'
 import MuiButton, { ButtonProps as MuiButtonProps } from '@mui/material/Button'
 import Tooltip from '../Tooltip'
 import CircularProgress from '../CircularProgress'
@@ -43,7 +43,7 @@ export interface ButtonProps extends Omit<MuiButtonProps, 'color'> {
     | 'info'
     | 'warning'
   loading?: boolean
-  tooltipTitle?: string
+  tooltipTitle?: ReactNode
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(

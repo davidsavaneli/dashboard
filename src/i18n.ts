@@ -5,12 +5,40 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 const resources = {
   en: {
     translation: {
-      save: 'Enter code',
+      hide: 'Hide',
+      show: 'Show',
+      chooseDate: 'Choose Date',
+      chooseDateAndTime: 'Choose Date & Time',
+      chooseTime: 'Choose Time',
+      close: 'Close',
+      download: 'Download',
+      logout: 'Logout',
+      uploadImage: 'Upload Image',
+      decrease: 'Decrease',
+      increase: 'Increase',
+      hidePassword: 'Hide Password',
+      showPassword: 'Show Password',
+      darkTheme: 'Dark Theme',
+      lightTheme: 'Light Theme',
     },
   },
   ka: {
     translation: {
-      save: 'შეიყვანე კოდი',
+      hide: 'დამალვა',
+      show: 'ჩვენება',
+      chooseDate: 'აირჩიეთ თარიღი',
+      chooseDateAndTime: 'აირჩიეთ თარიღი და დრო',
+      chooseTime: 'აირჩიეთ დრო',
+      close: 'დახურვა',
+      download: 'გადმოწერა',
+      logout: 'გამოსვლა',
+      uploadImage: 'ათვირთეთ სურათი',
+      decrease: 'შემცირება',
+      increase: 'გაზრდა',
+      hidePassword: 'პაროლის დამალვა',
+      showPassword: 'პაროლის ჩვენება',
+      darkTheme: 'მუქი თემა',
+      lightTheme: 'ღია თემა',
     },
   },
 }
@@ -21,7 +49,7 @@ i18next
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    lng: 'ka',
+    lng: 'en',
     fallbackLng: 'en',
     supportedLngs: ['en', 'ka'],
     resources,

@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import Title from '../Title'
 import Collapse from '../Collapse'
 import IconButton from '../IconButton'
+import TranslationText from '../TranslationText'
 
 import styles from './styles.module.css'
 
@@ -26,7 +27,13 @@ const Card = ({ title, headerActions, footerActions, children, collapse = false,
         <div className={clsx(styles.header, collapse && !expanded && styles.unExpanded)}>
           <div className={styles.cardTitle}>{title && <Title variant='h4'>{title}</Title>}</div>
           {headerActions && <div className={styles.headerActions}>{headerActions}</div>}
-          {collapse && <IconButton iconName={expanded ? 'ArrowCircleUp' : 'ArrowCircleDown'} onClick={handleExpand} />}
+          {collapse && (
+            <IconButton
+              iconName={expanded ? 'ArrowCircleUp' : 'ArrowCircleDown'}
+              tooltipTitle={expanded ? <TranslationText text={'hide'} /> : <TranslationText text={'show'} />}
+              onClick={handleExpand}
+            />
+          )}
         </div>
       )}
       <Collapse in={collapse ? expanded : true}>

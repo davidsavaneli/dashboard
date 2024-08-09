@@ -1,5 +1,6 @@
 import IconButton, { IconButtonProps } from '../IconButton'
 import useDarkMode from '../../hooks/useDarkMode'
+import TranslationText from '../TranslationText'
 
 export interface ThemeSwitcherProps {
   color?: IconButtonProps['color']
@@ -18,6 +19,7 @@ const ThemeSwitcher = ({ color = 'primary', rounded = false, variant = 'filled' 
       color={color}
       rounded={rounded}
       onClick={toggleDarkMode}
+      tooltipTitle={darkMode ? <TranslationText text='lightTheme' /> : <TranslationText text='darkTheme' />}
     />
   )
 }

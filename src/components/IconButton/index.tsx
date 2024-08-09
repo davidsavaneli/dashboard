@@ -5,6 +5,7 @@ import Tooltip from '../Tooltip'
 import clsx from 'clsx'
 
 import './styles.css'
+import { ReactNode } from 'react'
 
 declare module '@mui/material/IconButton' {
   interface IconButtonPropsColorOverrides {
@@ -39,7 +40,7 @@ export interface IconButtonProps extends MuiIconButtonProps {
   variant?: 'contained' | 'filled' | 'transparent'
   iconVariant?: IconProps['variant']
   loading?: boolean
-  tooltipTitle?: string
+  tooltipTitle?: ReactNode
   nonClickable?: boolean
 }
 

@@ -6,6 +6,7 @@ import MuiDialogContent from '@mui/material/DialogContent'
 import MuiDialogActions from '@mui/material/DialogActions'
 import Title from '../Title'
 import IconButton from '../IconButton'
+import TranslationText from '../TranslationText'
 
 import './styles.css'
 
@@ -28,7 +29,12 @@ const Dialog = ({ size = 'md', title, actions, onClose, ...props }: DialogProps)
     <MuiDialog className={classNames} onClose={onClose} {...props}>
       <MuiDialogTitle>
         <div>{title && <Title variant='h4'>{title}</Title>}</div>
-        <IconButton className='MuiDialog-closeIcon' iconName='Add' onClick={onClose} />
+        <IconButton
+          className='MuiDialog-closeIcon'
+          iconName='Add'
+          onClick={onClose}
+          tooltipTitle={<TranslationText text='close' />}
+        />
       </MuiDialogTitle>
       <MuiDialogContent>{props.children}</MuiDialogContent>
       {actions && <MuiDialogActions>{actions}</MuiDialogActions>}
