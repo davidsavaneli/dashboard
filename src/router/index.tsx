@@ -51,10 +51,7 @@ export default CustomRouter
 
 const NoMatch = () => {
   const navigate = useNavigate()
+  useEffect(() => navigate('/'))
 
-  useEffect(() => {
-    navigate('/')
-  })
-
-  return <div>No Match! Redirect to './' (2s)</div>
+  return <></>
 }

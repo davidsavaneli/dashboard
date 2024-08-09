@@ -44,7 +44,7 @@ const MiniImageUploaderPage = Loadable(lazy(() => delayForDemo(import('./pages/M
 const FileUploaderPage = Loadable(lazy(() => delayForDemo(import('./pages/FileUploader'))))
 
 const delayForDemo = async (promise: any) => {
-  await new Promise((resolve) => setTimeout(resolve, 300))
+  await new Promise((resolve) => setTimeout(resolve, 500))
   return promise
 }
 

@@ -37,10 +37,7 @@ const DateTimePickerValidator = ({ name, label, ...props }: DateTimePickerCompon
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton
-                    iconName='Calendar'
-                    disabled={props.disabled}
-                  />
+                  <IconButton iconName='Calendar' disabled={props.disabled} />
                 </InputAdornment>
               ),
             }}

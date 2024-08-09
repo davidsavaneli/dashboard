@@ -28,10 +28,7 @@ const DatePicker = ({ format = 'DD/MM/YYYY', error = false, helperText, ...props
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton
-                    disabled={props.disabled}
-                    iconName='Calendar'
-                  />
+                  <IconButton disabled={props.disabled} iconName='Calendar' />
                 </InputAdornment>
               ),
             }}
