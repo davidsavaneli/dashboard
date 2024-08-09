@@ -27,16 +27,18 @@ const ChartsPage = () => {
                 />
               ),
             }}
-          />
+          >
+            ...
+          </BarChartSmall>
         </div>
         <div className='col-3'>
-          <BarChartSmall />
+          <BarChartSmall>...</BarChartSmall>
         </div>
         <div className='col-3'>
-          <BarChartSmall />
+          <BarChartSmall>...</BarChartSmall>
         </div>
         <div className='col-3'>
-          <BarChartSmall />
+          <BarChartSmall>...</BarChartSmall>
         </div>
       </div>
     </ContentLayout>

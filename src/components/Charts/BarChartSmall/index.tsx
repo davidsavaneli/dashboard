@@ -1,19 +1,19 @@
-import { ReactNode, useState } from 'react'
-import clsx from 'clsx'
+import { ReactNode } from 'react'
 import Card, { CardProps } from '../../Card'
-import IconButton from '../../IconButton'
 
 import styles from './styles.module.css'
 
 export interface BarChartSmallProps {
-  title?: string
+  children: ReactNode
   cardProps?: Omit<CardProps, 'children'>
 }
 
-const BarChartSmall = ({ title, cardProps }: BarChartSmallProps) => {
+const BarChartSmall = ({ children, cardProps }: BarChartSmallProps) => {
   return (
     <div className={styles.chart}>
-      <Card {...cardProps}>...</Card>
+      <Card icon='Chart1' {...cardProps}>
+        {children}
+      </Card>
     </div>
   )
 }
