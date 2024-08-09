@@ -40,7 +40,6 @@ const DateTimePickerValidator = ({ name, label, ...props }: DateTimePickerCompon
                   <IconButton
                     iconName='Calendar'
                     disabled={props.disabled}
-                    tooltipTitle={!props.disabled && <TranslationText text='chooseDateAndTime' />}
                   />
                 </InputAdornment>
               ),

@@ -84,7 +84,7 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
   return (
     <div
       className={clsx(`${styles.textEditorBox}`, {
-        disabled: disabled,
+        [styles.disabled]: disabled,
       })}
     >
       <div
@@ -156,6 +156,7 @@ export const TextEditor = ({ placeholder = '', error, helperText, disabled = fal
           onChange={handleChange}
           placeholder={placeholder}
           modules={modules}
+          readOnly={disabled}
         />
       </div>
       {helperText && <FormHelperText error={error}>{helperText}</FormHelperText>}

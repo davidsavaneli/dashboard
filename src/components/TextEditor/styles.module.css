@@ -2,6 +2,16 @@
   position: relative;
 }
 
+.textEditorBox.disabled {
+  opacity: 0.7 !important;
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
+}
+
+.textEditorBox.disabled * {
+  cursor: not-allowed !important;
+}
+
 .textEditorInnerBox {
   border-radius: var(--border-radius-sm);
 }

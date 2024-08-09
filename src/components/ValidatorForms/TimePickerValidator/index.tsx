@@ -37,11 +37,7 @@ const TimePickerValidator = ({ name, label, ...props }: TimePickerValidatorProps
             InputProps={{
               endAdornment: (
                 <InputAdornment position='end'>
-                  <IconButton
-                    iconName='Clock'
-                    disabled={props.disabled}
-                    tooltipTitle={!props.disabled && <TranslationText text='chooseTime' />}
-                  />
+                  <IconButton iconName='Clock' disabled={props.disabled} />
                 </InputAdornment>
               ),
             }}

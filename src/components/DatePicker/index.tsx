@@ -31,7 +31,6 @@ const DatePicker = ({ format = 'DD/MM/YYYY', error = false, helperText, ...props
                   <IconButton
                     disabled={props.disabled}
                     iconName='Calendar'
-                    tooltipTitle={!props.disabled && <TranslationText text='chooseDate' />}
                   />
                 </InputAdornment>
               ),

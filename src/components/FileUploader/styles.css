@@ -6,6 +6,10 @@
   border-radius: var(--border-radius-sm) !important;
 }
 
+.filepond-container.filepond-disabled {
+  border-color: var(--color-primaryLight-shade400) !important;
+}
+
 .filepond-container .MuiListItem-root {
   padding: 0 0 var(--padding-sm) 0 !important;
 }
