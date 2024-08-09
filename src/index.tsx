@@ -1,10 +1,13 @@
+import './i18n/i18n'
+import './assets/css/styles.css'
+
+// export * from './components'
+// export * from './hooks'
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
-import './i18n'
-
-import './assets/css/styles.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
@@ -14,6 +17,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>,
 )
-
-// export * from './components'
-// export * from './hooks'
