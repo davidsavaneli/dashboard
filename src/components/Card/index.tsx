@@ -18,6 +18,7 @@ export interface CardProps {
   children: ReactNode
   collapse?: boolean
   open?: boolean
+  disableHeaderLine?: boolean
 }
 
 const Card = ({
@@ -30,13 +31,18 @@ const Card = ({
   children,
   collapse = false,
   open = false,
+  disableHeaderLine = false,
 }: CardProps) => {
   const [expanded, setExpanded] = useState<boolean>(open)
 
   const handleExpand = () => setExpanded((prev) => !prev)
 
   return (
-    <div className={styles.card}>
+    <div
+      className={clsx(styles.card, {
+        [styles.disableHeaderLine]: disableHeaderLine,
+      })}
+    >
       {(title || icon || headerActions || collapse) && (
         <div className={clsx(styles.header, collapse && !expanded && styles.unExpanded)}>
           <div className={styles.cardTitle}>

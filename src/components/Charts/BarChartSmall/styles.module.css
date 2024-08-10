@@ -1,0 +1,42 @@
+.chart {
+    margin-bottom: var(--margin-sm);
+}
+
+.chartWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-sm) var(--padding-md) var(--padding-sm) var(--padding-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-card);
+  margin-top: calc(var(--margin-md) * -1);
+}
+
+.chartBox {
+  width: 100%;
+}
+
+.rightInfo {
+  display: flex;
+  align-items: flex-end;
+  min-width: 100px;
+  padding-left: var(--padding-md);
+  flex-direction: column;
+  gap: 4px;
+}
+
+.primaryInfo {
+  position: relative;
+}
+
+.secondaryInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 3px;
+}
+
+.secondaryInfo svg {
+  transform: scale(0.9);
+}

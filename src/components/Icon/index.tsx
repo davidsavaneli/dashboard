@@ -109,6 +109,9 @@ import {
   Camera,
   Wallet3,
   ChartSquare,
+  ArrowUp,
+  ArrowDown,
+  CloudChange,
 } from 'iconsax-react'
 
 import styles from './styles.module.css'
@@ -222,6 +225,9 @@ const Icons = {
   Camera,
   Wallet3,
   ChartSquare,
+  ArrowUp,
+  ArrowDown,
+  CloudChange,
 }
 
 export type IconName = keyof typeof Icons
