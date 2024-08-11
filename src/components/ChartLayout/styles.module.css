@@ -1,0 +1,13 @@
+.chart {
+  position: relative;
+}
+
+.chartWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: var(--padding-sm) var(--padding-md) var(--padding-sm) var(--padding-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-card);
+  margin-top: calc(var(--margin-md) * -1);
+}

@@ -1,20 +1,20 @@
 import Chart from 'react-apexcharts'
 import { ApexOptions } from 'apexcharts'
-import Card, { CardProps } from '../../Card'
+import ChartLayout, { ChartLayoutProps } from '../../ChartLayout'
 import Title from '../../Title'
 import Text from '../../Text'
 import Icon from '../../Icon'
 import { getCssColorVariable } from '../../../helpers'
+import { BarChartSmallChartDataProps } from '../../../types'
 
 import styles from './styles.module.css'
 
-export interface BarChartSmallProps {
-  cardProps?: Omit<CardProps, 'children'>
-  color?: 'primary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
+export interface BarChartSmallProps extends Omit<ChartLayoutProps, 'children'> {
   horizontal?: boolean
+  chartData?: BarChartSmallChartDataProps
 }
 
-const BarChartSmall = ({ cardProps, color = 'medium', horizontal = false }: BarChartSmallProps) => {
+const BarChartSmall = ({ cardProps, color = 'medium', horizontal = false, chartData }: BarChartSmallProps) => {
   const chartColor = getCssColorVariable(color)
 
   const options: ApexOptions = {
@@ -33,6 +33,8 @@ const BarChartSmall = ({ cardProps, color = 'medium', horizontal = false }: BarC
         borderRadius: 2,
         borderRadiusApplication: 'around',
         horizontal: horizontal,
+        barHeight: '60%',
+        columnWidth: '60%',
       },
     },
     dataLabels: {
@@ -56,32 +58,23 @@ const BarChartSmall = ({ cardProps, color = 'medium', horizontal = false }: BarC
     },
   }
 
-  const series = [
-    {
-      name: 'users',
-      data: [130, 100, 180, 70, 80, 130, 160],
-    },
-  ]
-
   return (
-    <div className={styles.chart}>
-      <Card icon='Chart1' {...cardProps} disableHeaderLine={true} iconColor={color}>
-        <div className={styles.chartWrapper}>
-          <div className={styles.chartBox}>
-            <Chart options={options} series={series} type='bar' height={56} />
+    <ChartLayout cardProps={cardProps} color={color}>
+      <div className={styles.chartBox}>
+        <Chart options={options} series={chartData?.series} type='bar' height={56} />
+      </div>
+      <div className={styles.rightInfo}>
+        {chartData?.primaryInfo && (
+          <div className={styles.primaryInfo}>
+            <Title>{chartData?.primaryInfo}</Title>
           </div>
-          <div className={styles.rightInfo}>
-            <div className={styles.primaryInfo}>
-              <Title>3000$</Title>
-            </div>
-            <div className={styles.secondaryInfo}>
-              <Icon color='success' name='ArrowUp' size='sm' />
-              <Text color='success'>30.6%</Text>
-            </div>
-          </div>
+        )}
+        <div className={styles.secondaryInfo}>
+          <Icon color='success' name='ArrowUp' size='sm' />
+          <Text color='success'>30.6%</Text>
         </div>
-      </Card>
-    </div>
+      </div>
+    </ChartLayout>
   )
 }
 

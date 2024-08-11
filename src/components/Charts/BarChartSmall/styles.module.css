@@ -1,17 +1,3 @@
-.chart {
-    margin-bottom: var(--margin-sm);
-}
-
-.chartWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--padding-sm) var(--padding-md) var(--padding-sm) var(--padding-md);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--box-shadow-card);
-  margin-top: calc(var(--margin-md) * -1);
-}
-
 .chartBox {
   width: 100%;
 }
