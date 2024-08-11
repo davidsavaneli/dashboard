@@ -1,28 +1,21 @@
-import { ReactNode } from 'react'
 import Chart from 'react-apexcharts'
 import { ApexOptions } from 'apexcharts'
 import Card, { CardProps } from '../../Card'
 import Title from '../../Title'
 import Text from '../../Text'
 import Icon from '../../Icon'
+import { getCssColorVariable } from '../../../helpers'
 
 import styles from './styles.module.css'
 
 export interface BarChartSmallProps {
   cardProps?: Omit<CardProps, 'children'>
   color?: 'primary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning'
+  horizontal?: boolean
 }
 
-const getCssVariableColor = (
-  color: 'primary' | 'dark' | 'medium' | 'light' | 'success' | 'error' | 'info' | 'warning',
-) => {
-  const root = document.documentElement
-  const cssVarName = `--color-${color}`
-  return getComputedStyle(root).getPropertyValue(cssVarName).trim()
-}
-
-const BarChartSmall = ({ cardProps, color = 'medium' }: BarChartSmallProps) => {
-  const chartColor = getCssVariableColor(color)
+const BarChartSmall = ({ cardProps, color = 'medium', horizontal = false }: BarChartSmallProps) => {
+  const chartColor = getCssColorVariable(color)
 
   const options: ApexOptions = {
     chart: {
@@ -39,7 +32,7 @@ const BarChartSmall = ({ cardProps, color = 'medium' }: BarChartSmallProps) => {
       bar: {
         borderRadius: 2,
         borderRadiusApplication: 'around',
-        horizontal: true,
+        horizontal: horizontal,
       },
     },
     dataLabels: {

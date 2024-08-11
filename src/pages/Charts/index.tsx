@@ -1,4 +1,4 @@
-import { ContentLayout, BarChartSmall, IconButton, Menu } from '../../components'
+import { ContentLayout, BarChartSmall, IconButton, Menu, Space } from '../../components'
 
 const ChartsPage = () => {
   return (
@@ -36,23 +36,6 @@ const ChartsPage = () => {
             cardProps={{
               title: 'All Earnings',
               icon: 'Wallet3',
-              headerActions: (
-                <Menu
-                  component={<IconButton iconName='More' />}
-                  items={[
-                    {
-                      children: 'Daily',
-                      selected: true,
-                    },
-                    {
-                      children: 'Weekly',
-                    },
-                    {
-                      children: 'Monthly',
-                    },
-                  ]}
-                />
-              ),
             }}
           />
         </div>
@@ -60,25 +43,8 @@ const ChartsPage = () => {
           <BarChartSmall
             color='medium'
             cardProps={{
-              title: 'App Downloads',
-              icon: 'CloudChange',
-              headerActions: (
-                <Menu
-                  component={<IconButton iconName='More' />}
-                  items={[
-                    {
-                      children: 'Daily',
-                      selected: true,
-                    },
-                    {
-                      children: 'Weekly',
-                    },
-                    {
-                      children: 'Monthly',
-                    },
-                  ]}
-                />
-              ),
+              title: 'All Earnings',
+              icon: 'Wallet3',
             }}
           />
         </div>
@@ -86,25 +52,8 @@ const ChartsPage = () => {
           <BarChartSmall
             color='light'
             cardProps={{
-              title: 'Registered Users',
-              icon: 'Profile2User',
-              headerActions: (
-                <Menu
-                  component={<IconButton iconName='More' />}
-                  items={[
-                    {
-                      children: 'Daily',
-                      selected: true,
-                    },
-                    {
-                      children: 'Weekly',
-                    },
-                    {
-                      children: 'Monthly',
-                    },
-                  ]}
-                />
-              ),
+              title: 'All Earnings',
+              icon: 'Wallet3',
             }}
           />
         </div>
@@ -112,25 +61,8 @@ const ChartsPage = () => {
           <BarChartSmall
             color='success'
             cardProps={{
-              title: 'Registered Users',
-              icon: 'Profile2User',
-              headerActions: (
-                <Menu
-                  component={<IconButton iconName='More' />}
-                  items={[
-                    {
-                      children: 'Daily',
-                      selected: true,
-                    },
-                    {
-                      children: 'Weekly',
-                    },
-                    {
-                      children: 'Monthly',
-                    },
-                  ]}
-                />
-              ),
+              title: 'All Earnings',
+              icon: 'Wallet3',
             }}
           />
         </div>
@@ -138,25 +70,8 @@ const ChartsPage = () => {
           <BarChartSmall
             color='error'
             cardProps={{
-              title: 'Registered Users',
-              icon: 'Profile2User',
-              headerActions: (
-                <Menu
-                  component={<IconButton iconName='More' />}
-                  items={[
-                    {
-                      children: 'Daily',
-                      selected: true,
-                    },
-                    {
-                      children: 'Weekly',
-                    },
-                    {
-                      children: 'Monthly',
-                    },
-                  ]}
-                />
-              ),
+              title: 'All Earnings',
+              icon: 'Wallet3',
             }}
           />
         </div>
@@ -164,8 +79,30 @@ const ChartsPage = () => {
           <BarChartSmall
             color='info'
             cardProps={{
-              title: 'Registered Users',
-              icon: 'Profile2User',
+              title: 'All Earnings',
+              icon: 'Wallet3',
+            }}
+          />
+        </div>
+        <div className='col-3'>
+          <BarChartSmall
+            color='warning'
+            cardProps={{
+              title: 'All Earnings',
+              icon: 'Wallet3',
+            }}
+          />
+        </div>
+      </div>
+      <Space m='lg' />
+      <div className='row'>
+        <div className='col-3'>
+          <BarChartSmall
+            horizontal={true}
+            color='primary'
+            cardProps={{
+              title: 'All Earnings',
+              icon: 'Wallet3',
               headerActions: (
                 <Menu
                   component={<IconButton iconName='More' />}
@@ -188,27 +125,71 @@ const ChartsPage = () => {
         </div>
         <div className='col-3'>
           <BarChartSmall
+            horizontal={true}
+            color='dark'
+            cardProps={{
+              title: 'All Earnings',
+              icon: 'Wallet3',
+            }}
+          />
+        </div>
+        <div className='col-3'>
+          <BarChartSmall
+            horizontal={true}
+            color='medium'
+            cardProps={{
+              title: 'All Earnings',
+              icon: 'Wallet3',
+            }}
+          />
+        </div>
+        <div className='col-3'>
+          <BarChartSmall
+            horizontal={true}
+            color='light'
+            cardProps={{
+              title: 'All Earnings',
+              icon: 'Wallet3',
+            }}
+          />
+        </div>
+        <div className='col-3'>
+          <BarChartSmall
+            horizontal={true}
+            color='success'
+            cardProps={{
+              title: 'All Earnings',
+              icon: 'Wallet3',
+            }}
+          />
+        </div>
+        <div className='col-3'>
+          <BarChartSmall
+            horizontal={true}
+            color='error'
+            cardProps={{
+              title: 'All Earnings',
+              icon: 'Wallet3',
+            }}
+          />
+        </div>
+        <div className='col-3'>
+          <BarChartSmall
+            horizontal={true}
+            color='info'
+            cardProps={{
+              title: 'All Earnings',
+              icon: 'Wallet3',
+            }}
+          />
+        </div>
+        <div className='col-3'>
+          <BarChartSmall
+            horizontal={true}
             color='warning'
             cardProps={{
-              title: 'Registered Users',
-              icon: 'Profile2User',
-              headerActions: (
-                <Menu
-                  component={<IconButton iconName='More' />}
-                  items={[
-                    {
-                      children: 'Daily',
-                      selected: true,
-                    },
-                    {
-                      children: 'Weekly',
-                    },
-                    {
-                      children: 'Monthly',
-                    },
-                  ]}
-                />
-              ),
+              title: 'All Earnings',
+              icon: 'Wallet3',
             }}
           />
         </div>
