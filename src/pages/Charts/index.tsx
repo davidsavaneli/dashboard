@@ -1,4 +1,4 @@
-import { ContentLayout, BarChartSmall, IconButton, Menu, Space } from '../../components'
+import { ContentLayout, BarChartSmall, LineChartSmall, IconButton, Menu, Space } from '../../components'
 
 const ChartsPage = () => {
   return (
@@ -45,7 +45,6 @@ const ChartsPage = () => {
           />
           <Space />
         </div>
-
         <div className='col-3'>
           <BarChartSmall
             horizontal={true}
@@ -74,6 +73,47 @@ const ChartsPage = () => {
               {
                 name: 'users',
                 data: [180, 100, 120, 70, 80, 130, 160],
+              },
+            ]}
+            additionalInfo={{
+              primary: {
+                label: '4000$',
+              },
+              secondary: {
+                label: '-20.2%',
+                isPercentage: true,
+              },
+            }}
+          />
+          <Space />
+        </div>
+        <div className='col-3'>
+          <LineChartSmall
+            cardProps={{
+              title: 'Earnings',
+              icon: 'Wallet3',
+              headerActions: (
+                <Menu
+                  component={<IconButton iconName='More' />}
+                  items={[
+                    {
+                      children: 'Daily',
+                      selected: true,
+                    },
+                    {
+                      children: 'Weekly',
+                    },
+                    {
+                      children: 'Monthly',
+                    },
+                  ]}
+                />
+              ),
+            }}
+            series={[
+              {
+                name: 'users',
+                data: [110, 100, 120, 80, 90, 130, 105],
               },
             ]}
             additionalInfo={{

@@ -246,4 +246,7 @@ export type { ChartLayoutProps } from './ChartLayout'
 export { default as BarChartSmall } from './Charts/BarChartSmall'
 export type { BarChartSmallProps } from './Charts/BarChartSmall'
 
+export { default as LineChartSmall } from './Charts/LineChartSmall'
+export type { LineChartSmallProps } from './Charts/LineChartSmall'
+
 export { default as Toast } from './Toast'

@@ -1,0 +1,20 @@
+.chartBox {
+  width: 100%;
+}
+
+.rightInfo {
+  display: flex;
+  align-items: flex-end;
+  min-width: 100px;
+  padding-left: var(--padding-md);
+  flex-direction: column;
+  gap: 4px;
+}
+
+.primaryInfo {
+  position: relative;
+}
+
+.secondaryInfo {
+  position: relative;
+}
