@@ -3,18 +3,37 @@ import { ApexOptions } from 'apexcharts'
 import ChartLayout, { ChartLayoutProps } from '../../ChartLayout'
 import Title from '../../Title'
 import Text from '../../Text'
-import Icon from '../../Icon'
-import { getCssColorVariable } from '../../../helpers'
-import { BarChartSmallChartDataProps } from '../../../types'
+import {
+  getCssColorVariable,
+  isValidChartDataArray,
+  calculateChartPercentage,
+  getChartPercentageColor,
+} from '../../../helpers'
+import { ApexAxisChartSeries } from '../../../types'
 
 import styles from './styles.module.css'
 
 export interface BarChartSmallProps extends Omit<ChartLayoutProps, 'children'> {
   horizontal?: boolean
-  chartData?: BarChartSmallChartDataProps
+  series?: ApexAxisChartSeries
+  additionalInfo?: {
+    primary?: {
+      label?: string | number
+    }
+    secondary?: {
+      label?: string | number
+      isPercentage?: boolean
+    }
+  }
 }
 
-const BarChartSmall = ({ cardProps, color = 'medium', horizontal = false, chartData }: BarChartSmallProps) => {
+const BarChartSmall = ({
+  cardProps,
+  color = 'medium',
+  horizontal = false,
+  series = [],
+  additionalInfo,
+}: BarChartSmallProps) => {
   const chartColor = getCssColorVariable(color)
 
   const options: ApexOptions = {
@@ -58,21 +77,29 @@ const BarChartSmall = ({ cardProps, color = 'medium', horizontal = false, chartD
     },
   }
 
+  const formattedPercentage =
+    series.length > 0 ? calculateChartPercentage(isValidChartDataArray(series[0].data)) : 'N/A'
+
   return (
     <ChartLayout cardProps={cardProps} color={color}>
       <div className={styles.chartBox}>
-        <Chart options={options} series={chartData?.series} type='bar' height={56} />
+        <Chart options={options} series={series} type='bar' height={56} />
       </div>
       <div className={styles.rightInfo}>
-        {chartData?.primaryInfo && (
+        {additionalInfo?.primary?.label && (
           <div className={styles.primaryInfo}>
-            <Title>{chartData?.primaryInfo}</Title>
+            <Title>{additionalInfo?.primary?.label}</Title>
           </div>
         )}
-        <div className={styles.secondaryInfo}>
-          <Icon color='success' name='ArrowUp' size='sm' />
-          <Text color='success'>30.6%</Text>
-        </div>
+        {(additionalInfo?.secondary?.label || additionalInfo?.secondary?.isPercentage) && (
+          <div className={styles.secondaryInfo}>
+            <Text
+              color={additionalInfo.secondary.isPercentage ? getChartPercentageColor(formattedPercentage) : 'primary'}
+            >
+              {additionalInfo.secondary.isPercentage ? formattedPercentage : additionalInfo.secondary.label}
+            </Text>
+          </div>
+        )}
       </div>
     </ChartLayout>
   )

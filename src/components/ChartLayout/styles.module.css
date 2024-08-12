@@ -4,7 +4,7 @@
 
 .chartWrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   padding: var(--padding-sm) var(--padding-md) var(--padding-sm) var(--padding-md);
   border-radius: var(--border-radius-md);

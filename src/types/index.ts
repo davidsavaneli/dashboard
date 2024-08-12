@@ -1,1 +1,1 @@
-export type { BarChartSmallChartDataProps } from './apexChart'
+export type { ApexAxisChartSeries } from './charts'

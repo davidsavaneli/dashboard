@@ -1,10 +1,4 @@
-export type BarChartSmallChartDataProps = {
-  series?: ApexAxisChartSeries
-  primaryInfo?: string
-  secondaryInfo?: string
-}
-
-type ApexAxisChartSeries = {
+export type ApexAxisChartSeries = {
   name?: string
   type?: string
   color?: string

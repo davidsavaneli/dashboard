@@ -16,13 +16,5 @@
 }
 
 .secondaryInfo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  gap: 3px;
-}
-
-.secondaryInfo svg {
-  transform: scale(0.9);
 }

@@ -7,7 +7,7 @@ const ChartsPage = () => {
         <div className='col-3'>
           <BarChartSmall
             cardProps={{
-              title: 'All Earnings',
+              title: 'Earnings',
               icon: 'Wallet3',
               headerActions: (
                 <Menu
@@ -27,14 +27,20 @@ const ChartsPage = () => {
                 />
               ),
             }}
-            chartData={{
-              primaryInfo: '5000$',
-              series: [
-                {
-                  name: 'users',
-                  data: [130, 100, 180, 70, 80, 130, 160],
-                },
-              ],
+            series={[
+              {
+                name: 'users',
+                data: [130, 100, 180, 70, 80, 130, 160],
+              },
+            ]}
+            additionalInfo={{
+              primary: {
+                label: '4000$',
+              },
+              secondary: {
+                label: '+30.6%',
+                isPercentage: true,
+              },
             }}
           />
           <Space />
@@ -44,7 +50,7 @@ const ChartsPage = () => {
           <BarChartSmall
             horizontal={true}
             cardProps={{
-              title: 'All Earnings',
+              title: 'Earnings',
               icon: 'Wallet3',
               headerActions: (
                 <Menu
@@ -64,14 +70,20 @@ const ChartsPage = () => {
                 />
               ),
             }}
-            chartData={{
-              primaryInfo: '5000$',
-              series: [
-                {
-                  name: 'users',
-                  data: [130, 100, 180, 70, 80, 130, 160],
-                },
-              ],
+            series={[
+              {
+                name: 'users',
+                data: [180, 100, 120, 70, 80, 130, 160],
+              },
+            ]}
+            additionalInfo={{
+              primary: {
+                label: '4000$',
+              },
+              secondary: {
+                label: '-20.2%',
+                isPercentage: true,
+              },
             }}
           />
           <Space />
