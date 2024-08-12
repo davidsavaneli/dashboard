@@ -51,8 +51,9 @@ const getListItemButtonSizes = (depth: number): ListItemButtonProps['size'] => {
   }
 }
 
-const isSelected = (path: string) => {
-  return window.location.pathname === path
+const isSelected = (itemPath: string) => {
+  const currentPath = window.location.pathname
+  return currentPath === itemPath || currentPath.startsWith(`${itemPath}/`)
 }
 
 const listItemArrowComponent = (open: boolean) =>
