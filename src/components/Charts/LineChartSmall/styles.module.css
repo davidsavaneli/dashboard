@@ -13,8 +13,10 @@
 
 .primaryInfo {
   position: relative;
+  text-align: right;
 }
 
 .secondaryInfo {
   position: relative;
+  text-align: right;
 }

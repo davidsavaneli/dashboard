@@ -121,8 +121,8 @@ const ChartsPage = () => {
                 label: '4000$',
               },
               secondary: {
-                label: '-20.2%',
-                isPercentage: true,
+                label: 'Label',
+                isPercentage: false,
               },
             }}
           />
