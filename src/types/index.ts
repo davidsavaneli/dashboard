@@ -1,1 +1,1 @@
-export type { ApexAxisChartSeries } from './charts'
+export type { ApexAxisChartSeries, ApexNonAxisChartSeries } from './charts'

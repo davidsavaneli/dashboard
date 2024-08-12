@@ -22,6 +22,8 @@ export type ApexAxisChartSeries = {
     | number[][]
 }[]
 
+export type ApexNonAxisChartSeries = number[]
+
 type ApexFill = {
   colors?: any[]
   opacity?: number | number[]
