@@ -8,6 +8,7 @@ export interface IRouteItem {
   iconName: IconName | ''
   element: ReactNode
   children?: IRouteItem[]
+  showInDrawer?: boolean
 }
 
 export interface IRoutes {

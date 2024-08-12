@@ -154,7 +154,19 @@ const renderLinks = (items: IRouteItem[], routes: IRoutes, depth: number = 0, op
   ))
 }
 
+const filterItems = (items: IRouteItem[]): IRouteItem[] => {
+  return items
+    .filter((item) => item.showInDrawer !== false)
+    .map((item) => ({
+      ...item,
+      children: filterItems(item.children ?? []),
+    }))
+    .filter((item) => item.children.length > 0 || item.element !== '')
+}
+
 const Drawer = ({ routes, openFirstLevel = true, logo, logoAltText = '' }: DrawerProps) => {
+  const filteredItems = filterItems(routes.items)
+
   return (
     <div className={styles.drawerContainer}>
       <div className={styles.drawer}>
@@ -164,7 +176,7 @@ const Drawer = ({ routes, openFirstLevel = true, logo, logoAltText = '' }: Drawe
           </div>
         </div>
         <div className={styles.drawerItems}>
-          <List>{renderLinks(routes.items, routes, 0, openFirstLevel)}</List>
+          <List>{renderLinks(filteredItems, routes, 0, openFirstLevel)}</List>
         </div>
       </div>
     </div>
