@@ -84,16 +84,7 @@ export const routes: IRoutes = {
               path: '/components/forms/button',
               iconName: '',
               element: <ButtonPage />,
-              children: [
-                {
-                  name: 'Button Add Or Update',
-                  path: '/components/forms/button/add-or-update',
-                  iconName: '',
-                  element: <>Button Add Or Update Page</>,
-                  showInDrawer: false,
-                  children: [],
-                },
-              ],
+              children: [],
             },
             {
               name: 'Icon Button',
