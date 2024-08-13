@@ -18,7 +18,8 @@
     "declarationDir": "type",
     "sourceMap": false,
     "outDir": "dist",
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "baseUrl": "src"
   },
   "paths": ["src"],
   "include": ["src/**/*"]

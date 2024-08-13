@@ -1,7 +1,14 @@
 import { ReactNode } from 'react'
+import '../../i18n'
 import LocalizationProvider from '../LocalizationProvider'
 import ToastContainer from '../ToastContainer'
 import useScrollToTop from '../../hooks/useScrollToTop'
+
+import '../../assets/css/fonts.css'
+import '../../assets/css/variables.css'
+import '../../assets/css/normalize.css'
+import '../../assets/css/grids.css'
+import '../../assets/css/general.css'
 
 import styles from './styles.module.css'
 
