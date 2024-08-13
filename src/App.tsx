@@ -1,5 +1,5 @@
 import { MainLayout, Drawer, Header, Breadcrumbs } from './components'
-import CustomRouter from './router'
+import { CustomRouter } from './router'
 import { routes } from './routes'
 
 import logoSrc from './assets/images/logo.svg'

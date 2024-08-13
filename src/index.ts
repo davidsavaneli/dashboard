@@ -1,10 +1,4 @@
-// import './assets/css/fonts.css'
-// import './assets/css/variables.css'
-// import './assets/css/normalize.css'
-// import './assets/css/grids.css'
-// import './assets/css/general.css'
-// import './i18n'
-// import './router'
+export * from './router'
 export * from './components'
 // export * from './hooks'
 

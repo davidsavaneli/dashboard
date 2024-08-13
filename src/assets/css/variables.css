@@ -112,7 +112,7 @@
   --color-warning-shade800: rgba(var(--color-warning-rgb), 0.9);
 
   /* General */
-  --font-family: 'Inter var';
+  --font-family: 'Inter';
   --color-text-primary: var(--color-primary);
   --drawer-width: 290px;
   --header-height: 80px;
